@@ -65,6 +65,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        transform: scale(1.5);
         z-index: -50;
         opacity: 0.8;
         filter: blur(var(--blyrics-background-blur)) saturate(var(--blyrics-background-saturate));
@@ -317,3 +318,4 @@ ytmusic-player-page:before {
     transform: scale(1.5);
     opacity: 0.8;
 }
+
