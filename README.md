@@ -25,9 +25,10 @@ Original/Base Script: [walm-git/Modern-YouTube-Music-Theme](https://github.com/w
 3. In **Better Lyrics** configuration tab, pick any theme you like, but for better consistency, choose **"Even Better Lyrics Plus by Noah & BetterLyrics"**.
 
 # Showcase
-<img width="2552" height="1313" alt="msedge_cXXoVpMdPd" src="https://github.com/user-attachments/assets/c5f5b1ad-97f4-4fa7-a6d2-c3928a2ef188" />
-<img width="2552" height="1313" alt="msedge_BDta8IYGn4" src="https://github.com/user-attachments/assets/9cac1d5c-f74d-4af4-90ad-fce48b32176a" />
-<img width="2552" height="1313" alt="msedge_BDta8IYGn4" src="https://github.com/user-attachments/assets/5e9c4336-8613-4012-b236-b8d0a5ca0838" />
-<img width="2560" height="1440" alt="msedge_ypMg6mRGRb" src="https://github.com/user-attachments/assets/f277fb79-33d9-4cfa-986d-622b913db42d" />
+<img width="2552" height="1313" alt="msedge_cXXoVpMdPd" src="https://github.com/user-attachments/assets/229b723d-d120-4b5f-b39a-0c931471b0cf" />
+<img width="2552" height="1313" alt="msedge_BDta8IYGn4" src="https://github.com/user-attachments/assets/121a8596-5e20-4dfb-94d8-f13659c1f6c2" />
+<img width="2552" height="1313" alt="msedge_BDta8IYGn4" src="https://github.com/user-attachments/assets/cc72dde1-c160-47d7-8e45-1dc94a9ab64c" />
+<img width="2560" height="1440" alt="msedge_ypMg6mRGRb" src="https://github.com/user-attachments/assets/5335bbb1-2609-4185-9fd5-96423c3ca2ab" />
+
 
 **Small Note**: I do not know how to code or fully understand CSS, so there might be some messy lines and room for improvement. This was originally made for my personal use, but I decided to share it here. Enjoy!
