@@ -5,7 +5,7 @@
 @description    YouTube Music CSS theme that sets the background to the current song’s cover art with glass like ui.
 @author         chengggit
 @homepageURL    https://github.com/chengggit/Youtube-Music-Dynamic-Theme
-@updateURL      https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.css
+@updateURL      https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.user.css
 @license        MIT License
 
 @var range    bg-blur          'Background Blur' [1, 0.1, 5, 0.1]
@@ -413,4 +413,5 @@ ytmusic-player-page:before {
     transform: scale(var(--bg-scale));
     opacity: 0.8;
     filter: blur(calc(var(--bg-blur)*100px)) saturate(var(--bg-saturate)) brightness(var(--brightness)) !important;
+
 }
