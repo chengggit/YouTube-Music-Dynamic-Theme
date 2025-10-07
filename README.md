@@ -56,6 +56,10 @@ Original/Base Script: [walm-git/Modern-YouTube-Music-Theme](https://github.com/w
 </details>
 
 #### In **Better Lyrics** configuration tab, pick any theme you like, but for better consistency, choose **"Even Better Lyrics Plus by Noah & BetterLyrics"**.
+<details>
+  <summary>Currently Available Configurable Options</summary>
+ <img width="352" height="314" alt="image" src="https://github.com/user-attachments/assets/196ada88-1e1c-41bd-a9c0-ada1f2e39587" />
+</details>
 
 # Showcase
 <img width="2552" height="1313" alt="msedge_cXXoVpMdPd" src="https://github.com/user-attachments/assets/229b723d-d120-4b5f-b39a-0c931471b0cf" />
