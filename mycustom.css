@@ -1,3 +1,19 @@
+/* ==UserStyle==
+@name           YTM Dynamic Theme
+@namespace      https://github.com/chengggit/
+@version        1.0.1
+@description    YouTube Music CSS theme that sets the background to the current song’s cover art with glass like ui.
+@author         chengggit
+@homepageURL    https://github.com/chengggit/Youtube-Music-Dynamic-Theme
+@updateURL      https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.css
+@license        MIT License
+
+@var range    bg-blur          'Background Blur' [1, 0.1, 5, 0.1]
+@var range   brightness                  'Background Brightness' [1, 0, 10, 0.1]
+@var range    bg-saturate           'Background Saturation' [2, 0.1, 10, 0.1]
+@var range    bg-scale               'Background Scale' [1.5, 0, 3, 0.1]
+
+==/UserStyle== */
 @-moz-document domain("music.youtube.com") {
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
     * {
@@ -16,7 +32,7 @@
     }
 
     ytmusic-app {
-        --ytmusic-player-bar-background: #0f0f11;
+        --ytmusic-player-bar-background: #fff0;
     }
 
     ytmusic-player-page.ytmusic-app {
@@ -65,10 +81,10 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        transform: scale(1.5);
+        transform: scale(var(--bg-scale));
         z-index: -50;
         opacity: 0.8;
-        filter: blur(var(--blyrics-background-blur)) saturate(var(--blyrics-background-saturate));
+        filter: blur(calc(var(--bg-blur)*100px)) saturate(var(--bg-saturate)) brightness(var(--brightness));
         animation: scalePulse 8s ease-in-out infinite,
         slowRotate 30s linear infinite;
         animation-composition: add;
@@ -87,10 +103,10 @@ ytmusic-app #browse-page ytmusic-section-list-renderer::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transform: scale(1.5);
+    transform: scale(var(--bg-scale));
     z-index: -50;
     opacity: 0.8;
-    filter: blur(var(--blyrics-background-blur)) saturate(var(--blyrics-background-saturate));
+    filter: blur(calc(var(--bg-blur)*100px)) saturate(var(--bg-saturate)) brightness(var(--brightness));
     animation: scalePulse 8s ease-in-out infinite,
     slowRotate 30s linear infinite;
     animation-composition: add;
@@ -153,11 +169,21 @@ ytmusic-app-layout[is-bauhaus-sidenav-enabled].content-scrolled #mini-guide-back
     opacity: 0;
 }
 
-/* Drawer */
+/* Homepage Drawer */
 ytmusic-app[is-bauhaus-sidenav-enabled] #guide-wrapper.ytmusic-app {
     background: none;
     border-right: 1px solid rgba(255, 255, 255, .1);
     backdrop-filter: blur(10px);
+}
+/* Player page drawer and nav top */
+#layout[player-ui-state=PLAYER_PAGE_OPEN] #guide-wrapper,
+#layout[player-ui-state=PLAYER_PAGE_OPEN] #nav-bar-background {
+    border-color: rgba(255, 255, 255, .1) !important;
+}
+/* Player page nav left */
+#layout[player-ui-state=PLAYER_PAGE_OPEN] #mini-guide-background {
+    border-color: rgba(255, 255, 255, 0) !important;
+    backdrop-filter: none !important;
 }
 /* Tab Below Search */
 ytmusic-tabs.stuck {
@@ -308,7 +334,7 @@ ytmusic-carousel:active,
 ytmusic-carousel:focus {
     scrollbar-color: #FFFFFF transparent;
 }
-/* Notices Popup  */
+/* Notice Popup */
 tp-yt-paper-toast.yt-notification-action-renderer {
     background: none;
 
@@ -320,7 +346,7 @@ tp-yt-paper-toast.yt-notification-action-renderer {
 #sub-text.yt-notification-action-renderer {
     color: white;
 }
-/* Small buttons in queue */
+/* Small buttons in upnext */
 ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_UNKNOWN] a.ytmusic-chip-cloud-chip-renderer,
 ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_DEFAULT] a.ytmusic-chip-cloud-chip-renderer,
 ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_ICON_SECOND] a.ytmusic-chip-cloud-chip-renderer {
@@ -330,7 +356,7 @@ ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_ICON_SEC
 ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_LARGE_TRANSLUCENT_AND_SELECTED_WHITE] a.ytmusic-chip-cloud-chip-renderer {
     border: 1px solid rgba(255, 255, 255, .1);
 }
-/* Save button in queue */
+/* Save button */
 ytmusic-chip-cloud-chip-renderer[chip-style=STYLE_TRANSPARENT] a.ytmusic-chip-cloud-chip-renderer {
     background: none;
     color: white;
@@ -354,7 +380,28 @@ ytmusic-av-toggle[toggle-disabled] .av-toggle.ytmusic-av-toggle {
     background: none;
     backdrop-filter: blur(10px);
 }
-
+.toggle-bar.tp-yt-paper-toggle-button {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.5
+}
+.toggle-button.tp-yt-paper-toggle-button {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+tp-yt-paper-toggle-button[checked]:not([disabled]) .toggle-bar.tp-yt-paper-toggle-button {
+    background-color: white;
+    opacity: 0.8;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+tp-yt-paper-toggle-button[checked]:not([disabled]) .toggle-button.tp-yt-paper-toggle-button {
+    background-color: #fff;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
 /* Better Lyrics Extension */
 .blyrics-container span {
     font-family: "Inter" !important;
@@ -363,6 +410,7 @@ ytmusic-av-toggle[toggle-disabled] .av-toggle.ytmusic-av-toggle {
     line-height: 1.15;
 }
 ytmusic-player-page:before {
-    transform: scale(1.5);
+    transform: scale(var(--bg-scale));
     opacity: 0.8;
+    filter: blur(calc(var(--bg-blur)*100px)) saturate(var(--bg-saturate)) brightness(var(--brightness)) !important;
 }
