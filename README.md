@@ -1,6 +1,8 @@
 # Youtube Music Dynamic Theme
 
-A custom YouTube Music CSS theme that sets the background to the current song’s cover with blur and subtle animations for a lively feel. Requires **Better Lyrics** extension for the dynamic background and time-synced lyrics features.
+A custom YouTube Music CSS theme that sets the background to the current song’s cover with blur, subtle animations for a lively feel and Glass-Like UI.
+
+Requires **Better Lyrics** extension for the dynamic background and time-synced lyrics features.
 
 This CSS was **NOT entirely written by me**. I **edited** it using a CSS made by **walm-git** as the base. I also incorporated parts from other scripts I found online for inspiration and to fix issues I couldn’t figure out myself. (credits below)
 
@@ -18,11 +20,42 @@ Original/Base Script: [walm-git/Modern-YouTube-Music-Theme](https://github.com/w
 # Instructions
 ## Requirements 
   - [Better Lyrics Extension For Youtube Music](https://better-lyrics.boidu.dev/)
-  - **Stylus** Extension for [Chrome](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/). Or any custom user stylesheet extension you want.
-### Usage
-1. Copy the content from **CSS** above or [click here](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.css).
-2. Paste it into **Stylus** and save. Enable it already if isn't enable by default.
-3. In **Better Lyrics** configuration tab, pick any theme you like, but for better consistency, choose **"Even Better Lyrics Plus by Noah & BetterLyrics"**.
+  - **Stylus** Extension for [Chrome](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/).
+### Installation
+**After installing the required extensions, follow the steps below:**
+<details>
+  <summary>Method 1: Easy</summary>
+
+- Open the **UserCSS (.user.css)** file above in RAW or via [this link](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.user.css).
+   
+- The installation page will open in a new tab.
+
+</details>
+
+<details>
+  <summary>Method 2: Local Files</summary>
+
+- Download the **UserCSS (.user.css)** above or [click here to redirect](https://github.com/chengggit/Youtube-Music-Dynamic-Theme/blob/main/mycustom.user.css).
+
+- **Firefox**: Drag and drop the file into your browser.
+
+  **Chrome**: Drag and drop the file into an open **Stylus** page like the manager or the popup.
+   
+- The installation page will open in a new tab.
+
+</details>
+
+<details>
+ 
+  <summary>Method 3: Manual Stylus</summary>
+
+- Copy the content from **CSS** file above or [click here to redirect](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.css).
+ 
+- Paste it into **Stylus** and save. Make sure it is enabled.
+
+</details>
+
+#### In **Better Lyrics** configuration tab, pick any theme you like, but for better consistency, choose **"Even Better Lyrics Plus by Noah & BetterLyrics"**.
 
 # Showcase
 <img width="2552" height="1313" alt="msedge_cXXoVpMdPd" src="https://github.com/user-attachments/assets/229b723d-d120-4b5f-b39a-0c931471b0cf" />
