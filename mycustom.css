@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YTM Dynamic Theme
 @namespace      https://github.com/chengggit/
-@version        1.1.1
+@version        1.1.2
 @description    YouTube Music CSS theme that sets the background to the current song’s cover art with glass like ui.
 @author         chengggit
 @homepageURL    https://github.com/chengggit/Youtube-Music-Dynamic-Theme
@@ -407,10 +407,5 @@ tp-yt-paper-toggle-button[checked]:not([disabled]) .toggle-button.tp-yt-paper-to
     font-size: 30px;
     font-weight: 450 !important;
     line-height: 1.15;
-}
-ytmusic-player-page:before {
-    transform: scale(var(--bg-scale));
-    opacity: 0.8;
-    filter: blur(calc(var(--bg-blur)*100px)) saturate(var(--bg-saturate)) brightness(var(--brightness)) !important;
     }
 }
