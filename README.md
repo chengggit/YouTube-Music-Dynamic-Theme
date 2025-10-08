@@ -21,7 +21,7 @@ Original/Base Script: [walm-git/Modern-YouTube-Music-Theme](https://github.com/w
 ## Requirements 
   - [Better Lyrics Extension For Youtube Music](https://better-lyrics.boidu.dev/)
   - **Stylus** Extension for [Chrome](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/).
-### Installation
+## Installation
 **After installing the required extensions, follow the steps below:**
 <details>
   <summary>Method 1: Easy</summary>
@@ -60,6 +60,20 @@ Original/Base Script: [walm-git/Modern-YouTube-Music-Theme](https://github.com/w
   <summary>Currently Available Configurable Options</summary>
  <img width="352" height="314" alt="image" src="https://github.com/user-attachments/assets/196ada88-1e1c-41bd-a9c0-ada1f2e39587" />
 </details>
+
+## How to Update
+1. Click **Manage** in the extension tab to open the style manager.
+<img width="248" height="124" alt="aRxFAtBDmo" src="https://github.com/user-attachments/assets/9dd2ca6d-b791-4dd2-a626-a9685533340e" />
+
+
+2. In style manager, click the **update** icon.
+<img width="387" height="40" alt="msedge_HinJekvKSW" src="https://github.com/user-attachments/assets/15d35ce7-91a4-454f-9bcb-79ef00d2eacb" />
+
+If you don’t see the update icon, make sure **Check for Updates** is enabled in the editor: click the style name and check the left-hand tab for the option.
+
+<img width="226" height="88" alt="msedge_rFbiu7squH" src="https://github.com/user-attachments/assets/55c70dc8-6fad-462a-bb7d-651558d9eadb" />
+
+Check if there’s a **raw GitHub** link inside, like the image above. If not, it’s best to reinstall the theme.
 
 # Showcase
 <img width="2552" height="1313" alt="msedge_cXXoVpMdPd" src="https://github.com/user-attachments/assets/229b723d-d120-4b5f-b39a-0c931471b0cf" />
