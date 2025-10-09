@@ -23,14 +23,16 @@ Original/Base Script: [walm-git/Modern-YouTube-Music-Theme](https://github.com/w
   - **Stylus** Extension for [Chrome](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/).
 ## Installation
 **After installing the required extensions, follow the steps below:**
-<details>
-  <summary>Method 1: Easy</summary>
 
-- Open the **UserCSS (.user.css)** file above in RAW or via [this link](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.user.css).
-   
-- The installation page will open in a new tab.
+- Click this button below to install.
+  [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.user.css)
 
-</details>
+**OR**
+
+- Open the **UserCSS (.user.css)** file above in RAW
+
+
+#### Alternative Methods
 
 <details>
   <summary>Method 2: Local Files</summary>
@@ -49,13 +51,14 @@ Original/Base Script: [walm-git/Modern-YouTube-Music-Theme](https://github.com/w
  
   <summary>Method 3: Manual Stylus</summary>
 
-- Copy the content from **CSS** file above or [click here to redirect](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.css).
+- Copy the content from **UserCSS** file above or [click here to redirect](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.css).
  
 - Paste it into **Stylus** and save. Make sure it is enabled.
 
 </details>
 
-#### In **Better Lyrics** configuration tab, pick any theme you like, but for better consistency, choose **"Even Better Lyrics Plus by Noah & BetterLyrics"**.
+### Configuration 
+**In *Better Lyrics* configuration tab, pick any theme you like, but for better consistency, choose "Even Better Lyrics Plus by Noah & BetterLyrics"**.
 <details>
   <summary>Currently Available Configurable Options</summary>
  <img width="352" height="314" alt="image" src="https://github.com/user-attachments/assets/196ada88-1e1c-41bd-a9c0-ada1f2e39587" />
