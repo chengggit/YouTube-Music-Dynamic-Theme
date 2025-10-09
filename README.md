@@ -25,6 +25,7 @@ Original/Base Script: [walm-git/Modern-YouTube-Music-Theme](https://github.com/w
 **After installing the required extensions, follow the steps below:**
 
 - Click this button below to install.
+  
   [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.user.css)
 
 **OR**
