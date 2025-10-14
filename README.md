@@ -8,6 +8,8 @@ This CSS was **NOT entirely written by me**. I **edited** it using a CSS made by
 
 The theme is heavily inspired by **"Even Better Lyrics Plus by Noah & BetterLyrics"** for the Better Lyrics extension.
 
+**Note**: The background animation may be CPU-intensive on your PC. You can disable it in the configuration if needed.
+
 ## Credits
 Original/Base Script: [walm-git/Modern-YouTube-Music-Theme](https://github.com/walm-git/Modern-YouTube-Music-Theme)
 
@@ -52,18 +54,22 @@ Original/Base Script: [walm-git/Modern-YouTube-Music-Theme](https://github.com/w
  
   <summary>Method 3: Manual Stylus</summary>
 
-- Copy the content from **UserCSS** file above or [click here to redirect](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.css).
+- Copy the content from **UserCSS** file above or [click here to redirect](https://github.com/chengggit/Youtube-Music-Dynamic-Theme/blob/main/mycustom.user.css).
  
 - Paste it into **Stylus** and save. Make sure it is enabled.
 
 </details>
 
-### Configuration 
+## Configuration 
 **In *Better Lyrics* configuration tab, pick any theme you like, but for better consistency, choose "Even Better Lyrics Plus by Noah & BetterLyrics"**.
 <details>
   <summary>Currently Available Configurable Options</summary>
- <img width="352" height="314" alt="image" src="https://github.com/user-attachments/assets/196ada88-1e1c-41bd-a9c0-ada1f2e39587" />
+ <img width="354" height="508" alt="image" src="https://github.com/user-attachments/assets/92e108ae-dec1-470f-95e3-096e755a2a40" />
 </details>
+
+**Browser Notes:**
+Background transitions don’t work in Firefox yet.
+The search box blur only works in Firefox, not sure why it doesn’t in Chromium-based browsers.
 
 ## How to Update
 1. Click **Manage** in the extension tab to open the style manager.
