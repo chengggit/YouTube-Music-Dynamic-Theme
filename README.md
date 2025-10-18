@@ -97,7 +97,7 @@ Check if there’s a **raw GitHub** link inside, like the image above. If not, i
 <img width="2552" height="1313" alt="msedge_szeKDgCA2Q" src="https://github.com/user-attachments/assets/8c74d1dc-4c20-4175-9116-8ac70d324482" />
 
 #### Mobile View Mode
-<img width="500" height="1080" alt="msedge_Ezzbq8p8fv" src="https://github.com/user-attachments/assets/fd4079b3-863b-4d0e-869a-4f10e374c02c" /> <img width="500" height="1080" alt="msedge_wwVMeHETKs" src="https://github.com/user-attachments/assets/faf79ba7-b5fd-4b9f-97ba-a1d38f5ab6f9" />
+<img width="450" height="1080" alt="msedge_Ezzbq8p8fv" src="https://github.com/user-attachments/assets/fd4079b3-863b-4d0e-869a-4f10e374c02c" /> <img width="450" height="1080" alt="msedge_wwVMeHETKs" src="https://github.com/user-attachments/assets/faf79ba7-b5fd-4b9f-97ba-a1d38f5ab6f9" />
 
 
 ## Credits
