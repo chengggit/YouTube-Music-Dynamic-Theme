@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YTM Dynamic Theme
 @namespace      https://github.com/chengggit/
-@version        2.0.0
+@version        2.0.1
 @preprocessor   stylus
 @description    YouTube Music CSS theme that sets the background to the current song’s cover art with glass like ui.
 @author         chengggit
@@ -328,7 +328,8 @@
 
     ytmusic-search-box #suggestion-list ytmusic-search-suggestion {
         background: transparent !important;
-        color: rgb(255, 255, 255)
+        color: rgb(255, 255, 255);
+        border-radius: 12px;
     }
 
     ytmusic-search-box #suggestion-list ytmusic-search-suggestion:hover {
@@ -371,13 +372,13 @@
         border: var(--borderColor);
     }
     
-    /* Spacing for card on the left */
+    /* Spacing for card on the right */
     .undercards-container.ytmusic-card-shelf-renderer {
         padding: 20px;
         gap: 16px
     }
     
-    /* Top spacing for the card on the left*/
+    /* Top spacing for the card on the right */
     yt-formatted-string.text.style-scope.ytmusic-message-renderer {
         margin-top: 0px !important
     }
@@ -408,6 +409,19 @@
         padding-top: var(--ytmusic-nav-bar-height);
         padding-left: var(--ytmusic-guide-width);
         padding-bottom: var(--ytmusic-player-bar-height);
+    }
+    
+    /* Re-center content in fullscreen */
+    @media (min-width: 615px) {
+    ytmusic-player-page:not([is-video-truncation-fix-enabled])[player-fullscreened]:not([blyrics-dfs]) {
+        #player.ytmusic-player-page,
+        #blyrics-song-info {
+        top: 50%;
+            }
+        }
+        ytmusic-app-layout:not([is-mweb-modernization-enabled])[player-fullscreened]:not([blyrics-dfs])>[slot=player-page] {
+            padding-bottom: 0
+        }
     }
     
     /* Miniplayer Spacing Fix */
@@ -456,29 +470,6 @@
     .song-button.ytmusic-av-toggle,
     .video-button.ytmusic-av-toggle {
         background: transparent; 
-    }
-
-    /* Auto Next Toggle */
-    .toggle-bar.tp-yt-paper-toggle-button {
-        background-color: rgba(255, 255, 255, 0.4);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        opacity: 0.5
-    }
-
-    .toggle-button.tp-yt-paper-toggle-button {
-        background-color: rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    tp-yt-paper-toggle-button[checked]:not([disabled]) .toggle-bar.tp-yt-paper-toggle-button {
-        background-color: rgb(255, 255, 255);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    tp-yt-paper-toggle-button[checked]:not([disabled]) .toggle-button.tp-yt-paper-toggle-button {
-        background-color: rgb(255, 255, 255);
-        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     /* Save button */
@@ -558,9 +549,66 @@
 
 /* ===Popup Containers=== */
     
+    /* ==New Playlist From Drawer== */
+    ytmusic-playlist-form {
+    background: rgba(0, 0, 0, 0);
+    }
+    ytmusic-dialog {
+    box-shadow: var(--drop-shadow);
+    background-color: var(--colorOption);
+    backdrop-filter: blur(var(--uiblur));
+    border: var(--borderColor);
+    border-radius: 25px;
+    }
+    /* Underline */
+    .unfocused-line.tp-yt-paper-input-container {
+    border-color: rgba(255, 255, 255, .4)
+    }
+    .focused-line.tp-yt-paper-input-container {
+    border-color: white
+    }
+        /* Toogle Button */
+        .ytSwitchShapeTrack {
+        background: var(--buttonColor);
+        }
+        .ytSwitchShapeKnob {
+        background: rgba(255, 255, 255, .3)
+        }
+        .ytSwitchShapeKnobActive {
+        background: rgba(255, 255, 255, .8)
+        }
+        
+        /* Playlist Visibility Dropdown */
+        .dropdown-content.tp-yt-paper-menu-button {
+        background-color: var(--colorOption);
+        border-radius: 25px;
+        box-shadow: var(--drop-shadow);
+        }
+        /* Two Backgrounds lmao */
+        .dropdown-content.ytmusic-dropdown-renderer {
+            background-color: rgba(0, 0, 0, .1);
+        }
+            /* Dropdown Item */
+            ytmusic-dropdown-item-renderer {
+                background: transparent;
+            }
+            /* Item Hover */
+            ytmusic-dropdown-item-renderer:hover, ytmusic-dropdown-item-renderer:focus {
+                background-color: rgba(255, 255, 255, .1);
+            }
+            /* Item Pressed */
+            tp-yt-paper-item.ytmusic-dropdown-item-renderer:focus::before {
+                background-color: transparent;
+            }
+            /* Icons */
+            .icon.ytmusic-dropdown-item-renderer,
+            tp-yt-iron-icon.tp-yt-paper-dropdown-menu,
+            ytmusic-dropdown-renderer[dropdown-style=underline] .icon.ytmusic-dropdown-renderer {
+                color: #ffffff;
+            }
+
     /* Add to Playlist */
     tp-yt-paper-dialog[modern],
-    tp-yt-paper-listbox.ytmusic-menu-popup-renderer,
     ytmusic-add-to-playlist-renderer {
         background: var(--colorOption);
         backdrop-filter: blur(var(--uiblur));
@@ -581,15 +629,16 @@
     }
 
     /* 3 Dots Dropdown */
+    ytmusic-menu-popup-renderer,
+    .ytmusicMultiPageMenuHost {
+        display: contents
+    }
     tp-yt-paper-listbox.ytmusic-menu-popup-renderer {
         --paper-listbox-background-color: var(--colorOption);
         border: var(--borderColor);
+        backdrop-filter: blur(var(--uiblur));
         border-radius: 25px;
         box-shadow: var(--drop-shadow);
-    }
-    /* Hide Dropdown Overflow, why visible hid it instead??? */
-    #contentWrapper.tp-yt-iron-dropdown>* {
-    overflow: visible; 
     }
 
     /* Miniplayer-Hover Overlay */
@@ -628,14 +677,55 @@
         --yt-spec-call-to-action: #38a3ff;
         --yt-endpoint-hover-color: #b0daff;
         --yt-compact-link-icon-color: #fff;
+        --yt-spec-outline: transparent;
         background: var(--colorOption);
         border-radius: 25px;
         border: var(--borderColor);
         box-shadow: var(--drop-shadow);
         backdrop-filter: blur(var(--uiblur));
         ytd-simple-menu-header-renderer {
-            background: transparent;
+            background: transparent
         }
+    }
+    /* Settings */
+    .category-menu-item.iron-selected.ytmusic-settings-page,
+    .category-menu-item.ytmusic-settings-page:focus:not(.iron-selected) {
+    background: rgba(255, 255, 255, .1);
+    border-radius: 8px;
+    }
+    ytmusic-setting-category-collection-renderer.ytmusic-settings-page {
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    }
+        /* Dropdown */
+        .dropdown-content.ytmusic-setting-single-option-menu-renderer {
+        background: transparent;
+        }
+        /* Divider */
+        .top-bar.ytmusic-settings-page,
+        .items.ytmusic-setting-category-collection-renderer>*.ytmusic-setting-category-collection-renderer {
+        border-bottom: 0
+        }
+    
+    /* Toggle Buttons */
+    .toggle-bar.tp-yt-paper-toggle-button {
+        background-color: rgba(255, 255, 255, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        opacity: 0.5
+    }
+
+    .toggle-button.tp-yt-paper-toggle-button {
+        background-color: rgb(180, 180, 180);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    tp-yt-paper-toggle-button[checked]:not([disabled]) .toggle-bar.tp-yt-paper-toggle-button {
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    tp-yt-paper-toggle-button[checked]:not([disabled]) .toggle-button.tp-yt-paper-toggle-button {
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     /* Link Bar in Share*/
@@ -841,7 +931,16 @@
             will-change: transform;
         }
     }
-
+    
+    /* Play Button Alignment Fix in Fullscreen - boidu */
+        @media (min-width: 615px) {
+      ytmusic-player-bar[player-fullscreened] #play-pause-button>.yt-icon-button>yt-icon {
+        width: 32px;
+        height: 32px;
+        }
+    }
+    
+    /* Footer */
     .blyrics-footer__discord,
     .autoscroll-resume-button,
     .blyrics-footer__container {
