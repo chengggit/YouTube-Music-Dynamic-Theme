@@ -1,4 +1,4 @@
-/* ===== YouTube Music Dynamic Background Theme V2.0.1 by chengg =====*/
+/* ===== YouTube Music Dynamic Background Theme V2.0.2 by chengg =====*/
 /* ===== Github Repo: https://github.com/chengggit/Youtube-Music-Dynamic-Theme ===== */
     
     
@@ -26,26 +26,25 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
 
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 /* ===ROOT=== */
 
     /* Hide the main page scrollbar */
-    html,
-    body {
+    html {
         scrollbar-width: none;
+        }
+        
         /* Push the layout back after hiding */
             ytmusic-app-layout>[slot=player-bar] {
-                width: 100vw
+                width: 100vw;
         }
-    }
 
     /* Font and Scrollbar */
-        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
     * {
         font-family: "Inter" !important; 
         font-weight: 400 !important;
-        scrollbar-width: thin;
-        scrollbar-color: transparent transparent;
+        scrollbar-width: none;
     }
 
     /* Scrollbar spacing in player page */
@@ -73,18 +72,21 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     
 /* ===Options=== */
     
-    /* Scrollbar When Hover */
+    /* Scrollbar On */
     
     /* ^^ To show scrollbar when hover over something scrollable, remove this line
+        * {
+            scrollbar-width: thin;
+            }
         *:hover {
             scrollbar-color: rgba(255, 255, 255, 1) transparent;
         }
-    } And this line ^^ */
-        
+    And this line ^^ */   
+       
         /* Player Page Background */
     
        /* ^^ To also apply the filter from the "Variables" section to the player page (the lyrics page), remove this line.
-        ytmusic-player-page:before {
+        ytmusic-player-page::before {
             transform: scale(var(--bg-scale));
             opacity: 1;
             filter: blur(calc(var(--bg-blur) * 100px)) saturate(var(--bg-sat)) brightness(var(--bg-brightness));
@@ -93,7 +95,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
             animation-composition: add;
             will-change: transform;
         }
-    } And remove this line. The reason i dont do this myself already is becuz incase someone want to configure it separately with their Better Lyrics Theme ^^ */
+    And remove this line. The reason i dont do this myself already is becuz incase someone want to configure it separately with their Better Lyrics Theme ^^ */
     
         /* Background Transition */
     
@@ -101,11 +103,11 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         ytmusic-app #browse-page ytmusic-section-list-renderer::before,
         ytmusic-app #search-page ytmusic-section-list-renderer::before,
         ytmusic-player-page[is-mweb-modernization-enabled] #main-panel.ytmusic-player-page::before,
-        ytmusic-player-page:before {
+        ytmusic-player-page::before {
             transition: background 0.3s ease-in;
             will-change: background;
         }
-    } And this line. ^^ */
+    And this line. ^^ */
 
     /* Animation Keyframes */
     @keyframes scalePulse {
@@ -137,29 +139,29 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     .stroke.yt-interaction,
     .fill.yt-interaction {
         border: 0;
-        background: transparent
+        background: transparent;
     }
 
     /* Universal Small Art */
     yt-img-shadow[object-fit=CONTAIN] img.yt-img-shadow {
         border-radius: var(--small-art);
-        object-fit: cover !important
+        object-fit: cover !important;
     }
     /* Big Art and Video */
     ytmusic-two-row-item-renderer[aspect-ratio=MUSIC_TWO_ROW_ITEM_THUMBNAIL_ASPECT_RATIO_SQUARE] .image-wrapper.ytmusic-two-row-item-renderer, .image.ytmusic-two-row-item-renderer {
-    border-radius: var(--big-art)
+    border-radius: var(--big-art);
     }
 
     /* Small Art Hover */
     .ytmusic-play-button-renderer,
     .thumbnail-overlay {
         border-radius: var(--small-art);
-        overflow: hidden
+        overflow: hidden;
     }
 
     /* Big Art Hover */
     .thumbnail-overlay.ytmusic-two-row-item-renderer {
-        border-radius: var(--big-art)
+        border-radius: var(--big-art);
     }
     
     /* Cover in Miniplayer and Playerpage */
@@ -168,7 +170,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     ytmusic-player.ytmusic-player-page {
         border-radius: var(--big-art) !important;
         overflow: hidden;
-        box-shadow: var(--drop-shadow)
+        box-shadow: var(--drop-shadow);
         }
         
     /* Selection Overlay When Playing */
@@ -176,7 +178,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     ytmusic-responsive-list-item-renderer[play-button-state=playing],
     ytmusic-responsive-list-item-renderer[play-button-state=paused],
     #items.ytmusic-carousel>ytmusic-multi-row-list-item-renderer.ytmusic-carousel {
-        border-radius: var(--small-art)
+        border-radius: var(--small-art);
     }
     
 /* ===Background=== */
@@ -202,10 +204,6 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         slowRotate 30s linear infinite;
         animation-composition: add;
         will-change: transform;
-    }
-    
-        body {
-        background: rgba(0, 0, 0, 1) !important;
     }
 
     /* Background Fix */
@@ -241,6 +239,8 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         padding: 2px;
         border-right: var(--borderColor);
         backdrop-filter: blur(var(--uiblur));
+        }
+        /* Divider */
         #divider.ytmusic-guide-section-renderer {
             border-top: 0;
         }
@@ -248,35 +248,27 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         /* New Playlist Button */
         .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal {
         background: var(--buttonColor);
-        border: var(--borderColor)
+        border: var(--borderColor);
         }
         .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal:hover {
-        background: rgba(255, 255, 255, .2)
+        background: rgba(255, 255, 255, .2);
         }
-    }
     
     /* Sign in Divider in Drawer*/
      ytmusic-guide-signin-promo-renderer[is-collapsed] {
-        border-top: 0 !important
-    }
-  
-
-    /* Buttons Below Search in Homepage */
-    ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_LARGE_TRANSLUCENT_AND_SELECTED_WHITE] a.ytmusic-chip-cloud-chip-renderer {
-        background: var(--buttonColor);
-        border: var(--borderColor)
+        border-top: 0 !important;
     }
     
     /* The 3 Buttons Above Carousel */
     .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--outline,
     yt-icon-button.ytmusic-carousel-shelf-renderer {
         background: var(--buttonColor);
-        border: var(--borderColor)
+        border: var(--borderColor);
     }
     
     /* Podcast Hover Background Behind the 3 Dots */
     ytmusic-multi-row-list-item-renderer:hover .menu.ytmusic-multi-row-list-item-renderer,ytmusic-multi-row-list-item-renderer[focus-within] .menu.ytmusic-multi-row-list-item-renderer {
-    background: transparent
+    background: transparent;
     }
     
 
@@ -361,25 +353,25 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     /* Spacing for card on the right */
     .undercards-container.ytmusic-card-shelf-renderer {
         padding: 20px;
-        gap: 16px
+        gap: 16px;
     }
     
     /* Top spacing for the card on the right */
     yt-formatted-string.text.style-scope.ytmusic-message-renderer {
-        margin-top: 0px !important
+        margin-top: 0px !important;
     }
         
     /* Hidden Background */
     .immersive-background.ytmusic-card-shelf-renderer::before {
-        background: transparent
+        background: transparent;
     }
     .thumbnail-container.ytmusic-card-shelf-renderer {
-        border-radius: var(--big-art)
+        border-radius: var(--big-art);
     }
 
     /* Searchpage Divider */
     ytmusic-shelf-renderer:not([is-playlist-detail-page]):not([is-album-detail-page]) #contents.ytmusic-shelf-renderer > *.ytmusic-shelf-renderer:not(:last-child) {
-        border-bottom: 0
+        border-bottom: 0;
     }
 
 /* ===Player Page=== */
@@ -399,14 +391,12 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     
     /* Re-center content in fullscreen */
     @media (min-width: 615px) {
-    ytmusic-player-page:not([is-video-truncation-fix-enabled])[player-fullscreened]:not([blyrics-dfs]) {
-        #player.ytmusic-player-page,
-        #blyrics-song-info {
+    ytmusic-player-page:not([is-video-truncation-fix-enabled])[player-fullscreened]:not([blyrics-dfs]) #player.ytmusic-player-page,
+    ytmusic-player-page:not([is-video-truncation-fix-enabled])[player-fullscreened]:not([blyrics-dfs]) #blyrics-song-info {
         top: 50%;
-            }
         }
         ytmusic-app-layout:not([is-mweb-modernization-enabled])[player-fullscreened]:not([blyrics-dfs])>[slot=player-page] {
-            padding-bottom: 0
+            padding-bottom: 0;
         }
     }
     
@@ -423,9 +413,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
             margin-bottom: 8px;
         }
         border-radius: 8px;
-        transform: translate3d(0,
-        0,
-        1px);
+        transform: translate3d(0, 0, 1px);
         border: 0;
         opacity: 0.825;
         &:hover:not([selected]) {
@@ -434,12 +422,14 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         }
     }
     
-    /* Small Buttons in Upnext */
-    ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_UNKNOWN] a.ytmusic-chip-cloud-chip-renderer,
-    ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_DEFAULT] a.ytmusic-chip-cloud-chip-renderer,
-    ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][chip-style=STYLE_ICON_SECOND] a.ytmusic-chip-cloud-chip-renderer {
+    /* Small Buttons */
+    ytmusic-chip-cloud-chip-renderer[chip-style^=STYLE_] a.ytmusic-chip-cloud-chip-renderer {
         background: var(--buttonColor);
-        border: var(--borderColor);
+        border: var(--borderColor); 
+        color: rgb(255, 255, 255);
+    }
+    ytmusic-chip-cloud-chip-renderer[chip-style^=STYLE_] a.ytmusic-chip-cloud-chip-renderer:hover {
+        background: rgba(255, 255, 255, 0.2);
     }
 
     /* Audio-Video Toggle */
@@ -448,44 +438,19 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         backdrop-filter: blur(var(--uiblur));
         border: var(--borderColor);
     }
-    
     ytmusic-av-toggle[toggle-disabled] .av-toggle.ytmusic-av-toggle {
-        opacity: 0.5
+        opacity: 0.5;
     }
-    
     .song-button.ytmusic-av-toggle,
     .video-button.ytmusic-av-toggle {
         background: transparent; 
     }
-
-    /* Save button */
-    ytmusic-chip-cloud-chip-renderer[chip-style=STYLE_TRANSPARENT] a.ytmusic-chip-cloud-chip-renderer {
-        background: var(--buttonColor);
-        color: rgb(255, 255, 255);
-        backdrop-filter: blur(var(--uiblur));
-        border: var(--borderColor);
-    }
-    ytmusic-chip-cloud-chip-renderer[chip-style=STYLE_TRANSPARENT] a.ytmusic-chip-cloud-chip-renderer:hover {
-        background: rgba(255, 255, 255, 0.2);
-    }
-
+    
     /* Player Page Drawer and Nav Top */
     #layout[player-ui-state=PLAYER_PAGE_OPEN] #guide-wrapper,
     #layout[player-ui-state=PLAYER_PAGE_OPEN] #nav-bar-background {
         background: var(--colorOption) !important;
-        border-color: rgba(255, 255, 255, .1) !important;
-    }
-
-    /* Player Page Nav Left */
-    #layout[player-ui-state=PLAYER_PAGE_OPEN] #mini-guide-background {
-        border-color: transparent !important;
-        background: none;
-        backdrop-filter: none !important;
-    }
-    
-    /* Player Bar in Player Page*/
-    #layout[player-ui-state=PLAYER_PAGE_OPEN] #player-bar-background {
-        background: var(--colorOption) !important;
+        border: var(--borderColor) !important;
     }
     
 /* ===Player Bar=== */
@@ -494,7 +459,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     #player-bar-background.ytmusic-app-layout,
     #player-bar-background, ytmusic-player-bar {
         background-color: var(--colorOption);
-        backdrop-filter: blur(var(--uiblur))
+        backdrop-filter: blur(var(--uiblur));
     }
 
     /* Player Bar Art */
@@ -507,7 +472,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     ytmusic-app {
         --ytmusic-player-bar-background: transparent;
         .volume-slider.ytmusic-player-bar, .expand-volume-slider.ytmusic-player-bar {
-        --paper-slider-container-color: rgba(255, 255, 255, .5)
+        --paper-slider-container-color: rgba(255, 255, 255, .5);
         }
     }
 
@@ -548,20 +513,20 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     }
     /* Underline */
     .unfocused-line.tp-yt-paper-input-container {
-    border-color: rgba(255, 255, 255, .4)
+    border-color: rgba(255, 255, 255, .4);
     }
     .focused-line.tp-yt-paper-input-container {
-    border-color: white
+    border-color: white;
     }
         /* Toogle Button */
         .ytSwitchShapeTrack {
         background: var(--buttonColor);
         }
         .ytSwitchShapeKnob {
-        background: rgba(255, 255, 255, .3)
+        background: rgba(255, 255, 255, .3);
         }
         .ytSwitchShapeKnobActive {
-        background: rgba(255, 255, 255, .8)
+        background: rgba(255, 255, 255, .8);
         }
         
         /* Playlist Visibility Dropdown */
@@ -600,24 +565,24 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         backdrop-filter: blur(var(--uiblur));
         box-shadow: var(--drop-shadow);
         border-radius: 25px;
-        border: var(--borderColor)
+        border: var(--borderColor);
     } 
 
     /* Add to Playlist Art */
     .thumbnail.ytmusic-playlist-add-to-option-renderer {
-        border-radius: var(--small-art)
+        border-radius: var(--small-art);
     }
 
     /* Add to Playlist Divider */
     .top-bar.ytmusic-add-to-playlist-renderer,
     ytmusic-carousel-shelf-renderer.ytmusic-add-to-playlist-renderer:not(:empty) {
-        border-bottom: 0
+        border-bottom: 0;
     }
 
     /* 3 Dots Dropdown */
     ytmusic-menu-popup-renderer,
     .ytmusicMultiPageMenuHost {
-        display: contents
+        display: contents;
     }
     tp-yt-paper-listbox.ytmusic-menu-popup-renderer {
         --paper-listbox-background-color: var(--colorOption);
@@ -655,7 +620,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         color: rgb(255, 255, 255);
     }
     .yt-spec-button-shape-next--call-to-action-inverse.yt-spec-button-shape-next--text {
-        color: #38a3ff
+        color: #38a3ff;
     }
     
     /* User Dropdown */
@@ -669,10 +634,10 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         border: var(--borderColor);
         box-shadow: var(--drop-shadow);
         backdrop-filter: blur(var(--uiblur));
-        ytd-simple-menu-header-renderer {
-            background: transparent
         }
-    }
+        ytd-simple-menu-header-renderer {
+            background: transparent;
+        }
     /* Settings */
     .category-menu-item.iron-selected.ytmusic-settings-page,
     .category-menu-item.ytmusic-settings-page:focus:not(.iron-selected) {
@@ -680,7 +645,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     border-radius: 8px;
     }
     ytmusic-setting-category-collection-renderer.ytmusic-settings-page {
-    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
     }
         /* Dropdown */
         .dropdown-content.ytmusic-setting-single-option-menu-renderer {
@@ -689,14 +654,14 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         /* Divider */
         .top-bar.ytmusic-settings-page,
         .items.ytmusic-setting-category-collection-renderer>*.ytmusic-setting-category-collection-renderer {
-        border-bottom: 0
+        border-bottom: 0;
         }
     
     /* Toggle Buttons */
     .toggle-bar.tp-yt-paper-toggle-button {
         background-color: rgba(255, 255, 255, 0.4);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        opacity: 0.5
+        opacity: 0.5;
     }
 
     .toggle-button.tp-yt-paper-toggle-button {
@@ -716,7 +681,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     
     /* Link Bar in Share*/
     #bar.yt-copy-link-renderer {
-    background: var(--buttonColor)
+    background: var(--buttonColor);
     }
 
 /* ===Artist Page=== */
@@ -729,11 +694,8 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     /* Artist Header Mask */
     .image.ytmusic-immersive-header-renderer {
         mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-        -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
         mask-repeat: no-repeat;
-        -webkit-mask-repeat: no-repeat;
         mask-size: 100% 100%;
-        -webkit-mask-size: 100% 100%;
     }
 
     /* Artist Header Gradient */
@@ -765,7 +727,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         background: rgba(255, 0, 0, .2);
     }
     ytmusic-subscribe-button-renderer[is-subscribed]:hover {
-        background: rgba(255, 255, 255, .2)
+        background: rgba(255, 255, 255, .2);
     }
     /* Unsub Popup */
     yt-confirm-dialog-renderer[dialog][dialog][dialog],
@@ -789,11 +751,8 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     /* Podcast Header Mask */
     .image.ytmusic-visual-header-renderer {
         mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-        -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
         mask-repeat: no-repeat;
-        -webkit-mask-repeat: no-repeat;
         mask-size: 100% 100%;
-        -webkit-mask-size: 100% 100%;
     }
 
     /* Podcast Header Gradient */
@@ -812,10 +771,10 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     
     /* Play Button */
     .play-pause-button-wrapper.ytmusic-player-controls {
-        transform: scale(1.2)
+        transform: scale(1.2);
     }
     .play-pause-button-wrapper.ytmusic-player-controls:hover {
-        transform: scale(1.4)
+        transform: scale(1.4);
     }
     /* The Other Buttons */
     .next-button.ytmusic-player-controls,
@@ -826,7 +785,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         color: transparent;
         background: transparent !important;
         transition: transform 0.3s ease;
-        margin: 0
+        margin: 0;
     }
     
     /* The Other Buttons Hover */
@@ -901,8 +860,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     .blyrics-container span {
         font-family: "Inter" !important; /* ^^ Font specifically for Player/Lyrics page ^^ */
         font-size: 30px;
-        font-weight: 450 !important;
-        line-height: 1.15;
+        font-weight: 500 !important;
     }
     
     /* Play Button Alignment Fix in Fullscreen - boidu */
@@ -922,11 +880,10 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         border: var(--borderColor);
         backdrop-filter: blur(var(--uiblur));
         transition: opacity 0.3s ease-in;
-        will-change: opacity
+        will-change: opacity;
         }
     .blyrics-footer__discord:hover,
     .autoscroll-resume-button:hover,
     .blyrics-footer__container:hover {
         opacity: 1;
     }
-}
