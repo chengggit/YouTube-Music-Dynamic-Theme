@@ -2,7 +2,7 @@
 
 @name: YouTube Music Dynamic Background Theme
 @author: chengg
-@version: 2.0.4
+@version: 2.0.5
 @description: YouTube Music CSS theme that sets the background to the current song’s cover art with glass like ui.
 @source: https://github.com/chengggit/Youtube-Music-Dynamic-Theme
 
@@ -41,7 +41,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
             }
         
         /* Push the layout back after hiding */
-            ytmusic-app-layout>[slot=player-bar] {
+            ytmusic-app-layout > [slot=player-bar] {
                 width: 100vw;
             }
  
@@ -71,7 +71,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         --buttonColor: rgba(255, 255, 255, .1); /* Buttons' Background Color */
         --big-art: 25px; /* Big Art Border Radius*/
         --small-art: 8px; /* Small Art Border Radius */
-        --drop-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        --drop-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
         --borderColor: transparent; /* Default: 1px solid rgba(255, 255, 255, .1) */
         --albumsize: 400px; /* Album Art Size in Player Page */
         --selectBRad: 8px; /* Border Radius for Smaller Selections */
@@ -119,22 +119,25 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         }
     And this line. ^^ */
 
-    /* Animation Keyframes */
     @keyframes scalePulse {
         0% {
             transform: scale(1.2);
         }
+        
         50% {
             transform: scale(1.3);
         }
+        
         100% {
             transform: scale(1.2);
         }
     }
+    
     @keyframes slowRotate {
         0% {
             transform: rotate(0deg);
         }
+        
         100% {
             transform: rotate(360deg);
         }
@@ -181,20 +184,15 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         border-radius: var(--big-art) !important;
     }
 
-    ytmusic-player[player-ui-state=PLAYER_BAR_ONLY] .html5-video-player, .video-stream {
+    ytmusic-player[player-ui-state=PLAYER_BAR_ONLY] .html5-video-player,
+    .video-stream {
         background: transparent;
         border-radius: 4px;
     }
 
-    /* Art Full Screen Wrapper */
-    ytmusic-player-page:not([is-video-truncation-fix-enabled])[player-fullscreened]:not([blyrics-dfs]) #player.ytmusic-player-page {
+    #player.ytmusic-player-page:not([player-ui-state=PLAYER_BAR_ONLY]) {
         border-radius: var(--big-art);
-        box-shadow: var(--drop-shadow);
-    }
-
-    ytmusic-player-page[mini-player-enabled]:not([player-page-open]) #player.ytmusic-player-page {
-        border-radius: var(--big-art);
-        box-shadow: var(--drop-shadow);
+        box-shadow: var(--drop-shadow) !important;
     }
 
     @media (min-width: 615px) {
@@ -300,7 +298,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal {
         background: var(--buttonColor);
         border: var(--borderColor);
-        
+
         &:hover {
             background: rgba(255, 255, 255, .2);
         }
@@ -323,7 +321,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         position: relative;
         border-radius: var(--small-art);
     }
-    
+
     ytmusic-multi-row-list-item-renderer:hover,
     ytmusic-multi-row-list-item-renderer[focus-within] {
         .menu.ytmusic-multi-row-list-item-renderer {
@@ -338,7 +336,6 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         border: var(--borderColor) !important;
     }
 
-    /* Search Box Opened*/
     ytmusic-search-box[has-query] .search-container.ytmusic-search-box,
     ytmusic-search-box[opened] .search-container.ytmusic-search-box {
         border-radius: 12px;
@@ -440,6 +437,41 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
 
     /* ===Player Page=== */
     
+    ytmusic-app-layout[player-page-open]:not([is-mweb-player-bar-modernization-enabled]) > [slot=player-page] {
+        animation: open-playerpage .5s cubic-bezier(.3, .6, .5, 1);
+    }
+
+    ytmusic-app-layout:not([player-page-open]):not([is-mweb-player-bar-modernization-enabled]) > [slot=player-page] {
+        animation: collapse-playerpage .5s cubic-bezier(.3, .6, .5, 1);
+    }
+
+    @keyframes open-playerpage {
+        0% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes collapse-playerpage {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(120vh);
+            opacity: 0;
+        }
+    }
+
     /* Player Page Background Re-position */
     ytmusic-app-layout:not([is-mweb-modernization-enabled]) > [slot=player-page] {
         position: fixed;
@@ -754,7 +786,7 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
         .toggle-button.tp-yt-paper-toggle-button {
             background-color: rgb(255, 255, 255);
             border: 1px solid rgba(255, 255, 255, 0.1);
-        }          
+        }
     }
 
     /* Link Bar in Share*/
@@ -843,31 +875,12 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
 
     /* ===Mobile View=== */
     
-    .play-pause-button-wrapper.ytmusic-player-controls {
-        color: transparent;
-        background: transparent !important;
-        transform: scale(1.2);
-        will-change: transform;
-        transition: transform 0.3s ease;
-
-        &:hover {
-            transform: scale(1.4);
-        }
+    ytmusic-app-layout[player-page-open][is-mweb-player-bar-modernization-enabled] > [slot=player-page] {
+        animation: open-playerpage .5s cubic-bezier(.3, .6, .5, 1);
     }
 
-    .next-button.ytmusic-player-controls,
-    .previous-button.ytmusic-player-controls,
-    .shuffle.ytmusic-player-controls,
-    .repeat.ytmusic-player-controls {
-        color: transparent;
-        background: transparent !important;
-        will-change: transform;
-        transition: transform 0.3s ease;
-
-        &:hover {
-            background: transparent;
-            transform: scale(1.2);
-        }
+    ytmusic-app-layout[is-mweb-player-bar-modernization-enabled][player-ui-state=PLAYER_BAR_ONLY] > [slot=player-page] {
+        animation: collapse-playerpage .5s cubic-bezier(.3, .6, .5, 1);
     }
 
     ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
@@ -916,6 +929,10 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state=TABS_VIEW] #main-panel.ytmusic-player-page {
         transform: none;
     }
+    
+    ytmusic-player-page[is-mweb-modernization-enabled][transition-mode] #side-panel.ytmusic-player-page {
+        transition: transform .55s cubic-bezier(.3, .6, .5, 1);
+    }
 
     ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state=TABS_VIEW] {
         .av.ytmusic-player-page,
@@ -943,6 +960,33 @@ Note: The background animation may be CPU-intensive on your PC. But it can be di
     ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state=TABS_VIEW] #music-player-wrapper {
         transform: translateY(6.5rem);
         transition: transform 0.3s ease-out;
+    }
+
+    .play-pause-button-wrapper.ytmusic-player-controls {
+        color: transparent;
+        background: transparent !important;
+        transform: scale(1.2);
+        will-change: transform;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.4);
+        }
+    }
+
+    .next-button.ytmusic-player-controls,
+    .previous-button.ytmusic-player-controls,
+    .shuffle.ytmusic-player-controls,
+    .repeat.ytmusic-player-controls {
+        color: transparent;
+        background: transparent !important;
+        will-change: transform;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            background: transparent;
+            transform: scale(1.2);
+        }
     }
 
     /* ===Better Lyrics Extension=== */
