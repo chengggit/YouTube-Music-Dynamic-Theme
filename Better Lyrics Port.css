@@ -2,7 +2,7 @@
 
 @name: YouTube Music Dynamic Background Theme
 @author: chengg
-@version: 2.0.6
+@version: 2.0.6.1
 @description: YouTube Music CSS theme that sets the background to the current song’s cover art with glass like ui.
 @source: https://github.com/chengggit/Youtube-Music-Dynamic-Theme
 
@@ -507,14 +507,9 @@ Note: The background animation may be CPU-intensive on your PC.
         padding-bottom: var(--ytmusic-player-bar-height);
     }
 
-    /* Re-position back to how it was */
-    ytmusic-player-page:not([is-video-truncation-fix-enabled])[player-fullscreened]:not([blyrics-dfs]) #player.ytmusic-player-page,
-    ytmusic-player-page:not([is-video-truncation-fix-enabled])[player-fullscreened]:not([blyrics-dfs]) #blyrics-song-info {
-        top: 50%;
-    }
-
     ytmusic-app-layout:not([is-mweb-modernization-enabled])[player-fullscreened]:not([blyrics-dfs]) > [slot=player-page] {
         padding-bottom: 0;
+        padding-left: 0;
     }
 
     ytmusic-player[player-ui-state=MINIPLAYER] {
