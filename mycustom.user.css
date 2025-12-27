@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YTM Dynamic Theme
 @namespace      https://github.com/chengggit/
-@version        2.0.6
+@version        2.0.6.1
 @preprocessor   stylus
 @description    YouTube Music CSS theme that sets the background to the current song’s cover art with glass like ui.
 @author         chengggit
@@ -513,15 +513,10 @@
         padding-left: var(--ytmusic-guide-width);
         padding-bottom: var(--ytmusic-player-bar-height);
     }
-
-    /* Re-position back to how it was */
-    ytmusic-player-page:not([is-video-truncation-fix-enabled])[player-fullscreened]:not([blyrics-dfs]) #player.ytmusic-player-page,
-    ytmusic-player-page:not([is-video-truncation-fix-enabled])[player-fullscreened]:not([blyrics-dfs]) #blyrics-song-info {
-        top: 50%;
-    }
-
+    
     ytmusic-app-layout:not([is-mweb-modernization-enabled])[player-fullscreened]:not([blyrics-dfs]) > [slot=player-page] {
         padding-bottom: 0;
+        padding-left: 0;
     }
 
     ytmusic-player[player-ui-state=MINIPLAYER] {
@@ -1036,4 +1031,5 @@
             opacity: 1;
         }
     }
+
 }
