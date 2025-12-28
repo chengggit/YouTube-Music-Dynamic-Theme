@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YTM Dynamic Theme
 @namespace      https://github.com/chengggit/
-@version        2.0.6.1
+@version        2.0.6.2
 @preprocessor   stylus
 @description    YouTube Music CSS theme that sets the background to the current song’s cover art with glass like ui.
 @author         chengggit
@@ -30,7 +30,6 @@
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
     /* ===ROOT=== */
-    
     html {
         scrollbar-width: none;
     }
@@ -48,7 +47,8 @@
     if show-scr {
         * {
             scrollbar-width: thin;
-            /*scrollbar-color: transparent transparent;*/ /* On only when hover */
+            /*scrollbar-color: transparent transparent;*/
+            /* On only when hover */
         }
 
         *:hover {
@@ -62,12 +62,12 @@
         margin-right: -10px;
     }
 
-    :root {        
+    :root {
         --albumsize: albumsize;
         --bg-scale: bg-scale;
         --bg-blur: bg-blur;
         --bg-brightness: bg-brightness;
-        --bg-sat: bg-saturate;        
+        --bg-sat: bg-saturate;
         --bg-opac: bg-opac;
         --uiblur: uiblur;
         --colorOption: rgba(0, 0, 0, 0);
@@ -137,7 +137,6 @@
     }
 
     /* ===Art=== */
-    
     /* Background Behind Art */
     ytmusic-player {
         background-color: transparent;
@@ -200,7 +199,6 @@
     }
 
     /* ===Background=== */
-    
     #browse-page::before,
     #search-page::before {
         content: "";
@@ -282,7 +280,6 @@
     }
 
     /* ===Homepage=== */
-    
     /* Nav Bar Top */
     #nav-bar-background.ytmusic-app-layout,
     ytmusic-app-layout.content-scrolled #nav-bar-divider {
@@ -403,7 +400,6 @@
     }
 
     /* ===Search Page=== */
-
     /* Tab Below Search */
     .tab-container.ytmusic-tabs {
         box-shadow: none !important;
@@ -457,7 +453,6 @@
     }
 
     /* ===Player Page=== */
-
     ytmusic-app-layout[player-page-open]:not([is-mweb-player-bar-modernization-enabled]) > [slot=player-page] {
         animation: open-playerpage .5s cubic-bezier(.3, .6, .5, 1);
     }
@@ -513,7 +508,7 @@
         padding-left: var(--ytmusic-guide-width);
         padding-bottom: var(--ytmusic-player-bar-height);
     }
-    
+
     ytmusic-app-layout:not([is-mweb-modernization-enabled])[player-fullscreened]:not([blyrics-dfs]) > [slot=player-page] {
         padding-bottom: 0;
         padding-left: 0;
@@ -565,7 +560,6 @@
     }
 
     /* ===Player Bar=== */
-    
     ytmusic-player-bar,
     #player-bar-background {
         background-color: var(--colorOption);
@@ -617,7 +611,6 @@
     }
 
     /* ===Popup Containers=== */
-
     /* New Playlist From Drawer */
     ytmusic-playlist-form {
         background: transparent;
@@ -709,41 +702,23 @@
     }
 
     /* 3 Dots Dropdown */
-    ytmusic-menu-popup-renderer,
-    .ytmusicMultiPageMenuHost {
-        display: contents;
-    }
-
-    tp-yt-paper-listbox.ytmusic-menu-popup-renderer {
-        --paper-listbox-background-color: var(--colorOption);
-        border: var(--borderColor);
+    tp-yt-iron-dropdown.ytmusic-popup-container {
+        background: var(--colorOption);
         backdrop-filter: blur(var(--uiblur));
         border-radius: 25px;
         box-shadow: var(--drop-shadow);
-    }
-
-    #items.ytmusic-menu-popup-renderer > .ytmusic-menu-popup-renderer:hover {
-        border-radius: var(--selectBRad);
-    }
-
-    /* Notice Popup */
-    tp-yt-paper-toast,
-    tp-yt-paper-toast.yt-notification-action-renderer,
-    #toast.ytmusic-notification-text-renderer {
-        background: var(--colorOption);
-        border-radius: 8px;
         border: var(--borderColor);
-        box-shadow: var(--drop-shadow);
-        backdrop-filter: blur(var(--uiblur));
+        overflow: hidden;
     }
 
-    #text.yt-notification-action-renderer,
-    #sub-text.yt-notification-action-renderer {
-        color: white;
+    tp-yt-paper-listbox.ytmusic-menu-popup-renderer {
+        --paper-listbox-background-color: transparent;
+        border: 0;
     }
 
-    .yt-spec-button-shape-next--call-to-action-inverse.yt-spec-button-shape-next--text {
-        color: #38a3ff;
+    .ytmusic-menu-popup-renderer {
+        border-radius: var(--selectBRad);
+        overflow: hidden;
     }
 
     /* User Dropdown */
@@ -752,11 +727,7 @@
         --yt-endpoint-hover-color: #b0daff;
         --yt-compact-link-icon-color: white;
         --yt-spec-outline: transparent;
-        background: var(--colorOption);
-        border-radius: 25px;
-        border: var(--borderColor);
-        box-shadow: var(--drop-shadow);
-        backdrop-filter: blur(var(--uiblur));
+        background: transparent;
     }
 
     ytd-simple-menu-header-renderer {
@@ -819,8 +790,27 @@
         border: var(--borderColor);
     }
 
-    /* ===Artist Page=== */
+    /* Notice Popup */
+    tp-yt-paper-toast,
+    tp-yt-paper-toast.yt-notification-action-renderer,
+    #toast.ytmusic-notification-text-renderer {
+        background: var(--colorOption);
+        border-radius: 8px;
+        border: var(--borderColor);
+        box-shadow: var(--drop-shadow);
+        backdrop-filter: blur(var(--uiblur));
+    }
 
+    #text.yt-notification-action-renderer,
+    #sub-text.yt-notification-action-renderer {
+        color: white;
+    }
+
+    .yt-spec-button-shape-next--call-to-action-inverse.yt-spec-button-shape-next--text {
+        color: #38a3ff;
+    }
+
+    /* ===Artist Page=== */
     /* Hidden Background */
     ytmusic-immersive-header-renderer {
         background-color: var(--ytmusic-app);
@@ -896,7 +886,6 @@
     }
 
     /* ===Mobile View=== */
-    
     .play-pause-button-wrapper.ytmusic-player-controls {
         color: transparent;
         background: transparent !important;
@@ -1004,7 +993,6 @@
     }
 
     /* ===Better Lyrics Extension=== */
-    
     .blyrics-container span {
         font-family: "Inter" !important;
         font-size: 30px;
@@ -1031,5 +1019,4 @@
             opacity: 1;
         }
     }
-
 }
