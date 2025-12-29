@@ -10,23 +10,26 @@
 @license        MIT License
 
 @var select theme "Theme" ["default:Default", "light:Light Mode", "dark:Dark Mode", "custom:Custom"]
+
 @var text font "Font (e.g. font1, font2)" "Inter"
 @var number font-weight1 "Font weight" 400
 @var range lyrics-font-size "Lyrics font size" [30, 0, 100, 1, 'px']
 @var number lyrics-font-weight "Lyrics font weight" 500
 @var color text-color-1 "Primary text color" white
 @var color text-color-2 "Secondary text color" white
+@var color accent "Accent" white
+
 @var select background1 "Background type" ["dynamic:Dynamic", "backgroundimg:Image", "color:Static Color"]
 @var color background-colour "Static color background" black
 @var text background-url "Image URL (e.g. 'yourimg.url')" "'https://i.redd.it/aqt7ct7kw2ag1.jpeg'"
-@var range    bg-blur          'Background blur' [0.6, 0, 5, 0.1]
-@var range   bg-brightness           'Background brightness' [0.7, 0, 10, 0.1]
-@var range    bg-saturate           'Background saturation' [1.5, 0.1, 10, 0.1]
-@var range    bg-scale               'Background scale' [1.4, 0, 3, 0.1]
-@var number    bg-rotation-speed              'BG Rotating speed (0 = disable)' [0, 0, 100, 's']
-@var number    bg-scale-speed               'BG Breathing effect (0 = disable)' [0, 0, 100, 's']
+@var range bg-blur 'Background blur' [0.6, 0, 5, 0.1]
+@var range bg-brightness 'Background brightness' [0.7, 0, 10, 0.1]
+@var range bg-saturate 'Background saturation' [1.5, 0.1, 10, 0.1]
+@var range bg-scale 'Background scale' [1.4, 0, 3, 0.1]
+@var number bg-rotation-speed 'BG Rotating speed (0 = disable)' [0, 0, 100, 's']
+@var number bg-scale-speed 'BG Breathing effect (0 = disable)' [0, 0, 100, 's']
 @var checkbox bg-fade "Background transition" 1
-@var color accent "Accent" white
+
 @var color layout-color "Layout color" transparent
 @var color layout-contrast "Layout contrast" rgba(255,255,255,0.1)
 @var color layout-hover "Layout hover" rgba(255,255,255,0.1)
@@ -35,12 +38,15 @@
 @var color button-color "Button color" rgba(255,255,255,0.1)
 @var color button-hover "Button hover" rgba(255,255,255,0.2)
 @var color button-border "Button border" rgba(0,0,0,0)
+
 @var range select-radius "Select border radius" [8, 0, 100, 1, 'px']
 @var range big-select-radius "Big select border radius" [12, 0, 100, 1, 'px']
 @var range small-art-radius "Small cover border radius" [8, 0, 100, 1, 'px']
 @var range big-art-radius "big cover border radius" [25, 0, 100, 1, 'px']
+
 @var number album-art-size 'Album art size in player page' [400, 0, 800, 'px']
 @var range player-page-opacity "Player background transparency" [1, 0, 1, 0.1]
+@var checkbox show-skip-buttons "Show skip buttons on player bar" 1
 @var checkbox small-video "Revert back to small video" 0
 @var checkbox left-align-artists "Left align all artists' lines" 0
 @var number lyric-scroll-duration "Lyric scroll animation duration" [0.5, 0, 60, 0.1, 's']
@@ -144,6 +150,10 @@
         color: var(--accent) !important;
     }
 
+.index.ytmusic-responsive-list-item-renderer {
+  color: var(--text-color-2);
+}
+
     tp-yt-paper-ripple.tp-yt-paper-tab {
         color: transparent;
     }
@@ -194,7 +204,7 @@
 
     /* Player Page Art */
     ytmusic-player[player-ui-state] #song-media-window {
-        background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0) 40%);
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 40%);
         border-radius: var(--big-art-radius);
     }
 
@@ -403,16 +413,15 @@
         color: var(--accent) !important;
     }
 
-    #divider.ytmusic-guide-section-renderer {
-        border-top: 0;
-    }
+#divider {
+  border: 0 !important;
+}
 
     /* New Playlist Button */
     .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal {
         background: var(--button-color);
         border: var(--button-border);
         color: var(--text-color-1);
-
         &:hover {
             background: var(--button-hover);
             border: var(--button-border);
@@ -424,7 +433,6 @@
         background: var(--button-color);
         border: var(--button-border);
         color: var(--accent);
-
         &:hover {
             background: var(--button-hover);
         }
@@ -705,13 +713,19 @@
     }
 
     ytmusic-player-bar.ytmusic-app {
-        transition: background 0.3s ease,
-            bottom .5s;
+        transition: background 0.3s ease, bottom .5s;
     }
 
     #layout[player-ui-state="PLAYER_PAGE_OPEN"] ytmusic-player-bar,
     #layout[player-ui-state="PLAYER_PAGE_OPEN"] #player-bar-background {
         background: transparent !important;
+    }
+
+    if show-skip-buttons {
+        ytmusic-player-bar yt-icon-button[hidden],
+        yt-icon-button.rewind-button {
+            display: inline-flex !important;
+        }
     }
 
     /* Song Info */
@@ -842,7 +856,6 @@
 
     ytmusic-dropdown-item-renderer {
         background: transparent;
-
         &:hover,
         &:focus {
             background: var(--layout-hover);
@@ -1055,6 +1068,23 @@
         border: var(--layout-border);
     }
 
+    #checkbox.tp-yt-paper-checkbox {
+        border-color: var(--accent);
+        --paper-checkbox-checked-color: var(--accent);
+        }
+
+    .yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--filled {
+        color: var(--text-color-1);
+        background: var(--accent);
+        &:hover {
+            background: color-mix(in oklch, var(--accent) 70%, white 30%);
+        }
+    }
+
+    yt-formatted-string.yt-start-at-renderer {
+        color: var(--text-color-2);
+    }
+
     ytmusic-navigation-button-renderer[is-web-delhi-icons-enabled] button.ytmusic-navigation-button-renderer {
         border-radius: 12px;
         background: var(--button-color);
@@ -1091,6 +1121,10 @@
             border: var(--button-border);
         }
     }
+    
+    yt-card-item-container-renderer {
+  border: 0;
+}
 
     /* ==========================Artist Page========================== */
     ytmusic-immersive-header-renderer {
@@ -1131,16 +1165,19 @@
 
     /* Sub Button */
     ytmusic-subscribe-button-renderer {
-        background: rgba(255,0,0,.1);
+        --ytmusic-subscribe-button-outline-color: transparent;
+        --ytmusic-subscribe-button-color: text-color-1;
+        background: var(--accent);
         border-radius: 18px;
-        border: 0 !important;
         backdrop-filter: blur(var(--layout-blur));
+        border: var(--button-border);
         &:hover {
-            background: rgba(255,0,0,.2);
+            background: color-mix(in oklch, var(--accent) 70%, white 30%);
         }
     }
 
     ytmusic-subscribe-button-renderer[is-subscribed] {
+        --ytmusic-subscribe-button-outline-color: transparent;
         --ytmusic-subscribe-button-color: var(--accent);
         background: var(--button-color);
         backdrop-filter: blur(var(--layout-blur));
@@ -1171,6 +1208,17 @@
     }
 
     /* ==========================Podcast========================== */
+    tp-yt-paper-listbox.ytmusic-playback-rate-popup-renderer {
+        border: var(--layour-border);
+        --paper-listbox-background-color: transparent;
+    }
+
+    tp-yt-paper-item.ytmusic-playback-rate-popup-renderer {
+        --ytmusic-menu-item-hover-background-color: var(--layout-hover);
+        color: var(--text-color-1);
+        border-radius: var(--select-radius);
+    }
+
     /* Podcast Header */
     ytmusic-visual-header-renderer[has-banner-image] .gradient-container.ytmusic-visual-header-renderer {
         background: transparent;
@@ -1188,7 +1236,7 @@
     }
 
     .subtitle.ytmusic-multi-row-list-item-renderer {
-        color: $text-color-2;
+        color: var(--text-color-2);
     }
 
     /* Podcast Focused */
@@ -1236,7 +1284,7 @@
         content: "";
         position: fixed;
         inset: -5rem;
-        background: background;
+        background: var(--blyrics-background-img);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
