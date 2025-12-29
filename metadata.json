@@ -1,0 +1,23 @@
+{
+  "id": "dynamic-background",
+  "title": "\u0017Dynamic Background",
+  "creators": [
+    "chengggit"
+  ],
+  "minVersion": "2.2.0",
+  "hasShaders": false,
+  "version": "3.0.0",
+  "tags": [
+    "dark",
+    "light",
+    "colorful",
+    "animated",
+    "glassmorphism"
+  ],
+  "images": [
+    "preview.png",
+    "preview1.jpg",
+    "preview2.jpg",
+    "bgpreview.webp"
+  ]
+}
