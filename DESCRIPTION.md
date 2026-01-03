@@ -1,6 +1,6 @@
 # Dynamic Background
 
-![](/images/Main.webp)
+![](https://github.com/chengggit/YouTube-Music-Dynamic-Theme/blob/revamp/images/Main.webp?raw=true)
 A custom YouTube Music CSS theme that sets the background to the currently playing song’s cover with blur, subtle animations, and a glass-like UI for a modern look.
 
 **Note:** Background animations may be CPU-intensive, but can be easily toggled on or off.
@@ -8,6 +8,7 @@ A custom YouTube Music CSS theme that sets the background to the currently playi
 More information is available in the main [README](https://github.com/chengggit/Youtube-Music-Dynamic-Theme).
 
 ## Table of Contents
+
 - [Features](#features)
 - [Previews](#previews)
 - [License](#license)
@@ -15,6 +16,7 @@ More information is available in the main [README](https://github.com/chengggit/
 - [Credits](#credits)
 
 ## Features
+
 - Full site-wide theme for YouTube Music
 - Dynamic backgrounds that change with the currently playing song
 - Light and Dark modes with adjustable colors and settings
@@ -23,15 +25,23 @@ More information is available in the main [README](https://github.com/chengggit/
 - Easy-to-edit variables for quick personalization
 
 ## Previews
-![](/images/bgpreview.webp)
+
+![](https://github.com/chengggit/YouTube-Music-Dynamic-Theme/blob/revamp/images/bgpreview.webp?raw=true)
+
 ### Default
-![](/images/Default.webp)
+
+![](https://github.com/chengggit/YouTube-Music-Dynamic-Theme/blob/revamp/images/Default.webp?raw=true)
+
 ### Light Preset
-![](/images/Light2.webp)
+
+![](https://github.com/chengggit/YouTube-Music-Dynamic-Theme/blob/revamp/images/Light2.webp?raw=true)
+
 ### Dark Preset
-![](/images/Dark.webp)
+
+![](https://github.com/chengggit/YouTube-Music-Dynamic-Theme/blob/revamp/images/Dark.webp?raw=true)
 
 ## License
+
 This theme is licensed under the **MIT License**, allowing you to use, modify, and redistribute it. If you reuse or fork any part of the theme, please credit the original project and preserve this license notice. Any code snippets borrowed from other themes are already credited within this repository.
 
 ## Compatibility
@@ -43,6 +53,7 @@ This theme is licensed under the **MIT License**, allowing you to use, modify, a
 - [walm-git's Modern YouTube Music Theme](https://github.com/walm-git/Modern-YouTube-Music-Theme), which served as the base CSS for this theme.
 
 Snippets used in this theme:
+
 - Background Fix: [Mixcraftio's Customisable Youtube Music Theme V3](https://userstyles.world/style/6678/customisable-youtube-music-theme-v3)
 - Search Box and Song Timestamp: [zgoly's YouTube Music Frosted Glass](https://userstyles.world/style/6219/youtube-music-frosted-glass)
 
