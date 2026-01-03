@@ -1,6 +1,6 @@
 # Dynamic Background
 
-![](https://github.com/chengggit/YouTube-Music-Dynamic-Theme/blob/revamp/images/Main.webp?raw=true)
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/revamp/images/Main.webp)
 A custom YouTube Music CSS theme that sets the background to the currently playing song’s cover with blur, subtle animations, and a glass-like UI for a modern look.
 
 **Note:** Background animations may be CPU-intensive, but can be easily toggled on or off.
@@ -26,19 +26,19 @@ More information is available in the main [README](https://github.com/chengggit/
 
 ## Previews
 
-![](https://github.com/chengggit/YouTube-Music-Dynamic-Theme/blob/revamp/images/bgpreview.webp?raw=true)
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/revamp/images/bgpreview.webp)
 
 ### Default
 
-![](https://github.com/chengggit/YouTube-Music-Dynamic-Theme/blob/revamp/images/Default.webp?raw=true)
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/revamp/images/Default.webp)
 
 ### Light Preset
 
-![](https://github.com/chengggit/YouTube-Music-Dynamic-Theme/blob/revamp/images/Light2.webp?raw=true)
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/revamp/images/Light2.webp)
 
 ### Dark Preset
 
-![](https://github.com/chengggit/YouTube-Music-Dynamic-Theme/blob/revamp/images/Dark.webp?raw=true)
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/revamp/images/Dark.webp)
 
 ## License
 
