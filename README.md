@@ -47,32 +47,54 @@ After installing the required extensions, choose one of the methods below:
 
 #### Install with Better Lyrics
 
-1. Download and import the [**Better Lyrics Port.css**](https://github.com/chengggit/Youtube-Music-Dynamic-Theme/blob/main/Better%20Lyrics%20Port.css) in the Better Lyrics theme section.
+Method 1: Install from the Theme Marketplace
 
-- Or copy the content of the file and paste it directly into the Better Lyrics theme section.
+1. Open the Better Lyrics extension and go to the Themes section.
+2. Open the Theme Marketplace and search for “Dynamic Background”.
+3. Click Install.
+4. After installing, go back to Themes, open Installed Themes, and click Apply.
 
-#### Alternative Methods
+---
+
+Method 2: Install using the repository link
+
+1. Copy the repository link.
+2. Open the Theme Marketplace, then click Install from URL (or press U on your keyboard).
+3. Paste the link and click Install.
+
+Grant permission if prompted.
+
+#### Manual Installation
 
 <details>
-  <summary>Method 2: Local Files</summary>
+  <summary>Better Lyrics </summary>
 
-1. Download the **UserCSS (.user.css)** above or [click here to redirect](https://github.com/chengggit/Youtube-Music-Dynamic-Theme/blob/main/mycustom.user.css).
+1. Download and import the [style.rics](/style.rics) in the Better Lyrics theme section.
 
-2. **Firefox**: Drag and drop the file into your browser.
-
-   **Chrome**: Drag and drop the file into an open **Stylus** page like the manager or the popup.
-
-3. The installation page will open in a new tab.
+- Or copy the content of the file and paste it directly into the Better Lyrics theme section.
 
 </details>
 
 <details>
  
-  <summary>Method 3: Manual Stylus</summary>
+  <summary>Stylus</summary>
+Method 1: Copy Pasting
 
-1. Copy the content from **UserCSS** file above or [click here to redirect](https://github.com/chengggit/Youtube-Music-Dynamic-Theme/blob/main/mycustom.user.css).
+1. Copy the content from UserCSS file above or [click here to redirect](/mycustom.user.css).
 
-2. Paste it into **Stylus** and save. Make sure it is enabled.
+2. Paste it into Stylus and save. Make sure it is enabled.
+
+---
+
+Method 2: Local File
+
+1. Download the UserCSS above or [click here to redirect](/mycustom.user.css).
+
+2. **Firefox**: Drag and drop the file into your browser.
+
+   **Chrome**: Drag and drop the file into an open Stylus page like the manager or the popup.
+
+3. The installation page will open in a new tab.
 
 </details>
 
@@ -84,11 +106,11 @@ After installing the required extensions, choose one of the methods below:
 
 ![](/images/Default.webp)
 
-### Light Theme
+### Light Preset
 
 ![](/images/Light2.webp)
 
-### Dark Theme
+### Dark Preset
 
 ![](/images/Dark.webp)
 
@@ -116,23 +138,7 @@ Check if there’s a **raw GitHub** link inside, like the image above. If not, i
 
 #### For Stylus Users
 
-Open the extension tab, click on the cog button to show options.
-| Options | Default Values |
-|----------|----------|
-| Dark Theme | Off |
-| Dim Background In Dark Mode | On |
-| Also Applies Background Filter To Player Page | On |
-| Background Blur | 0.6 |
-| Background Brightness | 0.7 |
-| Background Saturation | 1.5 |
-| Background Scale | 1.4 |
-| BG Rotating Speed (0 = disable) | 30 |
-| BG Breathing Effect (0 = disable) | 8 |
-| BG Transition (may lag when song switches) | Off |
-| UI Backdrop | 10px |
-| Disable Border | On |
-| Album Art Size In Player Page | 400 |
-| Player Background Opacity | 1 |
+Open the extension tab, click on the cog button next to the theme to show options.
 
 #### Better Lyrics
 
@@ -142,7 +148,7 @@ Configuration instructions can be found at the top of the theme’s README insid
 
 #### Compatibility
 
-- Works with Better Lyrics v2.1.1+
+- Works with Better Lyrics V0.0.0
 
 ## License
 

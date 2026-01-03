@@ -5,9 +5,9 @@ A custom YouTube Music CSS theme that sets the background to the currently playi
 
 **Note:** Background animations may be CPU-intensive, but can be easily toggled on or off.
 
-More information is available in the main [README](/README.md).
+More information is available in the main [README](https://github.com/chengggit/Youtube-Music-Dynamic-Theme).
 
-## Contents
+## Table of Contents
 - [Features](#features)
 - [Previews](#previews)
 - [License](#license)
@@ -26,9 +26,9 @@ More information is available in the main [README](/README.md).
 ![](/images/bgpreview.webp)
 ### Default
 ![](/images/Default.webp)
-### Light Theme
+### Light Preset
 ![](/images/Light2.webp)
-### Dark Theme
+### Dark Preset
 ![](/images/Dark.webp)
 
 ## License
@@ -36,7 +36,7 @@ This theme is licensed under the **MIT License**, allowing you to use, modify, a
 
 ## Compatibility
 
-- Works with Better Lyrics v2.1+
+- Works with Better Lyrics v0.0.0
 
 ## Credits
 
