@@ -1,6 +1,5 @@
 # Dynamic Background
 
-![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/revamp/images/Main.webp)
 A custom YouTube Music CSS theme that sets the background to the currently playing song’s cover with blur, subtle animations, and a glass-like UI for a modern look.
 
 **Note:** Background animations may be CPU-intensive, but can be easily toggled on or off.
@@ -46,7 +45,7 @@ This theme is licensed under the **MIT License**, allowing you to use, modify, a
 
 ## Compatibility
 
-- Works with Better Lyrics v0.0.0
+- Works with Better Lyrics v2.2.0+
 
 ## Credits
 
