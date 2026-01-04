@@ -1,8 +1,3 @@
-/* =====
- @name: Dynamic Background V3.0.0.3
- @source: https://github.com/chengggit/Youtube-Music-Dynamic-Theme
-===== */
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 // default | light | dark
@@ -43,7 +38,8 @@ $lyrics-font-weight: 500;
 $lyrics-font-size: 30px;
 $album-art-size: 400px;
 $small-video: off; // revert back to small video in player page
-$unified-artists-lines: off; // left-align all singers' lines
+$unified-artists-lines: off; // use one text alignment for all singers
+
 // Animations
 $lyric-scroll-duration: 0.5s;
 $lyric-scroll-timing: ease-in-out;
@@ -924,6 +920,10 @@ ytmusic-dialog {
   border-radius: 24px;
 }
 
+.ytmusic-playlist-form .dropdown-content.tp-yt-paper-menu-button {
+  left: 12rem
+}
+
 .dropdown-content.ytmusic-dropdown-renderer {
   background: transparent;
   backdrop-filter: blur(var(--layout-blur));
@@ -1151,6 +1151,10 @@ ytmusic-play-button-renderer.ytmusic-responsive-header-renderer {
   &:hover {
     background: var(--button-hover) !important;
   }
+}
+
+.ytmusic-responsive-header-renderer .yt-simple-endpoint:hover {
+  background: var(--button-hover);
 }
 
 /* Song select Dialog */
@@ -1473,7 +1477,7 @@ ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state="TABS_VI
   transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding-top 0.5s ease-in-out;
 }
 
-@if $left-align-artists == on {
+@if $unified-artists-lines == on {
   .blyrics--line[data-agent="v2"],
   .blyrics--line[data-agent="v3"],
   .blyrics--line[data-agent="v1000"] {
