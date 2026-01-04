@@ -45,7 +45,7 @@ This theme is licensed under the **MIT License**, allowing you to use, modify, a
 
 ## Compatibility
 
-- Works with Better Lyrics v2.2.0+
+- Works with Better Lyrics v2.2.0 Canary+
 
 ## Credits
 

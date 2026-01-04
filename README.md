@@ -43,7 +43,7 @@ After installing the required extensions, choose one of the methods below:
 
 1. Click this button below to install.
 
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.user.css)
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)]()
 
 #### Install with Better Lyrics
 
@@ -148,7 +148,7 @@ Configuration instructions can be found at the top of the theme’s README insid
 
 #### Compatibility
 
-- Works with Better Lyrics V0.0.0
+- Works with Better Lyrics V2.2.0 Canary+
 
 ## License
 
