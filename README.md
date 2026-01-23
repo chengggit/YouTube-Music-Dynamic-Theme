@@ -30,7 +30,8 @@ Requires **Better Lyrics** extension for the dynamic background and time-synced 
 First install [Better Lyrics Extension For Youtube Music](https://better-lyrics.boidu.dev/). Once the extension is installed, you can choose one of the following methods to install the themes:
 
 #### Installation Methods:
-Method 1: Manual Install 
+
+Method 1: Manual Install
 
 1. Download and import the [Better Lyrics Port.css](/Better%20Lyrics%20Port.css) in the Better Lyrics theme section.
 
@@ -57,14 +58,17 @@ Method 3: Install using the repository link
 
 Grant permission if prompted.
 
+---
+
 #### Install with Stylus
+
 **Stylus version will stay at V2.0.6.2 and will not receive further updates.**
 
- [Stylus Extension](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en) is needed.
+[Stylus Extension](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en) is needed.
 
 1. Click this button below to install.
 
-    [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.user.css)
+   [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.user.css)
 
 **Unfortunately, I’ve decided to discontinue the Stylus theme. Maintaining and porting two separate versions for Stylus and Better Lyrics has become too draining, so it will no longer receive updates.**
 
@@ -96,7 +100,7 @@ Configuration instructions can be found at the top of the theme’s README insid
 ## Compatibility
 
 - Dynamic Background V2.0.6.2, Better Lyrics V2.1.0+ is recommended. Older versions might work, but it’s not guaranteed.
-- Dynamic Background V3.0.0 Preview only works with Better Lyrics V2.2.0 Canary and above.
+- Dynamic Background V3.0.0 Preview only works with Better Lyrics V2.2.0 Canary (beta) and above.
 
 ## License
 
