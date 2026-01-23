@@ -2,8 +2,6 @@
 
 A custom YouTube Music CSS theme that sets the background to the currently playing song’s cover with blur, subtle animations, and a glass-like UI for a modern look.
 
-**Note:** Background animations may be CPU-intensive, but can be easily toggled on or off.
-
 More information is available in the main [README](https://github.com/chengggit/Youtube-Music-Dynamic-Theme).
 
 ## Table of Contents
@@ -20,8 +18,7 @@ More information is available in the main [README](https://github.com/chengggit/
 - Dynamic backgrounds that change with the currently playing song
 - Light and Dark modes with adjustable colors and settings
 - Modern UI with glassmorphism and rounded corners
-- Background animations you can toggle on or off
-- Easy-to-edit variables for quick personalization
+- Easy-to-edit variables for customization
 
 ## Previews
 

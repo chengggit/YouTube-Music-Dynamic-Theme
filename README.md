@@ -22,7 +22,6 @@ Requires **Better Lyrics** extension for the dynamic background and time-synced 
 - Dynamic backgrounds that change with the currently playing song
 - Light and Dark modes with adjustable colors and settings
 - Modern UI with glassmorphism and rounded corners
-- Background animations you can toggle on or off
 - Easy-to-edit variables for quick personalization
 
 ## Installation
@@ -46,8 +45,14 @@ After installing the required extensions, choose one of the methods below:
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)]()
 
 #### Install with Better Lyrics
+Method 1: Manual Install 
 
-Method 1: Install from the Theme Marketplace
+1. Download and import the [Better Lyrics Port.css](/Better%20Lyrics%20Port.css) in the Better Lyrics theme section.
+
+- Or copy the content of the file and paste it directly into the Better Lyrics theme section.
+
+#### Methods below is for [Dynamic Background V3.0.0 Preview](style.rics). Only compatible with Better Lyrics V2.2.0 Canary(beta) and above.
+Method 2: Install from the Theme Marketplace
 
 1. Open the Better Lyrics extension and go to the Themes section.
 2. Open the Theme Marketplace and search for “Dynamic Background”.
@@ -56,7 +61,7 @@ Method 1: Install from the Theme Marketplace
 
 ---
 
-Method 2: Install using the repository link
+Method 3: Install using the repository link
 
 1. Copy the repository link.
 2. Open the Theme Marketplace, then click Install from URL (or press U on your keyboard).
@@ -65,15 +70,6 @@ Method 2: Install using the repository link
 Grant permission if prompted.
 
 #### Manual Installation
-
-<details>
-  <summary>Better Lyrics </summary>
-
-1. Download and import the [style.rics](/style.rics) in the Better Lyrics theme section.
-
-- Or copy the content of the file and paste it directly into the Better Lyrics theme section.
-
-</details>
 
 <details>
  
@@ -146,9 +142,10 @@ Configuration instructions can be found at the top of the theme’s README insid
 
 ---
 
-#### Compatibility
+### Compatibility
 
-- Works with Better Lyrics V2.2.0 Canary+
+- Dynamic Background V2.0.6.2, Better Lyrics V2.1.0+ is recommended. Older versions might work, but it’s not guaranteed.
+- Dynamic Background V3.0.0 Preview only works with Better Lyrics V2.2.0 Canary and above.
 
 ## License
 
