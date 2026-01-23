@@ -12,7 +12,8 @@ Requires **Better Lyrics** extension for the dynamic background and time-synced 
 - [Features](#features)
 - [Installation](#installation)
 - [Previews](#previews)
-- [Usage](#usage)
+- [Configuration](#configuration)
+- [Compatibility](#compatibility)
 - [License](#license)
 - [Credits](#credits)
 
@@ -26,25 +27,9 @@ Requires **Better Lyrics** extension for the dynamic background and time-synced 
 
 ## Installation
 
-### Extensions Needed
+First install [Better Lyrics Extension For Youtube Music](https://better-lyrics.boidu.dev/). Once the extension is installed, you can choose one of the following methods to install the themes:
 
-- [Better Lyrics Extension For Youtube Music](https://better-lyrics.boidu.dev/). **Required**
-- **Stylus** Extension for [Chrome](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/). **Optional (Recommended for Easier Setup and Customization)**.
-
-**Browser Notes:**
-
-- Background transitions don’t work in Firefox yet.
-- Search box background blur only works in Firefox, not sure why it doesn’t in Chromium-based browsers.
-
-After installing the required extensions, choose one of the methods below:
-
-#### Install with Stylus
-
-1. Click this button below to install.
-
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)]()
-
-#### Install with Better Lyrics
+#### Installation Methods:
 Method 1: Manual Install 
 
 1. Download and import the [Better Lyrics Port.css](/Better%20Lyrics%20Port.css) in the Better Lyrics theme section.
@@ -53,7 +38,8 @@ Method 1: Manual Install
 
 Dynamic Background is now a built-in theme. Use the latest Better Lyrics version for updates.
 
-#### Methods below is for [Dynamic Background V3.0.0 Preview](style.rics). Only compatible with Better Lyrics V2.2.0 Canary(beta) and above.
+> Note: Methods below is for [Dynamic Background V3.0.0 Preview](/style.rics) and require Better Lyrics V2.2.0 Canary (beta) and above.
+
 Method 2: Install from the Theme Marketplace
 
 1. Open the Better Lyrics extension and go to the Themes section.
@@ -71,30 +57,21 @@ Method 3: Install using the repository link
 
 Grant permission if prompted.
 
-#### Manual Installation
+#### Install with Stylus
+**Stylus version will stay at V2.0.6.2 and will not receive further updates.**
 
-<details>
- 
-  <summary>Stylus</summary>
-Method 1: Copy Pasting
+ [Stylus Extension](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en) is needed.
 
-1. Copy the content from UserCSS file above or [click here to redirect](/mycustom.user.css).
+1. Click this button below to install.
 
-2. Paste it into Stylus and save. Make sure it is enabled.
+    [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.user.css)
 
----
+**Unfortunately, I’ve decided to discontinue the Stylus theme. Maintaining and porting two separate versions for Stylus and Better Lyrics has become too draining, so it will no longer receive updates.**
 
-Method 2: Local File
+**Browser Notes:**
 
-1. Download the UserCSS above or [click here to redirect](/mycustom.user.css).
-
-2. **Firefox**: Drag and drop the file into your browser.
-
-   **Chrome**: Drag and drop the file into an open Stylus page like the manager or the popup.
-
-3. The installation page will open in a new tab.
-
-</details>
+- Background transitions don’t work in Firefox yet.
+- Search box background blur only works in Firefox, not sure why it doesn’t in Chromium-based browsers.
 
 ## Previews
 
@@ -112,39 +89,11 @@ Method 2: Local File
 
 ![](/images/Dark.webp)
 
-## Usage
-
-### How to Update (Stylus only)
-
-1. Click **Manage** in the extension tab to open the style manager.
-
-<img width="248" height="124" alt="aRxFAtBDmo" src="https://github.com/user-attachments/assets/9dd2ca6d-b791-4dd2-a626-a9685533340e" />
-
-2. In style manager, click the update icon.
-
-<img width="387" height="40" alt="msedge_HinJekvKSW" src="https://github.com/user-attachments/assets/15d35ce7-91a4-454f-9bcb-79ef00d2eacb" />
-
-If you don’t see the update icon, make sure **Check for updates** is enabled in the editor: click the style name and check the left-hand tab for the option.
-
-<img width="226" height="88" alt="msedge_rFbiu7squH" src="https://github.com/user-attachments/assets/55c70dc8-6fad-462a-bb7d-651558d9eadb" />
-
-Check if there’s a **raw GitHub** link inside, like the image above. If not, it’s best to reinstall the theme with Stylus.
-
----
-
-### Configuration
-
-#### For Stylus Users
-
-Open the extension tab, click on the cog button next to the theme to show options.
-
-#### Better Lyrics
+## Configuration
 
 Configuration instructions can be found at the top of the theme’s README inside the CSS.
 
----
-
-### Compatibility
+## Compatibility
 
 - Dynamic Background V2.0.6.2, Better Lyrics V2.1.0+ is recommended. Older versions might work, but it’s not guaranteed.
 - Dynamic Background V3.0.0 Preview only works with Better Lyrics V2.2.0 Canary and above.
