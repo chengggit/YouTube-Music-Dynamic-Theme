@@ -51,6 +51,8 @@ Method 1: Manual Install
 
 - Or copy the content of the file and paste it directly into the Better Lyrics theme section.
 
+Dynamic Background is now a built-in theme. Use the latest Better Lyrics version for updates.
+
 #### Methods below is for [Dynamic Background V3.0.0 Preview](style.rics). Only compatible with Better Lyrics V2.2.0 Canary(beta) and above.
 Method 2: Install from the Theme Marketplace
 
