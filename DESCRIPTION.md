@@ -22,19 +22,19 @@ More information is available in the main [README](https://github.com/chengggit/
 
 ## Previews
 
-![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/revamp/images/bgpreview.webp)
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/main/images/bgpreview.webp)
 
 ### Default
 
-![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/revamp/images/Default.webp)
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/main/images/Default.webp)
 
 ### Light Preset
 
-![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/revamp/images/Light2.webp)
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/main/images/Light2.webp)
 
 ### Dark Preset
 
-![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/revamp/images/Dark.webp)
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/main/images/Dark.webp)
 
 ## License
 
