@@ -2,12 +2,11 @@
 
 @name: YouTube Music Dynamic Background Theme
 @author: chengg
-@version: 2.0.6
+@version: 2.0.6.2
 @description: YouTube Music CSS theme that sets the background to the current song’s cover art with glass like ui.
 @source: https://github.com/chengggit/Youtube-Music-Dynamic-Theme
 
 ===== */
-    
     
 /* ========== README README README README README ========== */
 
@@ -507,14 +506,9 @@ Note: The background animation may be CPU-intensive on your PC.
         padding-bottom: var(--ytmusic-player-bar-height);
     }
 
-    /* Re-position back to how it was */
-    ytmusic-player-page:not([is-video-truncation-fix-enabled])[player-fullscreened]:not([blyrics-dfs]) #player.ytmusic-player-page,
-    ytmusic-player-page:not([is-video-truncation-fix-enabled])[player-fullscreened]:not([blyrics-dfs]) #blyrics-song-info {
-        top: 50%;
-    }
-
     ytmusic-app-layout:not([is-mweb-modernization-enabled])[player-fullscreened]:not([blyrics-dfs]) > [slot=player-page] {
         padding-bottom: 0;
+        padding-left: 0;
     }
 
     ytmusic-player[player-ui-state=MINIPLAYER] {
@@ -707,56 +701,34 @@ Note: The background animation may be CPU-intensive on your PC.
     }
 
     /* 3 Dots Dropdown */
-    ytmusic-menu-popup-renderer,
-    .ytmusicMultiPageMenuHost {
-        display: contents;
-    }
-
-    tp-yt-paper-listbox.ytmusic-menu-popup-renderer {
-        --paper-listbox-background-color: var(--colorOption);
-        border: var(--borderColor);
+    tp-yt-iron-dropdown.ytmusic-popup-container {
+        background: var(--colorOption);
         backdrop-filter: blur(var(--uiblur));
         border-radius: 25px;
         box-shadow: var(--drop-shadow);
-    }
-
-    #items.ytmusic-menu-popup-renderer > .ytmusic-menu-popup-renderer:hover {
-        border-radius: var(--selectBRad);
-    }
-
-    /* Notice Popup */
-    tp-yt-paper-toast,
-    tp-yt-paper-toast.yt-notification-action-renderer,
-    #toast.ytmusic-notification-text-renderer {
-        background: var(--colorOption);
-        border-radius: 8px;
         border: var(--borderColor);
-        box-shadow: var(--drop-shadow);
-        backdrop-filter: blur(var(--uiblur));
+        overflow: hidden;
     }
 
-    #text.yt-notification-action-renderer,
-    #sub-text.yt-notification-action-renderer {
-        color: white;
+    tp-yt-paper-listbox.ytmusic-menu-popup-renderer {
+        --paper-listbox-background-color: transparent;
+        border: 0;
     }
-
-    .yt-spec-button-shape-next--call-to-action-inverse.yt-spec-button-shape-next--text {
-        color: #38a3ff;
+    
+    .ytmusic-menu-popup-renderer {
+        border-radius: var(--selectBRad);
+        overflow: hidden;
     }
-
+    
     /* User Dropdown */
     .ytmusicMultiPageMenuRendererHost {
         --yt-spec-call-to-action: #38a3ff;
         --yt-endpoint-hover-color: #b0daff;
         --yt-compact-link-icon-color: white;
         --yt-spec-outline: transparent;
-        background: var(--colorOption);
-        border-radius: 25px;
-        border: var(--borderColor);
-        box-shadow: var(--drop-shadow);
-        backdrop-filter: blur(var(--uiblur));
+        background: transparent;
     }
-
+    
     ytd-simple-menu-header-renderer {
         background: transparent;
     }
@@ -817,6 +789,26 @@ Note: The background animation may be CPU-intensive on your PC.
         border: var(--borderColor);
     }
 
+    /* Notice Popup */
+    tp-yt-paper-toast,
+    tp-yt-paper-toast.yt-notification-action-renderer,
+    #toast.ytmusic-notification-text-renderer {
+        background: var(--colorOption);
+        border-radius: 8px;
+        border: var(--borderColor);
+        box-shadow: var(--drop-shadow);
+        backdrop-filter: blur(var(--uiblur));
+    }
+
+    #text.yt-notification-action-renderer,
+    #sub-text.yt-notification-action-renderer {
+        color: white;
+    }
+
+    .yt-spec-button-shape-next--call-to-action-inverse.yt-spec-button-shape-next--text {
+        color: #38a3ff;
+    }
+    
     /* ===Artist Page=== */
 
     /* Hidden Background */
@@ -1007,13 +999,6 @@ Note: The background animation may be CPU-intensive on your PC.
         font-family: "Inter" !important; /* ^^ Font specifically for Player/Lyrics page ^^ */
         font-size: 30px;
         font-weight: 500 !important;
-    }
-
-
-    /* Play Button Alignment Fix in Fullscreen - @boidu */
-    ytmusic-player-bar[player-fullscreened] #play-pause-button > .yt-icon-button > yt-icon {
-        width: 32px;
-        height: 32px;
     }
 
     .blyrics-footer__discord,
