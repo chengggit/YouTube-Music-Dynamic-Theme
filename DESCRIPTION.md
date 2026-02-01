@@ -10,15 +10,22 @@ More information is available in the main [README](https://github.com/chengggit/
 - [Previews](#previews)
 - [License](#license)
 - [Compatibility](#compatibility)
+- [Configuration](#configuration)
 - [Credits](#credits)
 
 ## Features
 
 - Full site-wide theme for YouTube Music
-- Dynamic backgrounds that change with the currently playing song
-- Light and Dark modes with adjustable colors and settings
-- Modern UI with glassmorphism and rounded corners
-- Easy-to-edit variables for customization
+- Dynamic backgrounds that change with the current song, or use static colors/images
+- Light & Dark presets (fully customizable)
+- Modern glassmorphism UI with blur and rounded corners
+- Easy customization via the RICS preprocessor
+- Smooth, configurable animations that can be adjusted or disabled
+
+Toggleable player enhancements:
+
+- Centered player controls
+- Increment skip buttons
 
 ## Previews
 
@@ -36,13 +43,29 @@ More information is available in the main [README](https://github.com/chengggit/
 
 ![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/main/images/Dark.webp)
 
+### Custom Image
+
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/2543d2272cbda8d20e5c11030fb8c51b4ead58b4/images/custompreview.webp)
+
+Image: [NASA](https://science.nasa.gov/image-detail/wise-infrared-view-of-andromeda-galaxy-and-companions-3/)
+
+Background Blur Setting: 0.05
+
+### Static Color
+
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/2543d2272cbda8d20e5c11030fb8c51b4ead58b4/images/staticpreview.webp)
+
 ## License
 
 This theme is licensed under the **MIT License**, allowing you to use, modify, and redistribute it. If you reuse or fork any part of the theme, please credit the original project and preserve this license notice. Any code snippets borrowed from other themes are already credited within this repository.
 
+## Configuration
+
+All the variables are at the top of the CSS. You can tweak colors, fonts, animations, and layout to fit your style.
+
 ## Compatibility
 
-- Works with Better Lyrics v2.2.0 Canary+
+- Works with Better Lyrics v2.2.0 Canary and later.
 
 ## Credits
 
