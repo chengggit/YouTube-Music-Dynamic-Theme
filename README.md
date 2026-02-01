@@ -20,10 +20,15 @@ Requires **Better Lyrics** extension for the dynamic background and time-synced 
 ## Features
 
 - Full site-wide theme for YouTube Music
-- Dynamic backgrounds that change with the currently playing song
-- Light and Dark modes with adjustable colors and settings
-- Modern UI with glassmorphism and rounded corners
-- Easy-to-edit variables for quick personalization
+- Dynamic backgrounds that change with the current song, or use static colors/images
+- Light & Dark presets (fully customizable)
+- Modern glassmorphism UI with blur and rounded corners
+- Easy customization via the RICS preprocessor
+- Smooth, configurable animations that can be adjusted or disabled
+
+Toggleable player enhancements:
+- Centered player controls
+- Increment skip buttons
 
 ## Installation
 
@@ -39,7 +44,7 @@ Method 1: Manual Install
 
 Dynamic Background is now a built-in theme. Use the latest Better Lyrics version for updates.
 
-> Note: Methods below is for [Dynamic Background V3.0.0 Preview](/style.rics) and require Better Lyrics V2.2.0 Canary (beta) and above.
+> Note: Methods below is for [Dynamic Background V3.0.0](/style.rics) and require Better Lyrics V2.2.0 Canary (pre-release) or later. To install the Better Lyrics pre-release, follow the instructions in [this guide](https://github.com/better-lyrics/better-lyrics?tab=readme-ov-file#manual-installation).
 
 Method 2: Install from the Theme Marketplace
 
@@ -93,14 +98,25 @@ Grant permission if prompted.
 
 ![](/images/Dark.webp)
 
+### Custom Image
+
+![](/images/custompreview.webp)
+Image: [NASA](https://science.nasa.gov/image-detail/wise-infrared-view-of-andromeda-galaxy-and-companions-3/)
+
+Background Blur Setting: 0.05
+
+### Static Color
+
+![](/images/staticpreview.webp)
+
 ## Configuration
 
-Configuration instructions can be found at the top of the theme’s README inside the CSS.
+All the variables are at the top of the CSS. You can tweak colors, fonts, animations, and layout to fit your style.
 
 ## Compatibility
 
 - Dynamic Background V2.0.6.2, Better Lyrics V2.1.0+ is recommended. Older versions might work, but it’s not guaranteed.
-- Dynamic Background V3.0.0 Preview only works with Better Lyrics V2.2.0 Canary (beta) and above.
+- Dynamic Background V3.0.0 only works with Better Lyrics V2.2.0 Canary (pre-release) and later.
 
 ## License
 
