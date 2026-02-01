@@ -5,7 +5,7 @@ A custom YouTube Music CSS theme that sets the background to the current song’
 
 Requires **Better Lyrics** extension for the dynamic background and time-synced lyrics features.
 
-**Note**: The background animation may be CPU-intensive on your PC. You can disable it in the configuration if needed.
+**Note**: The animations may be CPU-intensive on your PC. You can disable it in the configuration if needed.
 
 ## Table of Contents
 
