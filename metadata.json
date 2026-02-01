@@ -5,8 +5,8 @@
     "chengggit"
   ],
   "minVersion": "2.2.0",
-  "hasShaders": false,
-  "version": "2.9.9",
+  "hasShaders": true,
+  "version": "3.0.0",
   "tags": [
     "dark",
     "light",
@@ -17,6 +17,7 @@
   "images": [
     "preview.png",
     "preview1.jpg",
-    "preview2.jpg"
+    "preview2.jpg",
+    "customimage.jpg"
   ]
 }
