@@ -1,6 +1,6 @@
 # Dynamic Background
 
-A custom YouTube Music CSS theme that sets the background to the currently playing song’s cover with blur, subtle animations, and a glass-like UI for a modern look.
+A YouTube Music theme featuring dynamic backgrounds and glassmorphism for [Better Lyrics Extension](https://better-lyrics.boidu.dev/).
 
 More information is available in the main [README](https://github.com/chengggit/Youtube-Music-Dynamic-Theme).
 
@@ -26,6 +26,11 @@ Toggleable player enhancements:
 
 - Centered player controls
 - Increment skip buttons
+
+**Known Limitations**
+
+- Background transitions don’t work in Firefox yet.
+- The search box background blur does not work in Chromium-based browsers.
 
 ## Previews
 
@@ -65,7 +70,7 @@ All the variables are at the top of the CSS. You can tweak colors, fonts, animat
 
 ## Compatibility
 
-- Works with Better Lyrics v2.2.0 Canary and later.
+- Compatible with Better Lyrics v2.2.0 and later.
 
 ## Credits
 

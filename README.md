@@ -1,11 +1,7 @@
-# YouTube Music Dynamic Theme
-
 ![](/images/Main.webp)
-A custom YouTube Music CSS theme that sets the background to the current song’s cover with blur, subtle animations for a lively feel and Glass-Like UI.
 
-Requires **Better Lyrics** extension for the dynamic background and time-synced lyrics features.
-
-**Note**: The animations may be CPU-intensive on your PC. You can disable it in the configuration if needed.
+# Dynamic Background
+ A YouTube Music theme featuring dynamic backgrounds and glassmorphism for [Better Lyrics Extension](https://better-lyrics.boidu.dev/).
 
 ## Table of Contents
 
@@ -27,35 +23,31 @@ Requires **Better Lyrics** extension for the dynamic background and time-synced 
 - Smooth, configurable animations that can be adjusted or disabled
 
 Toggleable player enhancements:
+
 - Centered player controls
 - Increment skip buttons
+
+**Note**: The animations may affect performance and can be disabled in the settings.
 
 ## Installation
 
 First install [Better Lyrics Extension For Youtube Music](https://better-lyrics.boidu.dev/). Once the extension is installed, you can choose one of the following methods to install the themes:
 
+**Known Limitations**
+
+- Background transitions don’t work in Firefox yet.
+- The search box background blur does not work in Chromium-based browsers.
+
 #### Installation Methods:
 
-Method 1: Manual Install
-
-1. Download and import the [Better Lyrics Port.css](/Better%20Lyrics%20Port.css) in the Better Lyrics theme section.
-
-- Or copy the content of the file and paste it directly into the Better Lyrics theme section.
-
-Dynamic Background is now a built-in theme. Use the latest Better Lyrics version for updates.
-
-> Note: Methods below is for [Dynamic Background V3.0.0](/style.rics) and require Better Lyrics V2.2.0 Canary (pre-release) or later. To install the Better Lyrics pre-release, follow the instructions in [this guide](https://github.com/better-lyrics/better-lyrics?tab=readme-ov-file#manual-installation).
-
-Method 2: Install from the Theme Marketplace
+Method 1: Install from the Theme Marketplace **(Recommended)**
 
 1. Open the Better Lyrics extension and go to the Themes section.
 2. Open the Theme Marketplace and search for “Dynamic Background”.
 3. Click Install.
 4. After installing, go back to Themes, open Installed Themes, and click Apply.
 
----
-
-Method 3: Install using the repository link
+Method 2: Install using the repository link
 
 1. Copy the repository link.
 2. Open the Theme Marketplace, then click Install from URL (or press U on your keyboard).
@@ -76,11 +68,6 @@ Grant permission if prompted.
    [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.user.css)
 
 **Unfortunately, I’ve decided to discontinue the Stylus theme. Maintaining and porting two separate versions for Stylus and Better Lyrics has become too draining, so it will no longer receive updates.**
-
-**Browser Notes:**
-
-- Background transitions don’t work in Firefox yet.
-- Search box background blur only works in Firefox, not sure why it doesn’t in Chromium-based browsers.
 
 ## Previews
 
@@ -115,8 +102,7 @@ All the variables are at the top of the CSS. You can tweak colors, fonts, animat
 
 ## Compatibility
 
-- Dynamic Background V2.0.6.2, Better Lyrics V2.1.0+ is recommended. Older versions might work, but it’s not guaranteed.
-- Dynamic Background V3.0.0 only works with Better Lyrics V2.2.0 Canary (pre-release) and later.
+- Compatible With Better Lyrics V2.2.0 and later.
 
 ## License
 
