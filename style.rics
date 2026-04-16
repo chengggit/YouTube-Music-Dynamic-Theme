@@ -75,7 +75,7 @@ $sliding-drawer: off; // side drawer open/close animation
 $sliding-duration: 0.3s;
 $sliding-timing: ease;
 
-$search-bar: off; // search bar open/collapse animation
+$search-bar: on; // search bar open/collapse animation
 $search-bar-duration: 0.3s;
 $search-bar-timing: ease;
 
@@ -530,7 +530,8 @@ ytmusic-search-box #suggestion-list {
   background: var(--layout-color) !important;
   box-shadow: var(--drop-shadow);
   border: var(--layout-border) !important;
-  backdrop-filter: blur(var(--layout-blur)) !important;
+  backdrop-filter: blur(var(--layout-blur));
+  anchor-name: --search-dropdown;
 
   ytmusic-search-suggestions-section {
     background: transparent !important;
@@ -545,6 +546,26 @@ ytmusic-search-box #suggestion-list {
       }
     }
   }
+}
+
+/* Chromium backdrop workaround */
+@supports (not (-moz-appearance: none)) {
+  ytmusic-app-layout::after {
+    content: "";
+    position: fixed;
+    position-anchor: --search-dropdown;
+    top: anchor(top);
+    left: anchor(left);
+    width: anchor-size(width);
+    height: anchor-size(height);
+    border-radius: var(--radius-panel);
+    backdrop-filter: blur(var(--layout-blur));
+    opacity: 0;
+    z-index: 2;
+  }
+}
+ytmusic-app-layout:has(ytmusic-search-box[opened])::after {
+  opacity: 1;
 }
 
 ytmusic-search-box[opened] #suggestion-list {
