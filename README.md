@@ -43,7 +43,6 @@ First install [Better Lyrics Extension For Youtube Music](https://better-lyrics.
 **Known Limitations**
 
 - Background transitions don’t work in Firefox yet.
-- The search box background blur does not work in Chromium-based browsers.
 
 #### Installation Methods:
 
