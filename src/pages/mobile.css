@@ -1,0 +1,79 @@
+/* ========================== MOBILE VIEW ========================== */
+ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
+  content: '';
+  position: fixed;
+  inset: -5rem;
+  background: if(
+    $background == dynamic,
+    var(--blyrics-background-img),
+    $background
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -50;
+  opacity: 1;
+  filter: blur(30px) brightness(var(--bg-brightness));
+}
+
+ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state]
+  #side-panel.ytmusic-player-page {
+  height: 100vh;
+  background: transparent;
+}
+
+ytmusic-player-page #top-player-bar {
+  background: transparent;
+  z-index: 1;
+  backdrop-filter: none;
+}
+
+@media (max-width: 615px) {
+  .blyrics-container:before,
+  .blyrics-container:after {
+    opacity: 0;
+  }
+
+  /* Overlay Over Lyrics Background */
+  #tab-renderer {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  }
+}
+
+.play-pause-button-wrapper.ytmusic-player-controls {
+  color: transparent;
+  background: transparent;
+  transform: scale(1.2);
+}
+
+.next-button.ytmusic-player-controls,
+.previous-button.ytmusic-player-controls,
+.shuffle.ytmusic-player-controls,
+.repeat.ytmusic-player-controls {
+  color: transparent;
+  background: transparent !important;
+}
+
+/* Lyrics Tab Opening Transition */
+ytmusic-player-page[is-mweb-modernization-enabled] #main-panel {
+  transform: none !important;
+}
+
+ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state='TABS_VIEW'] {
+  .av,
+  #info-panel,
+  #player-controls,
+  .collapse-button,
+  .context-menu-button {
+    opacity: 0;
+  }
+}
+
+ytmusic-player-page[player-page-ui-state='TABS_VIEW'] #thumbnail > img {
+  border-radius: calc(var(--radius-art) * 10);
+}
+
+ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state='TABS_VIEW']
+  #music-player-wrapper {
+  transform: translateY(6.5rem);
+}

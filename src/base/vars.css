@@ -1,0 +1,118 @@
+/* ========================== THEME SETTINGS ========================== */
+/* Edit these variables to configure your theme                        */
+
+:root {
+  /* Background */
+  --cfg-bg-brightness: 0.7;
+  --cfg-bg-blur: 0.6;
+  --cfg-bg-saturate: 1.5;
+  --cfg-bg-scale: 1.2;
+  --cfg-player-page-opacity: 0.8;
+
+  /* Typography */
+  --cfg-font: 'Inter';
+  --cfg-font-weight: 400;
+
+  /* Colors */
+  --cfg-text-color-1: white;
+  --cfg-text-color-2: rgba(255, 255, 255, 0.7);
+  --cfg-icon: white;
+  --cfg-accent: pink;
+  --cfg-accent-icon: pink;
+  --cfg-accent-hover: rgb(255, 122, 144);
+
+  /* Layout */
+  --cfg-layout-color: transparent;
+  --cfg-layout-contrast: rgba(255, 255, 255, 0.1);
+  --cfg-layout-highlight: rgba(255, 255, 255, 0.1);
+  --cfg-button-color: rgba(255, 255, 255, 0.1);
+  --cfg-button-highlight: rgba(255, 255, 255, 0.2);
+  --cfg-layout-blur: 10px;
+  --cfg-layout-border: transparent;
+  --cfg-button-border: transparent;
+  --cfg-drop-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+  /* Music */
+  --cfg-lyrics-font-weight: 500;
+  --cfg-lyrics-font-size: 30px;
+  --cfg-album-art-size: 400px;
+}
+
+/* ============================================================ */
+
+* {
+  font-family: var(--cfg-font) !important;
+  font-weight: var(--cfg-font-weight);
+  scrollbar-width: none !important;
+}
+
+:root {
+  --album-art-size: var(--cfg-album-art-size);
+  --bg-scale: var(--cfg-bg-scale);
+  --bg-blur: calc(var(--cfg-bg-blur) * 100px);
+  --bg-brightness: var(--cfg-bg-brightness);
+  --bg-saturate: var(--cfg-bg-saturate);
+  --player-page-opacity: var(--cfg-player-page-opacity);
+
+  --text-color-1: var(--cfg-text-color-1);
+  --text-color-2: var(--cfg-text-color-2);
+  --icon: var(--cfg-icon);
+  --accent: var(--cfg-accent);
+  --accent-icon: var(--cfg-accent-icon);
+  --accent-hover: var(--cfg-accent-hover);
+
+  --layout-color: var(--cfg-layout-color);
+  --layout-contrast: var(--cfg-layout-contrast);
+  --layout-highlight: var(--cfg-layout-highlight);
+  --button-color: var(--cfg-button-color);
+  --button-highlight: var(--cfg-button-highlight);
+  --layout-blur: var(--cfg-layout-blur);
+  --layout-border: var(--cfg-layout-border);
+  --button-border: var(--cfg-button-border);
+  --drop-shadow: var(--cfg-drop-shadow);
+
+  --radius-art: 8px;
+  --radius-art-medium: 16px;
+  --radius-art-big: 24px;
+  --radius-button: 12px;
+  --radius-button-alt: 16px;
+  --radius-highlight: 8px;
+  --radius-highlight-big: 12px;
+  --radius-panel: 12px;
+  --radius-panel-big: 24px;
+
+  --bg-duration: 0.3s;
+  --bg-timing: ease-in-out;
+
+  --player-page-duration: 0.65s;
+  --player-page-timing: cubic-bezier(0.3, 0.6, 0.5, 1);
+
+  --fade-duration: 0.3s;
+  --fade-duration-alt: 0.5s;
+  --fade-timing: ease;
+
+  --play-button-duration: 0.3s;
+  --play-button-timing: ease;
+
+  --silding-duration: 0.3s;
+  --sliding-timing: ease;
+
+  --search-bar-duration: 0.3s;
+  --search-bar-timing: ease;
+
+  --no-lyrics-slide-delay: 1.8s;
+  --no-lyrics-duration: 0.3s;
+  --no-lyrics-timing: ease-in-out;
+
+  --blyrics-lyric-scroll-duration: 0.5s;
+  --blyrics-lyric-scroll-timing-function: ease-in-out;
+
+  --ytmusic-text-primary: var(--cfg-text-color-1);
+  --ytmusic-overlay-text-secondary: var(--cfg-text-color-2);
+
+  --blyrics-font-family: var(--cfg-font);
+  --blyrics-font-weight: var(--cfg-lyrics-font-weight);
+  --blyrics-font-size: var(--cfg-lyrics-font-size);
+  --blyrics-footer-font-family: var(--cfg-font);
+  --blyrics-footer-font-weight: var(--cfg-font-weight);
+}

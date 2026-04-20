@@ -1,0 +1,90 @@
+/* ========================== ARTIST PAGE ========================== */
+ytmusic-immersive-header-renderer {
+  background: var(--ytmusic-app);
+}
+
+ytmusic-immersive-header-renderer .image {
+  margin-left: 0 !important;
+  opacity: 0.8;
+  filter: brightness(0.95);
+}
+
+.description.ytmusic-immersive-header-renderer {
+  color: var(--text-color-1);
+}
+
+ytmusic-toggle-button-renderer
+  yt-formatted-string.ytmusic-toggle-button-renderer {
+  color: var(--accent);
+}
+
+ytmusic-immersive-header-renderer[is-description-expanded] .image {
+  filter: brightness(0.55);
+}
+
+/* Artist Header */
+.image.ytmusic-immersive-header-renderer {
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  mask-repeat: no-repeat;
+  mask-size: 100%;
+}
+
+.ytmusic-browse-response .content-container-wrapper,
+.content-container-wrapper .gradient-container {
+  background: transparent !important;
+}
+
+/* Sub Button */
+ytmusic-subscribe-button-renderer {
+  --ytmusic-subscribe-button-outline-color: transparent;
+  --ytmusic-subscribe-button-color: var(--accent);
+  background: rgb(from var(--accent) r g b / 0.2);
+  border-radius: var(--radius-button-alt);
+  backdrop-filter: blur(var(--layout-blur));
+  border: var(--button-border);
+  &:hover {
+    background: rgb(from var(--accent) r g b / 0.4);
+  }
+}
+
+ytmusic-subscribe-button-renderer[is-subscribed] {
+  --ytmusic-subscribe-button-outline-color: transparent;
+  --ytmusic-subscribe-button-color: var(--text-color-1);
+  background: var(--button-color);
+  backdrop-filter: blur(var(--layout-blur));
+  border: var(--button-border);
+  &:hover {
+    background: var(--button-highlight);
+  }
+}
+
+/* Unsub Confirm */
+yt-confirm-dialog-renderer[dialog][dialog][dialog] {
+  --ytd-user-comment-color: white;
+  background: transparent;
+}
+ytmusic-popup-container
+  tp-yt-paper-dialog.ytmusic-popup-container[role='dialog'] {
+  outline: none !important;
+}
+
+/* Shuffle and Radio Button */
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--filled {
+  color: var(--accent);
+  background: var(--button-color);
+  backdrop-filter: blur(var(--layout-blur));
+  border: var(--button-border);
+  border-radius: var(--radius-button-alt);
+  &:hover {
+    background: var(--button-highlight);
+    border: var(--button-border);
+  }
+  .yt-icon-shape {
+    color: var(--accent-icon);
+  }
+}
+
+/* User Page */
+ytmusic-subscribe-button-renderer.ytmusic-visual-header-renderer {
+  background: none;
+}
