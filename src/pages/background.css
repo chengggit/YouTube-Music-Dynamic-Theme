@@ -48,6 +48,7 @@ ytmusic-fullbleed-thumbnail-renderer[is-background] .image {
       brightness(var(--bg-brightness));
     transform: scale(var(--bg-scale));
     opacity: var(--player-page-opacity);
+    z-index: -50;
   }
 }
 
@@ -61,5 +62,5 @@ ytmusic-app-layout[player-page-open]:not([is-mweb-modernization-enabled])
   visibility: visible !important;
 }
 ytmusic-app-layout[player-fullscreened] > [slot='content'] {
-  display: block;
+  display: block !important;
 }

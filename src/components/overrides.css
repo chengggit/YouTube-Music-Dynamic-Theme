@@ -1,3 +1,17 @@
 #player-page {
   margin: var(--menu-bar-height) !important;
 }
+ytmusic-app-layout {
+  --ytmusic-nav-bar-height: 64px;
+}
+yt-formatted-string.description {
+  font-size: unset !important;
+}
+
+ytmusic-app-layout[player-visible][is-player-bar-slide-up-animation-enabled]
+  #player-bar-background.ytmusic-app-layout,
+ytmusic-app-layout[player-visible][is-player-bar-slide-up-animation-enabled]
+  > [slot='player-bar'] {
+  animation: none !important;
+}
+

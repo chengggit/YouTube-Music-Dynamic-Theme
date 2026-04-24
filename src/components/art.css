@@ -69,7 +69,10 @@ ytmusic-two-row-item-renderer .image-wrapper {
 }
 
 ytmusic-player[player-ui-state] #song-media-window {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 40%) !important;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0) 40%
+  ) !important;
   border-radius: var(--radius-art-big);
 }
 

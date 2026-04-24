@@ -11,6 +11,7 @@ ytmusic-immersive-header-renderer .image {
 
 .description.ytmusic-immersive-header-renderer {
   color: var(--text-color-1);
+  font-size: 14px !important;
 }
 
 ytmusic-toggle-button-renderer

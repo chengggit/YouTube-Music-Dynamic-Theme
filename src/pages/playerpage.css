@@ -29,7 +29,17 @@ ytmusic-player[player-ui-state='MINIPLAYER'] {
       var(--ytmusic-mini-player-spacing)
   ) !important;
 }
+ytmusic-player-page:not([video-mode]):not([player-ui-state='FULLSCREEN'])
+  #player.ytmusic-player-page {
+  width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 
+#side-panel {
+  width: 50%;
+  max-width: unset;
+}
 /* Tab */
 tp-yt-paper-tab.ytmusic-player-page {
   color: var(--text-color-1);
@@ -115,8 +125,9 @@ ytmusic-chip-cloud-chip-renderer[is-selected]
   color: var(--text-color-1);
 }
 
-.description.ytmusic-description-shelf-renderer {
+yt-formatted-string.description.ytmusic-description-shelf-renderer {
   color: var(--text-color-1);
+  font-size: 14px !important;
 }
 
 ytmusic-tab-renderer.ytmusic-player-page {

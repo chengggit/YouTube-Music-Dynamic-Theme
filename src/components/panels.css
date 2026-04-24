@@ -58,6 +58,10 @@ ytmusic-dialog {
   border-radius: var(--radius-panel-big) !important;
 }
 
+.description.ytmusic-dropdown-item-renderer {
+  font-size: var(--ytmusic-responsive-font-size);
+}
+
 .ytmusic-playlist-form .dropdown-content.tp-yt-paper-menu-button {
   left: 12rem;
 }
