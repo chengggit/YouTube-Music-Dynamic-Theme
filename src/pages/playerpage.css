@@ -115,14 +115,14 @@ ytmusic-chip-cloud-chip-renderer[is-selected]
 }
 
 .av-toggle.ytmusic-av-toggle {
-  background: var(--button-color);
+  background: var(--button-color) !important;
   border: var(--button-border);
 }
 
-.song-button.ytmusic-av-toggle,
-.video-button.ytmusic-av-toggle {
-  background: transparent;
-  color: var(--text-color-1);
+ytmusic-av-toggle .song-button.ytmusic-av-toggle,
+ytmusic-av-toggle .video-button.ytmusic-av-toggle {
+  background-color: transparent;
+  color: var(--text-color-1) !important;
 }
 
 yt-formatted-string.description.ytmusic-description-shelf-renderer {

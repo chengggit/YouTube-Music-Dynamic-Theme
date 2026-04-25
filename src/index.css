@@ -7,7 +7,7 @@
 @import './components/panels.css';
 @import './components/playerbar.css';
 
-/* @import './features/animation.css'; */
+@import './features/animation.css';
 @import './features/lyrics.css';
 
 @import './pages/artist.css';

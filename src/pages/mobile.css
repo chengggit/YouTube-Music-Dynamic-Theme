@@ -3,11 +3,6 @@ ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
   content: '';
   position: fixed;
   inset: -5rem;
-  background: if(
-    $background == dynamic,
-    var(--blyrics-background-img),
-    $background
-  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,13 +23,8 @@ ytmusic-player-page #top-player-bar {
   backdrop-filter: none;
 }
 
+/* Overlay Over Lyrics Background */
 @media (max-width: 615px) {
-  .blyrics-container:before,
-  .blyrics-container:after {
-    opacity: 0;
-  }
-
-  /* Overlay Over Lyrics Background */
   #tab-renderer {
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
   }

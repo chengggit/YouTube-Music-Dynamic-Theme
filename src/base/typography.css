@@ -25,6 +25,9 @@ yt-icon.ytmusic-inline-badge-renderer {
 }
 
 /* CTA */
+.title.ytmusic-carousel-shelf-basic-header-renderer a {
+  font-weight: 700;
+}
 a.yt-simple-endpoint.yt-formatted-string {
   --yt-spec-call-to-action: var(--accent);
   --yt-endpoint-hover-color: var(--accent-hover);

@@ -164,10 +164,10 @@ ytmusic-search-box[opened] #suggestion-list {
 
 /* Carousel Buttons */
 .button-group yt-icon-button.ytmusic-carousel-shelf-renderer,
-.yt-spec-button-shape-next.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--outline {
+.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextOutline {
   background: var(--button-color);
-  border: var(--button-border);
-  color: var(--text-color-1);
+  border: var(--button-border) !important;
+  color: var(--text-color-1) !important;
   border-radius: var(--radius-button-alt);
   &:hover {
     background: var(--button-highlight);

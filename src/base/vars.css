@@ -1,6 +1,5 @@
-/* ========================== THEME SETTINGS ========================== */
-/* Edit these variables to configure your theme                        */
-
+/* ========================== THEME CONFIG ========================== */
+/* Edit these variables to configure your theme */
 :root {
   /* Background */
   --cfg-bg-brightness: 0.7;
@@ -12,6 +11,9 @@
   /* Typography */
   --cfg-font: 'Inter';
   --cfg-font-weight: 400;
+  --cfg-lyrics-font-weight: 700;
+  --cfg-lyrics-font-size: 40px;
+  --cfg-album-art-size: 400px;
 
   /* Colors */
   --cfg-text-color-1: white;
@@ -32,10 +34,39 @@
   --cfg-button-border: transparent;
   --cfg-drop-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 
-  /* Music */
-  --cfg-lyrics-font-weight: 500;
-  --cfg-lyrics-font-size: 30px;
-  --cfg-album-art-size: 400px;
+  /* Corner Radius */
+  --cfg-radius-art: 8px;
+  --cfg-radius-art-medium: 16px;
+  --cfg-radius-art-big: 24px;
+
+  --cfg-radius-button: 12px;
+  --cfg-radius-button-alt: 16px;
+
+  --cfg-radius-highlight: 8px;
+  --cfg-radius-highlight-big: 12px;
+
+  --cfg-radius-panel: 12px;
+  --cfg-radius-panel-big: 24px;
+
+  /* Animations */
+  --cfg-bg-duration: 0.3s;
+  --cfg-bg-timing: ease-in-out;
+
+  --cfg-player-page-duration: 0.65s;
+  --cfg-player-page-timing: cubic-bezier(0.3, 0.6, 0.5, 1);
+
+  --cfg-fade-duration: 0.3s;
+  --cfg-fade-duration-alt: 0.5s;
+  --cfg-fade-timing: ease;
+
+  --cfg-play-button-duration: 0.3s;
+  --cfg-play-button-timing: ease;
+
+  --cfg-silding-duration: 0.3s;
+  --cfg-sliding-timing: ease;
+
+  --cfg-search-bar-duration: 0.3s;
+  --cfg-search-bar-timing: ease;
 }
 
 /* ============================================================ */
@@ -71,48 +102,38 @@
   --button-border: var(--cfg-button-border);
   --drop-shadow: var(--cfg-drop-shadow);
 
-  --radius-art: 8px;
-  --radius-art-medium: 16px;
-  --radius-art-big: 24px;
-  --radius-button: 12px;
-  --radius-button-alt: 16px;
-  --radius-highlight: 8px;
-  --radius-highlight-big: 12px;
-  --radius-panel: 12px;
-  --radius-panel-big: 24px;
+  --radius-art: var(--cfg-radius-art);
+  --radius-art-medium: var(--cfg-radius-art-medium);
+  --radius-art-big: var(--cfg-radius-art-big);
 
-  --bg-duration: 0.3s;
-  --bg-timing: ease-in-out;
+  --radius-button: var(--cfg-radius-button);
+  --radius-button-alt: var(--cfg-radius-button-alt);
 
-  --player-page-duration: 0.65s;
-  --player-page-timing: cubic-bezier(0.3, 0.6, 0.5, 1);
+  --radius-highlight: var(--cfg-radius-highlight);
+  --radius-highlight-big: var(--cfg-radius-highlight-big);
 
-  --fade-duration: 0.3s;
-  --fade-duration-alt: 0.5s;
-  --fade-timing: ease;
+  --radius-panel: var(--cfg-radius-panel);
+  --radius-panel-big: var(--cfg-radius-panel-big);
 
-  --play-button-duration: 0.3s;
-  --play-button-timing: ease;
+  --bg-duration: var(--cfg-bg-duration);
+  --bg-timing: var(--cfg-bg-timing);
 
-  --silding-duration: 0.3s;
-  --sliding-timing: ease;
+  --player-page-duration: var(--cfg-player-page-duration);
+  --player-page-timing: var(--cfg-player-page-timing);
 
-  --search-bar-duration: 0.3s;
-  --search-bar-timing: ease;
+  --fade-duration: var(--cfg-fade-duration);
+  --fade-duration-alt: var(--cfg-fade-duration-alt);
+  --fade-timing: var(--cfg-fade-timing);
 
-  --no-lyrics-slide-delay: 1.8s;
-  --no-lyrics-duration: 0.3s;
-  --no-lyrics-timing: ease-in-out;
+  --play-button-duration: var(--cfg-play-button-duration);
+  --play-button-timing: var(--cfg-play-button-timing);
 
-  --blyrics-lyric-scroll-duration: 0.5s;
-  --blyrics-lyric-scroll-timing-function: ease-in-out;
+  --silding-duration: var(--cfg-silding-duration);
+  --sliding-timing: var(--cfg-sliding-timing);
+
+  --search-bar-duration: var(--cfg-search-bar-duration);
+  --search-bar-timing: var(--cfg-search-bar-timing);
 
   --ytmusic-text-primary: var(--cfg-text-color-1);
   --ytmusic-overlay-text-secondary: var(--cfg-text-color-2);
-
-  --blyrics-font-family: var(--cfg-font);
-  --blyrics-font-weight: var(--cfg-lyrics-font-weight);
-  --blyrics-font-size: var(--cfg-lyrics-font-size);
-  --blyrics-footer-font-family: var(--cfg-font);
-  --blyrics-footer-font-weight: var(--cfg-font-weight);
 }

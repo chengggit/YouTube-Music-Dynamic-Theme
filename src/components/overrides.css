@@ -8,10 +8,18 @@ yt-formatted-string.description {
   font-size: unset !important;
 }
 
+#synced-lyrics-container
+  yt-formatted-string.description.ytmusic-description-shelf-renderer {
+  color: var(--text-color-1);
+  font-weight: 600 !important;
+  font-size: clamp(1.4rem, 1.1vmax, 3rem) !important;
+}
+.lyrics-picker-content-dots {
+  display: none !important;
+}
 ytmusic-app-layout[player-visible][is-player-bar-slide-up-animation-enabled]
   #player-bar-background.ytmusic-app-layout,
 ytmusic-app-layout[player-visible][is-player-bar-slide-up-animation-enabled]
   > [slot='player-bar'] {
   animation: none !important;
 }
-

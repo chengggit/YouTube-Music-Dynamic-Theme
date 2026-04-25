@@ -22,3 +22,17 @@ ytmusic-player-page[player-ui-state='FULLSCREEN'] {
     }
   }
 }
+
+ytmusic-player-page[player-ui-state='FULLSCREEN']:not([player-page-open])
+  #player.ytmusic-player-page {
+  display: none;
+}
+
+/* misalign play button fix */
+ytmusic-player-bar[player-fullscreened]
+  #play-pause-button
+  > .yt-icon-button
+  > yt-icon {
+  width: 32px;
+  height: 32px;
+}

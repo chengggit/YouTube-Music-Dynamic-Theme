@@ -138,7 +138,7 @@ tp-yt-iron-dropdown.ytmusic-popup-container {
   overflow: hidden;
 }
 
-tp-yt-paper-listbox.ytmusic-menu-popup-renderer {
+ytmusic-menu-popup-renderer tp-yt-paper-listbox.ytmusic-menu-popup-renderer {
   --paper-listbox-background-color: transparent;
   border: 0;
 }
@@ -154,15 +154,15 @@ tp-yt-paper-listbox#items yt-formatted-string {
 }
 
 /* User Dropdown */
-.ytmusicMultiPageMenuRendererHost {
-  --yt-spec-call-to-action: var(--accent);
+ytmusic-multi-page-menu-renderer.ytmusicMultiPageMenuRendererHost {
+  --yt-sys-color-baseline--call-to-action: var(--accent);
   --yt-endpoint-hover-color: var(--accent-hover);
-  --yt-spec-outline: transparent;
+  --yt-sys-color-baseline--outline: transparent;
   background: transparent;
 }
 
 ytd-simple-menu-header-renderer {
-  background: transparent;
+  background: transparent !important;
 }
 
 ytd-compact-link-renderer {
