@@ -2,24 +2,24 @@
 /* Tab Below Search */
 .tab-container.ytmusic-tabs {
   box-shadow: none !important;
-  background: transparent;
-  border-bottom: 0;
+  background: transparent !important;
+  border-bottom: 0 !important;
 }
 
 .tab.ytmusic-tabs {
-  color: var(--text-color-1);
+  color: var(--text-color-1) !important;
 }
 
 .tab.selected.ytmusic-tabs {
-  color: var(--accent);
-  border-bottom: 1px solid var(--accent);
+  color: var(--accent) !important;
+  border-bottom: 1px solid var(--accent) !important;
 }
 
 /* When Scrolled */
 ytmusic-tabs.stuck {
   box-shadow: none !important;
-  background: var(--layout-color);
-  backdrop-filter: blur(var(--layout-blur));
+  background: var(--layout-color) !important;
+  backdrop-filter: blur(var(--layout-blur)) !important;
 }
 
 /* Search Card */
@@ -28,15 +28,15 @@ yt-formatted-string.text.style-scope.ytmusic-message-renderer {
 }
 
 .immersive-background.ytmusic-card-shelf-renderer::before {
-  background: transparent;
+  background: transparent !important;
 }
 
 .undercards-container.ytmusic-card-shelf-renderer::before,
 .card-content-container.ytmusic-card-shelf-renderer::before {
-  background: var(--layout-color);
-  border: var(--layout-border);
-  backdrop-filter: blur(var(--layout-blur));
-  border-radius: var(--radius-panel-big);
+  background: var(--layout-color) !important;
+  border: var(--layout-border) !important;
+  backdrop-filter: blur(var(--layout-blur)) !important;
+  border-radius: var(--radius-panel-big) !important;
 }
 
 .undercards-container.ytmusic-card-shelf-renderer {

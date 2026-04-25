@@ -51,11 +51,20 @@ a.yt-simple-endpoint.yt-formatted-string {
 }
 
 tp-yt-paper-ripple.tp-yt-paper-tab {
-  color: transparent;
+  color: transparent !important;
 }
 
 .stroke.yt-interaction,
 .fill.yt-interaction {
   border: 0;
-  background: transparent;
+  background: transparent !important;
+}
+
+yt-icon-button.ytmusic-player-bar .yt-icon {
+  fill: var(--icon);
+  color: var(--icon);
+}
+
+.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextText {
+  color: var(--icon) !important;
 }

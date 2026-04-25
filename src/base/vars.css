@@ -2,11 +2,11 @@
 /* Edit these variables to configure your theme */
 :root {
   /* Background */
-  --cfg-bg-brightness: 0.7;
-  --cfg-bg-blur: 0.6;
-  --cfg-bg-saturate: 1.5;
-  --cfg-bg-scale: 1.2;
-  --cfg-player-page-opacity: 0.8;
+  --cfg-bg-brightness: 0.8;
+  --cfg-bg-blur: 0;
+  --cfg-bg-saturate: 1.2;
+  --cfg-bg-scale: ;
+  --cfg-player-page-opacity: 1;
 
   /* Typography */
   --cfg-font: 'Inter';
@@ -16,12 +16,12 @@
   --cfg-album-art-size: 400px;
 
   /* Colors */
-  --cfg-text-color-1: white;
+  --cfg-text-color-1: rgb(255, 255, 255);
   --cfg-text-color-2: rgba(255, 255, 255, 0.7);
-  --cfg-icon: white;
-  --cfg-accent: pink;
-  --cfg-accent-icon: pink;
-  --cfg-accent-hover: rgb(255, 122, 144);
+  --cfg-icon: rgb(255, 255, 255);
+  --cfg-accent: rgb(255, 255, 255);
+  --cfg-accent-icon: rgb(255, 255, 255);
+  --cfg-accent-hover: rgb(255, 255, 255);
 
   /* Layout */
   --cfg-layout-color: transparent;

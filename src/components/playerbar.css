@@ -56,9 +56,9 @@ ytmusic-player-bar:hover #progress-bar {
   overflow: hidden;
 }
 
-.time-info.ytmusic-player-bar,
-.duration.ytmusic-player-queue-item {
-  color: var(--text-color-2);
+.ytmusic-player-bar .time-info.ytmusic-player-bar,
+yt-formatted-string.duration.ytmusic-player-queue-item {
+  color: var(--text-color-2) !important;
 }
 
 /* Volume Control */

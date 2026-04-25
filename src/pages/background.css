@@ -5,6 +5,12 @@
   position: fixed;
   inset: 0;
   height: 120vh;
+  background: color-mix(
+    in srgb,
+    rgba(3, 3, 3) calc(100% - var(--ytmusic-album-color-ratio, 50%)),
+    rgba(var(--ytmusic-album-color-dark), 1)
+      var(--ytmusic-album-color-ratio, 50%)
+  ) !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,14 +20,12 @@
     brightness(var(--bg-brightness));
 }
 
-@if $bg-transition == on {
-  #browse-page::before,
-  #search-page::before,
-  ytmusic-player-page::before,
-  ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
-    transition: background var(--bg-duration) var(--bg-timing);
-    will-change: background;
-  }
+#browse-page::before,
+#search-page::before,
+ytmusic-player-page::before,
+ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
+  transition: background var(--bg-duration) var(--bg-timing);
+  will-change: background;
 }
 
 /* Background Fix */

@@ -7,13 +7,13 @@ ytmusic-app-layout > [slot='player-bar'] {
 .strapline.ytmusic-shelf-renderer,
 .ytmusicCardShelfHeaderBasicRendererStrapline,
 .strapline.ytmusic-carousel-shelf-basic-header-renderer {
-  color: var(--accent);
+  color: var(--accent) !important;
 }
 
 /* Nav Bar */
 #nav-bar-background.ytmusic-app-layout,
 ytmusic-app-layout.content-scrolled #nav-bar-divider {
-  opacity: 1;
+  opacity: 1 !important;
   backdrop-filter: blur(var(--layout-blur));
   background: var(--layout-color) !important;
   border-bottom: var(--layout-border) !important;
@@ -64,18 +64,18 @@ ytmusic-guide-entry-renderer .content-wrapper.ytmusic-play-button-renderer {
 }
 
 /* New Playlist Button */
-.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal {
+button.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextTonal {
   background: var(--button-color);
   border: var(--button-border);
-  color: var(--accent);
+  color: var(--text-color-1);
   border-radius: var(--radius-button-alt);
   &:hover {
     background: var(--button-highlight);
     border: var(--button-border);
   }
-  .yt-icon-shape {
-    color: var(--accent-icon);
-  }
+}
+.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextTonal .yt-icon-shape {
+  color: var(--icon);
 }
 
 /* Search Box */
@@ -88,13 +88,13 @@ ytmusic-search-box .search-box {
   }
 }
 input.ytmusic-search-box {
-  color: var(--text-color-2);
+  color: var(--text-color-1) !important;
 }
 ytmusic-search-box[has-query] input.ytmusic-search-box,
 ytmusic-search-box[opened] input.ytmusic-search-box {
   color: var(--text-color-1);
   &::placeholder {
-    color: var(--text-color-1);
+    color: var(--text-color-2) !important;
   }
 }
 .search-container.ytmusic-search-box {

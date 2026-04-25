@@ -36,7 +36,7 @@ ytmusic-immersive-header-renderer[is-description-expanded] .image {
 }
 
 /* Sub Button */
-ytmusic-subscribe-button-renderer {
+ytmusic-subscribe-button-renderer.subscribe {
   --ytmusic-subscribe-button-outline-color: transparent;
   --ytmusic-subscribe-button-color: var(--accent);
   background: rgb(from var(--accent) r g b / 0.2);
@@ -61,11 +61,13 @@ ytmusic-subscribe-button-renderer[is-subscribed] {
 
 /* Unsub Confirm */
 yt-confirm-dialog-renderer[dialog][dialog][dialog] {
-  --ytd-user-comment-color: white;
-  background: transparent;
+  --ytd-user-comment-color: white !important;
+  background: transparent !important;
 }
 ytmusic-popup-container
-  tp-yt-paper-dialog.ytmusic-popup-container[role='dialog'] {
+  tp-yt-paper-dialog.ytmusic-popup-container:has(
+    yt-confirm-dialog-renderer
+  )[role='dialog'] {
   outline: none !important;
 }
 

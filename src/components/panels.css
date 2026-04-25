@@ -8,15 +8,15 @@ ytmusic-playlist-form {
 }
 
 .label.ytmusic-dropdown-item-renderer {
-  color: var(--text-color-1);
+  color: var(--text-color-1) !important;
 }
 
 tp-yt-iron-input.tp-yt-paper-input > input.tp-yt-paper-input {
-  color: var(--text-color-1);
+  color: var(--text-color-1) !important;
 }
 
-.yt-list-item-view-model__title {
-  color: var(--text-color-1);
+.ytListItemViewModelTitle {
+  color: var(--text-color-1) !important;
 }
 
 ytmusic-dialog {
@@ -86,12 +86,12 @@ tp-yt-paper-item.ytmusic-dropdown-item-renderer:focus::before {
 }
 
 tp-yt-iron-icon.tp-yt-paper-dropdown-menu {
-  color: var(--icon);
+  color: var(--icon) !important;
 }
 
 /* Add to Playlist */
-tp-yt-paper-dialog[modern],
-ytmusic-add-to-playlist-renderer {
+tp-yt-paper-dialog[modern].ytmusic-popup-container,
+ytmusic-add-to-playlist-renderer.ytmusic-popup-container {
   --yt-spec-brand-background-primary: transparent;
   background: var(--layout-color);
   backdrop-filter: blur(var(--layout-blur));
@@ -103,7 +103,7 @@ ytmusic-add-to-playlist-renderer {
 /* Divider */
 .top-bar.ytmusic-add-to-playlist-renderer,
 ytmusic-carousel-shelf-renderer.ytmusic-add-to-playlist-renderer:not(:empty) {
-  border-bottom: 0;
+  border-bottom: 0 !important;
 }
 
 /* Add to Option */
@@ -114,20 +114,27 @@ ytmusic-playlist-add-to-option-renderer {
   }
 }
 
-#title.ytmusic-playlist-add-to-option-renderer {
+button.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextFilled {
   color: var(--text-color-1);
+  background: var(--button-color);
+  &:hover {
+    background: var(--button-highlight);
+  }
 }
 
-.thumbnail.ytmusic-playlist-add-to-option-renderer {
+#title.ytmusic-playlist-add-to-option-renderer {
+  color: var(--text-color-1) !important;
+}
+
+ytmusic-thumbnail-renderer.thumbnail.ytmusic-playlist-add-to-option-renderer {
   border-radius: var(--radius-art);
 }
-
-/* Divider */
-.top-bar.ytmusic-add-to-playlist-renderer,
-ytmusic-carousel-shelf-renderer.ytmusic-add-to-playlist-renderer:not(:empty) {
-  border-bottom: 0;
+.section-heading.ytmusic-add-to-playlist-renderer {
+  color: var(--text-color-1) !important;
 }
-
+.subtitle.ytmusic-two-row-item-renderer {
+  color: var(--text-color-2) !important;
+}
 /* 3 Dot Menu */
 tp-yt-iron-dropdown.ytmusic-popup-container {
   background: var(--layout-color);
