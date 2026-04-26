@@ -11,3 +11,8 @@
   color: var(--text-color-2) !important;
   font-style: normal !important;
 }
+
+#synced-lyrics-container .text-lyrics.lrc-header {
+  scale: 0.55 !important;
+  color: rgba(255, 255, 255, 0.3) !important;
+}

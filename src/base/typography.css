@@ -29,6 +29,7 @@ yt-icon.ytmusic-inline-badge-renderer {
   font-weight: 700;
 }
 a.yt-simple-endpoint.yt-formatted-string {
+  --yt-endpoint-color: var(--text-color-1);
   --yt-spec-call-to-action: var(--accent);
   --yt-endpoint-hover-color: var(--accent-hover);
   &:hover {
@@ -42,7 +43,7 @@ a.yt-simple-endpoint.yt-formatted-string {
 }
 
 .index.ytmusic-responsive-list-item-renderer {
-  color: var(--text-color-2);
+  color: var(--text-color-2) !important;
 }
 
 /* Like buttons pressed */
@@ -52,12 +53,6 @@ a.yt-simple-endpoint.yt-formatted-string {
 
 tp-yt-paper-ripple.tp-yt-paper-tab {
   color: transparent !important;
-}
-
-.stroke.yt-interaction,
-.fill.yt-interaction {
-  border: 0;
-  background: transparent !important;
 }
 
 yt-icon-button.ytmusic-player-bar .yt-icon {

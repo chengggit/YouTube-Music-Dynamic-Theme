@@ -1,7 +1,7 @@
 /* ========================== ART ========================== */
 /* Background Behind Art */
 ytmusic-player {
-  background: transparent;
+  background: transparent !important;
 }
 
 ytmusic-section-list-renderer[main-page-type='MUSIC_PAGE_TYPE_ARTIST']
@@ -25,7 +25,7 @@ ytmusic-item-thumbnail-overlay-renderer:not([play-button-state='default']) {
 
 ytmusic-responsive-list-item-renderer[is-album-detail-page]
   ytmusic-background-overlay-renderer {
-  background: transparent;
+  background: transparent !important;
 }
 
 /* Playing/Selected Overlay */
@@ -41,7 +41,7 @@ ytmusic-play-button-renderer:not([state='default'])
 
 /* Playlist Page Art */
 ytmusic-responsive-header-renderer {
-  --yt-img-border-radius: var(--radius-art-big);
+  --yt-img-border-radius: var(--radius-art-big) !important;
 }
 
 #header-group #img {

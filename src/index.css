@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Inter');
 
+@import './base/header.css';
 @import './base/vars.css';
 @import './base/typography.css';
 

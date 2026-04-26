@@ -5,15 +5,7 @@
   position: fixed;
   inset: 0;
   height: 120vh;
-  background: color-mix(
-    in srgb,
-    rgba(3, 3, 3) calc(100% - var(--ytmusic-album-color-ratio, 50%)),
-    rgba(var(--ytmusic-album-color-dark), 1)
-      var(--ytmusic-album-color-ratio, 50%)
-  ) !important;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: var(--background) center / cover no-repeat !important;
   transform: scale(var(--bg-scale));
   z-index: -50;
   filter: blur(var(--bg-blur)) saturate(var(--bg-saturate))
@@ -27,10 +19,8 @@ ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
   transition: background var(--bg-duration) var(--bg-timing);
   will-change: background;
 }
-
-/* Background Fix */
 .background-gradient {
-  background: none !important;
+  background: transparent !important;
 }
 ytmusic-fullbleed-thumbnail-renderer[is-background] .image {
   mask-image: linear-gradient(transparent);
@@ -44,7 +34,7 @@ ytmusic-fullbleed-thumbnail-renderer[is-background] .image {
     content: '';
     position: fixed;
     inset: 0;
-    background: var(--ytmusic-background);
+    background: var(--background) center / cover no-repeat !important;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

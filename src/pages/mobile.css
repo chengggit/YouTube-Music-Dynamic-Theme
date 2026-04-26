@@ -2,19 +2,23 @@
 ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
   content: '';
   position: fixed;
-  inset: -5rem;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  inset: 0 !important;
+  height: 120vh !important;
+  background: var(--background) center / cover no-repeat !important;
+  filter: blur(var(--bg-blur)) saturate(var(--bg-saturate))
+    brightness(var(--bg-brightness)) !important;
   z-index: -50;
-  opacity: 1;
-  filter: blur(30px) brightness(var(--bg-brightness));
 }
 
 ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state]
   #side-panel.ytmusic-player-page {
   height: 100vh;
-  background: transparent;
+  background: transparent !important;
+}
+
+ytmusic-player-page[is-mweb-modernization-enabled]:not([player-fullscreened])
+  #player.ytmusic-player-page {
+  max-height: unset !important;
 }
 
 ytmusic-player-page #top-player-bar {
@@ -31,8 +35,8 @@ ytmusic-player-page #top-player-bar {
 }
 
 .play-pause-button-wrapper.ytmusic-player-controls {
-  color: transparent;
-  background: transparent;
+  color: transparent !important;
+  background: transparent !important;
   transform: scale(1.2);
 }
 
@@ -42,6 +46,18 @@ ytmusic-player-page #top-player-bar {
 .repeat.ytmusic-player-controls {
   color: transparent;
   background: transparent !important;
+}
+
+tp-yt-paper-slider#progress-bar.ytmusic-player-controls {
+  --paper-slider-knob-start-color: var(--accent);
+  --paper-slider-knob-start-border-color: var(--accent);
+  --paper-slider-knob-color: var(--accent);
+  --paper-slider-active-color: var(--accent);
+}
+
+.current-time.ytmusic-player-controls,
+.total-time.ytmusic-player-controls {
+  color: var(--text-color-2) !important;
 }
 
 /* Lyrics Tab Opening Transition */
@@ -66,4 +82,10 @@ ytmusic-player-page[player-page-ui-state='TABS_VIEW'] #thumbnail > img {
 ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state='TABS_VIEW']
   #music-player-wrapper {
   transform: translateY(6.5rem);
+}
+
+.stroke.yt-interaction,
+.fill.yt-interaction {
+  border: 0 !important;
+  background: transparent !important;
 }

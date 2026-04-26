@@ -49,13 +49,14 @@ ytmusic-player-bar:hover #progress-bar {
   --yt-endpoint-hover-color: var(--accent-hover);
 }
 
-.thumbnail-image-wrapper.ytmusic-player-bar,
-.image.ytmusic-player-bar {
-  display: block;
-  border-radius: var(--radius-art);
-  overflow: hidden;
+@media (min-width: 615px) {
+  .thumbnail-image-wrapper.ytmusic-player-bar,
+  .image.ytmusic-player-bar {
+    display: block !important;
+    border-radius: var(--radius-art);
+    overflow: hidden;
+  }
 }
-
 .ytmusic-player-bar .time-info.ytmusic-player-bar,
 yt-formatted-string.duration.ytmusic-player-queue-item {
   color: var(--text-color-2) !important;
@@ -63,14 +64,14 @@ yt-formatted-string.duration.ytmusic-player-queue-item {
 
 /* Volume Control */
 ytmusic-app {
-  --ytmusic-player-bar-background: transparent;
-  .volume-slider.ytmusic-player-bar,
-  .expand-volume-slider.ytmusic-player-bar {
-    --paper-slider-knob-color: var(--accent);
-    --paper-slider-knob-start-color: var(--accent);
-    --paper-slider-knob-start-border-color: var(--accent);
-    --paper-slider-container-color: transparent;
-  }
+  --ytmusic-player-bar-background: transparent !important;
+}
+ytmusic-app .volume-slider.ytmusic-player-bar,
+ytmusic-app .expand-volume-slider.ytmusic-player-bar {
+  --paper-slider-knob-color: var(--accent) !important;
+  --paper-slider-knob-start-color: var(--accent) !important;
+  --paper-slider-knob-start-border-color: var(--accent) !important;
+  --paper-slider-container-color: transparent !important;
 }
 
 /* Podcast Player Bar */
@@ -118,41 +119,5 @@ ytmusic-player-bar:has(ytmusic-player-expanding-menu[aria-hidden='false']) {
   .right-controls.ytmusic-player-bar .expand-button.ytmusic-player-bar,
   .playback-rate.ytmusic-player-bar {
     opacity: 0;
-  }
-}
-
-@if $increment-skip-buttons == on {
-  ytmusic-player-bar yt-icon-button[hidden],
-  yt-icon-button.rewind-button {
-    display: inline-flex !important;
-  }
-}
-
-@if $centered-playback-controls == on {
-  @media (min-width: 615px) {
-    ytmusic-player-bar {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas: 'start middle end';
-    }
-    .left-controls.ytmusic-player-bar {
-      grid-area: middle;
-      justify-self: center;
-      justify-content: center;
-    }
-    .middle-controls.ytmusic-player-bar {
-      grid-area: start;
-      justify-content: start;
-      margin-left: 12px;
-    }
-    .time-info.ytmusic-player-bar {
-      position: absolute;
-      top: -18px;
-      margin: 0px;
-    }
-    .spinner-container.ytmusic-player-bar {
-      position: absolute;
-      left: 0;
-    }
   }
 }

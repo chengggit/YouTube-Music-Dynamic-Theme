@@ -2,7 +2,7 @@
 ytmusic-app-layout[player-page-open][is-mweb-player-bar-modernization-enabled]
   > [slot='player-page'] {
   animation: open-playerpage var(--player-page-duration)
-    var(--player-page-timing);
+    var(--player-page-timing) !important;
 }
 
 ytmusic-app-layout:not(
@@ -10,17 +10,17 @@ ytmusic-app-layout:not(
   )[is-mweb-player-bar-modernization-enabled]
   > [slot='player-page'] {
   animation: collapse-playerpage var(--player-page-duration)
-    var(--player-page-timing);
+    var(--player-page-timing) !important;
 }
 
 ytmusic-player-page[mini-player-enabled][player-page-open]
   #player.ytmusic-player-page {
-  animation: mp-grow 0.75s cubic-bezier(0.3, 0.6, 0.5, 1);
+  animation: mp-grow 0.75s cubic-bezier(0.3, 0.6, 0.5, 1) !important;
 }
 
 ytmusic-player-page[mini-player-enabled]:not([player-page-open])
   #player.ytmusic-player-page {
-  animation: mp-shrink 1s cubic-bezier(0.5, 0.6, 0.5, 1);
+  animation: mp-shrink 1s cubic-bezier(0.5, 0.6, 0.5, 1) !important;
 }
 
 @keyframes open-playerpage {
@@ -71,12 +71,12 @@ ytmusic-player-page[mini-player-enabled]:not([player-page-open])
 
 ytmusic-player-page[is-mweb-modernization-enabled]:not([player-fullscreened])
   #player.ytmusic-player-page {
-  transition: transform 0.65s var(--player-page-timing);
+  transition: transform 0.65s var(--player-page-timing) !important;
 }
 
 ytmusic-player-page[is-mweb-modernization-enabled][transition-mode]
   #side-panel {
-  transition: transform 0.65s var(--player-page-timing);
+  transition: transform 0.65s var(--player-page-timing) !important;
 }
 
 ytmusic-player-page[player-page-ui-state='TABS_VIEW'] #thumbnail > img {
@@ -251,7 +251,9 @@ ytmusic-player-queue-item yt-button-shape {
 ytmusic-dropdown-item-renderer {
   transition: background var(--fade-duration) var(--fade-timing);
 }
-
+tp-yt-paper-item.yt-dropdown-menu {
+  transition: background var(--fade-duration) var(--fade-timing);
+}
 ytmusic-playlist-add-to-option-renderer {
   transition: background var(--fade-duration) var(--fade-timing);
 }
@@ -302,11 +304,14 @@ yt-icon-button.ytmusic-carousel-shelf-renderer,
 .ytSpecButtonShapeNextMono.ytSpecButtonShapeNextOutline {
   transition: background var(--fade-duration) var(--fade-timing) !important;
 }
-
-/* No idea */
-.yt-list-item-view-model__container--tappable {
+.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextTonal {
+  transition: background var(--fade-duration) var(--fade-timing) !important;
+}
+/* Collab Container */
+.ytListItemViewModelTappable {
   transition: background var(--fade-duration) var(--fade-timing);
 }
+
 .yt-simple-endpoint {
   transition: background var(--fade-duration) var(--fade-timing);
 }

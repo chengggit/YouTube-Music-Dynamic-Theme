@@ -23,3 +23,18 @@ ytmusic-app-layout[player-visible][is-player-bar-slide-up-animation-enabled]
   > [slot='player-bar'] {
   animation: none !important;
 }
+ytmusic-app .background-gradient.style-scope,
+ytmusic-app-layout[is-bauhaus-sidenav-enabled]
+  #mini-guide-background.ytmusic-app-layout {
+  background: transparent !important;
+}
+.navigation-item {
+  color: var(--icon) !important;
+}
+/* In-App Menu Case */
+ytmusic-player[player-ui-state='FULLSCREEN'].ytmusic-player-page {
+  margin-top: auto !important;
+}
+ytmusic-player-page[player-ui-state='FULLSCREEN'] .content.ytmusic-player-page {
+  margin-top: calc(var(--menu-bar-height, 32px) * -1);
+}

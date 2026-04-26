@@ -199,19 +199,33 @@ yt-formatted-string.ytd-account-item-renderer[secondary] {
 
 /* Settings */
 ytmusic-setting-category-collection-renderer.ytmusic-settings-page {
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+yt-formatted-string.summary {
+  color: var(--text-color-2) !important;
+}
+
+.dropdown-content.ytmusic-setting-single-option-menu-renderer
+  .menu-item.ytmusic-setting-single-option-menu-renderer {
+  color: var(--text-color-1) !important;
 }
 
 .category-menu-item.iron-selected.ytmusic-settings-page,
 .category-menu-item.ytmusic-settings-page:focus:not(.iron-selected) {
-  background: var(--layout-highlight);
-  border-radius: var(--radius-highlight);
+  background: var(--layout-highlight) !important;
+  border-radius: var(--radius-highlight) !important;
 }
 
 .dropdown-content.ytmusic-setting-single-option-menu-renderer {
-  background: transparent;
+  background: transparent !important;
 }
 
+.tp-yt-paper-item.tp-yt-paper-item:focus,
+tp-yt-paper-item:focus {
+  background: var(--layout-highlight) !important;
+  border-radius: var(--radius-highlight) !important;
+}
 /* Divider */
 .top-bar.ytmusic-settings-page,
 .items .ytmusic-setting-category-collection-renderer {
@@ -239,7 +253,7 @@ tp-yt-paper-toggle-button[checked]:not([disabled])
 }
 
 /* "Recently Played" Button */
-button.ytmusic-sort-filter-button-renderer {
+ytmusic-sort-filter-button-renderer button.ytmusic-sort-filter-button-renderer {
   color: var(--text-color-1);
   border: var(--button-border);
   border-radius: var(--radius-button-alt);
@@ -254,20 +268,22 @@ ytmusic-multi-select-menu-item-renderer {
 }
 
 #container.ytmusic-multi-select-menu-renderer {
-  background: transparent;
-  border: 0;
+  background: transparent !important;
+  border: 0 !important;
 }
 
 #items.ytmusic-multi-select-menu-renderer {
-  background: transparent;
+  background: transparent !important;
 }
 
 #title.ytmusic-multi-select-menu-renderer {
-  border: 0;
+  border: 0 !important;
 }
-
+h1 .text.ytmusic-menu-title-renderer {
+  color: var(--text-color-1);
+}
 ytmusic-background-promo-renderer {
-  background: transparent;
+  background: transparent !important;
   .yt-icon-shape {
     color: var(--icon);
   }
@@ -277,22 +293,22 @@ ytmusic-background-promo-renderer {
 tp-yt-paper-toast,
 tp-yt-paper-toast.yt-notification-action-renderer,
 #toast.ytmusic-notification-text-renderer {
-  background: var(--layout-color);
-  border-radius: var(--radius-panel);
-  border: var(--layout-border);
-  box-shadow: var(--drop-shadow);
-  backdrop-filter: blur(var(--layout-blur));
+  background: var(--layout-color) !important;
+  border-radius: var(--radius-panel) !important;
+  border: var(--layout-border) !important;
+  box-shadow: var(--drop-shadow) !important;
+  backdrop-filter: blur(var(--layout-blur)) !important;
 }
 
 #text.yt-notification-action-renderer,
 #sub-text.yt-notification-action-renderer {
-  color: var(--text-color-1);
+  color: var(--text-color-1) !important;
 }
 
-.yt-spec-button-shape-next--call-to-action-inverse.yt-spec-button-shape-next--text {
-  color: var(--accent);
+.ytSpecButtonShapeNextCallToActionInverse.ytSpecButtonShapeNextText {
+  color: var(--accent) !important;
   &:hover {
-    background: var(--button-highlight);
+    background: var(--button-highlight) !important;
   }
 }
 
@@ -338,13 +354,13 @@ ytmusic-multi-select-menu-bar {
 /* Collaborate Container */
 #header.ytmusic-engagement-panel-title-header-renderer,
 #content.ytmusic-engagement-panel-section-list-renderer {
-  background: transparent;
+  background: transparent !important;
 }
 
-.yt-list-item-view-model__container--tappable {
-  border-radius: var(--radius-highlight-big);
+.ytListItemViewModelTappable {
+  border-radius: var(--radius-highlight-big) !important;
   &:hover {
-    background: var(--layout-highlight);
+    background: var(--layout-highlight) !important;
   }
 }
 
@@ -361,7 +377,7 @@ ytmusic-menu-renderer.ytmusic-responsive-header-renderer {
   background: var(--button-highlight);
 }
 
-.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--text {
+button.ytSpecButtonShapeNextCallToAction.ytSpecButtonShapeNextText {
   color: var(--accent);
   background: var(--button-color);
   border: var(--button-border);
@@ -393,25 +409,25 @@ ytmusic-menu-renderer.ytmusic-responsive-header-renderer
 
 /* Share Container */
 #start-at-wrapper {
-  --paper-input-container-disabled-opacity: 0.65;
+  --paper-input-container-disabled-opacity: 0.65 !important;
 }
 
 #bar.yt-copy-link-renderer {
-  background: var(--layout-contrast);
-  border: var(--layout-border);
+  background: var(--layout-contrast) !important;
+  border: var(--layout-border) !important;
 }
 
 #checkbox.tp-yt-paper-checkbox {
-  border-color: var(--button-color);
-  background: var(--button-color);
-  --paper-checkbox-checked-color: var(--button-color);
+  border-color: var(--button-color) !important;
+  background: var(--button-color) !important;
+  --paper-checkbox-checked-color: var(--button-color) !important;
 }
 
 #checkmark.tp-yt-paper-checkbox {
-  border-color: var(--icon);
+  border-color: var(--icon) !important;
 }
 
-.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--filled {
+button.ytSpecButtonShapeNextCallToAction.ytSpecButtonShapeNextFilled {
   color: var(--accent);
   background: var(--button-color);
   border-radius: var(--radius-button-alt);
@@ -420,7 +436,7 @@ ytmusic-menu-renderer.ytmusic-responsive-header-renderer
   }
 }
 
-.scroll-button.yt-third-party-share-target-section-renderer {
+yt-icon-button.scroll-button.yt-third-party-share-target-section-renderer {
   background: var(--button-color);
   backdrop-filter: blur(var(--layout-blur));
   box-shadow: none;
@@ -458,14 +474,14 @@ ytmusic-navigation-button-renderer.ytmusic-carousel
 }
 
 tp-yt-paper-listbox.yt-dropdown-menu {
-  background: transparent;
-  .iron-selected.yt-dropdown-menu,
-  tp-yt-paper-item.yt-dropdown-menu:hover {
-    background: var(--layout-highlight);
-    border-radius: var(--radius-highlight);
-  }
+  background: transparent !important;
+}
+tp-yt-paper-listbox.yt-dropdown-menu .iron-selected.yt-dropdown-menu,
+tp-yt-paper-listbox.yt-dropdown-menu tp-yt-paper-item.yt-dropdown-menu:hover {
+  background: var(--layout-highlight);
+  border-radius: var(--radius-highlight);
 }
 
 yt-card-item-container-renderer {
-  border: 0;
+  border: 0 !important;
 }

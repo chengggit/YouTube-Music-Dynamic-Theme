@@ -4,8 +4,8 @@ ytmusic-player-page[player-fullscreened] ytmusic-description-shelf-renderer {
 }
 
 ytmusic-multi-row-list-item-renderer[is-detailed-view] {
-  --ytmusic-list-item-height: 182px;
-  --ytmusic-multi-row-list-item-thumbnail-size: 80px;
+  --ytmusic-list-item-height: 182px !important;
+  --ytmusic-multi-row-list-item-thumbnail-size: 80px !important;
 }
 
 /* Podcast Header */
@@ -42,6 +42,9 @@ ytmusic-responsive-header-renderer
   background: var(--button-color) !important;
   border: var(--button-border) !important;
 }
+#text.ytmusic-toggle-button-renderer {
+  color: var(--text-color-1);
+}
 
 /* Podcast Focused */
 ytmusic-multi-row-list-item-renderer[play-button-state] {
@@ -54,9 +57,9 @@ ytmusic-multi-row-list-item-renderer.ytmusic-shelf-renderer {
 
 /* Progress Bar */
 .foreground-bar.ytmusic-playback-progress-renderer {
-  background: var(--accent);
+  background: var(--accent) !important;
 }
 
-.subtitle.ytmusic-multi-row-list-item-renderer {
+yt-formatted-string.subtitle.ytmusic-multi-row-list-item-renderer {
   color: var(--text-color-2);
 }

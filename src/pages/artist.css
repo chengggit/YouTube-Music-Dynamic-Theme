@@ -1,6 +1,8 @@
 /* ========================== ARTIST PAGE ========================== */
 ytmusic-immersive-header-renderer {
-  background: var(--ytmusic-app);
+  background: var(--background) !important;
+  filter: blur(var(--bg-blur)) saturate(var(--bg-saturate))
+    brightness(var(--bg-brightness));
 }
 
 ytmusic-immersive-header-renderer .image {
@@ -10,11 +12,12 @@ ytmusic-immersive-header-renderer .image {
 }
 
 .description.ytmusic-immersive-header-renderer {
-  color: var(--text-color-1);
+  color: var(--text-color-1) !important;
   font-size: 14px !important;
 }
 
-ytmusic-toggle-button-renderer
+.description-container
+  ytmusic-toggle-button-renderer
   yt-formatted-string.ytmusic-toggle-button-renderer {
   color: var(--accent);
 }
@@ -89,5 +92,21 @@ ytmusic-popup-container
 
 /* User Page */
 ytmusic-subscribe-button-renderer.ytmusic-visual-header-renderer {
-  background: none;
+  background: none !important;
+}
+.ytSpecButtonShapeNextOverlay.ytSpecButtonShapeNextText {
+  color: var(--text-color-1) !important;
+}
+.line-text.yt-confirm-dialog-renderer {
+  color: var(--text-color-1);
+}
+.ytAttributedStringHost.ytAttributedStringWhiteSpacePreWrap {
+  color: var(--text-color-1);
+  font-weight: 700 !important;
+}
+.title.ytmusic-card-shelf-renderer .yt-simple-endpoint.yt-formatted-string {
+  font-weight: 700 !important;
+}
+.subscriber-count-text.ytmusic-subscribe-button-renderer {
+  color: var(--text-color-1) !important;
 }
