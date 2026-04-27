@@ -28,6 +28,14 @@ ytmusic-player-page[player-ui-state='FULLSCREEN']:not([player-page-open])
   display: none;
 }
 
+/* Hide lyrics tab if no lyrics  */
+ytmusic-player-page[player-ui-state='FULLSCREEN']
+  .synced-lyrics-vlist:has(yt-icon[icon='yt-icons:warning']) {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  transition-delay: 2s;
+}
+
 /* misalign play button fix */
 ytmusic-player-bar[player-fullscreened]
   #play-pause-button

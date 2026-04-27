@@ -35,9 +35,6 @@ ytmusic-fullbleed-thumbnail-renderer[is-background] .image {
     position: fixed;
     inset: 0;
     background: var(--background) center / cover no-repeat !important;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     filter: blur(var(--bg-blur)) saturate(var(--bg-saturate))
       brightness(var(--bg-brightness));
     transform: scale(var(--bg-scale));

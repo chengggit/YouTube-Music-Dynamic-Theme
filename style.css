@@ -1742,9 +1742,6 @@ ytmusic-fullbleed-thumbnail-renderer[is-background] .image {
     position: fixed;
     inset: 0;
     background: var(--background) center / cover no-repeat !important;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     filter: blur(var(--bg-blur)) saturate(var(--bg-saturate))
       brightness(var(--bg-brightness));
     transform: scale(var(--bg-scale));
@@ -1799,6 +1796,15 @@ ytmusic-player-page[player-ui-state='FULLSCREEN'] {
 ytmusic-player-page[player-ui-state='FULLSCREEN']:not([player-page-open])
   #player.ytmusic-player-page {
   display: none;
+}
+
+/* Hide lyrics tab if no lyrics  */
+
+ytmusic-player-page[player-ui-state='FULLSCREEN']
+  .synced-lyrics-vlist:has(yt-icon[icon='yt-icons:warning']) {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  transition-delay: 2s;
 }
 
 /* misalign play button fix */
@@ -2414,21 +2420,21 @@ yt-formatted-string.text.style-scope.ytmusic-message-renderer {
 }
 
 .undercards-container.ytmusic-card-shelf-renderer {
-  padding: 20px;
-  gap: 16px;
+  padding: 20px !important;
+  gap: 16px !important;
 }
 
 .thumbnail-container.ytmusic-card-shelf-renderer {
-  border-radius: var(--radius-art-medium);
+  border-radius: var(--radius-art-medium) !important;
 }
 
 /* Radio Button */
 
-.ytmusic-card-shelf-renderer .yt-spec-button-shape-next--outline {
-  color: var(--accent);
-  border-radius: var(--radius-button-alt);
+.ytmusic-card-shelf-renderer .ytSpecButtonShapeNextOutline {
+  color: var(--accent) !important;
+  border-radius: var(--radius-button-alt) !important;
   .yt-icon-shape {
-    color: var(--accent-icon);
+    color: var(--accent-icon) !important;
   }
 }
 
