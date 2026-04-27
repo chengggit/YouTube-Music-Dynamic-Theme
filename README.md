@@ -38,7 +38,7 @@ Toggleable player enhancements:
 
 ## Installation
 
-### Better Lyrics (Recommended)
+### Better Lyrics (Extension)
 
 Install [Better Lyrics Extension For Youtube Music](https://better-lyrics.boidu.dev/).
 
@@ -87,31 +87,35 @@ Requires the [Stylus Extension](https://chromewebstore.google.com/detail/stylus/
 Maintaining and porting separate versions for Stylus and Better Lyrics became too time-consuming, so Stylus support has been discontinued.
 
 ## Previews
-
+### Better Lyrics
 ![](/images/bgpreview.webp)
 
-### Default
+#### Default
 
 ![](/images/Default.webp)
 
-### Light Preset
+#### Light Preset
 
 ![](/images/Light2.webp)
 
-### Dark Preset
+#### Dark Preset
 
 ![](/images/Dark.webp)
 
-### Custom Image
+#### Custom Image
 
 ![](/images/custompreview.webp)
 Image: [NASA](https://science.nasa.gov/image-detail/wise-infrared-view-of-andromeda-galaxy-and-companions-3/)
 
 Background Blur Setting: 0.05
 
-### Static Color
+#### Static Color
 
 ![](/images/staticpreview.webp)
+
+### Pear Desktop
+
+![](/images/pear1.webp)
 
 ## Configuration
 
@@ -134,8 +138,8 @@ All variables are defined at the top of the CSS/RICS file.
 
 ## Compatibility
 
-- Compatible With Better Lyrics V2.2.0 and later.
-- Tested with Pear Desktop 3.11.0
+- Better Lyrics v2.2.0 and later
+- Pear Desktop 3.11.0 (tested)
 
 ## License
 
