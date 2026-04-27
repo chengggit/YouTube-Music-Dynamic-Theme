@@ -2,7 +2,7 @@
 
 # Dynamic Background
 
-A highly customizable YouTube Music theme featuring dynamic backgrounds and glassmorphism for [Better Lyrics Extension](https://better-lyrics.boidu.dev/).
+A highly customizable YouTube Music theme featuring dynamic backgrounds and glassmorphism. Available for [Better Lyrics Extension](https://better-lyrics.boidu.dev/) and [Pear Desktop](https://github.com/pear-devs/pear-desktop).
 
 <div align="center">
 
@@ -38,42 +38,53 @@ Toggleable player enhancements:
 
 ## Installation
 
-First install [Better Lyrics Extension For Youtube Music](https://better-lyrics.boidu.dev/). Once the extension is installed, you can choose one of the following methods to install the themes:
+### Better Lyrics (Recommended)
+
+Install [Better Lyrics Extension For Youtube Music](https://better-lyrics.boidu.dev/).
 
 **Known Limitations**
 
 - Background transitions don’t work in Firefox yet.
 
-#### Installation Methods:
+**Method 1 (Built-in)**:
 
-Method 1: Install from the Theme Marketplace **(Recommended)**
+- Open extension settings → Themes → Click Change → Select Dynamic Background.
 
-1. Open the Better Lyrics extension and go to the Themes section.
-2. Open the Theme Marketplace and search for “Dynamic Background”.
-3. Click Install.
-4. After installing, go back to Themes, open Installed Themes, and click Apply.
+**Method 2 (Marketplace)**:
 
-Method 2: Install using the repository link
+- Open Theme Marketplace → Search for "Dynamic Background" → Click Install.
 
-1. Copy the repository link.
-2. Open the Theme Marketplace, then click Install from URL (or press U on your keyboard).
-3. Paste the link and click Install.
+### Pear Desktop (App)
 
-Grant permission if prompted.
+The Album Color Theme plugin is required for dynamic background functionality.
+
+**Known Limitations**
+
+- On Pear Desktop 3.11.0, the Album Color Theme plugin has been reported to not work properly on some systems such as macOS, Fedora, and Arch-based Linux. See [#3857](https://github.com/pear-devs/pear-desktop/issues/3857).
+
+- Dynamic backgrounds behave differently from the Better Lyrics version, as Pear Desktop does not provide a variable for fetching the song’s album cover. This implementation relies on the Album Color Theme plugin as a workaround.
+
+- The search suggestion background blur workaround does not work on Pear Desktop yet due to its current Chromium 140 base, where CSS anchor behavior differs from Chromium 144+. This should be resolved once Pear updates to a compatible Chromium version.
+
+#### Installation
+
+1. Download [`style.css`](/style.css)
+2. Open the app menu → **Options** → **Visual Tweaks** → **Theme** → **Import custom CSS file**
+3. Select the downloaded `style.css`
 
 ---
 
 #### Install with Stylus
 
-**Stylus version will stay at V2.0.6.2 and will not receive further updates.**
+> The Stylus version is locked at **v2.0.6.2** and will not receive further updates.
 
-[Stylus Extension](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en) is needed.
+Requires the [Stylus Extension](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en)
 
-1. Click this button below to install.
+1. Click the button below to install:
 
    [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.user.css)
 
-**Unfortunately, I’ve decided to discontinue the Stylus theme. Maintaining and porting two separate versions for Stylus and Better Lyrics has become too draining, so it will no longer receive updates.**
+Maintaining and porting separate versions for Stylus and Better Lyrics became too time-consuming, so Stylus support has been discontinued.
 
 ## Previews
 
@@ -104,11 +115,27 @@ Background Blur Setting: 0.05
 
 ## Configuration
 
-All the variables are at the top of the CSS. You can tweak colors, fonts, animations, and layout to fit your style.
+All variables are defined at the top of the CSS/RICS file.
+
+- Edit values to customize colors, fonts, layout, and animations
+- Supports standard CSS formats (rgb, rgba, hex, etc.)
+- Custom fonts must be installed on your system
+
+**Animations**
+
+- Better Lyrics: uses `on` / `off` toggles
+- Pear Desktop: set duration to `0s` to disable
+
+**Notes**
+
+- Dynamic backgrounds on Pear require the Album Color Theme plugin
+- Better Lyrics includes presets (`default`, `light`, `dark`) as quick starting styles. You can still override any value manually
+- Pear Desktop uses CSS variables (`--cfg-*`) and comment-based toggles
 
 ## Compatibility
 
 - Compatible With Better Lyrics V2.2.0 and later.
+- Tested with Pear Desktop 3.11.0
 
 ## License
 
@@ -125,11 +152,11 @@ Snippets used in this theme:
 
 The theme is also heavily inspired by “Even Better Lyrics Plus” by Noah & BetterLyrics for **Better Lyrics** extension.
 
-# Thank You ❤️
+## Thank You ❤️
 
-This CSS was originally based on a theme made by **walm-git.** Since then, I’ve gone through and studied almost every part of it. Now, it’s almost entirely written by me. Countless hours spent in DevTools, asking ChatGPT for explanations and solutions, studying other people’s code, hunting for hidden elements, dealing with frustration, and killing my back. I’m proud to say this has become the best thing I’ve ever created.
+This CSS started from a theme made by **walm-git**, and over time I’ve rebuilt nearly every part of it. It’s now mostly my own work. A lot of hours went into it, digging through DevTools, reading other people’s code, getting stuck, and figuring things out along the way. I’m really proud of how it turned out.
 
-I just want to say thank you to everyone using this theme. I hope you enjoy it and love it as much as I do. Thank you to everyone who has supported this project from the start, to those who commented on my Reddit post, shared kind words, and to the people I credited above.
+Thanks to everyone who uses this theme. I hope you enjoy it as much as I enjoyed making it. And thank you to everyone who supported the project from the beginning—those who left feedback, shared kind words, and the people credited above.
 
 Thank you.
 
