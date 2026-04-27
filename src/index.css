@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+@import './base/header.css';
+@import './base/vars.css';
+@import './base/typography.css';
+
+@import './components/art.css';
+@import './components/panels.css';
+@import './components/playerbar.css';
+
+@import './features/animation.css';
+@import './features/lyrics.css';
+
+@import './pages/artist.css';
+@import './pages/background.css';
+@import './pages/fullscreen.css';
+@import './pages/homepage.css';
+@import './pages/mobile.css';
+@import './pages/playerpage.css';
+@import './pages/podcast.css';
+@import './pages/searchpage.css';
+
+@import './components/overrides.css';

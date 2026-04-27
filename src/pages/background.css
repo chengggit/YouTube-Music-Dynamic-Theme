@@ -1,0 +1,57 @@
+/* ========================== BACKGROUND ========================== */
+#browse-page::before,
+#search-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  height: 120vh;
+  background: var(--background) center / cover no-repeat !important;
+  transform: scale(var(--bg-scale));
+  z-index: -50;
+  filter: blur(var(--bg-blur)) saturate(var(--bg-saturate))
+    brightness(var(--bg-brightness));
+}
+
+#browse-page::before,
+#search-page::before,
+ytmusic-player-page::before,
+ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
+  transition: background var(--bg-duration) var(--bg-timing);
+  will-change: background;
+}
+.background-gradient {
+  background: transparent !important;
+}
+ytmusic-fullbleed-thumbnail-renderer[is-background] .image {
+  mask-image: linear-gradient(transparent);
+}
+
+@media (min-width: 615px) {
+  ytmusic-player-page {
+    background: none;
+  }
+  ytmusic-player-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: var(--background) center / cover no-repeat !important;
+    filter: blur(var(--bg-blur)) saturate(var(--bg-saturate))
+      brightness(var(--bg-brightness));
+    transform: scale(var(--bg-scale));
+    opacity: var(--player-page-opacity);
+    z-index: -50;
+  }
+}
+
+/* Transparent Player Page */
+ytmusic-player-page:not([is-mweb-modernization-enabled]) {
+  background: none !important;
+  backdrop-filter: blur(15px);
+}
+ytmusic-app-layout[player-page-open]:not([is-mweb-modernization-enabled])
+  > #content {
+  visibility: visible !important;
+}
+ytmusic-app-layout[player-fullscreened] > [slot='content'] {
+  display: block !important;
+}
