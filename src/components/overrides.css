@@ -38,3 +38,8 @@ ytmusic-player[player-ui-state='FULLSCREEN'].ytmusic-player-page {
 ytmusic-player-page[player-ui-state='FULLSCREEN'] .content.ytmusic-player-page {
   margin-top: calc(var(--menu-bar-height, 32px) * -1);
 }
+/* Fix wrong miniplayer position */
+#player.ytmusic-player-page[player-ui-state='MINIPLAYER'] {
+  margin-left: unset !important;
+  margin-right: unset !important;
+}

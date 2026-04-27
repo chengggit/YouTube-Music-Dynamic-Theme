@@ -3,7 +3,7 @@ ytmusic-player[player-ui-state='FULLSCREEN'].ytmusic-player-page {
   top: unset;
   width: unset;
   height: unset;
-  max-width: 500px;
+  max-width: var(--album-art-size);
 }
 ytmusic-player[player-ui-state='FULLSCREEN'][video-mode].ytmusic-player-page {
   max-width: 800px;

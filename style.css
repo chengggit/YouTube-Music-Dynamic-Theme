@@ -65,7 +65,7 @@ For proper functionality, the variable below should be the default value:
   --cfg-bg-blur: 0; /* 0 to 1 (Multiplied by 100px) */
   --cfg-bg-saturate: 1.2;
   --cfg-bg-scale: 1.1;
-  --cfg-player-page-opacity: 0.7; /* Player page transparency */
+  --cfg-player-page-opacity: 1; /* Player page transparency */
 
   /* Typography 
      - Font: Name in quotes (e.g., 'Segoe UI', 'Noto Sans KR')
@@ -1771,7 +1771,7 @@ ytmusic-player[player-ui-state='FULLSCREEN'].ytmusic-player-page {
   top: unset;
   width: unset;
   height: unset;
-  max-width: 500px;
+  max-width: var(--album-art-size);
 }
 
 ytmusic-player[player-ui-state='FULLSCREEN'][video-mode].ytmusic-player-page {
@@ -2184,7 +2184,7 @@ ytmusic-player[player-ui-state='MINIPLAYER'] {
 
 ytmusic-player-page:not([is-mweb-modernization-enabled]):not([video-mode]):not(
     [player-ui-state='FULLSCREEN']
-  )
+  ):not([player-ui-state='MINIPLAYER'])
   #player.ytmusic-player-page {
   width: 100%;
   margin-left: auto !important;
@@ -2502,4 +2502,11 @@ ytmusic-player[player-ui-state='FULLSCREEN'].ytmusic-player-page {
 
 ytmusic-player-page[player-ui-state='FULLSCREEN'] .content.ytmusic-player-page {
   margin-top: calc(var(--menu-bar-height, 32px) * -1);
+}
+
+/* Fix wrong miniplayer position */
+
+#player.ytmusic-player-page[player-ui-state='MINIPLAYER'] {
+  margin-left: unset !important;
+  margin-right: unset !important;
 }

@@ -17,7 +17,7 @@
   --cfg-bg-blur: 0; /* 0 to 1 (Multiplied by 100px) */
   --cfg-bg-saturate: 1.2;
   --cfg-bg-scale: 1.1;
-  --cfg-player-page-opacity: 0.7; /* Player page transparency */
+  --cfg-player-page-opacity: 1; /* Player page transparency */
 
   /* Typography 
      - Font: Name in quotes (e.g., 'Segoe UI', 'Noto Sans KR')
