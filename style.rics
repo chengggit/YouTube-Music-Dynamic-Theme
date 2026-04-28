@@ -36,7 +36,7 @@ $drop-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); // values: x-offset y-offset blur-r
 // Music
 $centered-playback-controls: off;
 $increment-skip-buttons: off;
-$lyrics-font-weight: 500;
+$lyrics-font-weight: 600;
 $lyrics-font-size: 30px;
 $album-art-size: 400px;
 $small-video: off; // revert back to small video in player page
@@ -124,7 +124,7 @@ $final-bg-brightness: if($bg-brightness != null, $bg-brightness, map-get($theme-
 /* ==================================================== */
 yt-formatted-string, input, label, button, h2, tp-yt-paper-item, #title, #icon-label, .ytmusic-player-bar, .dialog-title, .title, .subtitle, .tab-content, .promo-title, [role="text"] {
   font-family: $font !important;
-  font-weight: $font-weight !important;
+  font-weight: $font-weight;
 }
 
 html, #items, #tab-renderer, #chips, ytmusic-menu-popup-renderer, .ytmusicMultiPageMenuHost, .scrollable-content, .scroller, .dropdown-content, .ytmusic-settings-page {
@@ -231,6 +231,8 @@ yt-icon.ytmusic-inline-badge-renderer {
 /* CTA Text */
 a.yt-simple-endpoint.yt-formatted-string {
   --yt-spec-call-to-action: var(--accent);
+  --yt-endpoint-color: var(--text-color-1);
+  --yt-endpoint-visited-color: var(--text-color-1);
   --yt-endpoint-hover-color: var(--accent-hover);
   &:hover {
     text-decoration: underline;
@@ -238,7 +240,7 @@ a.yt-simple-endpoint.yt-formatted-string {
 }
 
 /* Like Dislike 3 Dots */
-.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--text {
+.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextText {
   color: var(--icon);
 }
 
@@ -247,12 +249,16 @@ a.yt-simple-endpoint.yt-formatted-string {
 }
 
 /* Like buttons pressed */
-.yt-spec-button-shape-next[aria-pressed="true"] {
+.ytSpecButtonShapeNextHost[aria-pressed="true"] {
   color: var(--accent-icon);
 }
 
 tp-yt-paper-ripple.tp-yt-paper-tab {
   color: transparent;
+}
+
+textarea.tp-yt-iron-autogrow-textarea {
+  color: var(--text-color-1);
 }
 
 .stroke.yt-interaction,
@@ -478,7 +484,7 @@ ytmusic-guide-entry-renderer .content-wrapper.ytmusic-play-button-renderer {
 }
 
 /* New Playlist Button */
-.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal {
+.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextTonal {
   background: var(--button-color);
   border: var(--button-border);
   color: var(--accent);
@@ -580,7 +586,7 @@ ytmusic-search-box[opened] #suggestion-list {
 
 /* Carousel Buttons */
 yt-icon-button.ytmusic-carousel-shelf-renderer,
-.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--outline {
+.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextOutline {
   background: var(--button-color);
   border: var(--button-border);
   color: var(--text-color-1);
@@ -671,15 +677,6 @@ yt-formatted-string.text.style-scope.ytmusic-message-renderer {
   border-radius: var(--radius-art-medium);
 }
 
-/* Radio Button */
-.ytmusic-card-shelf-renderer .yt-spec-button-shape-next--outline {
-  color: var(--accent);
-  border-radius: var(--radius-button-alt);
-  .yt-icon-shape {
-    color: var(--accent-icon);
-  }
-}
-
 /* Divider */
 ytmusic-responsive-list-item-renderer.ytmusic-shelf-renderer,
 .ytmusic-playlist-shelf-renderer {
@@ -733,7 +730,15 @@ tp-yt-paper-tab.iron-selected.ytmusic-player-page {
 .selection-bar.tp-yt-paper-tabs {
   border-bottom: 1px solid var(--accent);
 }
-
+.ytmusic-tab-renderer .title {
+  color: var(--text-color-1) !important;
+}
+.autoplay.ytmusic-tab-renderer .subtitle.ytmusic-tab-renderer {
+  color: var(--text-color-2);
+}
+.section-heading.ytmusic-add-to-playlist-renderer {
+  color: var(--text-color-1);
+}
 /* Queue */
 ytmusic-player-queue-item {
   --ytmusic-player-queue-item-thumbnail-size: 42px !important;
@@ -1067,6 +1072,10 @@ ytmusic-add-to-playlist-renderer {
   border: var(--layout-border);
 }
 
+yt-formatted-string.subtitle.ytmusic-two-row-item-renderer {
+  color: var(--text-color-2) !important;
+}
+
 /* Divider */
 .top-bar.ytmusic-add-to-playlist-renderer,
 ytmusic-carousel-shelf-renderer.ytmusic-add-to-playlist-renderer:not(:empty) {
@@ -1122,9 +1131,9 @@ tp-yt-paper-listbox#items yt-formatted-string {
 
 /* User Dropdown */
 .ytmusicMultiPageMenuRendererHost {
-  --yt-spec-call-to-action: var(--accent);
+  --yt-sys-color-baseline--call-to-action: var(--accent);
   --yt-endpoint-hover-color: var(--accent-hover);
-  --yt-spec-outline: transparent;
+  --yt-sys-color-baseline--outline: transparent;
   background: transparent;
 }
 
@@ -1161,7 +1170,19 @@ yt-formatted-string.ytd-account-item-renderer[secondary] {
 ytmusic-setting-category-collection-renderer.ytmusic-settings-page {
   border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
-
+.dialog-title.ytmusic-settings-page {
+  color: var(--text-color-1);
+  font-weight: 700;
+}
+.ytmusic-settings-page yt-formatted-string.summary {
+  color: var(--text-color-2)
+}
+.dropdown-content.ytmusic-setting-single-option-menu-renderer .menu-item.ytmusic-setting-single-option-menu-renderer {
+  color: var(--text-color-1)
+}
+tp-yt-paper-item-body.ytmusic-setting-single-option-menu-renderer {
+  --paper-item-body-secondary-color: var(--text-color-2);
+}
 .category-menu-item.iron-selected.ytmusic-settings-page,
 .category-menu-item.ytmusic-settings-page:focus:not(.iron-selected) {
   background: var(--layout-highlight);
@@ -1237,6 +1258,7 @@ ytmusic-background-promo-renderer {
 tp-yt-paper-toast,
 tp-yt-paper-toast.yt-notification-action-renderer,
 #toast.ytmusic-notification-text-renderer {
+  color: var(--text-color-1);
   background: var(--layout-color);
   border-radius: var(--radius-panel);
   border: var(--layout-border);
@@ -1249,7 +1271,7 @@ tp-yt-paper-toast.yt-notification-action-renderer,
   color: var(--text-color-1);
 }
 
-.yt-spec-button-shape-next--call-to-action-inverse.yt-spec-button-shape-next--text {
+.ytSpecButtonShapeNextCallToActionInverse.ytSpecButtonShapeNextText {
   color: var(--accent);
   &:hover {
     background: var(--button-highlight);
@@ -1267,23 +1289,31 @@ ytmusic-play-button-renderer.ytmusic-responsive-header-renderer {
 .ytmusic-responsive-header-renderer a.ytmusic-toggle-button-renderer:hover {
   background: var(--button-highlight);
 }
-
+.tab-content.tp-yt-paper-tab {
+  color: var(--text-color-1);
+}
+ytmusic-playlist-form[tabbed-ui-enabled] tp-yt-iron-pages.ytmusic-playlist-form .content.ytmusic-playlist-form {
+  border-top: 0;
+  border-bottom: 0;
+}
 /* Song select Dialog */
 ytmusic-multi-select-menu-bar {
   background: transparent;
 }
-
+.text.ytmusic-multi-select-menu-bar {
+  color: var(--text-color-1);
+}
 #tooltip {
   background: var(--layout-contrast);
   border-radius: var(--radius-panel);
 }
 
 /* Playlist Visibility Dialog */
-.yt-spec-dialog-layout {
+.ytSpecDialogLayoutHost {
   background: transparent;
 }
 
-.yt-radio-shape__label-container {
+.ytRadioShapeLabelContainer {
   color: var(--text-color-1);
 }
 
@@ -1301,7 +1331,7 @@ ytmusic-multi-select-menu-bar {
   background: transparent;
 }
 
-.yt-list-item-view-model__container--tappable {
+.ytListItemViewModelTappable {
   border-radius: var(--radius-highlight-big);
   &:hover {
     background: var(--layout-highlight);
@@ -1316,11 +1346,7 @@ ytmusic-menu-renderer.ytmusic-responsive-header-renderer {
   background: var(--button-color) !important;
 }
 
-#action-buttons .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--text:hover {
-  background: var(--button-highlight);
-}
-
-.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--text {
+.ytSpecButtonShapeNextCallToAction.ytSpecButtonShapeNextText {
   color: var(--accent);
   background: var(--button-color);
   border: var(--button-border);
@@ -1369,7 +1395,7 @@ ytmusic-menu-renderer.ytmusic-responsive-header-renderer .yt-spec-button-shape-n
   border-color: var(--icon);
 }
 
-.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--filled {
+.ytSpecButtonShapeNextCallToAction.ytSpecButtonShapeNextFilled{
   color: var(--accent);
   background: var(--button-color);
   border-radius: var(--radius-button-alt);
@@ -1487,7 +1513,7 @@ ytmusic-subscribe-button-renderer[is-subscribed] {
 
 /* Unsub Confirm */
 yt-confirm-dialog-renderer[dialog][dialog][dialog] {
-  --ytd-user-comment-color: white;
+  --ytd-user-comment-color: var(--text-color-1);
   background: transparent;
 }
 ytmusic-popup-container tp-yt-paper-dialog.ytmusic-popup-container[role=dialog] {
@@ -1495,7 +1521,7 @@ ytmusic-popup-container tp-yt-paper-dialog.ytmusic-popup-container[role=dialog] 
 }
 
 /* Shuffle and Radio Button */
-.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--filled {
+.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextFilled {
   color: var(--accent);
   background: var(--button-color);
   backdrop-filter: blur(var(--layout-blur));
@@ -1514,7 +1540,19 @@ ytmusic-popup-container tp-yt-paper-dialog.ytmusic-popup-container[role=dialog] 
 ytmusic-subscribe-button-renderer.ytmusic-visual-header-renderer {
   background: none
 }
-
+.subscriber-count-text.ytmusic-subscribe-button-renderer {
+  color: var(--text-color-2);
+}
+.ytAttributedStringWhiteSpacePreWrap {
+  color: var(--text-color-1);
+  font-weight: 700;
+}
+.ytSpecButtonShapeNextOverlay.ytSpecButtonShapeNextText {
+  color: var(--text-color-1);
+  &:hover {
+    background: var(--button-highlight);
+  }
+}
 /* ========================== PODCAST ========================== */
 ytmusic-player-page[player-fullscreened] ytmusic-description-shelf-renderer {
   display: none;
@@ -1652,7 +1690,7 @@ ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state="TABS_VI
 }
 #blyrics-song-info p {
   font-family: $font;
-  font-weight: $font-weight !important;
+  font-weight: var(--blyrics-font-weight) !important;
 }
 
 .blyrics-footer {
@@ -1915,10 +1953,6 @@ ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state="TABS_VI
     @include fade(background, var(--fade-duration));
   }
 
-  .yt-spec-button-shape-next {
-    @include fade(background, var(--fade-duration));
-  }
-
   tp-yt-paper-item.ytmusic-playback-rate-popup-renderer {
     @include fade(background, var(--fade-duration));
   }
@@ -1967,7 +2001,8 @@ ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state="TABS_VI
   }
 
   /* DROPDOWN */
-  ytmusic-dropdown-item-renderer {
+  ytmusic-dropdown-item-renderer,
+  tp-yt-paper-item.yt-dropdown-menu {
     @include fade(background, var(--fade-duration));
   }
 
@@ -2015,13 +2050,20 @@ ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state="TABS_VI
     @include fade(background, var(--fade-duration));
   }
 
-  /* i forgot */
+  /* Pill-shaped Buttons */
   yt-icon-button.ytmusic-carousel-shelf-renderer {
     transition: background var(--fade-duration) var(--fade-timing) !important;
   }
-  .yt-list-item-view-model__container--tappable {
+  .ytSpecButtonShapeNextMono,
+  .ytSpecButtonShapeNextCallToAction,
+  .ytSpecButtonShapeNextOverlay {
     @include fade(background, var(--fade-duration));
   }
+
+  .ytListItemViewModelTappable {
+    @include fade(background, var(--fade-duration));
+  }
+
   .yt-simple-endpoint {
     @include fade(background, var(--fade-duration));
   }
