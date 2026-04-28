@@ -1,13 +1,13 @@
 {
   "dependencies": {
     "postcss": "^8.5.10",
-    "prettier-plugin-rics": "^0.3.17",
     "rics": "^0.3.20"
   },
   "devDependencies": {
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.1",
-    "prettier": "^3.7.4"
+    "prettier": "^3.8.3",
+    "prettier-plugin-rics": "^0.3.17"
   },
   "scripts": {
     "build": "postcss src/index.css --use postcss-import -o style.css --no-map",

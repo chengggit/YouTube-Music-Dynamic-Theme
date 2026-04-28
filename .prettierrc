@@ -1,10 +1,11 @@
 {
   "singleQuote": true,
+  "plugins": ["prettier-plugin-rics"],
   "overrides": [
     {
       "files": "*.rics",
       "options": {
-        "parser": "prettier-plugin-rics"
+        "parser": "rics"
       }
     },
     {
