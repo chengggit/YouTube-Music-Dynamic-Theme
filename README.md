@@ -71,23 +71,14 @@ The Album Color Theme plugin is required for dynamic background functionality.
 1. Download [`style.css`](/style.css)
 2. Open the app menu → **Options** → **Visual Tweaks** → **Theme** → **Import custom CSS file**
 3. Select the downloaded `style.css`
+4. Restart the app
 
 ---
 
-#### Install with Stylus
-
-> The Stylus version is locked at **v2.0.6.2** and will not receive further updates.
-
-Requires the [Stylus Extension](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en)
-
-1. Click the button below to install:
-
-   [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/chengggit/Youtube-Music-Dynamic-Theme/refs/heads/main/mycustom.user.css)
-
-Maintaining and porting separate versions for Stylus and Better Lyrics became too time-consuming, so Stylus support has been discontinued.
-
 ## Previews
+
 ### Better Lyrics
+
 ![](/images/bgpreview.webp)
 
 #### Default
