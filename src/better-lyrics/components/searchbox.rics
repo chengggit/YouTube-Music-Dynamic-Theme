@@ -1,0 +1,85 @@
+/* Search Box */
+ytmusic-search-box .search-box {
+  border-radius: var(--radius-panel) !important;
+  background: var(--ui-contrast) !important;
+  border: var(--ui-border) !important;
+  .yt-icon-shape {
+    color: var(--accent-icon);
+  }
+}
+input.ytmusic-search-box {
+  color: var(--text-secondary);
+}
+ytmusic-search-box[has-query] input.ytmusic-search-box,
+ytmusic-search-box[opened] input.ytmusic-search-box {
+  color: var(--text-primary);
+  &::placeholder {
+    color: var(--text-primary);
+  }
+}
+.search-container.ytmusic-search-box {
+  border-radius: var(--radius-panel);
+}
+ytmusic-search-box[has-query] .search-container.ytmusic-search-box,
+ytmusic-search-box[opened] .search-container.ytmusic-search-box {
+  border-radius: var(--radius-panel);
+  background: transparent !important;
+  box-shadow: var(--ui-shadow);
+}
+
+ytmusic-search-box #suggestion-list {
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: initial !important;
+  border-radius: var(--radius-panel) !important;
+  background: var(--ui-color) !important;
+  box-shadow: var(--ui-shadow);
+  border: var(--ui-border) !important;
+  backdrop-filter: blur(var(--ui-blur));
+  anchor-name: --search-dropdown;
+
+  ytmusic-search-suggestions-section {
+    background: transparent !important;
+
+    ytmusic-search-suggestion {
+      background: transparent !important;
+      color: var(--text-primary);
+      border-radius: var(--radius-panel);
+      &:hover {
+        background: var(--ui-highlight) !important;
+        color: var(--text-primary);
+      }
+    }
+  }
+}
+
+/* Chromium backdrop workaround */
+@supports (not (-moz-appearance: none)) {
+  ytmusic-app-layout::after {
+    content: "";
+    position: fixed;
+    position-anchor: --search-dropdown;
+    top: anchor(top);
+    left: anchor(left);
+    width: anchor-size(width);
+    height: anchor-size(height);
+    border-radius: var(--radius-panel);
+    backdrop-filter: blur(var(--ui-blur));
+    opacity: 0;
+    z-index: 2;
+  }
+}
+ytmusic-app-layout:has(ytmusic-search-box[opened])::after {
+  opacity: 1;
+}
+
+ytmusic-search-box[opened] #suggestion-list {
+  top: calc(var(--ytmusic-search-box-height) + 16px) !important;
+  opacity: 1;
+  visibility: visible;
+}
+
+#suggestions .ytmusic-search-suggestions-section {
+  border-radius: var(--radius-highlight);
+}

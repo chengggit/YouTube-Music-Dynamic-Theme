@@ -1,0 +1,72 @@
+/* ========================== TYPOGRAPHY & ICONS ========================== */
+yt-formatted-string, input, label, button, h2, tp-yt-paper-item, #title, #icon-label, .ytmusic-player-bar, .dialog-title, .title, .subtitle, .tab-content, .promo-title, [role="text"] {
+  font-family: $font-family !important;
+  font-weight: $font-weight;
+}
+
+html, #items, #tab-renderer, #chips, ytmusic-menu-popup-renderer, .ytmusicMultiPageMenuHost, .scrollable-content, .scroller, .dropdown-content, .ytmusic-settings-page {
+  scrollbar-width: none !important;
+}
+yt-formatted-string.title {
+  color: var(--text-primary) !important;
+  --yt-endpoint-color: var(--text-primary) !important;
+  --yt-endpoint-hover-color: var(--text-primary) !important;
+  --yt-endpoint-visited-color: var(--text-primary) !important;
+}
+
+yt-icon {
+  color: var(--icon);
+}
+
+yt-icon.ytmusic-inline-badge-renderer {
+  color: var(--accent-icon);
+}
+
+/* Icons in explore top songs  */
+.icon-column.ytmusic-custom-index-column-renderer .yt-icon-shape {
+  color: var(--icon);
+}
+
+.icon.ytmusic-play-button-renderer {
+  --ytmusic-play-button-guide-icon-color: var(--icon);
+  color: var(--icon);
+}
+
+/* CTA Text */
+a.yt-simple-endpoint.yt-formatted-string {
+  --yt-spec-call-to-action: var(--accent);
+  --yt-endpoint-color: var(--text-primary);
+  --yt-endpoint-visited-color: var(--text-primary);
+  --yt-endpoint-hover-color: var(--accent-highlight);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Like Dislike 3 Dots */
+.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextText {
+  color: var(--icon);
+}
+
+.index.ytmusic-responsive-list-item-renderer {
+  color: var(--text-secondary);
+}
+
+/* Like buttons pressed */
+.ytSpecButtonShapeNextHost[aria-pressed="true"] {
+  color: var(--accent-icon);
+}
+
+tp-yt-paper-ripple.tp-yt-paper-tab {
+  color: transparent;
+}
+
+textarea.tp-yt-iron-autogrow-textarea {
+  color: var(--text-primary);
+}
+
+.stroke.yt-interaction,
+.fill.yt-interaction {
+  border: 0;
+  background: transparent;
+}

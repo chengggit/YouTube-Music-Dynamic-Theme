@@ -1,0 +1,185 @@
+/* --- default | light | dark --- */
+$preset: default;
+
+/* --- Background & Backdrop --- */
+$background: dynamic;         // dynamic (uses current song art) | color | url('your-image.jpg')
+$bg-brightness: null;
+$bg-blur: 0.6;                // Background blur intensity
+$bg-saturate: 1.5;            // Background color vibrancy
+$bg-scale: 1.2;               // Background zoom level
+$bg-player-opacity: 1;        // Player page transparency
+
+/* --- Typography & Colors --- */
+$font-family: "Inter";        // Main font for all text
+$font-weight: 400;            // Main text weight
+$text-primary: white;         // Main text color (titles, primary info)
+$text-secondary: rgba(white, 0.7); // Secondary text color (subtitles, secondary info)
+
+$icon: white;                 // Standard button/icon color
+$accent: white;               // Accent for highlights (e.g., titles, active states)
+$accent-icon: white;          // Accent for icons (e.g., like button, active shuffle/repeat)
+$accent-highlight: mix($accent, white, 70%); // Lighter accent for hover states and highlights
+
+/* --- Lyrics --- */
+$fullscreen-layout: corner;   // default | corner
+$lyrics-font-size: 40px;
+$lyrics-font-weight: 600;
+
+$lyrics-blur-lines: (
+  previous: true,
+  current: false,
+  upcoming: true
+);
+$lyrics-blur-amount: 6px;     // Intensity of the lyric blur
+
+/* --- UI Components --- */
+$album-art-size: 400px;
+
+$ui-color: null;              // Panel backgrounds
+$ui-contrast: null;           // Secondary backgrounds
+$ui-highlight: null;          // Hover/Select backgrounds
+$ui-blur: 10px;
+$ui-border: transparent;      // e.g., "1px solid rgba(255,255,255,0.1)"
+$ui-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+$btn-color: null;             // Default button backgrounds
+$btn-highlight: null;         // Button hover backgrounds
+$btn-border: transparent;     // e.g., "1px solid rgba(255,255,255,0.1)"
+
+/* --- Features & Toggles --- */
+$small-video: false;                // Revert back to small video layout
+$unified-artists-lines: false;      // Force single alignment for all singers
+$increment-skip-buttons: false;     // Show -10s/+30s skip buttons
+$centered-playback-controls: false; // Center Play/Skip buttons in player bar
+
+/* --- Roundness --- */
+$radius-art: 8px;             // Album art corners (Small)
+$radius-art-md: 16px;         // Album art corners (Medium)
+$radius-art-lg: 20px;         // Album art corners (Large)
+
+$radius-btn: 12px;            // Standard buttons
+$radius-btn-alt: 16px;        // Alternate/Pill buttons
+
+$radius-highlight: 8px;       // Hover overlays
+$radius-highlight-lg: 12px;
+
+$radius-panel: 12px;          // Popups and dropdowns
+$radius-panel-lg: 24px;
+
+/* --- Animation --- */
+$anim-progress-bar: true;     // Smooth moving play bar
+$anim-extra: false;           // Detailed UI micro-interactions
+
+$anim-bg-transition: true;    // Crossfade background on song change
+$anim-bg-duration: 0.3s;
+$anim-bg-timing: ease-in-out;
+
+$anim-player-page: true;      // Player page open/close animation
+$anim-player-page-duration: 0.65s;
+$anim-player-page-timing: cubic-bezier(0.3, 0.6, 0.5, 1);
+
+$anim-fade: true;             // General UI fade transitions
+$anim-fade-duration: 0.3s;
+$anim-fade-duration-alt: 0.5s;
+$anim-fade-timing: ease;
+
+$anim-play-btn: true;         // Play button hover effect
+$anim-play-btn-duration: 0.3s;
+$anim-play-btn-timing: ease;
+
+$anim-drawer: true;           // Sidebar open/close
+$anim-drawer-duration: 0.3s;
+$anim-drawer-timing: ease;
+
+$anim-search-bar: true;       // Search open/close animation
+$anim-search-bar-duration: 0.3s;
+$anim-search-bar-timing: ease;
+
+$anim-no-lyrics-centered-player: true; // Center art when no lyrics exist
+$anim-no-lyrics-duration: 0.3s;
+$anim-no-lyrics-timing: ease-in-out;
+$anim-no-lyrics-slide-delay: 1.8s;
+
+$lyric-scroll-duration: 0.5s; // Speed of lyric line movement
+$lyric-scroll-timing: ease-in-out;
+
+// Presets
+$theme-presets: (
+  default: (
+    bg-brightness: 0.7,
+    ui-color: transparent,
+    ui-contrast: rgba(255, 255, 255, .1),
+    ui-highlight: rgba(255, 255, 255, .1),
+    btn-color: rgba(255, 255, 255, .1),
+    btn-highlight: rgba(255, 255, 255, .2)
+  ),
+  dark: (
+    bg-brightness: 0.5,
+    ui-color: rgba(0, 0, 0, .2),
+    ui-contrast: rgba(255, 255, 255, .1),
+    ui-highlight: rgba(255, 255, 255, .1),
+    btn-color: rgba(255, 255, 255, .1),
+    btn-highlight: rgba(255, 255, 255, .2)
+  ),
+  light: (
+    bg-brightness: 0.8,
+    ui-color: rgba(255, 255, 255, .07),
+    ui-contrast: rgba(255, 255, 255, .15),
+    ui-highlight: rgba(255, 255, 255, .15),
+    btn-color: rgba(255, 255, 255, .15),
+    btn-highlight: rgba(255, 255, 255, .25)
+  )
+);
+
+/* ==================================================== */
+
+$theme-map: map-get($theme-presets, $preset);
+$final-bg-brightness: if($bg-brightness, $bg-brightness, map-get($theme-map, bg-brightness));
+
+$simple-vars: (
+  "album-art-size", "bg-scale", "bg-saturate", "bg-player-opacity",
+  "text-primary", "text-secondary", "icon", "accent", "accent-icon", "accent-highlight",
+  "ui-blur", "ui-border", "btn-border", "ui-shadow",
+
+  "radius-art", "radius-art-md", "radius-art-lg",
+  "radius-btn", "radius-btn-alt", "radius-highlight",
+  "radius-highlight-lg", "radius-panel-lg", "radius-panel",
+
+  "anim-bg-duration", "anim-bg-timing",
+  "anim-player-page-duration", "anim-player-page-timing",
+  "anim-fade-duration", "anim-fade-duration-alt", "anim-fade-timing",
+  "anim-play-btn-duration", "anim-play-btn-timing",
+  "anim-drawer-duration", "anim-drawer-timing",
+  "anim-search-bar-duration", "anim-search-bar-timing",
+  "anim-no-lyrics-slide-delay", "anim-no-lyrics-duration", "anim-no-lyrics-timing"
+);
+
+:root {
+
+  @each $var in $simple-vars {
+    --#{$var}: $#{$var};
+  }
+
+  --bg-blur: calc($bg-blur * 100px);
+  --bg-brightness: if($final-bg-brightness != null, $final-bg-brightness, 0.7);
+
+  --ui-color: if($ui-color, $ui-color, map-get($theme-map, ui-color));
+  --ui-contrast: if($ui-contrast, $ui-contrast, map-get($theme-map, ui-contrast));
+  --ui-highlight: if($ui-highlight, $ui-highlight, map-get($theme-map, ui-highlight));
+  --btn-color: if($btn-color, $btn-color, map-get($theme-map, btn-color));
+  --btn-highlight: if($btn-highlight, $btn-highlight, map-get($theme-map, btn-highlight));
+
+  --blyrics-lyric-scroll-duration: $lyric-scroll-duration;
+  --blyrics-lyric-scroll-timing-function: $lyric-scroll-timing;
+
+  --ytmusic-text-primary: $text-primary;
+  --ytmusic-overlay-text-secondary: $text-secondary;
+
+  --blyrics-font-family: $font-family;
+  --blyrics-font-weight: $lyrics-font-weight;
+  --blyrics-font-size: $lyrics-font-size;
+  --blyrics-footer-font-family: $font-family;
+  --blyrics-footer-font-weight: $font-weight;
+
+  --blyrics-glow-color: rgb(255,255,255);
+}

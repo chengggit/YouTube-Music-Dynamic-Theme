@@ -1,0 +1,89 @@
+/* ========================== ART ========================== */
+/* Background Behind Art */
+ytmusic-player {
+  background: transparent;
+}
+
+ytmusic-responsive-list-item-renderer {
+  --ytmusic-list-item-height: 54px;
+  --ytmusic-responsive-list-item-thumbnail-size: 38px;
+}
+
+ytmusic-background-overlay-renderer {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent 80%);
+}
+
+ytmusic-item-thumbnail-overlay-renderer:not([play-button-state="default"]) {
+  #background.ytmusic-item-thumbnail-overlay-renderer {
+    opacity: 0 !important;
+  }
+  &:hover #background.ytmusic-item-thumbnail-overlay-renderer {
+    opacity: 1 !important;
+  }
+}
+
+ytmusic-responsive-list-item-renderer[is-album-detail-page] ytmusic-background-overlay-renderer {
+  background: transparent;
+}
+
+/* Playing/Selected Overlay */
+ytmusic-responsive-list-item-renderer[play-button-state] {
+  border-radius: var(--radius-art);
+}
+
+ytmusic-play-button-renderer:not([state="default"]) .content-wrapper .yt-icon-shape {
+  color: var(--accent-icon);
+}
+
+/* Playlist Page Art */
+ytmusic-responsive-header-renderer {
+  --yt-img-border-radius: var(--radius-art-lg);
+}
+
+#header-group #img {
+  border-radius: 50%;
+}
+
+/* Small Art */
+yt-img-shadow[object-fit="CONTAIN"] img,
+ytmusic-player[player-ui-state="PLAYER_BAR_ONLY"] #img,
+.thumbnail-overlay {
+  border-radius: var(--radius-art);
+  object-fit: cover !important;
+  overflow: hidden;
+}
+
+/* Player Page Art */
+ytmusic-player[player-page-open] .player-wrapper,
+ytmusic-two-row-item-renderer .image-wrapper {
+  border-radius: var(--radius-art-lg);
+}
+
+#player:not([player-ui-state="PLAYER_BAR_ONLY"]) {
+  border-radius: var(--radius-art-lg);
+  box-shadow: var(--ui-shadow) !important;
+  overflow: hidden;
+}
+
+ytmusic-player[player-ui-state] #song-media-window {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 40%);
+  border-radius: var(--radius-art-lg);
+}
+
+ytmusic-player[player-ui-state="PLAYER_BAR_ONLY"] {
+  .html5-video-player,
+  .video-stream {
+    background: transparent;
+    border-radius: var(--radius-art-md);
+  }
+}
+
+@media (min-width: 615px) {
+  ytmusic-player-page:not([video-mode]):not([player-fullscreened]):not([blyrics-dfs]):not([player-ui-state="MINIPLAYER"]) #player {
+    max-width: var(--album-art-size) !important;
+  }
+}
+
+#top-shelf .image-wrapper {
+  border-radius: var(--radius-art-md);
+}

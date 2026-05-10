@@ -1,0 +1,52 @@
+/* ========================== BETTER LYRICS ========================== */
+#better-lyrics-kawarp-backdrop-player {
+  background-color: transparent !important;
+}
+
+#blyrics-loader {
+  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding-top 0.5s ease-in-out;
+}
+
+#blyrics-song-info {
+  max-width: 50rem;
+  @if $fullscreen-layout == corner {
+    text-align: left !important;
+    margin: 0 !important;
+    padding-left: 2rem !important;
+  }
+  p#blyrics-title {
+    font-size: 2.5rem;
+  }
+  p#blyrics-artist {
+    font-size: 2rem;
+  }
+}
+
+.blyrics-footer {
+  opacity: 0;
+  filter: blur(6px);
+  transition: 
+  opacity var(--anim-fade-duration-alt) var(--anim-fade-timing),
+  filter 1s var(--anim-fade-timing);
+  &:hover {
+    opacity: 1;
+    filter: none;
+    transition: opacity var(--anim-fade-duration) var(--anim-fade-timing);
+  }
+}
+
+.blyrics-footer__discord,
+.autoscroll-resume-button,
+.blyrics-footer__container {
+  background: var(--btn-color);
+  border: var(--ui-border);
+  backdrop-filter: blur(var(--ui-blur));
+}
+.autoscroll-resume-button {
+  border-radius: var(--radius-btn);
+}
+.blyrics-footer__container {
+  border-radius: var(--radius-btn-alt);
+}
+
+

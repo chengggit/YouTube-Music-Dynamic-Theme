@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Inter");
+
+/* =========================================================
+ THEME CONFIGURATION GUIDE
+ ===========================================================
+ 
+ Null:  'null' inherit values from the active $preset. Set to a specific value to override.
+ Background Blur:  Value is multiplied by 100px (e.g., 0.8 = 80px blur).
+ Help:  See inline comments for usage or GitHub for the full README.
+ 
+============================================================ */
