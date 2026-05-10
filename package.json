@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "postcss": "^8.5.10",
-    "rics": "^0.3.20"
+    "rics": "^0.3.21",
+    "rics-cli": "^0.3.21",
+    "ws": "^8.20.0"
   },
   "devDependencies": {
     "postcss-cli": "^11.0.1",
