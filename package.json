@@ -12,7 +12,9 @@
     "prettier-plugin-rics": "^0.3.17"
   },
   "scripts": {
-    "build": "postcss src/index.css --use postcss-import -o style.css --no-map",
-    "watch": "postcss src/index.css --use postcss-import -o style.css --no-map --watch"
+    "build-rics": "node build-rics.js",
+    "watch-rics": "node build-rics.js --watch",
+    "build-pear": "postcss src/index.css --use postcss-import -o style.css --no-map",
+    "watch-pear": "postcss src/index.css --use postcss-import -o style.css --no-map --watch"
   }
 }
