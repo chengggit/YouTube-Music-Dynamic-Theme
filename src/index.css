@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Inter');
 
-@import './base/header.css';
-@import './base/vars.css';
-@import './base/typography.css';
+@import './pear-ytm/base/header.css';
+@import './pear-ytm/base/vars.css';
+@import './pear-ytm/base/typography.css';
 
-@import './components/art.css';
-@import './components/panels.css';
-@import './components/playerbar.css';
+@import './pear-ytm/components/art.css';
+@import './pear-ytm/components/panels.css';
+@import './pear-ytm/components/playerbar.css';
 
-@import './features/animation.css';
-@import './features/lyrics.css';
+@import './pear-ytm/features/animation.css';
+@import './pear-ytm/features/lyrics.css';
 
-@import './pages/artist.css';
-@import './pages/background.css';
-@import './pages/fullscreen.css';
-@import './pages/homepage.css';
-@import './pages/mobile.css';
-@import './pages/playerpage.css';
-@import './pages/podcast.css';
-@import './pages/searchpage.css';
+@import './pear-ytm/pages/artist.css';
+@import './pear-ytm/pages/background.css';
+@import './pear-ytm/pages/fullscreen.css';
+@import './pear-ytm/pages/homepage.css';
+@import './pear-ytm/pages/mobile.css';
+@import './pear-ytm/pages/playerpage.css';
+@import './pear-ytm/pages/podcast.css';
+@import './pear-ytm/pages/searchpage.css';
 
-@import './components/overrides.css';
+@import './pear-ytm/components/overrides.css';
