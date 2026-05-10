@@ -67,7 +67,7 @@ $centered-playback-controls: false; // Center Play/Skip buttons in player bar
 /* --- Roundness --- */
 $radius-art: 8px;             // Album art corners (Small)
 $radius-art-md: 16px;         // Album art corners (Medium)
-$radius-art-lg: 24px;         // Album art corners (Large)
+$radius-art-lg: 20px;         // Album art corners (Large)
 
 $radius-btn: 12px;            // Standard buttons
 $radius-btn-alt: 16px;        // Alternate/Pill buttons
