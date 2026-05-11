@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
+const prettier = require('prettier');
+
 const isWatch = process.argv.includes('--watch');
+const filePath = './style.rics';
 
 const filesInOrder = [
   'src/better-lyrics/base/header.rics',
@@ -27,14 +30,21 @@ const filesInOrder = [
   'src/better-lyrics/pages/podcast.rics',
 ];
 
-function build() {
+async function build() {
   let output = '';
   for (const file of filesInOrder) {
     output += fs.readFileSync(path.join(__dirname, file), 'utf8') + '\n\n';
   }
-  fs.writeFileSync('style.rics', output);
+
+  const formatted = await prettier.format(output, {
+    parser: 'rics',
+    plugins: ['prettier-plugin-rics'],
+  });
+
+  fs.writeFileSync(filePath, formatted);
+
   console.log(
-    `[${new Date().toLocaleTimeString()}] style.rics built successfully.`,
+    `[${new Date().toLocaleTimeString()}] ${filePath} built successfully.`,
   );
 }
 
