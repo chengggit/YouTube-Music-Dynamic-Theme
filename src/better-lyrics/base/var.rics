@@ -7,10 +7,10 @@ $bg-brightness: null;
 $bg-blur: 0.6;                // Background blur intensity
 $bg-saturate: 1.5;            // Background color vibrancy
 $bg-scale: 1.2;               // Background zoom level
-$bg-player-opacity: 1;        // Player page transparency
+$bg-player-opacity: 0.8;        // Player page transparency
 
 /* --- Typography & Colors --- */
-$font-family: "Inter";        // Main font for all text
+$font-family: "Inter", "Apple SD Gothic Neo"; // Main font for all text
 $font-weight: 400;            // Main text weight
 $text-primary: white;         // Main text color (titles, primary info)
 $text-secondary: rgba(white, 0.7); // Secondary text color (subtitles, secondary info)
@@ -68,7 +68,7 @@ $radius-panel-lg: 24px;
 
 /* --- Animation --- */
 $anim-progress-bar: true;     // Smooth moving play bar
-$anim-extra: false;           // Detailed UI micro-interactions
+$anim-extra: true;           // Detailed UI micro-interactions
 
 $anim-bg-transition: true;    // Crossfade background on song change
 $anim-bg-duration: 0.3s;
