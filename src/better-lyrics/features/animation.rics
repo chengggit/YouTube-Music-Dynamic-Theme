@@ -110,7 +110,9 @@
   a.yt-simple-endpoint.yt-formatted-string {
     @include fade(color, var(--anim-fade-duration));
   }
-
+  #suggestions .ytmusic-search-suggestions-section {
+    @include fade(background-color, var(--anim-fade-duration));
+  }
   /* BIG SONG LIST */
   ytmusic-play-button-renderer .content-wrapper.ytmusic-play-button-renderer {
     @include fade(background, var(--anim-fade-duration));
@@ -272,6 +274,9 @@
   button.ytmusic-navigation-button-renderer {
     @include fade(background, var(--anim-fade-duration));
   }
+  .autoscroll-resume-button {
+    @include fade(text-shadow, var(--anim-fade-duration));
+  }
 
   /* SETTING */
   .category-menu-item.ytmusic-settings-page {
@@ -284,6 +289,7 @@
   }
   .ytSpecButtonShapeNextMono,
   .ytSpecButtonShapeNextCallToAction,
+  .ytSpecButtonShapeNextCallToActionInverse,
   .ytSpecButtonShapeNextOverlay {
     @include fade(background, var(--anim-fade-duration));
   }

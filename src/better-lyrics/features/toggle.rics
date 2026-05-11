@@ -57,7 +57,7 @@
   ytmusic-player-page[player-fullscreened] #main-panel {
     flex-direction: row !important;
     justify-content: flex-start !important;
-    align-items: flex-end;
+    align-items: flex-end !important;
     transform: none !important;
     padding: 0 !important;
   }
@@ -77,10 +77,7 @@
 
   /* Video Mode */
   ytmusic-player-page:not([is-mweb-modernization-enabled])[player-fullscreened]:not([blyrics-dfs])[video-mode] .content.ytmusic-player-page {
-    padding-top: var(--ytmusic-player-page-horizontal-padding);
-    padding-bottom: var(--ytmusic-player-page-horizontal-padding);
-    padding-left: var(--ytmusic-player-page-horizontal-padding);
-    padding-right: 0;
+    padding: var(--ytmusic-player-page-horizontal-padding);
   }
   ytmusic-player-page:not([is-mweb-modernization-enabled])[player-fullscreened]:not([blyrics-dfs])[video-mode] #side-panel {
     width: 40%;
