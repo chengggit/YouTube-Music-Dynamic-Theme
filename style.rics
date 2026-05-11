@@ -10,7 +10,6 @@
  
 ============================================================ */
 
-
 /* --- default | light | dark --- */
 $preset: default;
 
@@ -272,7 +271,7 @@ textarea.tp-yt-iron-autogrow-textarea {
 }
 
 
-/* ========================== ART ========================== */
+/* ========================== ARTS ========================== */
 /* Background Behind Art */
 ytmusic-player {
   background: transparent;
@@ -813,7 +812,7 @@ ytmusic-player-bar:has(ytmusic-player-expanding-menu[aria-hidden="false"]) {
 }
 
 
-/* Search Box */
+/* ========================== SEARCH BOX ========================== */
 ytmusic-search-box .search-box {
   border-radius: var(--radius-panel) !important;
   background: var(--ui-contrast) !important;
@@ -1447,9 +1446,60 @@ ytmusic-player-page {
   border-radius: var(--radius-btn-alt);
 }
 
+/* ========================== LYRICS ========================== */
+.blyrics--line {
+  transform: scale(var(--blyrics-scale));
+  transition: 
+  transform var(--blyrics-scale-transition-duration) ease-in-out,
+  filter 0.8s ease-in-out,
+  opacity 0.6s ease;
+  filter: if(map-get($lyrics-blur-lines, previous), blur($lyrics-blur-amount), none);
+  opacity: 0.4;
+  &:hover {
+    filter: none !important;
+    opacity: 1 !important;
+  }
+}
+.blyrics-container[data-sync='none'] .blyrics--line {
+  opacity: 1;
+  filter: none;
+  transition: 
+  filter 0.35s ease-in-out,
+  opacity 0.2s ease;
+}
+.blyrics-container .blyrics--active ~ .blyrics--line {
+  opacity: 1;
+  filter: if(map-get($lyrics-blur-lines, upcoming), blur($lyrics-blur-amount), none);
+}
+.blyrics-container .blyrics--line.blyrics--pre-animating {
+  filter: if(map-get($lyrics-blur-lines, current), blur($lyrics-blur-amount), none);
+  opacity: 1;
+}
+.blyrics--line.blyrics--active.blyrics--animating {
+  filter: if(map-get($lyrics-blur-lines, current), blur($lyrics-blur-amount), none);
+  opacity: 1;
+  transform: scale(var(--blyrics-active-scale));
+  transition-delay: 0s;
+}
+.blyrics-container.blyrics-user-scrolling .blyrics--line {
+  opacity: 1;
+  filter: none;
+  transition: 
+  filter 0.35s ease-in-out,
+  opacity 0.2s ease;
+}
+
+@keyframes blyrics-glow {
+  0% {
+    filter: drop-shadow(0 0 1.2rem var(--blyrics-glow-color));
+  }
+  to {
+    filter: drop-shadow(0 0 0rem var(--blyrics-glow-color));
+  }
+}
 
 
-
+/* ========================== TOGGLES ========================== */
 @if $unified-artists-lines {
   .blyrics--line[data-agent="v2"],
   .blyrics--line[data-agent="v3"],
@@ -1601,58 +1651,6 @@ ytmusic-player-page {
   ytmusic-player-page[player-fullscreened]:not([blyrics-dfs]) #blyrics-wrapper:has(.blyrics-container[data-no-lyrics="true"]) {
     transition: opacity var(--anim-no-lyrics-duration) var(--anim-no-lyrics-timing);
     transition-delay: var(--anim-no-lyrics-slide-delay);
-  }
-}
-
-
-.blyrics--line {
-  transform: scale(var(--blyrics-scale));
-  transition: 
-  transform var(--blyrics-scale-transition-duration) ease-in-out,
-  filter 0.8s ease-in-out,
-  opacity 0.6s ease;
-  filter: if(map-get($lyrics-blur-lines, previous), blur($lyrics-blur-amount), none);
-  opacity: 0.4;
-  &:hover {
-    filter: none !important;
-    opacity: 1 !important;
-  }
-}
-.blyrics-container[data-sync='none'] .blyrics--line {
-  opacity: 1;
-  filter: none;
-  transition: 
-  filter 0.35s ease-in-out,
-  opacity 0.2s ease;
-}
-.blyrics-container .blyrics--active ~ .blyrics--line {
-  opacity: 1;
-  filter: if(map-get($lyrics-blur-lines, upcoming), blur($lyrics-blur-amount), none);
-}
-.blyrics-container .blyrics--line.blyrics--pre-animating {
-  filter: if(map-get($lyrics-blur-lines, current), blur($lyrics-blur-amount), none);
-  opacity: 1;
-}
-.blyrics--line.blyrics--active.blyrics--animating {
-  filter: if(map-get($lyrics-blur-lines, current), blur($lyrics-blur-amount), none);
-  opacity: 1;
-  transform: scale(var(--blyrics-active-scale));
-  transition-delay: 0s;
-}
-.blyrics-container.blyrics-user-scrolling .blyrics--line {
-  opacity: 1;
-  filter: none;
-  transition: 
-  filter 0.35s ease-in-out,
-  opacity 0.2s ease;
-}
-
-@keyframes blyrics-glow {
-  0% {
-    filter: drop-shadow(0 0 1.2rem var(--blyrics-glow-color));
-  }
-  to {
-    filter: drop-shadow(0 0 0rem var(--blyrics-glow-color));
   }
 }
 

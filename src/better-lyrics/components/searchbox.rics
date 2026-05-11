@@ -1,4 +1,4 @@
-/* Search Box */
+/* ========================== SEARCH BOX ========================== */
 ytmusic-search-box .search-box {
   border-radius: var(--radius-panel) !important;
   background: var(--ui-contrast) !important;

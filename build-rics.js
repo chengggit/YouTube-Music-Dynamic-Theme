@@ -16,7 +16,6 @@ const filesInOrder = [
   'src/better-lyrics/features/animation.rics',
   'src/better-lyrics/features/blyrics.rics',
   'src/better-lyrics/features/toggle.rics',
-  'src/better-lyrics/features/lyrics.rics',
 
   'src/better-lyrics/pages/artist.rics',
   'src/better-lyrics/pages/background.rics',
