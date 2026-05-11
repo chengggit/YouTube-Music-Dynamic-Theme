@@ -1,8 +1,5 @@
 /* ========================== PLAYER PAGE ========================== */
-ytmusic-app-layout:not([player-page-open]):not(
-    [is-mweb-player-bar-modernization-enabled]
-  )
-  > [slot='player-page'] {
+ytmusic-app-layout:not([player-page-open]):not([is-mweb-player-bar-modernization-enabled]) > [slot='player-page'] {
   transform: translate3d(0, 120vh, 0);
 }
 
@@ -24,10 +21,7 @@ ytmusic-app-layout[player-fullscreened] > [slot='player-page'] {
 }
 
 ytmusic-player[player-ui-state='MINIPLAYER'] {
-  bottom: calc(
-    120vh + var(--ytmusic-player-bar-height) +
-      var(--ytmusic-mini-player-spacing)
-  ) !important;
+  bottom: calc(120vh + var(--ytmusic-player-bar-height) + var(--ytmusic-mini-player-spacing)) !important;
 }
 
 /* Tab */
@@ -87,7 +81,7 @@ ytmusic-player-queue-item {
 }
 
 ytmusic-chip-cloud-chip-renderer[is-selected]
-  a.ytmusic-chip-cloud-chip-renderer {
+a.ytmusic-chip-cloud-chip-renderer {
   background: var(--btn-highlight) !important;
   color: var(--accent) !important;
   &:focus {
