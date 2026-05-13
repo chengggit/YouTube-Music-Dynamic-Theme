@@ -2,7 +2,7 @@
 $preset: default;
 
 /* --- Background & Backdrop --- */
-$background: dynamic;         // dynamic (uses current song art) | color | url('your-image.jpg')
+$background: dynamic;         // dynamic (uses current song art) | color | url('https://example.com/image.jpg')
 $bg-brightness: null;
 $bg-blur: 0.6;                // Background blur intensity
 $bg-saturate: 1.5;            // Background color vibrancy
@@ -40,7 +40,7 @@ $ui-contrast: null;           // Secondary backgrounds
 $ui-highlight: null;          // Hover/Select backgrounds
 $ui-blur: 10px;
 $ui-border: transparent;      // e.g., "1px solid rgba(255,255,255,0.1)"
-$ui-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+$ui-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); // x-offset y-offset blur color
 
 $btn-color: null;             // Default button backgrounds
 $btn-highlight: null;         // Button hover backgrounds
@@ -67,8 +67,7 @@ $radius-panel: 12px;          // Popups and dropdowns
 $radius-panel-lg: 24px;
 
 /* --- Animation --- */
-$anim-progress-bar: true;     // Smooth moving play bar
-$anim-extra: true;           // Detailed UI micro-interactions
+$anim-extra: true;           // Additional animations for UI and interactions
 
 $anim-bg-transition: true;    // Crossfade background on song change
 $anim-bg-duration: 0.3s;
@@ -83,17 +82,9 @@ $anim-fade-duration: 0.3s;
 $anim-fade-duration-alt: 0.5s;
 $anim-fade-timing: ease;
 
-$anim-play-btn: true;         // Play button hover effect
-$anim-play-btn-duration: 0.3s;
-$anim-play-btn-timing: ease;
-
 $anim-drawer: true;           // Sidebar open/close
 $anim-drawer-duration: 0.3s;
 $anim-drawer-timing: ease;
-
-$anim-search-bar: true;       // Search open/close animation
-$anim-search-bar-duration: 0.3s;
-$anim-search-bar-timing: ease;
 
 $anim-no-lyrics-centered-player: true; // Center art when no lyrics exist
 $anim-no-lyrics-duration: 0.3s;
@@ -148,9 +139,7 @@ $simple-vars: (
   "anim-bg-duration", "anim-bg-timing",
   "anim-player-page-duration", "anim-player-page-timing",
   "anim-fade-duration", "anim-fade-duration-alt", "anim-fade-timing",
-  "anim-play-btn-duration", "anim-play-btn-timing",
   "anim-drawer-duration", "anim-drawer-timing",
-  "anim-search-bar-duration", "anim-search-bar-timing",
   "anim-no-lyrics-slide-delay", "anim-no-lyrics-duration", "anim-no-lyrics-timing"
 );
 
