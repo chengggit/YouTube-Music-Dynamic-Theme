@@ -14,12 +14,6 @@
     margin: 0 !important;
     padding-left: 2rem !important;
   }
-  p#blyrics-title {
-    font-size: 2.5rem;
-  }
-  p#blyrics-artist {
-    font-size: 2rem;
-  }
 }
 
 .blyrics-footer {

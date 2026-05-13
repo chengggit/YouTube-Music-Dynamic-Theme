@@ -45,8 +45,11 @@
 }
 
 @if $fullscreen-layout == corner {
-  ytmusic-player-page:not([is-mweb-modernization-enabled])[player-fullscreened]:not([blyrics-dfs]) #side-panel {
-    height: unset;
+  #blyrics-song-info p#blyrics-title {
+    font-size: 2.5rem;
+  }
+  #blyrics-song-info p#blyrics-artist {
+    font-size: 2rem;
   }
 
   ytmusic-player-page[player-fullscreened] .content.ytmusic-player-page {
