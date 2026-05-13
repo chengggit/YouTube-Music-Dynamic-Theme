@@ -439,3 +439,4 @@ ytmusic-player-page {
     transform: scale(1);
     transition: none;
   }
+}
