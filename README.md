@@ -1,4 +1,4 @@
-![](/images/Main.webp)
+![](/images/main.webp)
 
 # Dynamic Background
 
