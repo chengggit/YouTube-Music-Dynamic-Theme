@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Inter");
+@import url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.min.css");
+@import url("https://cdn.jsdelivr.net/npm/font-pingfang-sc@1.0.5/index.min.css");
+
+/* =========================================================
+ THEME CONFIGURATION GUIDE
+ ===========================================================
+ 
+ Null:  'null' inherit values from the active $preset. Set to a specific value to override.
+ Background Blur:  Value is multiplied by 100px (e.g., 0.8 = 80px blur).
+ Help:  See inline comments for usage or GitHub for the full README.
+ 
+============================================================ */

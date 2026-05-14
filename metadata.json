@@ -15,9 +15,12 @@
     "glassmorphism"
   ],
   "images": [
-    "preview.png",
-    "preview1.jpg",
-    "preview2.jpg",
-    "customimage.jpg"
+    "main.webp",    
+    "preset.webp",
+    "blrc-preview.jpeg",
+    "corner-layout.jpeg",
+    "custom-img.jpeg",
+    "static.jpeg",
+    "layout.webp"
   ]
 }

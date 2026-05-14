@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "postcss": "^8.5.10",
-    "rics": "^0.3.20"
+    "rics": "^0.3.21",
+    "rics-cli": "^0.3.21",
+    "ws": "^8.20.0"
   },
   "devDependencies": {
     "postcss-cli": "^11.0.1",
@@ -10,7 +12,9 @@
     "prettier-plugin-rics": "^0.3.17"
   },
   "scripts": {
-    "build": "postcss src/index.css --use postcss-import -o style.css --no-map",
-    "watch": "postcss src/index.css --use postcss-import -o style.css --no-map --watch"
+    "build-rics": "node build-rics.js",
+    "watch-rics": "node build-rics.js --watch",
+    "build-pear": "postcss src/index.css --use postcss-import -o style.css --no-map",
+    "watch-pear": "postcss src/index.css --use postcss-import -o style.css --no-map --watch"
   }
 }

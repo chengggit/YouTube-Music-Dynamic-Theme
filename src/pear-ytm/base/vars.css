@@ -1,0 +1,204 @@
+/* ========================== THEME CONFIG ========================== */
+/* Edit these variables to configure your theme. 
+   Ensure every line ends with a semicolon (;) to prevent errors. */
+
+:root {
+  /* Background 
+     - Static: url("yourimagelink.com/image.jpg") or color (hex/rgb)
+     - Dynamic: Keep the color-mix block (Requires Album Color Theme plugin) */
+  --cfg-background: color-mix(
+    in srgb,
+    rgba(3, 3, 3) calc(100% - var(--ytmusic-album-color-ratio, 50%)),
+    rgba(var(--ytmusic-album-color-dark), 1)
+      var(--ytmusic-album-color-ratio, 50%)
+  );
+
+  --cfg-bg-brightness: 0.8; /* 0 to 1 */
+  --cfg-bg-blur: 0; /* 0 to 1 (Multiplied by 100px) */
+  --cfg-bg-saturate: 1.2;
+  --cfg-bg-scale: 1.1;
+  --cfg-player-page-opacity: 1; /* Player page transparency */
+
+  /* Typography 
+     - Font: Name in quotes (e.g., 'Segoe UI', 'Noto Sans KR')
+     - Weight: 100 to 900 */
+  --cfg-font: 'Inter';
+  --cfg-font-weight: 400;
+  --cfg-lyrics-font-weight: 700;
+  --cfg-lyrics-font-size: 40px;
+  --cfg-album-art-size: 400px;
+
+  /* Colors (hex, rgb, or rgba) */
+  --cfg-text-color-1: rgb(255, 255, 255);
+  --cfg-text-color-2: rgba(255, 255, 255, 0.7);
+  --cfg-icon: rgb(255, 255, 255);
+  --cfg-accent: rgb(255, 255, 255);
+  --cfg-accent-icon: rgb(255, 255, 255);
+  --cfg-accent-hover: rgb(255, 255, 255);
+
+  /* Layout 
+     - Border: Use 'transparent' for no border, or '1px solid color' 
+     - Shadow: Horizontal Offset | Vertical Offset | Blur | Color */
+  --cfg-layout-color: transparent;
+  --cfg-layout-contrast: rgba(255, 255, 255, 0.1);
+  --cfg-layout-highlight: rgba(255, 255, 255, 0.1);
+  --cfg-button-color: rgba(255, 255, 255, 0.1);
+  --cfg-button-highlight: rgba(255, 255, 255, 0.2);
+  --cfg-layout-blur: 10px;
+  --cfg-layout-border: transparent;
+  --cfg-button-border: transparent;
+  --cfg-drop-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+  /* Corner Radius (px) */
+  --cfg-radius-art: 8px;
+  --cfg-radius-art-medium: 16px;
+  --cfg-radius-art-big: 24px;
+
+  --cfg-radius-button: 12px;
+  --cfg-radius-button-alt: 16px;
+
+  --cfg-radius-highlight: 8px;
+  --cfg-radius-highlight-big: 12px;
+
+  --cfg-radius-panel: 12px;
+  --cfg-radius-panel-big: 24px;
+
+  /* Animations 
+     - Set duration to 0s to disable animation */
+  --cfg-bg-duration: 0.3s;
+  --cfg-bg-timing: ease-in-out;
+
+  --cfg-player-page-duration: 0.65s;
+  --cfg-player-page-timing: cubic-bezier(0.3, 0.6, 0.5, 1);
+
+  --cfg-fade-duration: 0.3s;
+  --cfg-fade-duration-alt: 0.5s;
+  --cfg-fade-timing: ease;
+
+  --cfg-play-button-duration: 0.3s;
+  --cfg-play-button-timing: ease;
+
+  --cfg-silding-duration: 0.3s;
+  --cfg-sliding-timing: ease;
+
+  --cfg-search-bar-duration: 0.3s;
+  --cfg-search-bar-timing: ease;
+}
+
+/* ========================== TOGGLES ========================== */
+
+/* To enable a toggle: Remove the slash-star /* and star-slash */
+/* To disable: Wrap the code block in slash-star /* and star-slash */
+
+/* ============================================================= */
+
+/* Increment Skip Buttons : Enable rewind and fast forward buttons
+
+ytmusic-player-bar yt-icon-button[hidden],
+yt-icon-button.rewind-button {
+  display: inline-flex !important;
+}
+
+*/
+
+/* Centered Control : Play and skip buttons in the middle similar to spotify
+
+@media (min-width: 615px) {
+  ytmusic-player-bar.ytmusic-app {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'start middle end';
+  }
+  ytmusic-player-bar .left-controls.ytmusic-player-bar {
+    grid-area: middle;
+    justify-self: center;
+    justify-content: center;
+  }
+  ytmusic-player-bar .middle-controls.ytmusic-player-bar {
+    grid-area: start;
+    justify-content: start;
+    margin-left: 12px;
+  }
+  ytmusic-player-bar .time-info.ytmusic-player-bar {
+    position: absolute;
+    top: -18px;
+    margin: 0px;
+  }
+  ytmusic-player-bar .spinner-container.ytmusic-player-bar {
+    position: absolute;
+    left: 0;
+  }
+}
+
+*/
+
+/* ============================================================ 
+* DO NOT EDIT BELOW THIS LINE
+ ============================================================== */
+* {
+  font-family: var(--cfg-font) !important;
+  font-weight: var(--cfg-font-weight);
+  scrollbar-width: none !important;
+}
+
+:root {
+  --album-art-size: var(--cfg-album-art-size);
+  --background: var(--cfg-background);
+  --bg-scale: var(--cfg-bg-scale);
+  --bg-blur: calc(var(--cfg-bg-blur) * 100px);
+  --bg-brightness: var(--cfg-bg-brightness);
+  --bg-saturate: var(--cfg-bg-saturate);
+  --player-page-opacity: var(--cfg-player-page-opacity);
+
+  --text-color-1: var(--cfg-text-color-1);
+  --text-color-2: var(--cfg-text-color-2);
+  --icon: var(--cfg-icon);
+  --accent: var(--cfg-accent);
+  --accent-icon: var(--cfg-accent-icon);
+  --accent-hover: var(--cfg-accent-hover);
+
+  --layout-color: var(--cfg-layout-color);
+  --layout-contrast: var(--cfg-layout-contrast);
+  --layout-highlight: var(--cfg-layout-highlight);
+  --button-color: var(--cfg-button-color);
+  --button-highlight: var(--cfg-button-highlight);
+  --layout-blur: var(--cfg-layout-blur);
+  --layout-border: var(--cfg-layout-border);
+  --button-border: var(--cfg-button-border);
+  --drop-shadow: var(--cfg-drop-shadow);
+
+  --radius-art: var(--cfg-radius-art);
+  --radius-art-medium: var(--cfg-radius-art-medium);
+  --radius-art-big: var(--cfg-radius-art-big);
+
+  --radius-button: var(--cfg-radius-button);
+  --radius-button-alt: var(--cfg-radius-button-alt);
+
+  --radius-highlight: var(--cfg-radius-highlight);
+  --radius-highlight-big: var(--cfg-radius-highlight-big);
+
+  --radius-panel: var(--cfg-radius-panel);
+  --radius-panel-big: var(--cfg-radius-panel-big);
+
+  --bg-duration: var(--cfg-bg-duration);
+  --bg-timing: var(--cfg-bg-timing);
+
+  --player-page-duration: var(--cfg-player-page-duration);
+  --player-page-timing: var(--cfg-player-page-timing);
+
+  --fade-duration: var(--cfg-fade-duration);
+  --fade-duration-alt: var(--cfg-fade-duration-alt);
+  --fade-timing: var(--cfg-fade-timing);
+
+  --play-button-duration: var(--cfg-play-button-duration);
+  --play-button-timing: var(--cfg-play-button-timing);
+
+  --silding-duration: var(--cfg-silding-duration);
+  --sliding-timing: var(--cfg-sliding-timing);
+
+  --search-bar-duration: var(--cfg-search-bar-duration);
+  --search-bar-timing: var(--cfg-search-bar-timing);
+
+  --ytmusic-text-primary: var(--cfg-text-color-1);
+  --ytmusic-overlay-text-secondary: var(--cfg-text-color-2);
+}

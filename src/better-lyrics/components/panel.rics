@@ -1,0 +1,327 @@
+/* ========================== PANELS & MISC ========================== */
+/* New Playlist Panel */
+ytmusic-playlist-form {
+  background: transparent;
+  .yt-icon-shape {
+    color: var(--icon);
+  }
+}
+
+.label.ytmusic-dropdown-item-renderer {
+  color: var(--text-primary);
+}
+
+tp-yt-iron-input.tp-yt-paper-input>input.tp-yt-paper-input {
+  color: var(--text-primary);
+}
+
+.yt-list-item-view-model__title {
+  color: var(--text-primary);
+}
+
+ytmusic-dialog {
+  box-shadow: var(--ui-shadow);
+  background: var(--ui-color);
+  backdrop-filter: blur(var(--ui-blur));
+  border: var(--ui-border);
+  border-radius: var(--radius-panel-lg);
+}
+
+/* Underline */
+.unfocused-line.tp-yt-paper-input-container {
+  border-color: rgba(255, 255, 255, .4);
+}
+
+.focused-line.tp-yt-paper-input-container {
+  border-color: var(--accent);
+}
+
+/* Toogle Button */
+.ytSwitchShapeTrack {
+  background: var(--btn-color);
+}
+
+.ytSwitchShapeKnob {
+  background: rgba(255, 255, 255, .3);
+}
+
+.ytSwitchShapeKnobActive {
+  background: var(--accent);
+}
+
+/* Playlist Visibility Dropdown */
+.dropdown-content.tp-yt-paper-menu-button {
+  --yt-spec-brand-background-primary: transparent;
+  background: var(--ui-color);
+  box-shadow: var(--ui-shadow);
+  backdrop-filter: blur(var(--ui-blur));
+  border-radius: var(--radius-panel-lg);
+}
+
+.ytmusic-playlist-form .dropdown-content.tp-yt-paper-menu-button {
+  left: 12rem;
+}
+
+.dropdown-content.ytmusic-dropdown-renderer {
+  background: transparent;
+  backdrop-filter: blur(var(--ui-blur));
+}
+
+ytmusic-dropdown-item-renderer {
+  background: transparent;
+  border-radius: var(--radius-highlight);
+  &:hover,
+  &:focus {
+    background: var(--ui-highlight);
+  }
+}
+
+/* Item Pressed */
+tp-yt-paper-item.ytmusic-dropdown-item-renderer:focus::before {
+  background: transparent;
+}
+
+tp-yt-iron-icon.tp-yt-paper-dropdown-menu {
+  color: var(--icon);
+}
+
+/* Add to Playlist */
+tp-yt-paper-dialog[modern],
+ytmusic-add-to-playlist-renderer {
+  --yt-spec-brand-background-primary: transparent;
+  background: var(--ui-color);
+  backdrop-filter: blur(var(--ui-blur));
+  box-shadow: var(--ui-shadow);
+  border-radius: var(--radius-panel-lg);
+  border: var(--ui-border);
+}
+
+yt-formatted-string.subtitle.ytmusic-two-row-item-renderer {
+  color: var(--text-secondary) !important;
+}
+
+/* Divider */
+.top-bar.ytmusic-add-to-playlist-renderer,
+ytmusic-carousel-shelf-renderer.ytmusic-add-to-playlist-renderer:not(:empty) {
+  border-bottom: 0;
+}
+
+/* Add to Option */
+ytmusic-playlist-add-to-option-renderer {
+  border-radius: var(--radius-highlight-lg);
+  .yt-icon-shape {
+    color: var(--accent-icon);
+  }
+}
+
+#title.ytmusic-playlist-add-to-option-renderer {
+  color: var(--text-primary);
+}
+
+.thumbnail.ytmusic-playlist-add-to-option-renderer {
+  border-radius: var(--radius-art);
+}
+
+/* Divider */
+.top-bar.ytmusic-add-to-playlist-renderer,
+ytmusic-carousel-shelf-renderer.ytmusic-add-to-playlist-renderer:not(:empty) {
+  border-bottom: 0;
+}
+
+/* 3 Dot Menu */
+tp-yt-iron-dropdown.ytmusic-popup-container {
+  background: var(--ui-color);
+  backdrop-filter: blur(var(--ui-blur));
+  border-radius: var(--radius-panel-lg);
+  box-shadow: var(--ui-shadow);
+  border: var(--ui-border);
+  overflow: hidden;
+}
+
+tp-yt-paper-listbox.ytmusic-menu-popup-renderer {
+  --paper-listbox-background-color: transparent;
+  border: 0;
+}
+
+tp-yt-paper-listbox#items yt-formatted-string {
+  color: var(--text-primary);
+}
+
+.ytmusic-menu-popup-renderer {
+  border-radius: var(--radius-highlight);
+  overflow: hidden;
+  --ytmusic-menu-item-hover-background-color: var(--ui-highlight);
+}
+
+/* User Dropdown */
+.ytmusicMultiPageMenuRendererHost {
+  --yt-sys-color-baseline--call-to-action: var(--accent);
+  --yt-endpoint-hover-color: var(--accent-highlight);
+  --yt-sys-color-baseline--outline: transparent;
+  background: transparent;
+}
+
+ytd-simple-menu-header-renderer {
+  background: transparent;
+}
+
+ytd-compact-link-renderer {
+  --yt-compact-link-icon-color: var(--icon);
+  border-radius: var(--radius-highlight);
+  &:hover {
+    background: var(--ui-highlight) !important;
+  }
+}
+
+tp-yt-paper-item:focus:before {
+  border-radius: var(--radius-highlight);
+}
+
+ytd-account-item-renderer {
+  --yt-spec-text-primary: var(--accent);
+  border-radius: var(--radius-highlight-lg);
+}
+
+#email.ytd-google-account-header-renderer {
+  color: var(--text-secondary);
+}
+
+yt-formatted-string.ytd-account-item-renderer[secondary] {
+  color: var(--text-secondary);
+}
+
+/* "Recently Played" Button */
+button.ytmusic-sort-filter-button-renderer {
+  color: var(--text-primary);
+  border: var(--btn-border);
+  border-radius: var(--radius-btn-alt);
+  background: var(--btn-color);
+}
+
+ytmusic-multi-select-menu-item-renderer {
+  border-radius: var(--radius-highlight);
+  &:hover {
+    background: var(--ui-highlight);
+  }
+}
+
+#container.ytmusic-multi-select-menu-renderer {
+  background: transparent;
+  border: 0;
+}
+
+#items.ytmusic-multi-select-menu-renderer {
+  background: transparent;
+}
+
+#title.ytmusic-multi-select-menu-renderer {
+  border: 0;
+}
+
+ytmusic-background-promo-renderer {
+  background: transparent;
+  .yt-icon-shape {
+    color: var(--icon);
+  }
+}
+
+/* Popup Message */
+tp-yt-paper-toast,
+tp-yt-paper-toast.yt-notification-action-renderer,
+#toast.ytmusic-notification-text-renderer {
+  color: var(--text-primary);
+  background: var(--ui-color);
+  border-radius: var(--radius-panel);
+  border: var(--ui-border);
+  box-shadow: var(--ui-shadow);
+  backdrop-filter: blur(var(--ui-blur));
+}
+
+#text.yt-notification-action-renderer,
+#sub-text.yt-notification-action-renderer {
+  color: var(--text-primary);
+}
+
+.ytSpecButtonShapeNextCallToActionInverse.ytSpecButtonShapeNextText {
+  color: var(--accent);
+  &:hover {
+    background: var(--btn-highlight);
+  }
+}
+
+/* Share Container */
+#start-at-wrapper {
+  --paper-input-container-disabled-opacity: 0.65;
+}
+
+#bar.yt-copy-link-renderer {
+  background: var(--ui-contrast);
+  border: var(--ui-border);
+}
+
+#checkbox.tp-yt-paper-checkbox {
+  border-color: var(--btn-color);
+  background: var(--btn-color);
+  --paper-checkbox-checked-color: var(--btn-color);
+}
+
+#checkmark.tp-yt-paper-checkbox {
+  border-color: var(--icon);
+}
+
+.ytSpecButtonShapeNextCallToAction.ytSpecButtonShapeNextFilled{
+  color: var(--accent);
+  background: var(--btn-color);
+  border-radius: var(--radius-btn-alt);
+  &:hover {
+    background: var(--btn-highlight);
+  }
+}
+
+.scroll-button.yt-third-party-share-target-section-renderer {
+  background: var(--btn-color);
+  backdrop-filter: blur(var(--ui-blur));
+  box-shadow: none;
+  .yt-icon-shape {
+    color: var(--icon);
+  }
+}
+
+yt-formatted-string.yt-start-at-renderer {
+  color: var(--text-secondary);
+}
+
+/* Explore Page */
+ytmusic-navigation-button-renderer.ytmusic-grid-renderer button.ytmusic-navigation-button-renderer {
+  background: var(--btn-color);
+  border-radius: var(--radius-btn-alt);
+  &:focus-within,
+  &:hover {
+    background: var(--btn-highlight);
+  }
+  .yt-icon-shape {
+    color: var(--icon);
+  }
+}
+
+ytmusic-navigation-button-renderer.ytmusic-carousel button.ytmusic-navigation-button-renderer {
+  background: var(--btn-color);
+  border-radius: var(--radius-btn);
+  &:focus-within,
+  &:hover {
+    background: var(--btn-highlight);
+  }
+}
+
+tp-yt-paper-listbox.yt-dropdown-menu {
+  background: transparent;
+  .iron-selected.yt-dropdown-menu,
+  tp-yt-paper-item.yt-dropdown-menu:hover {
+    background: var(--ui-highlight);
+    border-radius: var(--radius-highlight);
+  }
+}
+
+yt-card-item-container-renderer {
+  border: 0;
+}

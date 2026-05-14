@@ -1,8 +1,8 @@
-![](/images/Main.webp)
+![](/images/main.webp)
 
 # Dynamic Background
 
-A highly customizable YouTube Music theme featuring dynamic backgrounds and glassmorphism. Available for [Better Lyrics Extension](https://better-lyrics.boidu.dev/) and [Pear Desktop](https://github.com/pear-devs/pear-desktop).
+A features rich and highly customizable YouTube Music theme featuring dynamic backgrounds and glassmorphism. Available for [Better Lyrics Extension](https://better-lyrics.boidu.dev/) and [Pear Desktop](https://github.com/pear-devs/pear-desktop).
 
 <div align="center">
 
@@ -18,6 +18,7 @@ A highly customizable YouTube Music theme featuring dynamic backgrounds and glas
 - [Previews](#previews)
 - [Configuration](#configuration)
 - [Compatibility](#compatibility)
+- [Development](#development)
 - [License](#license)
 - [Credits](#credits)
 
@@ -60,9 +61,9 @@ The Album Color Theme plugin is required for dynamic background functionality.
 
 **Known Limitations**
 
-- On Pear Desktop 3.11.0, the Album Color Theme plugin has been reported to not work properly on some systems such as macOS, Fedora, and Arch-based Linux. See [#3857](https://github.com/pear-devs/pear-desktop/issues/3857).
-
 - Dynamic backgrounds behave differently from the Better Lyrics version, as Pear Desktop does not provide a variable for fetching the song’s album cover. This implementation relies on the Album Color Theme plugin as a workaround.
+
+- On Pear Desktop 3.11.0, the Album Color Theme plugin has been reported to not work properly on some systems such as macOS, Fedora, and Arch-based Linux. See [#3857](https://github.com/pear-devs/pear-desktop/issues/3857).
 
 - The search suggestion background blur workaround does not work on Pear Desktop yet due to its current Chromium 140 base, where CSS anchor behavior differs from Chromium 144+. This should be resolved once Pear updates to a compatible Chromium version.
 
@@ -73,42 +74,42 @@ The Album Color Theme plugin is required for dynamic background functionality.
 3. Select the downloaded `style.css`
 4. Restart the app
 
----
-
 ## Previews
 
-### Better Lyrics
+![](/images/lyrics-blur.webp)
+[Lyrics blur](/src/docs/CONFIGURATION.md#line-blur): from focused, to partial, to off.
 
-![](/images/bgpreview.webp)
+### Preset
+Three available presets: `default`, `light`, `dark`
+![](/images/preset.webp)
 
-#### Default
+### Layout
 
-![](/images/Default.webp)
+#### Corner: Theme Default
 
-#### Light Preset
+![](/images/corner-layout.jpeg)
 
-![](/images/Light2.webp)
+#### Center: Better Lyrics Default
 
-#### Dark Preset
+![](/images/default-layout.jpeg)
 
-![](/images/Dark.webp)
+### Custom Background
 
-#### Custom Image
+#### Custom Image: [NASA](https://science.nasa.gov/image-detail/wise-infrared-view-of-andromeda-galaxy-and-companions-3/)
 
-![](/images/custompreview.webp)
-Image: [NASA](https://science.nasa.gov/image-detail/wise-infrared-view-of-andromeda-galaxy-and-companions-3/)
+![](/images/custom-img.jpeg)
 
-Background Blur Setting: 0.05
+#### Static Color: #212121
 
-#### Static Color
-
-![](/images/staticpreview.webp)
+![](/images/static.jpeg)
 
 ### Pear Desktop
 
 ![](/images/pear1.webp)
 
 ## Configuration
+
+**Detailed informations about confirguration [here](/src/docs/CONFIGURATION.md).**
 
 All variables are defined at the top of the CSS/RICS file.
 
@@ -118,7 +119,7 @@ All variables are defined at the top of the CSS/RICS file.
 
 **Animations**
 
-- Better Lyrics: uses `on` / `off` toggles
+- Better Lyrics: uses `true` / `false` toggles
 - Pear Desktop: set duration to `0s` to disable
 
 **Notes**
@@ -131,6 +132,36 @@ All variables are defined at the top of the CSS/RICS file.
 
 - Better Lyrics v2.2.0 and later
 - Pear Desktop 3.11.0 (tested)
+
+## Development
+
+Dynamic Background for Better Lyrics is written in [`rics`](https://github.com/better-lyrics/rics), an in-house CSS preprocessor made by the Better Lyrics team. It is essentially a lightweight SCSS-like preprocessor.
+
+For the Pear Desktop port, the theme is written in plain CSS and uses PostCSS to compile smaller chunks into a single final stylesheet.
+
+### Getting Started
+
+Install the `rics` extension from the VSCode marketplace for syntax highlighting. If you use a different editor or IDE, masking the file as SCSS could work as well.
+
+The `rics` extension is not required for Pear Desktop development.
+
+Install the necessary modules:
+
+```bash
+npm install
+```
+
+Development commands:
+
+```bash
+# Better Lyrics
+npm run build-rics  # build once
+npm run watch-rics  # watch for changes
+
+# Pear Desktop
+npm run build-pear  # build once
+npm run watch-pear  # watch for changes
+```
 
 ## License
 
@@ -149,11 +180,8 @@ The theme is also heavily inspired by “Even Better Lyrics Plus” by Noah & Be
 
 ## Thank You ❤️
 
-This CSS started from a theme made by **walm-git**, and over time I’ve rebuilt nearly every part of it. It’s now mostly my own work. A lot of hours went into it, digging through DevTools, reading other people’s code, getting stuck, and figuring things out along the way. I’m really proud of how it turned out.
+This CSS started from a theme made by **walm-git**, and over time I’ve rebuilt nearly every part of it. It’s now mostly my own work. I’m really proud of how it turned out and have learned a lot from this project alone.
 
-Thanks to everyone who uses this theme. I hope you enjoy it as much as I enjoyed making it. And thank you to everyone who supported the project from the beginning—those who left feedback, shared kind words, and the people credited above.
+Thanks to everyone who uses this theme. I hope you enjoy using it as much as I do. And thank you to everyone who supported the project from the beginning and to those who left feedback, shared kind words, and the people credited above.
 
 Thank you.
-
-Sincerely,
-Cheng

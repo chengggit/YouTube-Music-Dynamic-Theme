@@ -1,6 +1,6 @@
 # Dynamic Background
 
-A highly customizable YouTube Music theme featuring dynamic backgrounds and glassmorphism for [Better Lyrics Extension](https://better-lyrics.boidu.dev/).
+A features rich and highly customizable YouTube Music theme featuring dynamic backgrounds and glassmorphism for [Better Lyrics Extension](https://better-lyrics.boidu.dev/).
 
 More information is available in the main [README](https://github.com/chengggit/Youtube-Music-Dynamic-Theme).
 

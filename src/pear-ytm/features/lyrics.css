@@ -1,0 +1,18 @@
+#synced-lyrics-container .text-lyrics yt-formatted-string {
+  font-family: var(--cfg-font) !important;
+  font-size: var(--cfg-lyrics-font-size) !important;
+  font-weight: var(--cfg-lyrics-font-weight) !important;
+}
+
+#synced-lyrics-container .text-lyrics > .romaji yt-formatted-string {
+  font-family: var(--cfg-font) !important;
+  font-size: calc(var(--cfg-lyrics-font-size) * 0.55) !important;
+  font-weight: var(--cfg-lyrics-font-weight) !important;
+  color: var(--text-color-2) !important;
+  font-style: normal !important;
+}
+
+#synced-lyrics-container .text-lyrics.lrc-header {
+  scale: 0.55 !important;
+  color: rgba(255, 255, 255, 0.3) !important;
+}
