@@ -82,6 +82,7 @@
   opacity: 1;
   filter: none;
   transition: 
+  transform var(--blyrics-scale-transition-duration) ease-in-out,
   filter 0.35s ease-in-out,
   opacity 0.2s ease;
 }
