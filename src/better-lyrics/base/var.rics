@@ -10,7 +10,7 @@ $bg-scale: 1.2;               // Background zoom level
 $bg-player-opacity: 0.8;        // Player page transparency
 
 /* --- Typography & Colors --- */
-$font-family: "Inter", "Apple SD Gothic Neo"; // Main font for all text
+$font-family: "Inter","PingFangSC-Regular","Apple SD Gothic Neo"; // Main font for all text
 $font-weight: 400;            // Main text weight
 $text-primary: white;         // Main text color (titles, primary info)
 $text-secondary: rgba(white, 0.7); // Secondary text color (subtitles, secondary info)
@@ -21,7 +21,7 @@ $accent-icon: white;          // Accent for icons (e.g., like button, active shu
 $accent-highlight: mix($accent, white, 70%); // Lighter accent for hover states and highlights
 
 /* --- Lyrics --- */
-$fullscreen-layout: corner;   // default | corner
+$fullscreen-layout: corner;   // corner | center
 $lyrics-font-size: 40px;
 $lyrics-font-weight: 600;
 
@@ -127,28 +127,7 @@ $theme-presets: (
 $theme-map: map-get($theme-presets, $preset);
 $final-bg-brightness: if($bg-brightness, $bg-brightness, map-get($theme-map, bg-brightness));
 
-$simple-vars: (
-  "album-art-size", "bg-scale", "bg-saturate", "bg-player-opacity",
-  "text-primary", "text-secondary", "icon", "accent", "accent-icon", "accent-highlight",
-  "ui-blur", "ui-border", "btn-border", "ui-shadow",
-
-  "radius-art", "radius-art-md", "radius-art-lg",
-  "radius-btn", "radius-btn-alt", "radius-highlight",
-  "radius-highlight-lg", "radius-panel-lg", "radius-panel",
-
-  "anim-bg-duration", "anim-bg-timing",
-  "anim-player-page-duration", "anim-player-page-timing",
-  "anim-fade-duration", "anim-fade-duration-alt", "anim-fade-timing",
-  "anim-drawer-duration", "anim-drawer-timing",
-  "anim-no-lyrics-slide-delay", "anim-no-lyrics-duration", "anim-no-lyrics-timing"
-);
-
 :root {
-
-  @each $var in $simple-vars {
-    --#{$var}: $#{$var};
-  }
-
   --bg-blur: calc($bg-blur * 100px);
   --bg-brightness: if($final-bg-brightness != null, $final-bg-brightness, 0.7);
 
@@ -158,11 +137,51 @@ $simple-vars: (
   --btn-color: if($btn-color, $btn-color, map-get($theme-map, btn-color));
   --btn-highlight: if($btn-highlight, $btn-highlight, map-get($theme-map, btn-highlight));
 
-  --blyrics-lyric-scroll-duration: $lyric-scroll-duration;
-  --blyrics-lyric-scroll-timing-function: $lyric-scroll-timing;
+  --album-art-size: #{$album-art-size};
+  --bg-scale: #{$bg-scale};
+  --bg-saturate: #{$bg-saturate};
+  --bg-player-opacity: #{$bg-player-opacity};
 
-  --ytmusic-text-primary: $text-primary;
-  --ytmusic-overlay-text-secondary: $text-secondary;
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+  --icon: #{$icon};
+  --accent: #{$accent};
+  --accent-icon: #{$accent-icon};
+  --accent-highlight: #{$accent-highlight};
+
+  --ui-blur: #{$ui-blur};
+  --ui-border: #{$ui-border};
+  --btn-border: #{$btn-border};
+  --ui-shadow: #{$ui-shadow};
+
+  --radius-art: #{$radius-art};
+  --radius-art-md: #{$radius-art-md};
+  --radius-art-lg: #{$radius-art-lg};
+  --radius-btn: #{$radius-btn};
+  --radius-btn-alt: #{$radius-btn-alt};
+  --radius-highlight: #{$radius-highlight};
+  --radius-highlight-lg: #{$radius-highlight-lg};
+  --radius-panel-lg: #{$radius-panel-lg};
+  --radius-panel: #{$radius-panel};
+
+  --anim-bg-duration: #{$anim-bg-duration};
+  --anim-bg-timing: #{$anim-bg-timing};
+  --anim-player-page-duration: #{$anim-player-page-duration};
+  --anim-player-page-timing: #{$anim-player-page-timing};
+  --anim-fade-duration: #{$anim-fade-duration};
+  --anim-fade-duration-alt: #{$anim-fade-duration-alt};
+  --anim-fade-timing: #{$anim-fade-timing};
+  --anim-drawer-duration: #{$anim-drawer-duration};
+  --anim-drawer-timing: #{$anim-drawer-timing};
+  --anim-no-lyrics-slide-delay: #{$anim-no-lyrics-slide-delay};
+  --anim-no-lyrics-duration: #{$anim-no-lyrics-duration};
+  --anim-no-lyrics-timing: #{$anim-no-lyrics-timing};
+
+  --blyrics-lyric-scroll-duration: #{$lyric-scroll-duration};
+  --blyrics-lyric-scroll-timing-function: #{$lyric-scroll-timing};
+
+  --ytmusic-text-primary: #{$text-primary};
+  --ytmusic-overlay-text-secondary: #{$text-secondary};
 
   --blyrics-font-family: $font-family;
   --blyrics-font-weight: $lyrics-font-weight;

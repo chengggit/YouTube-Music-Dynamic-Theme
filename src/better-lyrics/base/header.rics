@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Inter");
 @import url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.min.css");
+@import url("https://cdn.jsdelivr.net/npm/font-pingfang-sc@1.0.5/index.min.css");
 
 /* =========================================================
  THEME CONFIGURATION GUIDE
