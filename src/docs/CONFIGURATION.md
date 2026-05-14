@@ -2,10 +2,10 @@
 
 This theme comes in two versions for each different platforms:
 
-| Version | Platform                                                    | Config style             |
-| ------- | ----------------------------------------------------------- | ------------------------ |
-| RICS    | [Better Lyrics](https://github.com/boidushya/better-lyrics) | `$variable: value;`      |
-| CSS     | Pear Desktop                                                | `--cfg-variable: value;` |
+| Version | Platform                                                  | Config style             |
+| ------- | --------------------------------------------------------- | ------------------------ |
+| RICS    | [Better Lyrics](https://better-lyrics.boidu.dev/)         | `$variable: value;`      |
+| CSS     | [Pear Desktop](https://github.com/pear-devs/pear-desktop) | `--cfg-variable: value;` |
 
 This document covers the RICS version. Pear Desktop / CSS documentation is coming soon.
 
@@ -87,12 +87,12 @@ All variables accept any valid CSS color. Using `rgba()` lets you control opacit
 ## Lyrics
 
 ```scss
-$fullscreen-layout: corner; // default | corner
+$fullscreen-layout: corner; // corner | center
 $lyrics-font-size: 40px;
 $lyrics-font-weight: 600;
 ```
 
-`$fullscreen-layout` controls where the album art sits in fullscreen mode. `corner` anchors it to the bottom left corner of the screen and pushes the lyrics more the right. `default` uses the default album art centered layout.
+`$fullscreen-layout` controls where the album art sits in fullscreen mode. `corner` anchors it to the bottom left corner of the screen and pushes the lyrics more to the right. `center` uses the default album art centered layout.
 
 ### Line Blur
 
@@ -138,6 +138,15 @@ $btn-border: transparent;
 | `$btn-color`      | Default background for buttons.                                                                                                |
 | `$btn-highlight`  | Button background on hover.                                                                                                    |
 | `$btn-border`     | Border style for buttons. Follows the same format as `$ui-border`.                                                             |
+
+**Note:**
+
+Shadow values separated with commas or line breaks must be wrapped in quotes.
+
+```scss
+$ui-shadow: 'rgba(0, 0, 0, 0.3) 0 10px 24px -6px, 
+inset rgba(255, 255, 255, 0.1) 0 1px 0 0';
+```
 
 ## Corner Radius
 
