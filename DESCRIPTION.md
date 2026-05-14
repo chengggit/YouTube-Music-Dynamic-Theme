@@ -9,8 +9,8 @@ More information is available in the main [README](https://github.com/chengggit/
 - [Features](#features)
 - [Previews](#previews)
 - [License](#license)
-- [Compatibility](#compatibility)
 - [Configuration](#configuration)
+- [Compatibility](#compatibility)
 - [Credits](#credits)
 
 ## Features
@@ -32,43 +32,51 @@ Toggleable player enhancements:
 
 ## Previews
 
-![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/main/images/bgpreview.webp)
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/main/images/lyrics-blur.webp)
+[Lyrics blur](https://github.com/chengggit/YouTube-Music-Dynamic-Theme/blob/main/src/docs/CONFIGURATION.md#line-blur): from focused, to partial, to off.
 
-### Default
+### Preset
 
-![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/main/images/Default.webp)
+Three available presets: `default`, `light`, `dark`
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/main/images/preset.webp)
 
-### Light Preset
+### Layout
 
-![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/main/images/Light2.webp)
+#### Corner: Theme Default
 
-### Dark Preset
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/main/images/corner-layout.jpeg)
 
-![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/main/images/Dark.webp)
+#### Center: Better Lyrics Default
 
-### Custom Image
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/main/images/default-layout.jpeg)
 
-![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/2543d2272cbda8d20e5c11030fb8c51b4ead58b4/images/custompreview.webp)
+### Custom Background
 
-Image: [NASA](https://science.nasa.gov/image-detail/wise-infrared-view-of-andromeda-galaxy-and-companions-3/)
+#### Custom Image: [NASA](https://science.nasa.gov/image-detail/wise-infrared-view-of-andromeda-galaxy-and-companions-3/)
 
-Background Blur Setting: 0.05
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/main/images/custom-img.jpeg)
 
-### Static Color
+#### Static Color: #212121
 
-![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/2543d2272cbda8d20e5c11030fb8c51b4ead58b4/images/staticpreview.webp)
-
-## License
-
-This theme is licensed under the **MIT License**, allowing you to use, modify, and redistribute it. If you reuse or fork any part of the theme, please credit the original project and preserve this license notice. Any code snippets borrowed from other themes are already credited within this repository.
+![](https://raw.githubusercontent.com/chengggit/YouTube-Music-Dynamic-Theme/refs/heads/main/images/static.jpeg)
 
 ## Configuration
 
-All the variables are at the top of the CSS. You can tweak colors, fonts, animations, and layout to fit your style.
+**Detailed informations about confirguration [here](https://github.com/chengggit/YouTube-Music-Dynamic-Theme/blob/main/src/docs/CONFIGURATION.md).**
+
+All variables are defined at the top of the theme file.
+
+- Edit values to customize colors, fonts, layout, and animations
+- Supports standard CSS formats (rgb, rgba, hex, etc.)
+- Custom fonts must be installed on your system
 
 ## Compatibility
 
 - Compatible with Better Lyrics v2.2.0 and later.
+
+## License
+
+This theme is licensed under the **MIT License**, allowing you to use, modify, and redistribute it. If you reuse or fork any part of the theme, please credit the original project and preserve this license notice. Any code snippets borrowed from other themes are already credited within this repository.
 
 ## Credits
 
