@@ -1,9 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const prettier = require('prettier');
+const { compile } = require('rics');
 
 const isWatch = process.argv.includes('--watch');
-const filePath = './style.rics';
+const isDev = process.argv.includes('--dev');
+
+const broadcast = isDev ? require('./server.js').broadcast : () => {};
+
+const outputRICSPath = './style.rics';
 
 const filesInOrder = [
   'src/better-lyrics/base/header.rics',
@@ -36,21 +41,31 @@ async function build() {
     output += fs.readFileSync(path.join(__dirname, file), 'utf8') + '\n\n';
   }
 
-  const formatted = await prettier.format(output, {
-    parser: 'rics',
-    plugins: ['prettier-plugin-rics'],
-  });
+  if (!isDev) {
+    const formatted = await prettier.format(output, {
+      parser: 'rics',
+      plugins: ['prettier-plugin-rics'],
+    });
 
-  fs.writeFileSync(filePath, formatted);
+    fs.writeFileSync(outputRICSPath, formatted);
+
+    console.log(
+      `[${new Date().toLocaleTimeString()}] ${outputRICSPath} built successfully.`,
+    );
+    return;
+  }
+
+  const compiledRICS = compile(output);
+  fs.writeFileSync('./src/rics-dev.css', compiledRICS);
 
   console.log(
-    `[${new Date().toLocaleTimeString()}] ${filePath} built successfully.`,
+    `[${new Date().toLocaleTimeString()}] ${outputRICSPath} built and compiled to src/rics-dev.css successfully.`,
   );
 }
 
-let timeout = null;
-
 if (isWatch) {
+  let timeout = null;
+
   fs.watch('src/better-lyrics', { recursive: true }, (eventType, filename) => {
     if (filename?.endsWith('.rics')) {
       clearTimeout(timeout);
@@ -59,7 +74,7 @@ if (isWatch) {
         console.log(
           `[${new Date().toLocaleTimeString()}] Changed: ${filename}`,
         );
-        build();
+        build().then(broadcast);
       }, 100);
     }
   });

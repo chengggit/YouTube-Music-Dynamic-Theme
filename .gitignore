@@ -1,0 +1,5 @@
+/node_modules
+.prettierignore
+.vscode
+changelog.md
+src/rics-dev.css
