@@ -80,6 +80,7 @@ The Album Color Theme plugin is required for dynamic background functionality.
 [Lyrics blur](/src/docs/CONFIGURATION.md#line-blur): from focused, to partial, to off.
 
 ### Preset
+
 Three available presets: `default`, `light`, `dark`
 ![](/images/preset.webp)
 
@@ -145,9 +146,11 @@ Install the `rics` extension from the VSCode marketplace for syntax highlighting
 
 The `rics` extension is not required for Pear Desktop development.
 
-Install the necessary modules:
+Clone this repo and install the necessary modules:
 
 ```bash
+git clone https://github.com/chengggit/YouTube-Music-Dynamic-Theme.git
+cd YouTube-Music-Dynamic-Theme
 npm install
 ```
 
@@ -155,6 +158,7 @@ Development commands:
 
 ```bash
 # Better Lyrics
+npm run dev # watch & hot-reload from code editor/IDE
 npm run build-rics  # build once
 npm run watch-rics  # watch for changes
 
@@ -162,6 +166,19 @@ npm run watch-rics  # watch for changes
 npm run build-pear  # build once
 npm run watch-pear  # watch for changes
 ```
+
+### Hot Reload (Better Lyrics)
+
+1. Run `npm run dev` to start the WebSocket server on `localhost:8080` and watch for changes.
+2. Open YouTube Music in your browser and apply any theme inside Better Lyrics except "Default". This creates a `#blyrics-custom-style` style tag that we inject the compiled CSS into.
+3. Open DevTools and go to the Console. Paste the contents of [`client.js`](./client.js) to connect to the WebSocket server.
+4. Changes from your editor will reflect in the browser instantly on save.
+
+If you need to reconnect, just repaste [`client.js`](./client.js) in the console again. It will automatically close the previous connection and reconnect.
+
+#### How does it work
+
+`npm run dev` runs [`build-rics.js`](./build-rics.js) to watch for changes in `src/better-lyrics/`, concatenate them into `style.rics`, and compile to a temporary `src/rics-dev.css` that's broadcast to your browser in real-time via WebSocket. This is separate from `style.rics` in root, which is the actual theme file used by the extension, `src/rics-dev.css` is just a dev preview and is gitignored.
 
 ## License
 
