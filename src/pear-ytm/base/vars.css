@@ -1,4 +1,5 @@
 /* ========================== THEME CONFIG ========================== */
+
 /* Edit these variables to configure your theme. 
    Ensure every line ends with a semicolon (;) to prevent errors. */
 
@@ -20,13 +21,17 @@
   --cfg-player-page-opacity: 1; /* Player page transparency */
 
   /* Typography 
-     - Font: Name in quotes (e.g., 'Segoe UI', 'Noto Sans KR')
+     - Font: Name in quotes
      - Weight: 100 to 900 */
-  --cfg-font: 'Inter';
+  --cfg-font: 'Inter', 'Apple SD Gothic Neo', 'PingFangSC-Regular';
   --cfg-font-weight: 400;
-  --cfg-lyrics-font-weight: 700;
-  --cfg-lyrics-font-size: 40px;
+  --cfg-lyrics-font-weight: 600;
+  --cfg-lyrics-font-size: 50px;
   --cfg-album-art-size: 400px;
+
+  --cfg-previous-line-blur: 6px;
+  --cfg-current-line-blur: 0px;
+  --cfg-upcoming-line-blur: 6px;
 
   /* Colors (hex, rgb, or rgba) */
   --cfg-text-color-1: rgb(255, 255, 255);
@@ -166,6 +171,10 @@ yt-icon-button.rewind-button {
   --layout-border: var(--cfg-layout-border);
   --button-border: var(--cfg-button-border);
   --drop-shadow: var(--cfg-drop-shadow);
+
+  --previous-line-blur: var(--cfg-previous-line-blur);
+  --current-line-blur: var(--cfg-current-line-blur);
+  --upcoming-line-blur: var(--cfg-upcoming-line-blur);
 
   --radius-art: var(--cfg-radius-art);
   --radius-art-medium: var(--cfg-radius-art-medium);
