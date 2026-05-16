@@ -7,7 +7,10 @@ ytmusic-app-layout:not([player-page-open]):not(
 }
 
 /* Player Page Background Re-position */
-ytmusic-app-layout:not([is-mweb-modernization-enabled]) > [slot='player-page'] {
+ytmusic-app-layout:not([is-mweb-modernization-enabled]):not(
+    [player-fullscreened]
+  )
+  > [slot='player-page'] {
   position: fixed;
   top: 0 !important;
   left: 0 !important;
@@ -17,10 +20,6 @@ ytmusic-app-layout:not([is-mweb-modernization-enabled]) > [slot='player-page'] {
   padding-top: var(--ytmusic-nav-bar-height) !important;
   padding-left: var(--ytmusic-guide-width) !important;
   padding-bottom: var(--ytmusic-player-bar-height) !important;
-}
-
-ytmusic-app-layout[player-fullscreened] > [slot='player-page'] {
-  padding: var(--ytmusic-nav-bar-height) 0 0;
 }
 
 ytmusic-player[player-ui-state='MINIPLAYER'] {
