@@ -1177,14 +1177,14 @@ yt-icon-button.ytmusic-carousel-shelf-renderer,
   transition:
     opacity var(--anim-fade-duration) var(--anim-fade-duration),
     background var(--anim-fade-duration) var(--anim-fade-duration),
-    transform var(--play-btn-duration) var(--play-btn-timing);
+    transform var(--anim-play-btn-duration) var(--anim-play-btn-timing);
 }
 #play-button .content-wrapper.ytmusic-play-button-renderer:hover {
   transform: scale(1.2);
 }
 .play-pause-button-wrapper.ytmusic-player-controls {
   will-change: transform;
-  transition: transform var(--play-btn-duration) var(--play-btn-timing);
+  transition: transform var(--anim-play-btn-duration) var(--anim-play-btn-timing);
 }
 .play-pause-button-wrapper.ytmusic-player-controls:hover {
   transform: scale(1.4);
@@ -1194,7 +1194,7 @@ yt-icon-button.ytmusic-carousel-shelf-renderer,
 .shuffle.ytmusic-player-controls,
 .repeat.ytmusic-player-controls {
   will-change: transform;
-  transition: transform var(--play-btn-duration) var(--play-btn-timing);
+  transition: transform var(--anim-play-btn-duration) var(--anim-play-btn-timing);
 }
 .next-button.ytmusic-player-controls:hover,
 .previous-button.ytmusic-player-controls:hover,

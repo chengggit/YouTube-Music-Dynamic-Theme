@@ -87,8 +87,8 @@
   --cfg-anim-play-btn-duration: 0.3s;
   --cfg-anim-play-btn-timing: ease;
 
-  --cfg-anim-sliding-duration: 0.3s;
-  --cfg-anim-sliding-timing: ease;
+  --cfg-anim-drawer-duration: 0.3s;
+  --cfg-anim-drawer-timing: ease;
 
   --cfg-anim-search-bar-duration: 0.3s;
   --cfg-anim-search-bar-timing: ease;
@@ -205,8 +205,8 @@ yt-icon-btn.rewind-btn {
   --anim-play-btn-duration: var(--cfg-anim-play-btn-duration);
   --anim-play-btn-timing: var(--cfg-anim-play-btn-timing);
 
-  --anim-sliding-duration: var(--cfg-anim-sliding-duration);
-  --anim-sliding-timing: var(--cfg-anim-sliding-timing);
+  --anim-drawer-duration: var(--cfg-anim-drawer-duration);
+  --anim-drawer-timing: var(--cfg-anim-drawer-timing);
 
   --anim-search-bar-duration: var(--cfg-anim-search-bar-duration);
   --anim-search-bar-timing: var(--cfg-anim-search-bar-timing);
