@@ -18,20 +18,20 @@
 }
 .synced-line {
   transition:
-    filter 0.6s ease-in-out,
+    filter 0.4s ease-in-out,
     opacity 0.6s ease;
 }
 .synced-line.previous {
   opacity: 0.4;
-  filter: blur(var(--previous-line-blur));
+  filter: blur(var(--cfg-previous-line-blur));
 }
 .synced-line.current {
   opacity: 1;
-  filter: blur(var(--current-line-blur));
+  filter: blur(var(--cfg-current-line-blur));
 }
 .synced-line.upcoming {
   opacity: 0.6;
-  filter: blur(var(--upcoming-line-blur));
+  filter: blur(var(--cfg-upcoming-line-blur));
 }
 .synced-line:hover {
   opacity: 1;
