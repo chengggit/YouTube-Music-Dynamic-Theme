@@ -3,7 +3,7 @@
 @import url('https://cdn.jsdelivr.net/npm/font-pingfang-sc@1.0.5/index.min.css');
 
 @import './pear-ytm/base/header.css';
-@import './pear-ytm/base/vars.css';
+@import './pear-ytm/base/var.css';
 @import './pear-ytm/base/typography.css';
 
 @import './pear-ytm/components/art.css';

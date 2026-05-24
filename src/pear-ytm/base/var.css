@@ -33,20 +33,22 @@
   --cfg-accent-highlight: rgb(255, 255, 255);     /* Lighter accent for hover states and highlights */
 
   /* --- Lyrics --- */
+  --cfg-fullscreen-art-position: flex-end; /* Album art position in fullscreen (flex-start | center | flex-end) */
   --cfg-lyrics-font-size: 50px;
   --cfg-lyrics-font-weight: 600; 
+  --cfg-lyrics-container-width: 40%;
 
   --cfg-previous-line-blur: 6px;
   --cfg-current-line-blur: 0px;
   --cfg-upcoming-line-blur: 6px;
 
-  --cfg-album-art-size: 400px;
-
 /* --- UI Components --- */
 /*  
  - Border: Use 'transparent' for no border, or '1px solid color' 
  - Shadow: Horizontal-Offset Vertical-Offset Blur Color 
-*/
+*/  
+  --cfg-album-art-size: 400px;
+  
   --cfg-ui-color: transparent;                    /* Panel backgrounds */
   --cfg-ui-contrast: rgba(255, 255, 255, 0.1);  /* Secondary panel backgrounds */
   --cfg-ui-highlight: rgba(255, 255, 255, 0.1); /* Hover/Select backgrounds */
@@ -173,11 +175,6 @@ yt-icon-btn.rewind-btn {
   --btn-color: var(--cfg-btn-color);
   --btn-highlight: var(--cfg-btn-highlight);
   --btn-border: var(--cfg-btn-border);
-
-
-  --previous-line-blur: var(--cfg-previous-line-blur);
-  --current-line-blur: var(--cfg-current-line-blur);
-  --upcoming-line-blur: var(--cfg-upcoming-line-blur);
 
   --radius-art: var(--cfg-radius-art);
   --radius-art-md: var(--cfg-radius-art-md);
