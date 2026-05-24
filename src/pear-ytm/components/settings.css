@@ -1,0 +1,54 @@
+/* ========================== SETTINGS ========================== */
+ytmusic-setting-category-collection-renderer.ytmusic-settings-page {
+  border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+yt-formatted-string.summary {
+  color: var(--text-secondary) !important;
+}
+
+.dropdown-content.ytmusic-setting-single-option-menu-renderer
+  .menu-item.ytmusic-setting-single-option-menu-renderer {
+  color: var(--text-primary) !important;
+}
+
+.category-menu-item.iron-selected.ytmusic-settings-page,
+.category-menu-item.ytmusic-settings-page:focus:not(.iron-selected) {
+  background: var(--ui-highlight) !important;
+  border-radius: var(--radius-highlight) !important;
+}
+
+.dropdown-content.ytmusic-setting-single-option-menu-renderer {
+  background: transparent !important;
+}
+
+.tp-yt-paper-item.tp-yt-paper-item:focus,
+tp-yt-paper-item:focus {
+  background: var(--ui-highlight) !important;
+  border-radius: var(--radius-highlight) !important;
+}
+/* Divider */
+.top-bar.ytmusic-settings-page,
+.items .ytmusic-setting-category-collection-renderer {
+  border-bottom: 0 !important;
+}
+
+/* Toggle Buttons */
+#toggleBar.toggle-bar.tp-yt-paper-toggle-button {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0.5;
+}
+
+#toggleButton.toggle-button.tp-yt-paper-toggle-button {
+  background: rgb(180, 180, 180);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+tp-yt-paper-toggle-button[checked]:not([disabled])
+  #toggleBar.toggle-bar.tp-yt-paper-toggle-button,
+tp-yt-paper-toggle-button[checked]:not([disabled])
+  #toggleButton.toggle-button.tp-yt-paper-toggle-button {
+  background: var(--accent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}

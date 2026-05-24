@@ -7,8 +7,10 @@
 @import './pear-ytm/base/typography.css';
 
 @import './pear-ytm/components/art.css';
-@import './pear-ytm/components/panels.css';
+@import './pear-ytm/components/panel.css';
 @import './pear-ytm/components/playerbar.css';
+@import './pear-ytm/components/searchbox.css';
+@import './pear-ytm/components/settings.css';
 
 @import './pear-ytm/features/animation.css';
 @import './pear-ytm/features/lyrics.css';
@@ -16,10 +18,11 @@
 @import './pear-ytm/pages/artist.css';
 @import './pear-ytm/pages/background.css';
 @import './pear-ytm/pages/fullscreen.css';
-@import './pear-ytm/pages/homepage.css';
+@import './pear-ytm/pages/home.css';
 @import './pear-ytm/pages/mobile.css';
-@import './pear-ytm/pages/playerpage.css';
+@import './pear-ytm/pages/player.css';
 @import './pear-ytm/pages/podcast.css';
-@import './pear-ytm/pages/searchpage.css';
+@import './pear-ytm/pages/search.css';
+@import './pear-ytm/pages/playlist.css';
 
-@import './pear-ytm/components/overrides.css';
+@import './pear-ytm/base/overrides.css';
