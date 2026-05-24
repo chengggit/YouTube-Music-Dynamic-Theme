@@ -17,7 +17,7 @@
 
   --cfg-bg-brightness: 0.8;       
   --cfg-bg-blur: 0;               /* Background blur */
-  --cfg-bg-saturate: 1.2;         /* Background saturation */
+  --cfg-bg-saturate: 1.5;         /* Background saturation */
   --cfg-bg-scale: 1.1;            /* Background zoom level */
   --cfg-player-page-opacity: 0.8; /* Player page transparency */
 
@@ -103,15 +103,15 @@
 
 /* ============================================================= */
 
-/* Increment Skip Buttons : Enable rewind and fast forward btns */
+/* Increment Skip Buttons : Enable rewind and fast forward buttons */
 
-/* ytmusic-player-bar yt-icon-btn[hidden],
-yt-icon-btn.rewind-btn {
+/* ytmusic-player-bar yt-icon-button[hidden],
+yt-icon-button.rewind-button {
   display: inline-flex !important;
 }
  */
 
-/* Centered Control : Play and skip btns in the middle similar to spotify */
+/* Centered Control : Play and skip buttons in the middle similar to spotify */
 
 /* @media (min-width: 615px) {
   ytmusic-player-bar.ytmusic-app {
