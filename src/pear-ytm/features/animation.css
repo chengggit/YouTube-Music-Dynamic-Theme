@@ -1,16 +1,16 @@
 /* ========================== ANIMATIONS ========================== */
 ytmusic-app-layout[player-page-open][is-mweb-player-bar-modernization-enabled]
   > [slot='player-page'] {
-  animation: open-playerpage var(--player-page-duration)
-    var(--player-page-timing) !important;
+  animation: open-playerpage var(--anim-player-page-duration)
+    var(--anim-player-page-timing) !important;
 }
 
 ytmusic-app-layout:not(
     [player-page-open]
   )[is-mweb-player-bar-modernization-enabled]
   > [slot='player-page'] {
-  animation: collapse-playerpage var(--player-page-duration)
-    var(--player-page-timing) !important;
+  animation: collapse-playerpage var(--anim-player-page-duration)
+    var(--anim-player-page-timing) !important;
 }
 
 ytmusic-player-page[mini-player-enabled][player-page-open]
@@ -71,12 +71,12 @@ ytmusic-player-page[mini-player-enabled]:not([player-page-open])
 
 ytmusic-player-page[is-mweb-modernization-enabled]:not([player-fullscreened])
   #player.ytmusic-player-page {
-  transition: transform 0.65s var(--player-page-timing) !important;
+  transition: transform 0.65s var(--anim-player-page-timing) !important;
 }
 
 ytmusic-player-page[is-mweb-modernization-enabled][transition-mode]
   #side-panel {
-  transition: transform 0.65s var(--player-page-timing) !important;
+  transition: transform 0.65s var(--anim-player-page-timing) !important;
 }
 
 ytmusic-player-page[player-page-ui-state='TABS_VIEW'] #thumbnail > img {
@@ -122,35 +122,35 @@ ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state='FULL_PL
 
 /* CTA */
 a.yt-simple-endpoint.yt-formatted-string {
-  transition: color var(--fade-duration) var(--fade-timing);
+  transition: color var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 /* BIG SONG LIST */
 ytmusic-play-button-renderer .content-wrapper.ytmusic-play-button-renderer {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 ytmusic-background-overlay-renderer {
-  transition: opacity var(--fade-duration) var(--fade-timing);
+  transition: opacity var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 ytmusic-menu-renderer {
-  transition: opacity var(--fade-duration) var(--fade-timing);
+  transition: opacity var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 /* SMALL SONG LIST */
 ytmusic-item-thumbnail-overlay-renderer {
-  transition: opacity var(--fade-duration) var(--fade-timing);
+  transition: opacity var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 ytmusic-responsive-list-item-renderer[play-button-state] {
-  transition: background var(--fade-duration-alt) var(--fade-timing);
+  transition: background var(--anim-fade-duration-alt) var(--anim-fade-duration);
 }
 
 /* 3 Dots */
 ytmusic-responsive-list-item-renderer > ytmusic-menu-renderer {
   opacity: 0;
-  transition: opacity var(--fade-duration) var(--fade-timing);
+  transition: opacity var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 ytmusic-responsive-list-item-renderer:hover > ytmusic-menu-renderer {
@@ -159,80 +159,80 @@ ytmusic-responsive-list-item-renderer:hover > ytmusic-menu-renderer {
 
 /* Play Buttons */
 ytmusic-responsive-list-item-renderer .content-wrapper .yt-icon-shape {
-  transition: color var(--fade-duration) var(--fade-timing);
+  transition: color var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 yt-checkbox-renderer {
-  transition: opacity var(--fade-duration) var(--fade-timing);
+  transition: opacity var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 /* NAV BAR */
 .ytmusic-guide-entry-renderer {
   transition:
-    background var(--fade-duration) var(--fade-timing),
-    opacity var(--fade-duration) var(--fade-timing);
+    background var(--anim-fade-duration) var(--anim-fade-duration),
+    opacity var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 yt-icon-button.ytmusic-nav-bar {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 #tabs.ytmusic-tabbed-search-results-renderer {
   transition:
-    background var(--fade-duration) var(--fade-timing),
-    backdrop-filter var(--fade-duration) var(--fade-timing);
+    background var(--anim-fade-duration) var(--anim-fade-duration),
+    backdrop-filter var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 /* When Scrolled */
 ytmusic-tabs.stuck {
   transition:
-    background var(--fade-duration) var(--fade-timing),
-    backdrop-filter var(--fade-duration) var(--fade-timing);
+    background var(--anim-fade-duration) var(--anim-fade-duration),
+    backdrop-filter var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 /* PLAYER BAR */
 ytmusic-player-bar.ytmusic-app {
   transition:
-    background var(--fade-duration) var(--fade-timing),
+    background var(--anim-fade-duration) var(--anim-fade-duration),
     bottom 0.5s;
 }
 
 ytmusic-player-bar yt-icon-button.ytmusic-player-bar {
   border-radius: 50%;
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 .yt-spec-button-shape-next {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 tp-yt-paper-item.ytmusic-playback-rate-popup-renderer {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 /* PLAYER PAGE */
 .av.ytmusic-player-page {
-  transition: opacity var(--fade-duration) var(--fade-timing);
+  transition: opacity var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 .song-media-controls.ytmusic-player {
-  transition: opacity var(--fade-duration) var(--fade-timing);
+  transition: opacity var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 tp-yt-paper-tab.ytmusic-player-page {
-  transition: color var(--fade-duration) var(--fade-timing);
+  transition: color var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 /* QUEUE */
 ytmusic-player-queue-item {
   transition:
-    background var(--fade-duration-alt) var(--fade-timing),
-    opacity var(--fade-duration-alt) var(--fade-timing);
+    background var(--anim-fade-duration-alt) var(--anim-fade-duration),
+    opacity var(--anim-fade-duration-alt) var(--anim-fade-duration);
 }
 
 ytmusic-player-queue-item > yt-formatted-string {
   display: block !important;
-  transition: opacity var(--fade-duration) var(--fade-timing);
+  transition: opacity var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 ytmusic-player-queue-item:not([is-automix]):hover > yt-formatted-string {
@@ -244,83 +244,83 @@ ytmusic-player-queue-item:not([is-automix]):hover > yt-formatted-string {
 ytmusic-player-queue-item yt-button-shape {
   transform: translatex(36px);
   opacity: 1;
-  transition: opacity var(--fade-duration-alt) var(--fade-timing);
+  transition: opacity var(--anim-fade-duration-alt) var(--anim-fade-duration);
 }
 
 /* DROPDOWN */
 ytmusic-dropdown-item-renderer {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 tp-yt-paper-item.yt-dropdown-menu {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 ytmusic-playlist-add-to-option-renderer {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 .ytmusic-menu-popup-renderer {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 ytd-compact-link-renderer {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 ytd-account-item-renderer {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 /* "Recently Played" Button */
 ytmusic-multi-select-menu-item-renderer {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 /* BUTTONS */
 ytmusic-chip-cloud-chip-renderer a {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 ytmusic-subscribe-button-renderer {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 ytmusic-play-button-renderer {
   transition:
-    background var(--fade-duration) var(--fade-timing),
-    opacity var(--fade-duration) var(--fade-timing);
+    background var(--anim-fade-duration) var(--anim-fade-duration),
+    opacity var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 button.ytmusic-navigation-button-renderer {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 /* SETTING */
 .category-menu-item.ytmusic-settings-page {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 /* Carousel Buttons */
 yt-icon-button.ytmusic-carousel-shelf-renderer,
 .ytSpecButtonShapeNextMono.ytSpecButtonShapeNextOutline {
-  transition: background var(--fade-duration) var(--fade-timing) !important;
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration) !important;
 }
 .ytSpecButtonShapeNextMono.ytSpecButtonShapeNextTonal {
-  transition: background var(--fade-duration) var(--fade-timing) !important;
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration) !important;
 }
 /* Collab Container */
 .ytListItemViewModelTappable {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 .yt-simple-endpoint {
-  transition: background var(--fade-duration) var(--fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-duration);
 }
 
 #play-button .content-wrapper.ytmusic-play-button-renderer {
   transition:
-    opacity var(--fade-duration) var(--fade-timing),
-    background var(--fade-duration) var(--fade-timing),
-    transform var(--play-button-duration) var(--play-button-timing);
+    opacity var(--anim-fade-duration) var(--anim-fade-duration),
+    background var(--anim-fade-duration) var(--anim-fade-duration),
+    transform var(--play-btn-duration) var(--play-btn-timing);
 }
 #play-button .content-wrapper.ytmusic-play-button-renderer:hover {
   transform: scale(1.2);
@@ -328,7 +328,7 @@ yt-icon-button.ytmusic-carousel-shelf-renderer,
 
 .play-pause-button-wrapper.ytmusic-player-controls {
   will-change: transform;
-  transition: transform var(--play-button-duration) var(--play-button-timing);
+  transition: transform var(--play-btn-duration) var(--play-btn-timing);
 }
 .play-pause-button-wrapper.ytmusic-player-controls:hover {
   transform: scale(1.4);
@@ -339,7 +339,7 @@ yt-icon-button.ytmusic-carousel-shelf-renderer,
 .shuffle.ytmusic-player-controls,
 .repeat.ytmusic-player-controls {
   will-change: transform;
-  transition: transform var(--play-button-duration) var(--play-button-timing);
+  transition: transform var(--play-btn-duration) var(--play-btn-timing);
 }
 .next-button.ytmusic-player-controls:hover,
 .previous-button.ytmusic-player-controls:hover,
@@ -349,58 +349,58 @@ yt-icon-button.ytmusic-carousel-shelf-renderer,
 }
 
 ytmusic-search-box .ytmusic-search-box::placeholder {
-  transition: color var(--search-bar-duration) var(--search-bar-timing);
+  transition: color var(--anim-search-bar-duration) var(--anim-search-bar-timing);
 }
 
 ytmusic-search-box .search-container.ytmusic-search-box {
-  transition: box-shadow var(--search-bar-duration) var(--search-bar-timing);
+  transition: box-shadow var(--anim-search-bar-duration) var(--anim-search-bar-timing);
 }
 
 ytmusic-search-box #suggestion-list {
-  transition: var(--search-bar-duration) var(--search-bar-timing);
+  transition: var(--anim-search-bar-duration) var(--anim-search-bar-timing);
 }
 
 ytmusic-search-suggestion {
-  transition: background var(--search-bar-duration) var(--search-bar-timing);
+  transition: background var(--anim-search-bar-duration) var(--anim-search-bar-timing);
 }
 
 #content-wrapper.ytmusic-browse-response {
-  transition: margin var(--silding-duration) var(--sliding-timing);
+  transition: margin var(--anim-sliding-duration) var(--anim-sliding-timing);
 }
 
 ytmusic-search-page {
-  transition: padding var(--silding-duration) var(--sliding-timing);
+  transition: padding var(--anim-sliding-duration) var(--anim-sliding-timing);
 }
 
 ytmusic-nav-bar[is-bauhaus-sidenav-enabled] .center-content.ytmusic-nav-bar {
   transition:
-    padding var(--silding-duration) var(--sliding-timing),
-    margin var(--silding-duration) var(--sliding-timing);
+    padding var(--anim-sliding-duration) var(--anim-sliding-timing),
+    margin var(--anim-sliding-duration) var(--anim-sliding-timing);
 }
 
 #contentContainer.tp-yt-app-drawer {
   width: 256px !important;
-  transition: transform var(--silding-duration) var(--sliding-timing);
-  transition-duration: var(--silding-duration) !important;
+  transition: transform var(--anim-sliding-duration) var(--anim-sliding-timing);
+  transition-duration: var(--anim-sliding-duration) !important;
 }
 
 #guide-wrapper {
-  transition: width var(--silding-duration) var(--sliding-timing);
+  transition: width var(--anim-sliding-duration) var(--anim-sliding-timing);
 }
 
 tp-yt-app-drawer {
-  transition-duration: var(--silding-duration) !important;
+  transition-duration: var(--anim-sliding-duration) !important;
 }
 
 ytmusic-app-layout:not([is-mweb-modernization-enabled]) #mini-guide {
   display: unset !important;
   opacity: 0;
-  transition: opacity var(--silding-duration) var(--sliding-timing);
+  transition: opacity var(--anim-sliding-duration) var(--anim-sliding-timing);
 }
 
 ytmusic-app[is-guide-persistent][guide-collapsed] #mini-guide {
   opacity: 1;
-  transition: opacity var(--silding-duration) var(--sliding-timing);
+  transition: opacity var(--anim-sliding-duration) var(--anim-sliding-timing);
 }
 
 #layout[player-fullscreened] #mini-guide {
@@ -409,20 +409,20 @@ ytmusic-app[is-guide-persistent][guide-collapsed] #mini-guide {
 
 ytmusic-immersive-header-renderer .gradient-container,
 ytmusic-visual-header-renderer .content-container {
-  transition: padding var(--silding-duration) var(--sliding-timing);
+  transition: padding var(--anim-sliding-duration) var(--anim-sliding-timing);
 }
 
 #player-page.ytmusic-app {
   transition:
-    transform var(--player-page-duration) var(--player-page-timing),
-    padding var(--silding-duration) var(--sliding-timing),
-    height var(--silding-duration) var(--sliding-timing) !important;
+    transform var(--anim-player-page-duration) var(--anim-player-page-timing),
+    padding var(--anim-sliding-duration) var(--anim-sliding-timing),
+    height var(--anim-sliding-duration) var(--anim-sliding-timing) !important;
 }
 
 .toggle-player-page-button {
   transition:
-    background var(--fade-duration) var(--fade-timing),
-    transform var(--player-page-duration) var(--player-page-timing) !important;
+    background var(--anim-fade-duration) var(--anim-fade-duration),
+    transform var(--anim-player-page-duration) var(--anim-player-page-timing) !important;
 }
 
 #primaryProgress.tp-yt-paper-progress,

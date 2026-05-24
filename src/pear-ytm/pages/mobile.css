@@ -57,7 +57,7 @@ tp-yt-paper-slider#progress-bar.ytmusic-player-controls {
 
 .current-time.ytmusic-player-controls,
 .total-time.ytmusic-player-controls {
-  color: var(--text-color-2) !important;
+  color: var(--text-secondary) !important;
 }
 
 /* Lyrics Tab Opening Transition */

@@ -47,7 +47,7 @@ ytmusic-player-page:not([is-mweb-modernization-enabled]):not([video-mode]):not(
 
 /* Tab */
 tp-yt-paper-tab.ytmusic-player-page {
-  color: var(--text-color-1) !important;
+  color: var(--text-primary) !important;
 }
 
 tp-yt-paper-tab.iron-selected.ytmusic-player-page {
@@ -77,62 +77,62 @@ ytmusic-player-queue-item:not(:last-child) {
 
 .song-title.ytmusic-player-queue-item,
 .subtitle.ytmusic-queue-header-renderer {
-  color: var(--text-color-1) !important;
+  color: var(--text-primary) !important;
 }
 
 yt-formatted-string.byline.ytmusic-player-queue-item {
-  color: var(--text-color-2) !important;
+  color: var(--text-secondary) !important;
 }
 
 /* Small Buttons */
 #chips a.yt-simple-endpoint.ytmusic-chip-cloud-chip-renderer {
-  background: var(--button-color);
-  color: var(--text-color-1);
-  border-radius: var(--radius-button);
+  background: var(--btn-color);
+  color: var(--text-primary);
+  border-radius: var(--radius-btn);
   &:hover {
-    background: var(--button-highlight);
+    background: var(--btn-highlight);
   }
 }
 
 ytmusic-chip-cloud-chip-renderer[is-selected]
   a.ytmusic-chip-cloud-chip-renderer {
-  background: var(--button-highlight) !important;
+  background: var(--btn-highlight) !important;
   color: var(--accent) !important;
   &:focus {
-    background: var(--button-highlight);
+    background: var(--btn-highlight);
   }
 }
 
 #buttons .yt-simple-endpoint {
-  background: var(--button-color);
+  background: var(--btn-color);
   color: var(--accent);
-  border-radius: var(--radius-button-alt);
+  border-radius: var(--radius-btn-alt);
   .yt-icon-shape {
     color: var(--accent-icon);
   }
   &:hover {
-    background: var(--button-highlight);
+    background: var(--btn-highlight);
   }
 }
 
 /* Audio-Video Toggle */
 .ytmusic-av-toggle {
-  border-radius: var(--radius-button-alt) !important;
+  border-radius: var(--radius-btn-alt) !important;
 }
 
 .av-toggle.ytmusic-av-toggle {
-  background: var(--button-color) !important;
-  border: var(--button-border);
+  background: var(--btn-color) !important;
+  border: var(--btn-border);
 }
 
 ytmusic-av-toggle .song-button.ytmusic-av-toggle,
 ytmusic-av-toggle .video-button.ytmusic-av-toggle {
   background-color: transparent;
-  color: var(--text-color-1) !important;
+  color: var(--text-primary) !important;
 }
 
 yt-formatted-string.description.ytmusic-description-shelf-renderer {
-  color: var(--text-color-1) !important;
+  color: var(--text-primary) !important;
   font-size: 14px !important;
 }
 

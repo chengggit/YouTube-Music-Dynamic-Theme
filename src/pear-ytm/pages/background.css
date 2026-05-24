@@ -16,7 +16,7 @@
 #search-page::before,
 ytmusic-player-page::before,
 ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
-  transition: background var(--bg-duration) var(--bg-timing);
+  transition: background var(--anim-bg-duration) var(--anim-bg-timing);
   will-change: background;
 }
 .background-gradient {

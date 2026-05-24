@@ -10,7 +10,7 @@ yt-formatted-string.description {
 
 #synced-lyrics-container
   yt-formatted-string.description.ytmusic-description-shelf-renderer {
-  color: var(--text-color-1);
+  color: var(--text-primary);
   font-weight: 600 !important;
   font-size: clamp(1.4rem, 1.1vmax, 3rem) !important;
 }

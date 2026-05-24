@@ -41,7 +41,7 @@ ytmusic-play-button-renderer:not([state='default'])
 
 /* Playlist Page Art */
 ytmusic-responsive-header-renderer {
-  --yt-img-border-radius: var(--radius-art-big) !important;
+  --yt-img-border-radius: var(--radius-art-lg) !important;
 }
 
 #header-group #img {
@@ -60,12 +60,12 @@ ytmusic-player[player-ui-state='PLAYER_BAR_ONLY'] #img,
 /* Player Page Art */
 ytmusic-player[player-page-open] .player-wrapper,
 ytmusic-two-row-item-renderer .image-wrapper {
-  border-radius: var(--radius-art-big);
+  border-radius: var(--radius-art-lg);
 }
 
 #player:not([player-ui-state='PLAYER_BAR_ONLY']) {
-  border-radius: var(--radius-art-big);
-  box-shadow: var(--drop-shadow) !important;
+  border-radius: var(--radius-art-lg);
+  box-shadow: var(--ui-shadow) !important;
   overflow: hidden !important;
 }
 
@@ -74,14 +74,14 @@ ytmusic-player[player-ui-state] #song-media-window {
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0) 40%
   ) !important;
-  border-radius: var(--radius-art-big);
+  border-radius: var(--radius-art-lg);
 }
 
 ytmusic-player[player-ui-state='PLAYER_BAR_ONLY'] {
   .html5-video-player,
   .video-stream {
     background: transparent;
-    border-radius: var(--radius-art-medium);
+    border-radius: var(--radius-art-md);
   }
 }
 
@@ -95,5 +95,5 @@ ytmusic-player[player-ui-state='PLAYER_BAR_ONLY'] {
 }
 
 #top-shelf .image-wrapper {
-  border-radius: var(--radius-art-medium);
+  border-radius: var(--radius-art-md);
 }
