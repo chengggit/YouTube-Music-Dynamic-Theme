@@ -47,13 +47,13 @@ Install [Better Lyrics Extension For Youtube Music](https://better-lyrics.boidu.
 
 - Background transitions don’t work in Firefox yet.
 
-**Method 1 (Built-in)**:
-
-- Open extension settings → Themes → Click Change → Select Dynamic Background.
-
-**Method 2 (Marketplace)**:
+**Method 1: Marketplace (Recommended for auto-updates)**
 
 - Open Theme Marketplace → Search for "Dynamic Background" → Click Install.
+
+**Method 2: Built-in**
+
+- Open extension settings → Themes → Click Change → Select Dynamic Background.
 
 ### Pear Desktop (App)
 
@@ -67,11 +67,11 @@ The Album Color Theme plugin is required for dynamic background functionality.
 
 - The search suggestion background blur workaround does not work on Pear Desktop yet due to its current Chromium 140 base, where CSS anchor behavior differs from Chromium 144+. This should be resolved once Pear updates to a compatible Chromium version.
 
-#### Installation
+**Installation**
 
-1. Download [`style.css`](/style.css)
+1. Download [`pear-ytm.css`](/pear-ytm.css)
 2. Open the app menu → **Options** → **Visual Tweaks** → **Theme** → **Import custom CSS file**
-3. Select the downloaded `style.css`
+3. Select the downloaded `pear-ytm.css`
 4. Restart the app
 
 ## Previews
@@ -106,7 +106,7 @@ Three available presets: `default`, `light`, `dark`
 
 ### Pear Desktop
 
-![](/images/pear1.webp)
+![](/images/pear.jpeg)
 
 ## Configuration
 

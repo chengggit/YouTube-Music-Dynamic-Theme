@@ -7,9 +7,9 @@ This theme comes in two versions for each different platforms:
 | RICS    | [Better Lyrics](https://better-lyrics.boidu.dev/)         | `$variable: value;`      |
 | CSS     | [Pear Desktop](https://github.com/pear-devs/pear-desktop) | `--cfg-variable: value;` |
 
-This document covers the RICS version. Pear Desktop / CSS documentation is coming soon.
+## Better Lyrics (Extension)
 
-## Basics
+### Basics
 
 Configuration variables are defined at the top of the theme file. Every line must end with a semicolon (`;`) or the theme will break.
 
@@ -27,7 +27,7 @@ $bg-blur: null; // Inherits blur from the dark preset
 $bg-blur: 0.6; // Overrides (ignores the preset's value)
 ```
 
-## Background
+### Background
 
 ```scss
 $background: dynamic;
@@ -41,18 +41,18 @@ Accepts three types of values:
 
 The remaining background variables fine-tune how the background looks.
 
-| Variable             | Default | Range       | Description                                                               |
-| -------------------- | ------- | ----------- | ------------------------------------------------------------------------- |
-| `$bg-brightness`     | `null`  | `0` to `1`  | Darkens or lightens the background. `0` is black, `1` is full brightness. |
-| `$bg-blur`           | `0.6`   | `0` to `1`+ | Blur intensity. The value is multiplied by 100px, so `0.6` = 60px blur.   |
-| `$bg-saturate`       | `1.5`   | `0`+        | Color vibrancy. `1` is unchanged, higher values are more vivid.           |
-| `$bg-scale`          | `1.2`   | `1`+        | Zoom level. Values below `1` may show edges of the image.                 |
-| `$bg-player-opacity` | `0.8`   | `0` to `1`  | Transparency of the player page overlay on top of the home page.          |
+| Variable             | Default | Range      | Description                                                                     |
+| -------------------- | ------- | ---------- | ------------------------------------------------------------------------------- |
+| `$bg-brightness`     | `null`  | `0` to `1` | Darkens or lightens the background. `0` is black, `1` is full brightness.       |
+| `$bg-blur`           | `0.6`   | `0`+       | Blur intensity. The value is multiplied internally by 100px. `0.6` = 60px blur. |
+| `$bg-saturate`       | `1.5`   | `0`+       | Color vibrancy. `1` is unchanged, higher values are more vivid.                 |
+| `$bg-scale`          | `1.2`   | `1`+       | Zoom level. Values below `1` may show edges of the image.                       |
+| `$bg-player-opacity` | `0.8`   | `0` to `1` | Transparency of the player page overlay on top of the home page.                |
 
-## Typography
+### Typography
 
 ```scss
-$font-family: 'Inter', 'Apple SD Gothic Neo';
+$font-family: 'Inter', 'PingFangSC-Regular', 'Apple SD Gothic Neo';
 $font-weight: 400;
 ```
 
@@ -62,7 +62,7 @@ The font must be installed on your system. Fonts that are not installed will fal
 
 `$font-weight` controls the boldness of the main UI text. Standard values are `400` (regular) and `700` (bold), though any value from `100` to `900` is valid depending on what the font supports.
 
-## Colors
+### Colors
 
 ```scss
 $text-primary: white;
@@ -84,7 +84,7 @@ All variables accept any valid CSS color. Using `rgba()` lets you control opacit
 | `$accent-icon`      | Accent color specifically for interactive icons like the like button, active shuffle, and repeat.                                                                                                              |
 | `$accent-highlight` | Hover state color derived from `$accent`. Defaults to a 70% mix of `$accent` and white. Override this if you want hover states to be a different color entirely rather than a lightened version of the accent. |
 
-## Lyrics
+### Lyrics
 
 ```scss
 $fullscreen-layout: corner; // corner | center
@@ -94,7 +94,7 @@ $lyrics-font-weight: 600;
 
 `$fullscreen-layout` controls where the album art sits in fullscreen mode. `corner` anchors it to the bottom left corner of the screen and pushes the lyrics more to the right. `center` uses the default album art centered layout.
 
-### Line Blur
+#### Line Blur
 
 ```scss
 $lyrics-blur-lines: (
@@ -109,7 +109,7 @@ Controls which lyric lines are blurred to draw focus to the active line. Each ke
 
 `$lyrics-blur-amount` sets the intensity of the blur.
 
-## UI Components
+### UI Components
 
 ```scss
 $album-art-size: 400px;
@@ -148,7 +148,7 @@ $ui-shadow: 'rgba(0, 0, 0, 0.3) 0 10px 24px -6px,
 inset rgba(255, 255, 255, 0.1) 0 1px 0 0';
 ```
 
-## Corner Radius
+### Corner Radius
 
 Units can be `px`, `%`, `em`, etc. Higher values = rounder corners. Lower values = sharp square corners.
 
@@ -164,7 +164,7 @@ Units can be `px`, `%`, `em`, etc. Higher values = rounder corners. Lower values
 | `$radius-panel`        | `12px`  | Popups and dropdowns           |
 | `$radius-panel-lg`     | `24px`  | Larger panels                  |
 
-## Features and Toggles
+### Features and Toggles
 
 Set to `true` to enable, `false` to disable.
 
@@ -175,7 +175,7 @@ Set to `true` to enable, `false` to disable.
 | `$increment-skip-buttons`     | Adds -10s and +30s skip buttons to the player bar.                                                                          |
 | `$centered-playback-controls` | Moves the play and skip buttons to the center of the player bar, similar to Spotify's layout.                               |
 
-## Animations
+### Animations
 
 Animations are split into two parts: a toggle that enables or disables the animation entirely, and duration/timing variables that control how it feels. Setting a toggle to `false` removes the animation.
 
@@ -193,4 +193,186 @@ Animations with a `*-timing` variable accept any CSS easing value (`linear`, `ea
 
 ## Pear Desktop (CSS)
 
-Documentation for the Pear Desktop CSS version is coming soon.
+Configuration variables are defined at the top of the theme file inside the `:root` block. Every line must end with a semicolon (`;`) or the theme will break.
+
+Unlike the RICS version, there are no presets — all values are set explicitly. Removing a variable or leaving it blank will cause it to fall back to the browser default rather than a preset value.
+
+### Toggles
+
+Feature toggles are handled differently in the CSS version. Instead of `true`/`false` values, features are enabled by **uncommenting** the relevant CSS block, and disabled by **commenting it out**.
+
+**Example**:
+
+Disabled:
+
+```css
+/* To enable: remove the /* and */
+/* To disable: wrap the block in /* and */
+
+/* Increment Skip Buttons */
+/* ytmusic-player-bar yt-icon-button[hidden] { ... } */
+```
+
+Enabled:
+
+```css
+/* Increment Skip Buttons */
+ytmusic-player-bar yt-icon-button[hidden] { ... }
+```
+
+The toggle blocks are located below the `:root` configuration section.
+
+### Background
+
+```css
+--cfg-background: color-mix(
+  in srgb,
+  rgba(3, 3, 3) calc(100% - var(--ytmusic-album-color-ratio, 50%)),
+  rgba(var(--ytmusic-album-color-dark), 1) var(--ytmusic-album-color-ratio, 50%)
+);
+```
+
+Accepts three types of values:
+
+- `color-mix(...)` — the default block above pulls colors from the current song's album artwork. Requires the **Album Color Theme** plugin to be enabled.
+- A color value — any valid CSS color (hex, `rgb()`, `hsl()`).
+- An image URL — `url('https://example.com/image.jpg')`.
+
+The remaining background variables fine-tune how the background looks.
+
+| Variable                    | Default | Range      | Description                                                                       |
+| --------------------------- | ------- | ---------- | --------------------------------------------------------------------------------- |
+| `--cfg-bg-brightness`       | `0.8`   | `0` to `1` | Darkens or lightens the background. `0` is black, `1` is full brightness.         |
+| `--cfg-bg-blur`             | `0`     | `0`+       | Blur intensity. The value is multiplied internally by `100px`. `0.6` = 60px blur. |
+| `--cfg-bg-saturate`         | `1.5`   | `0`+       | Color vibrancy. `1` is unchanged, higher values are more vivid.                   |
+| `--cfg-bg-scale`            | `1.1`   | `1`+       | Zoom level. Values below `1` may show edges of the image.                         |
+| `--cfg-player-page-opacity` | `0.8`   | `0` to `1` | Transparency of the player page overlay on top of the home page.                  |
+
+### Typography
+
+```css
+--cfg-font: 'Inter', 'PingFangSC-Regular', 'Apple SD Gothic Neo';
+--cfg-font-weight: 400;
+```
+
+`--cfg-font` accepts a comma-separated list of font names in quotes. The browser tries each font in order and uses the first one installed on the system. This is useful for multi-language support — for example, pairing a Latin font with a CJK fallback.
+
+The font must be installed on your system. Fonts that are not installed will fall back to the browser default.
+
+`--cfg-font-weight` controls the boldness of the main UI text. Standard values are `400` (regular) and `700` (bold), though any value from `100` to `900` is valid depending on what the font supports.
+
+### Colors
+
+```css
+--cfg-text-primary: rgb(255, 255, 255);
+--cfg-text-secondary: rgba(255, 255, 255, 0.7);
+--cfg-icon: rgb(255, 255, 255);
+--cfg-accent: rgb(255, 255, 255);
+--cfg-accent-icon: rgb(255, 255, 255);
+--cfg-accent-highlight: rgb(255, 255, 255);
+```
+
+All variables accept any valid CSS color. Using `rgba()` lets you control opacity, which is useful for secondary elements.
+
+| Variable                 | Description                                                                                           |
+| ------------------------ | ----------------------------------------------------------------------------------------------------- |
+| `--cfg-text-primary`     | Main text — song titles, primary labels.                                                              |
+| `--cfg-text-secondary`   | Supporting text — subtitles, artist names, timestamps.                                                |
+| `--cfg-icon`             | Default color for buttons and icons in their resting state.                                           |
+| `--cfg-accent`           | Highlight color used on active states, selected items, and titles.                                    |
+| `--cfg-accent-icon`      | Accent color specifically for interactive icons like the like button, active shuffle, and repeat.     |
+| `--cfg-accent-highlight` | Hover state color. Defaults to white. Override this if you want hover states to be a different color. |
+
+### Lyrics
+
+```css
+--cfg-fullscreen-art-position: flex-end;
+--cfg-lyrics-font-size: 50px;
+--cfg-lyrics-font-weight: 600;
+--cfg-lyrics-container-width: 40%;
+```
+
+`--cfg-fullscreen-art-position` controls where the album art sits in fullscreen mode. `flex-end` anchors it to the bottom of the screen. `flex-start` moves it to the top. `center` uses the default centered layout.
+
+`--cfg-lyrics-container-width` controls how much horizontal space the lyrics take up on screen. Accepts any CSS width value. 40% means the lyrics column spans 40% of the screen width.
+
+#### Line Blur
+
+```css
+--cfg-previous-line-blur: 6px;
+--cfg-current-line-blur: 0px;
+--cfg-upcoming-line-blur: 6px;
+```
+
+Controls which lyric lines are blurred to draw focus to the active line. Each variable maps to a lyric position relative to the currently playing line. Set a position to `0px` to unblur those lines.
+
+### UI Components
+
+```css
+--cfg-album-art-size: 400px;
+
+--cfg-ui-color: transparent;
+--cfg-ui-contrast: rgba(255, 255, 255, 0.1);
+--cfg-ui-highlight: rgba(255, 255, 255, 0.1);
+--cfg-ui-blur: 10px;
+--cfg-ui-border: transparent;
+--cfg-ui-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+--cfg-btn-color: rgba(255, 255, 255, 0.1);
+--cfg-btn-highlight: rgba(255, 255, 255, 0.2);
+--cfg-btn-border: transparent;
+```
+
+| Variable               | Description                                                                                                                    |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `--cfg-album-art-size` | Size of the album artwork in the player.                                                                                       |
+| `--cfg-ui-color`       | Background fill for main panels.                                                                                               |
+| `--cfg-ui-contrast`    | Background fill for secondary panels that sit on top of another panel.                                                         |
+| `--cfg-ui-highlight`   | Background color when hovering or selecting items.                                                                             |
+| `--cfg-ui-blur`        | Backdrop blur applied behind panels.                                                                                           |
+| `--cfg-ui-border`      | Border style for panels. Use `transparent` for no border, or a value like `1px solid rgba(255,255,255,0.1)` for a subtle edge. |
+| `--cfg-ui-shadow`      | Box shadow for panels. Format: `x-offset y-offset blur color`.                                                                 |
+| `--cfg-btn-color`      | Default background for buttons.                                                                                                |
+| `--cfg-btn-highlight`  | Button background on hover.                                                                                                    |
+| `--cfg-btn-border`     | Border style for buttons. Follows the same format as `--cfg-ui-border`.                                                        |
+
+**Note:**
+
+Multi-layer shadows work the same as standard CSS — separate each layer with a comma.
+
+```css
+--cfg-ui-shadow:
+  rgba(0, 0, 0, 0.3) 0 10px 24px -6px, inset rgba(255, 255, 255, 0.1) 0 1px 0 0;
+```
+
+### Corner Radius
+
+Units can be `px`, `%`, `em`, etc. Higher values = rounder corners. Lower values = sharp square corners.
+
+| Variable                    | Default | Applies to                     |
+| --------------------------- | ------- | ------------------------------ |
+| `--cfg-radius-art`          | `8px`   | Album art, small size          |
+| `--cfg-radius-art-md`       | `16px`  | Album art, medium size         |
+| `--cfg-radius-art-lg`       | `20px`  | Album art, large size          |
+| `--cfg-radius-btn`          | `12px`  | Standard buttons               |
+| `--cfg-radius-btn-alt`      | `16px`  | Alternate / pill-style buttons |
+| `--cfg-radius-highlight`    | `8px`   | Hover overlay elements         |
+| `--cfg-radius-highlight-lg` | `12px`  | Larger hover overlays          |
+| `--cfg-radius-panel`        | `12px`  | Popups and dropdowns           |
+| `--cfg-radius-panel-lg`     | `24px`  | Larger panels                  |
+
+### Animations
+
+To disable any animation, set its duration variable to `0s`. Timing variables accept any CSS easing value (`linear`, `ease-in-out`, `cubic-bezier(...)`, etc.).
+
+| Duration                          | Timing                          | Notes                                                |
+| --------------------------------- | ------------------------------- | ---------------------------------------------------- |
+| `--cfg-anim-bg-duration`          | `--cfg-anim-bg-timing`          | Crossfades the background when the song changes.     |
+| `--cfg-anim-player-page-duration` | `--cfg-anim-player-page-timing` | Open/close animation for the player page.            |
+| `--cfg-anim-fade-duration`        | `--cfg-anim-fade-timing`        | Fade transitions across most UI elements.            |
+| `--cfg-anim-fade-duration-alt`    | —                               | Used for slower or more deliberate fade transitions. |
+| `--cfg-anim-play-btn-duration`    | `--cfg-anim-play-btn-timing`    | Play button animation.                               |
+| `--cfg-anim-drawer-duration`      | `--cfg-anim-drawer-timing`      | Open/close animation for the sidebar drawer.         |
+| `--cfg-anim-search-bar-duration`  | `--cfg-anim-search-bar-timing`  | Search bar expand/collapse animation.                |
+
+Animations with a `*-timing` variable accept any CSS easing value (`linear`, `ease-in-out`, `cubic-bezier(...)`, etc.).

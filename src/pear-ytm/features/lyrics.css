@@ -8,11 +8,65 @@
   font-family: var(--cfg-font) !important;
   font-size: calc(var(--cfg-lyrics-font-size) * 0.55) !important;
   font-weight: var(--cfg-lyrics-font-weight) !important;
-  color: var(--text-color-2) !important;
+  color: var(--text-secondary) !important;
   font-style: normal !important;
 }
 
 #synced-lyrics-container .text-lyrics.lrc-header {
   scale: 0.55 !important;
   color: rgba(255, 255, 255, 0.3) !important;
+}
+.synced-line {
+  transition:
+    filter 0.4s ease-in-out,
+    opacity 0.6s ease;
+}
+.synced-line.previous {
+  opacity: 0.4;
+  filter: blur(var(--cfg-previous-line-blur));
+}
+.synced-line.current {
+  opacity: 1;
+  filter: blur(var(--cfg-current-line-blur));
+}
+.synced-line.upcoming {
+  opacity: 0.6;
+  filter: blur(var(--cfg-upcoming-line-blur));
+}
+.synced-line:hover {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.current .text-lyrics > span > span {
+  animation:
+    lyrics-glow 1.2s forwards ease,
+    lyrics-wobble-2 1s forwards ease !important;
+}
+
+#synced-lyrics-container {
+  mask-image: linear-gradient(
+    180deg,
+    transparent,
+    #000 50px,
+    #000 calc(100% - 50px),
+    transparent
+  );
+}
+
+@keyframes lyrics-wobble-2 {
+  0% {
+    transform: scaleX(1);
+  }
+  12.5% {
+    transform: translateX(0.05em) scaleX(1.025);
+    animation-timing-function: ease-in-out;
+  }
+  75% {
+    transform: translateX(0) scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+    animation-timing-function: ease-out;
+  }
 }

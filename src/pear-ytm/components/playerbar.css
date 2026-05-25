@@ -1,7 +1,7 @@
 /* ========================== PLAYER BAR ========================== */
 ytmusic-player-bar {
-  background: var(--layout-color);
-  backdrop-filter: blur(var(--layout-blur));
+  background: var(--ui-color);
+  backdrop-filter: blur(var(--ui-blur));
 }
 
 #player-bar-background {
@@ -35,10 +35,10 @@ ytmusic-player-bar:hover #progress-bar {
 #hover-time-info.ytmusic-player-bar {
   padding: 12px !important;
   border-radius: var(--radius-panel) !important;
-  background: var(--layout-contrast) !important;
-  color: var(--text-color-1) !important;
-  backdrop-filter: blur(var(--layout-blur));
-  border: var(--layout-border) !important;
+  background: var(--ui-contrast) !important;
+  color: var(--text-primary) !important;
+  backdrop-filter: blur(var(--ui-blur));
+  border: var(--ui-border) !important;
 }
 
 /* Song Info */
@@ -46,7 +46,7 @@ ytmusic-player-bar:hover #progress-bar {
   color: var(--accent);
   --yt-endpoint-color: var(--accent);
   --yt-endpoint-visited-color: var(--accent);
-  --yt-endpoint-hover-color: var(--accent-hover);
+  --yt-endpoint-hover-color: var(--accent-highlight);
 }
 
 @media (min-width: 615px) {
@@ -59,7 +59,7 @@ ytmusic-player-bar:hover #progress-bar {
 }
 .ytmusic-player-bar .time-info.ytmusic-player-bar,
 yt-formatted-string.duration.ytmusic-player-queue-item {
-  color: var(--text-color-2) !important;
+  color: var(--text-secondary) !important;
 }
 
 /* Volume Control */
@@ -81,8 +81,8 @@ tp-yt-paper-listbox.ytmusic-playback-rate-popup-renderer {
 }
 
 tp-yt-paper-item.ytmusic-playback-rate-popup-renderer {
-  --ytmusic-menu-item-hover-background-color: var(--layout-highlight);
-  color: var(--text-color-1);
+  --ytmusic-menu-item-hover-background-color: var(--ui-highlight);
+  color: var(--text-primary);
   border-radius: var(--radius-highlight);
 }
 

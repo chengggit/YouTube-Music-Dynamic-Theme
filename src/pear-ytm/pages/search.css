@@ -1,0 +1,73 @@
+/* ========================== SEARCH PAGE ========================== */
+/* Tab Below Search */
+.tab-container.ytmusic-tabs {
+  box-shadow: none !important;
+  background: transparent !important;
+  border-bottom: 0 !important;
+}
+
+.tab.ytmusic-tabs {
+  color: var(--text-primary) !important;
+}
+
+.tab.selected.ytmusic-tabs {
+  color: var(--accent) !important;
+  border-bottom: 1px solid var(--accent) !important;
+}
+
+/* When Scrolled */
+ytmusic-tabs.stuck {
+  box-shadow: none !important;
+  background: var(--ui-color) !important;
+  backdrop-filter: blur(var(--ui-blur)) !important;
+}
+
+/* Search Card */
+yt-formatted-string.text.style-scope.ytmusic-message-renderer {
+  margin-top: 0px !important;
+}
+
+.immersive-background.ytmusic-card-shelf-renderer::before {
+  background: transparent !important;
+}
+
+.undercards-container.ytmusic-card-shelf-renderer::before,
+.card-content-container.ytmusic-card-shelf-renderer::before {
+  background: var(--ui-color) !important;
+  border: var(--ui-border) !important;
+  backdrop-filter: blur(var(--ui-blur)) !important;
+  border-radius: var(--radius-panel-lg) !important;
+}
+
+.undercards-container.ytmusic-card-shelf-renderer {
+  padding: 20px !important;
+  gap: 16px !important;
+}
+
+.thumbnail-container.ytmusic-card-shelf-renderer {
+  border-radius: var(--radius-art-md) !important;
+}
+
+/* Radio Button */
+.ytmusic-card-shelf-renderer .ytSpecButtonShapeNextOutline {
+  color: var(--accent) !important;
+  border-radius: var(--radius-btn-alt) !important;
+  .yt-icon-shape {
+    color: var(--accent-icon) !important;
+  }
+}
+
+/* Divider */
+ytmusic-responsive-list-item-renderer.ytmusic-shelf-renderer,
+.ytmusic-playlist-shelf-renderer {
+  border-bottom: 0 !important;
+}
+
+ytmusic-message-renderer {
+  .text.ytmusic-message-renderer {
+    color: var(--text-primary) !important;
+  }
+  .yt-icon-shape {
+    color: var(--icon);
+  }
+}

@@ -2,12 +2,12 @@
   "version": "2.0",
   "settings": {
     "enabled": true,
-    "kawarpOpacity": 1,
+    "kawarpOpacity": 0.75,
     "kawarpWarpIntensity": 1,
     "kawarpBlurPasses": 8,
-    "kawarpAnimationSpeed": 2,
-    "kawarpTransitionDuration": 2000,
-    "kawarpSaturation": 2,
+    "kawarpAnimationSpeed": 1.8,
+    "kawarpTransitionDuration": 1500,
+    "kawarpSaturation": 1.7,
     "kawarpDithering": 0,
     "kawarpAudioScaleBoost": 2,
     "audioResponsive": false,
@@ -17,5 +17,6 @@
     "showLogs": false,
     "showOnBrowsePages": false,
     "enableAnimatedArt": true
-  }
+  },
+  "exportedAt": "2026-05-24T14:00:26.324Z"
 }

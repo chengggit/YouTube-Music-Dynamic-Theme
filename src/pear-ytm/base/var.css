@@ -1,0 +1,213 @@
+/* ========================== THEME CONFIG ========================== */
+
+/* Edit these variables to configure your theme. 
+   Ensure every line ends with a semicolon (;) to prevent errors. */
+
+:root {
+  /* --- Background & Backdrop --- */
+  /* - Static: url("yourimagelink.com/image.jpg") or color (hex/rgb)
+     - Dynamic: Keep the color-mix block (Requires Album Color Theme plugin) */
+
+  --cfg-background: color-mix(
+    in srgb,
+    rgba(3, 3, 3) calc(100% - var(--ytmusic-album-color-ratio, 50%)),
+    rgba(var(--ytmusic-album-color-dark), 1)
+      var(--ytmusic-album-color-ratio, 50%)
+  );
+
+  --cfg-bg-brightness: 0.8;       
+  --cfg-bg-blur: 0;               /* Background blur */
+  --cfg-bg-saturate: 1.5;         /* Background saturation */
+  --cfg-bg-scale: 1.1;            /* Background zoom level */
+  --cfg-player-page-opacity: 0.8; /* Player page transparency */
+
+/* --- Typography & Colors --- */
+  --cfg-font: 'Inter', 'PingFangSC-Regular', 'Apple SD Gothic Neo'; /* Main font for all text */
+  --cfg-font-weight: 400;                           /* Main text weight */
+  --cfg-text-primary: rgb(255, 255, 255);         /* Main text color */
+  --cfg-text-secondary: rgba(255, 255, 255, 0.7); /* Secondary text color */
+
+  --cfg-icon: rgb(255, 255, 255);                 /* Icon color */
+  --cfg-accent: rgb(255, 255, 255);               /* Accent color for highlights */
+  --cfg-accent-icon: rgb(255, 255, 255);          /* Accent color for icons */  
+  --cfg-accent-highlight: rgb(255, 255, 255);     /* Lighter accent for hover states and highlights */
+
+  /* --- Lyrics --- */
+  --cfg-fullscreen-art-position: flex-end; /* Album art position in fullscreen (flex-start | center | flex-end) */
+  --cfg-lyrics-font-size: 50px;
+  --cfg-lyrics-font-weight: 600; 
+  --cfg-lyrics-container-width: 40%;
+
+  --cfg-previous-line-blur: 6px;
+  --cfg-current-line-blur: 0px;
+  --cfg-upcoming-line-blur: 6px;
+
+/* --- UI Components --- */
+/*  
+ - Border: Use 'transparent' for no border, or '1px solid color' 
+ - Shadow: Horizontal-Offset Vertical-Offset Blur Color 
+*/  
+  --cfg-album-art-size: 400px;
+  
+  --cfg-ui-color: transparent;                    /* Panel backgrounds */
+  --cfg-ui-contrast: rgba(255, 255, 255, 0.1);  /* Secondary panel backgrounds */
+  --cfg-ui-highlight: rgba(255, 255, 255, 0.1); /* Hover/Select backgrounds */
+  --cfg-ui-blur: 10px;
+  --cfg-ui-border: transparent;
+  --cfg-ui-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+  --cfg-btn-color: rgba(255, 255, 255, 0.1);     /* Button backgrounds */
+  --cfg-btn-highlight: rgba(255, 255, 255, 0.2); /* Button hover backgrounds */
+  --cfg-btn-border: transparent;
+
+  /* --- Roundness --- */
+  --cfg-radius-art: 8px;            /* Album art corners (Small) */
+  --cfg-radius-art-md: 16px;        /* Album art corners (Medium) */
+  --cfg-radius-art-lg: 20px;        /* Album art corners (Large) */
+
+  --cfg-radius-btn: 12px;           /* Standard buttons */ 
+  --cfg-radius-btn-alt: 16px;       /* Alternative/Pill buttons */
+
+  --cfg-radius-highlight: 8px;      /* Hover overlays */
+  --cfg-radius-highlight-lg: 12px;  
+
+  --cfg-radius-panel: 12px;         /* Popups and dropdowns */
+  --cfg-radius-panel-lg: 24px;
+
+/* --- Animation --- */
+/* - Set duration to 0s to disable animation */
+  --cfg-anim-bg-duration: 0.3s;
+  --cfg-anim-bg-timing: ease-in-out;
+
+  --cfg-anim-player-page-duration: 0.65s;
+  --cfg-anim-player-page-timing: cubic-bezier(0.3, 0.6, 0.5, 1);
+
+  --cfg-anim-fade-duration: 0.3s;
+  --cfg-anim-fade-duration-alt: 0.5s;
+  --cfg-anim-fade-timing: ease;
+
+  --cfg-anim-play-btn-duration: 0.3s;
+  --cfg-anim-play-btn-timing: ease;
+
+  --cfg-anim-drawer-duration: 0.3s;
+  --cfg-anim-drawer-timing: ease;
+
+  --cfg-anim-search-bar-duration: 0.3s;
+  --cfg-anim-search-bar-timing: ease;
+}
+
+/* ========================== TOGGLES ========================== */
+
+/* To enable a toggle: Remove the slash-star /* and star-slash */
+/* To disable: Wrap the code block in slash-star /* and star-slash */
+
+/* ============================================================= */
+
+/* Increment Skip Buttons : Enable rewind and fast forward buttons */
+
+/* ytmusic-player-bar yt-icon-button[hidden],
+yt-icon-button.rewind-button {
+  display: inline-flex !important;
+}
+ */
+
+/* Centered Control : Play and skip buttons in the middle similar to spotify */
+
+/* @media (min-width: 615px) {
+  ytmusic-player-bar.ytmusic-app {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'start middle end';
+  }
+  ytmusic-player-bar .left-controls.ytmusic-player-bar {
+    grid-area: middle;
+    justify-self: center;
+    justify-content: center;
+  }
+  ytmusic-player-bar .middle-controls.ytmusic-player-bar {
+    grid-area: start;
+    justify-content: start;
+    margin-left: 12px;
+  }
+  ytmusic-player-bar .time-info.ytmusic-player-bar {
+    position: absolute;
+    top: -18px;
+    margin: 0px;
+  }
+  ytmusic-player-bar .spinner-container.ytmusic-player-bar {
+    position: absolute;
+    left: 0;
+  }
+} */
+
+/* ============================================================ 
+* DO NOT EDIT BELOW THIS LINE
+ ============================================================== */
+* {
+  font-family: var(--cfg-font) !important;
+  font-weight: var(--cfg-font-weight);
+  scrollbar-width: none !important;
+}
+
+:root {
+  --album-art-size: var(--cfg-album-art-size);
+  --background: var(--cfg-background);
+  --bg-scale: var(--cfg-bg-scale);
+  --bg-blur: calc(var(--cfg-bg-blur) * 100px);
+  --bg-brightness: var(--cfg-bg-brightness);
+  --bg-saturate: var(--cfg-bg-saturate);
+  --player-page-opacity: var(--cfg-player-page-opacity);
+
+  --text-primary: var(--cfg-text-primary);
+  --text-secondary: var(--cfg-text-secondary);
+  --icon: var(--cfg-icon);
+  --accent: var(--cfg-accent);
+  --accent-icon: var(--cfg-accent-icon);
+  --accent-highlight: var(--cfg-accent-highlight);
+
+  --ui-color: var(--cfg-ui-color);
+  --ui-contrast: var(--cfg-ui-contrast);
+  --ui-highlight: var(--cfg-ui-highlight);
+  --ui-blur: var(--cfg-ui-blur);
+  --ui-border: var(--cfg-ui-border);
+  --ui-shadow: var(--cfg-ui-shadow);
+  
+  --btn-color: var(--cfg-btn-color);
+  --btn-highlight: var(--cfg-btn-highlight);
+  --btn-border: var(--cfg-btn-border);
+
+  --radius-art: var(--cfg-radius-art);
+  --radius-art-md: var(--cfg-radius-art-md);
+  --radius-art-lg: var(--cfg-radius-art-lg);
+
+  --radius-btn: var(--cfg-radius-btn);
+  --radius-btn-alt: var(--cfg-radius-btn-alt);
+
+  --radius-highlight: var(--cfg-radius-highlight);
+  --radius-highlight-lg: var(--cfg-radius-highlight-lg);
+
+  --radius-panel: var(--cfg-radius-panel);
+  --radius-panel-lg: var(--cfg-radius-panel-lg);
+
+  --anim-bg-duration: var(--cfg-anim-bg-duration);
+  --anim-bg-timing: var(--cfg-anim-bg-timing);
+
+  --anim-player-page-duration: var(--cfg-anim-player-page-duration);
+  --anim-player-page-timing: var(--cfg-anim-player-page-timing);
+
+  --anim-fade-duration: var(--cfg-anim-fade-duration);
+  --anim-fade-duration-alt: var(--cfg-anim-fade-duration-alt);
+  --anim-fade-timing: var(--cfg-anim-fade-timing);
+
+  --anim-play-btn-duration: var(--cfg-anim-play-btn-duration);
+  --anim-play-btn-timing: var(--cfg-anim-play-btn-timing);
+
+  --anim-drawer-duration: var(--cfg-anim-drawer-duration);
+  --anim-drawer-timing: var(--cfg-anim-drawer-timing);
+
+  --anim-search-bar-duration: var(--cfg-anim-search-bar-duration);
+  --anim-search-bar-timing: var(--cfg-anim-search-bar-timing);
+
+  --ytmusic-text-primary: var(--cfg-text-primary);
+  --ytmusic-overlay-text-secondary: var(--cfg-text-secondary);
+}
