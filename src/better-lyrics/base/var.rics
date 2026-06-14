@@ -7,7 +7,7 @@ $bg-brightness: null;
 $bg-blur: 0.6;                // Background blur intensity
 $bg-saturate: 1.5;            // Background color vibrancy
 $bg-scale: 1.2;               // Background zoom level
-$bg-player-opacity: 0.8;        // Player page transparency
+$bg-player-opacity: 0.8;      // Player page transparency
 
 /* --- Typography & Colors --- */
 $font-family: "Inter","PingFangSC-Regular","Apple SD Gothic Neo"; // Main font for all text
