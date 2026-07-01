@@ -200,6 +200,7 @@ $final-bg-brightness: if($bg-brightness, $bg-brightness, map-get($theme-map, bg-
   --blyrics-font-family: $font-family;
   --blyrics-font-weight: $lyrics-font-weight;
   --blyrics-font-size: $lyrics-font-size;
+  --blyrics-footer-text-color: $text-secondary;
   --blyrics-footer-font-family: $font-family;
   --blyrics-footer-font-weight: $font-weight;
 
@@ -1443,6 +1444,13 @@ ytmusic-player-page {
 .blyrics-footer__container {
   border-radius: var(--radius-btn-alt);
 }
+.blyrics-footer__discord > img {
+  filter: brightness(1.5);
+}
+#betterLyricsFooterLink span {
+  color: var(--icon) !important;
+  opacity: 1 !important;
+}
 
 /* ========================== LYRICS ========================== */
 .blyrics--line {
@@ -1689,7 +1697,7 @@ ytmusic-immersive-header-renderer[is-description-expanded] .image {
 /* Sub Button */
 ytmusic-subscribe-button-renderer {
   --ytmusic-subscribe-button-outline-color: transparent;
-  --ytmusic-subscribe-btn-color: var(--accent);
+  --ytmusic-subscribe-button-color: var(--accent);
   background: rgb(from var(--accent) r g b / 0.2);
   border-radius: var(--radius-btn-alt);
   backdrop-filter: blur(var(--ui-blur));
@@ -1727,7 +1735,7 @@ ytmusic-popup-container tp-yt-paper-dialog.ytmusic-popup-container[role=dialog] 
   border: var(--btn-border);
   border-radius: var(--radius-btn-alt);
   &:hover {
-    background: var(--btn-highlight);
+    background: var(--btn-highlight) !important;
     border: var(--btn-border);
   }
   .yt-icon-shape {
@@ -2061,9 +2069,8 @@ ytmusic-player-queue-item {
   border-radius: var(--radius-highlight);
   border: 0;
   opacity: 0.825;
-  &:not(:last-child) {
-    margin-bottom: 8px;
-  }
+  margin-bottom: 8px;
+
   &:hover {
     background: rgba(255, 255, 255, 0.05);
     opacity: 1;
