@@ -36,7 +36,7 @@ ytmusic-immersive-header-renderer[is-description-expanded] .image {
 /* Sub Button */
 ytmusic-subscribe-button-renderer {
   --ytmusic-subscribe-button-outline-color: transparent;
-  --ytmusic-subscribe-btn-color: var(--accent);
+  --ytmusic-subscribe-button-color: var(--accent);
   background: rgb(from var(--accent) r g b / 0.2);
   border-radius: var(--radius-btn-alt);
   backdrop-filter: blur(var(--ui-blur));
@@ -74,7 +74,7 @@ ytmusic-popup-container tp-yt-paper-dialog.ytmusic-popup-container[role=dialog] 
   border: var(--btn-border);
   border-radius: var(--radius-btn-alt);
   &:hover {
-    background: var(--btn-highlight);
+    background: var(--btn-highlight) !important;
     border: var(--btn-border);
   }
   .yt-icon-shape {

@@ -41,7 +41,7 @@ ytmusic-immersive-header-renderer[is-description-expanded] .image {
 /* Sub Button */
 ytmusic-subscribe-button-renderer.subscribe {
   --ytmusic-subscribe-button-outline-color: transparent;
-  --ytmusic-subscribe-btn-color: var(--accent);
+  --ytmusic-subscribe-button-color: var(--accent);
   background: rgb(from var(--accent) r g b / 0.2);
   border-radius: var(--radius-btn-alt);
   backdrop-filter: blur(var(--ui-blur));
@@ -75,14 +75,14 @@ ytmusic-popup-container
 }
 
 /* Shuffle and Radio Button */
-.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--filled {
+button.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextFilled {
   color: var(--accent);
   background: var(--btn-color);
   backdrop-filter: blur(var(--ui-blur));
   border: var(--btn-border);
   border-radius: var(--radius-btn-alt);
   &:hover {
-    background: var(--btn-highlight);
+    background: var(--btn-highlight) !important;
     border: var(--btn-border);
   }
   .yt-icon-shape {
