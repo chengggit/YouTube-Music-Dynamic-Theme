@@ -114,14 +114,6 @@ ytmusic-playlist-add-to-option-renderer {
   }
 }
 
-button.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextFilled {
-  color: var(--text-primary);
-  background: var(--btn-color);
-  &:hover {
-    background: var(--btn-highlight);
-  }
-}
-
 #title.ytmusic-playlist-add-to-option-renderer {
   color: var(--text-primary) !important;
 }
