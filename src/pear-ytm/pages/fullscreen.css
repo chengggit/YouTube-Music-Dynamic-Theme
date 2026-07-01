@@ -22,18 +22,20 @@ ytmusic-player[player-ui-state='FULLSCREEN'].ytmusic-player-page {
 ytmusic-player[player-ui-state='FULLSCREEN'][video-mode].ytmusic-player-page {
   max-width: 800px;
 }
-ytmusic-player-page[player-ui-state='FULLSCREEN'] {
-  #side-panel {
-    interactivity: unset !important;
-  }
+
+/* This no longer work but i kept it just in case */
+ytmusic-player-page .side-panel.ytmusic-player-page[inert] {
+  interactivity: unset !important;
+}
+
+ytmusic-player-page[player-ui-state='FULLSCREEN']
   tp-yt-paper-tabs.ytmusic-player-page {
-    border-bottom: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    will-change: opacity;
-    &:hover {
-      opacity: 1;
-    }
+  border-bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+  &:hover {
+    opacity: 1;
   }
 }
 
