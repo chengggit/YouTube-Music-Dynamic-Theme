@@ -15,7 +15,7 @@ ytmusic-player-bar {
 
 /* Progress Bar */
 #primaryProgress.tp-yt-paper-progress {
-  --paper-progress-active-color: var(--accent);
+  --paper-progress-active-color: var(--accent) !important;
 }
 
 #progress-bar[focused],
@@ -26,10 +26,15 @@ ytmusic-player-bar:hover #progress-bar {
 }
 
 #progress-bar.ytmusic-player-bar {
-  --paper-slider-knob-start-color: var(--accent);
-  --paper-slider-knob-start-border-color: var(--accent);
-  --paper-slider-knob-color: var(--accent);
-  --paper-slider-active-color: var(--accent);
+  --paper-slider-knob-start-color: var(--accent) !important;
+  --paper-slider-knob-start-border-color: var(--accent) !important;
+  --paper-slider-knob-color: var(--accent) !important;
+  --paper-slider-active-color: var(--accent) !important;
+}
+
+.slider-knob-inner.tp-yt-paper-slider {
+  background-color: var(--accent) !important;
+  border: 2px solid var(--accent) !important;
 }
 
 #hover-time-info.ytmusic-player-bar {
@@ -88,7 +93,7 @@ tp-yt-paper-item.ytmusic-playback-rate-popup-renderer {
 
 /* Icons */
 .spinner-layer.tp-yt-paper-spinner-lite {
-  color: var(--icon);
+  color: var(--icon) !important;
 }
 
 ytmusic-player-bar:not([repeat-mode='NONE']),
