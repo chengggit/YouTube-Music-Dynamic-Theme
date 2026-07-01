@@ -42,6 +42,13 @@
 .blyrics-footer__container {
   border-radius: var(--radius-btn-alt);
 }
+.blyrics-footer__discord > img {
+  filter: brightness(1.5);
+}
+#betterLyricsFooterLink span {
+  color: var(--icon) !important;
+  opacity: 1 !important;
+}
 
 /* ========================== LYRICS ========================== */
 .blyrics--line {

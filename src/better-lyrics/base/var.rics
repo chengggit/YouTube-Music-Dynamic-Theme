@@ -186,6 +186,7 @@ $final-bg-brightness: if($bg-brightness, $bg-brightness, map-get($theme-map, bg-
   --blyrics-font-family: $font-family;
   --blyrics-font-weight: $lyrics-font-weight;
   --blyrics-font-size: $lyrics-font-size;
+  --blyrics-footer-text-color: $text-secondary;
   --blyrics-footer-font-family: $font-family;
   --blyrics-footer-font-weight: $font-weight;
 
