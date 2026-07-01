@@ -63,10 +63,6 @@ The Album Color Theme plugin is required for dynamic background functionality.
 
 - Dynamic backgrounds behave differently from the Better Lyrics version, as Pear Desktop does not provide a variable for fetching the song’s album cover. This implementation relies on the Album Color Theme plugin as a workaround.
 
-- On Pear Desktop 3.11.0, the Album Color Theme plugin has been reported to not work properly on some systems such as macOS, Fedora, and Arch-based Linux. See [#3857](https://github.com/pear-devs/pear-desktop/issues/3857).
-
-- The search suggestion background blur workaround does not work on Pear Desktop yet due to its current Chromium 140 base, where CSS anchor behavior differs from Chromium 144+. This should be resolved once Pear updates to a compatible Chromium version.
-
 **Installation**
 
 1. Download [`pear-ytm.css`](/pear-ytm.css)
@@ -132,7 +128,7 @@ All variables are defined at the top of the CSS/RICS file.
 ## Compatibility
 
 - Better Lyrics v2.2.0 and later
-- Pear Desktop 3.11.0 (tested)
+- Pear Desktop 3.12.0
 
 ## Development
 
