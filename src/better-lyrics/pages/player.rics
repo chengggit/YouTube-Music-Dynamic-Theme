@@ -52,9 +52,8 @@ ytmusic-player-queue-item {
   border-radius: var(--radius-highlight);
   border: 0;
   opacity: 0.825;
-  &:not(:last-child) {
-    margin-bottom: 8px;
-  }
+  margin-bottom: 8px;
+
   &:hover {
     background: rgba(255, 255, 255, 0.05);
     opacity: 1;
@@ -124,3 +123,4 @@ a.ytmusic-chip-cloud-chip-renderer {
 ytmusic-tab-renderer.ytmusic-player-page {
   margin-right: -10px;
 }
+

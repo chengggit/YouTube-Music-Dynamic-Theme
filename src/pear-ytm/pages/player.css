@@ -71,9 +71,6 @@ ytmusic-player-queue-item {
     opacity: 1;
   }
 }
-ytmusic-player-queue-item:not(:last-child) {
-  margin-bottom: 8px !important;
-}
 
 .song-title.ytmusic-player-queue-item,
 .subtitle.ytmusic-queue-header-renderer {
