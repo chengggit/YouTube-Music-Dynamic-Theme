@@ -53,8 +53,8 @@ ytmusic-search-box #suggestion-list {
   }
 }
 
-/* Chromium 144+ backdrop workaround */
-/* ytmusic-app-layout::after {
+/* Search Backdrop workaround */
+ytmusic-app-layout::after {
   content: '';
   position: fixed;
   position-anchor: --search-dropdown;
@@ -70,7 +70,7 @@ ytmusic-search-box #suggestion-list {
 
 ytmusic-app-layout:has(ytmusic-search-box[opened])::after {
   opacity: 1;
-} */
+}
 
 ytmusic-search-box[opened] #suggestion-list {
   top: calc(var(--ytmusic-search-box-height) + 16px) !important;
