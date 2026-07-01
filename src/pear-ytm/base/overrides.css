@@ -1,3 +1,6 @@
+body {
+  background-color: unset !important;
+}
 #player-page {
   margin: var(--menu-bar-height) !important;
 }
