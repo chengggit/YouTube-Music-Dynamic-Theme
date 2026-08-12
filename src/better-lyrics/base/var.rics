@@ -142,6 +142,8 @@ $final-bg-brightness: if($bg-brightness, $bg-brightness, map-get($theme-map, bg-
   --bg-saturate: #{$bg-saturate};
   --bg-player-opacity: #{$bg-player-opacity};
 
+  --font-family: $font-family;
+  --font-weight: #{$font-weight};
   --text-primary: #{$text-primary};
   --text-secondary: #{$text-secondary};
   --icon: #{$icon};
@@ -181,6 +183,7 @@ $final-bg-brightness: if($bg-brightness, $bg-brightness, map-get($theme-map, bg-
   --blyrics-lyric-scroll-timing-function: #{$lyric-scroll-timing};
 
   --ytmusic-text-primary: #{$text-primary};
+  --ytmusic-text-secondary: #{$text-secondary};
   --ytmusic-overlay-text-secondary: #{$text-secondary};
 
   --blyrics-font-family: $font-family;

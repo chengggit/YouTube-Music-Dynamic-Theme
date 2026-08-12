@@ -1,7 +1,7 @@
 /* ========================== TYPOGRAPHY & ICONS ========================== */
 yt-formatted-string, input, label, button, h2, tp-yt-paper-item, #title, #icon-label, .ytmusic-player-bar, .dialog-title, .title, .subtitle, .tab-content, .promo-title, [role="text"] {
-  font-family: $font-family !important;
-  font-weight: $font-weight;
+  font-family: var(--font-family) !important;
+  font-weight: var(--font-weight);
 }
 
 html, #items, #tab-renderer, #chips, ytmusic-menu-popup-renderer, .ytmusicMultiPageMenuHost, .scrollable-content, .scroller, .dropdown-content, .ytmusic-settings-page {
