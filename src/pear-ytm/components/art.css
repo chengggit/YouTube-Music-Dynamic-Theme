@@ -97,3 +97,7 @@ ytmusic-player[player-ui-state='PLAYER_BAR_ONLY'] {
 #top-shelf .image-wrapper {
   border-radius: var(--radius-art-md);
 }
+
+.image-wrapper.ytmusic-two-row-item-renderer:hover img.yt-img-shadow {
+  transform: scale(1.01);
+}

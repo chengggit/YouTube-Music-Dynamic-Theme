@@ -313,7 +313,9 @@ yt-icon-button.ytmusic-carousel-shelf-renderer {
 }
 
 .yt-simple-endpoint {
-  transition: background var(--anim-fade-duration) var(--anim-fade-timing);
+  transition:
+    background var(--anim-fade-duration) var(--anim-fade-timing),
+    color var(--anim-fade-duration) var(--anim-fade-timing);
 }
 
 #play-button .content-wrapper.ytmusic-play-button-renderer {
@@ -434,7 +436,9 @@ ytmusic-visual-header-renderer .content-container {
 #secondaryProgress.tp-yt-paper-progress {
   transition: transform 1s linear;
 }
-
+#progressContainer.tp-yt-paper-progress {
+  transition: height 0.2s ease-out;
+}
 ytmusic-app-layout[is-mweb-modernization-enabled][player-ui-state='PLAYER_PAGE_OPEN']
   .slider-knob.tp-yt-paper-slider,
 ytmusic-app-layout:not([is-mweb-modernization-enabled])
@@ -449,4 +453,12 @@ ytmusic-immersive-header-renderer .description {
 
 ytmusic-immersive-header-renderer .image {
   transition: filter 0.5s ease;
+}
+.slider-knob-inner.tp-yt-paper-slider {
+  transition:
+    background 0.3s ease-in,
+    border 0.18s ease-in !important;
+}
+.image-wrapper.ytmusic-two-row-item-renderer img.yt-img-shadow {
+  transition: transform 0.3s ease;
 }

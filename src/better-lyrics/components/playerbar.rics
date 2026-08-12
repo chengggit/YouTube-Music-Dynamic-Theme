@@ -31,6 +31,11 @@ ytmusic-player-bar:hover #progress-bar {
   --paper-slider-active-color: var(--accent);
 }
 
+#progress-bar.ytmusic-player-bar {
+  top: -16px;
+  transform: unset;
+}
+
 #hover-time-info.ytmusic-player-bar {
   padding: 12px;
   border-radius: var(--radius-panel);
@@ -42,7 +47,6 @@ ytmusic-player-bar:hover #progress-bar {
 
 /* Song Info */
 .content-info-wrapper.ytmusic-player-bar .byline.ytmusic-player-bar {
-  color: var(--accent);
   --yt-endpoint-color: var(--accent);
   --yt-endpoint-visited-color: var(--accent);
   --yt-endpoint-hover-color: var(--accent-highlight);
