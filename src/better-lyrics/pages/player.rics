@@ -24,6 +24,10 @@ ytmusic-player[player-ui-state='MINIPLAYER'] {
   bottom: calc(120vh + var(--ytmusic-player-bar-height) + var(--ytmusic-mini-player-spacing)) !important;
 }
 
+ytmusic-player-page[is-player-page-layout-fixes-enabled] #main-panel.ytmusic-player-page {
+  height: 100%;
+}
+
 /* Tab */
 tp-yt-paper-tab.ytmusic-player-page {
   color: var(--text-primary);
@@ -74,6 +78,7 @@ ytmusic-player-queue-item {
   background: var(--btn-color);
   color: var(--text-primary);
   border-radius: var(--radius-btn);
+  border: var(--btn-border);
   &:hover {
     background: var(--btn-highlight);
   }
@@ -92,6 +97,7 @@ a.ytmusic-chip-cloud-chip-renderer {
   background: var(--btn-color);
   color: var(--accent);
   border-radius: var(--radius-btn-alt);
+  border: var(--btn-border);
   .yt-icon-shape {
     color: var(--accent-icon);
   }
@@ -124,3 +130,14 @@ ytmusic-tab-renderer.ytmusic-player-page {
   margin-right: -10px;
 }
 
+/* Comment */
+.ytd-comment-view-model .ytAttributedStringHost,
+.ytd-tri-state-button-view-model {
+  font-weight: var(--font-weight);
+}
+.ytSpecButtonShapeNextDisabled {
+  opacity: 0.7;
+}
+.ytSpecButtonShapeNextDisabled.ytSpecButtonShapeNextFilled {
+  color: var(--text-secondary);
+}

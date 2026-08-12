@@ -26,6 +26,12 @@ ytmusic-immersive-header-renderer[is-description-expanded] .image {
   filter: brightness(0.55);
 }
 
+ytmusic-responsive-list-item-renderer[is-checked] {
+  background-color: var(--ui-highlight) !important;
+}
+.more-button.ytmusic-shelf-renderer {
+  margin: 16px 0 !important;
+}
 /* Artist Header */
 .image.ytmusic-immersive-header-renderer {
   mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
@@ -52,11 +58,11 @@ ytmusic-subscribe-button-renderer.subscribe {
 }
 
 ytmusic-subscribe-button-renderer[is-subscribed] {
-  --ytmusic-subscribe-button-outline-color: transparent;
-  --ytmusic-subscribe-btn-color: var(--text-primary);
+  --ytmusic-subscribe-button-outline-color: transparent !important;
+  --ytmusic-subscribe-button-color: var(--text-primary) !important;
   background: var(--btn-color);
   backdrop-filter: blur(var(--ui-blur));
-  border: var(--btn-border);
+  border: var(--btn-border) !important;
   &:hover {
     background: var(--btn-highlight);
   }

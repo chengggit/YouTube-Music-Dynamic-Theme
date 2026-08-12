@@ -245,7 +245,7 @@ tp-yt-paper-toast.yt-notification-action-renderer,
 .ytSpecButtonShapeNextCallToActionInverse.ytSpecButtonShapeNextText {
   color: var(--accent);
   &:hover {
-    background: var(--btn-highlight);
+    background: var(--btn-highlight) !important;
   }
 }
 

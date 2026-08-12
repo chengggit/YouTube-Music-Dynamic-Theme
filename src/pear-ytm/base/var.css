@@ -209,5 +209,6 @@ yt-icon-button.rewind-button {
   --anim-search-bar-timing: var(--cfg-anim-search-bar-timing);
 
   --ytmusic-text-primary: var(--cfg-text-primary);
+  --ytmusic-text-secondary: var(--text-secondary);
   --ytmusic-overlay-text-secondary: var(--cfg-text-secondary);
 }

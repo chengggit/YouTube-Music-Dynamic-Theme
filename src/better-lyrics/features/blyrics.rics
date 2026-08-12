@@ -49,6 +49,9 @@
   color: var(--icon) !important;
   opacity: 1 !important;
 }
+.blyrics-dock__offset-value {
+  font-family: var(--font-family);
+}
 
 /* ========================== LYRICS ========================== */
 .blyrics--line {
