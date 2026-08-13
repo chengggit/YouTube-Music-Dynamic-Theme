@@ -1,0 +1,59 @@
+name: Bug Report
+description: Create a new issue for a bug report.
+title: "[BUG] - <title>"
+labels: ["bug"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: |
+        Please provide a brief description of the issue you are facing.
+      placeholder: A short description of your problem
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to Reproduce"
+      description: Please describe how to reproduce the problem.
+      value: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: platforms
+    attributes:
+      label: "Platforms"
+      description: What platforms are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Pear Desktop
+        - Other Browsers (Brave, Opera, Zen, Arc, etc.)
+    validations:
+      required: true
+
+  - type: textarea
+    id: platform_version
+    attributes:
+      label: "Browser or Pear version"
+      description: Please enter the version of the browser or Pear you are using.
+      placeholder: "e.g. Firefox 152.0.5 or Pear 3.12.0"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: "Additional context"
+      description: Please provide any additional context or screenshots (if applicable) that may help explain the problem.
+    validations:
+      required: false

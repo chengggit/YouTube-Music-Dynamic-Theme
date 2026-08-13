@@ -1,0 +1,54 @@
+name: Feature Request
+description: Suggest an idea or improvement for the theme.
+title: "[FEATURE] - <title>"
+labels: ["enhancement"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Feature Description"
+      description: |
+        Please provide a brief and clear description of the feature or improvement you would like to see.
+      placeholder: Describe the feature you'd like to see.
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: "Use Case"
+      description: |
+        Please explain what problem this feature would solve or how it would improve your experience.
+      placeholder: Explain why this feature would be useful.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: "Proposed Solution"
+      description: |
+        If you have an idea for how this feature could work, please describe it here.
+      placeholder: Describe how you think the feature could work.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: "Additional Context"
+      description: |
+        Add any additional context, screenshots, mockups, or examples that may help explain your request.
+      placeholder: Add any additional information here.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: self_assign
+    attributes:
+      label: "Would you like to work on this feature?"
+      description: "If you would like to work on this feature, please check the box below."
+      options:
+        - label: "I would like to work on this feature"
+          required: false
