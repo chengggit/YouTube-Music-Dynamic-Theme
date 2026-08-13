@@ -4,7 +4,7 @@
 /* 
 
 Theme: Dynamic Background 
-Version: 3.2.3 
+Version: 3.2.4 
 GitHub: https://github.com/chengggit/YouTube-Music-Dynamic-Theme 
 
 */
@@ -798,6 +798,10 @@ ytmusic-search-box .search-box {
 input.ytmusic-search-box {
   color: var(--text-primary) !important;
 }
+ytmusic-search-box[has-query],
+ytmusic-search-box[opened] {
+  border: none !important;
+}
 ytmusic-search-box[has-query] input.ytmusic-search-box,
 ytmusic-search-box[opened] input.ytmusic-search-box {
   color: var(--text-primary);
@@ -1233,7 +1237,7 @@ ytmusic-search-suggestion {
 ytmusic-search-page {
   transition: padding var(--anim-drawer-duration) var(--anim-drawer-timing);
 }
-ytmusic-nav-bar[is-bauhaus-sidenav-enabled] .center-content.ytmusic-nav-bar {
+ytmusic-nav-bar .center-content.ytmusic-nav-bar {
   transition:
     padding var(--anim-drawer-duration) var(--anim-drawer-timing),
     margin var(--anim-drawer-duration) var(--anim-drawer-timing);
@@ -1632,14 +1636,16 @@ ytmusic-app-layout.content-scrolled #nav-bar-divider {
   border-bottom: var(--ui-border) !important;
   border-top: 0 !important;
 }
-ytmusic-app-layout[is-bauhaus-sidenav-enabled].content-scrolled,
-ytmusic-app-layout[is-bauhaus-sidenav-enabled][player-page-open] {
+ytmusic-app-layout,
+ytmusic-app-layout.content-scrolled {
   #mini-guide-background.ytmusic-app-layout {
     opacity: 0 !important;
+    transition: none;
+    will-change: unset;
   }
 }
 /* Drawer */
-ytmusic-app[is-bauhaus-sidenav-enabled] #guide-wrapper.ytmusic-app {
+ytmusic-app #guide-wrapper.ytmusic-app {
   background: var(--ui-color) !important;
   padding: 2px;
   border-right: var(--ui-border) !important;
