@@ -20,15 +20,17 @@ ytmusic-app-layout.content-scrolled #nav-bar-divider {
   border-top: 0 !important;
 }
 
-ytmusic-app-layout[is-bauhaus-sidenav-enabled].content-scrolled,
-ytmusic-app-layout[is-bauhaus-sidenav-enabled][player-page-open] {
+ytmusic-app-layout,
+ytmusic-app-layout.content-scrolled {
   #mini-guide-background.ytmusic-app-layout {
     opacity: 0 !important;
+    transition: none;
+    will-change: unset;
   }
 }
 
 /* Drawer */
-ytmusic-app[is-bauhaus-sidenav-enabled] #guide-wrapper.ytmusic-app {
+ytmusic-app #guide-wrapper.ytmusic-app {
   background: var(--ui-color) !important;
   padding: 2px;
   border-right: var(--ui-border) !important;

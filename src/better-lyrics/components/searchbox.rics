@@ -10,6 +10,12 @@ ytmusic-search-box .search-box {
 input.ytmusic-search-box {
   color: var(--text-secondary);
 }
+
+ytmusic-search-box[has-query],
+ytmusic-search-box[opened] {
+  border: none;
+}
+
 ytmusic-search-box[has-query] input.ytmusic-search-box,
 ytmusic-search-box[opened] input.ytmusic-search-box {
   color: var(--text-primary);

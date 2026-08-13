@@ -379,7 +379,7 @@ ytmusic-search-page {
   transition: padding var(--anim-drawer-duration) var(--anim-drawer-timing);
 }
 
-ytmusic-nav-bar[is-bauhaus-sidenav-enabled] .center-content.ytmusic-nav-bar {
+ytmusic-nav-bar .center-content.ytmusic-nav-bar {
   transition:
     padding var(--anim-drawer-duration) var(--anim-drawer-timing),
     margin var(--anim-drawer-duration) var(--anim-drawer-timing);
