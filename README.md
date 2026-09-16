@@ -127,7 +127,7 @@ All variables are defined at the top of the CSS/RICS file.
 
 ## Compatibility
 
-- Better Lyrics v2.2.0 and later
+- Better Lyrics v2.4.0.8 and later
 - Pear Desktop 3.12.0
 
 ## Development
