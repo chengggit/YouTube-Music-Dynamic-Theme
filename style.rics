@@ -1438,10 +1438,16 @@ ytmusic-player-page {
 
 #blyrics-song-info {
   max-width: 50rem;
-  @if $fullscreen-layout == corner {
+}
+
+@if $fullscreen-layout == corner {
+  #blyrics-fs-info-row {
     text-align: left !important;
     margin: 0 !important;
     padding-left: 2rem !important;
+  }
+  #blyrics-fs-controls {
+    padding-left: 2rem;
   }
 }
 
