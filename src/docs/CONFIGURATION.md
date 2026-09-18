@@ -175,6 +175,21 @@ Set to `true` to enable, `false` to disable.
 | `$increment-skip-buttons`     | Adds -10s and +30s skip buttons to the player bar.                                                                          |
 | `$centered-playback-controls` | Moves the play and skip buttons to the center of the player bar, similar to Spotify's layout.                               |
 
+#### New Player Control
+
+Controls the layout and visibility behavior of the custom fullscreen player bar.
+
+```scss
+$new-player-control: (
+  enable: true,
+  always-on: false,
+);
+```
+
+- `enable`: Toggles the custom fullscreen player controls. When set to `false`, the custom control bar is hidden and native layout behavior is restored.
+
+- `always-on`: Keep the control to always visible when set to `true`.
+
 ### Animations
 
 Animations are split into two parts: a toggle that enables or disables the animation entirely, and duration/timing variables that control how it feels. Setting a toggle to `false` removes the animation.
