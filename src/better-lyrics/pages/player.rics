@@ -135,9 +135,17 @@ ytmusic-tab-renderer.ytmusic-player-page {
 .ytd-tri-state-button-view-model {
   font-weight: var(--font-weight);
 }
+#simplebox-placeholder.ytd-comment-simplebox-renderer,
+.yt-simple-endpoint.ytd-comment-view-model {
+  color: var(--text-secondary);
+}
 .ytSpecButtonShapeNextDisabled {
   opacity: 0.7;
 }
 .ytSpecButtonShapeNextDisabled.ytSpecButtonShapeNextFilled {
   color: var(--text-secondary);
+}
+tp-yt-paper-tab.ytmusic-player-page[disabled] {
+  opacity: 0.25;
+  pointer-events: unset !important;
 }

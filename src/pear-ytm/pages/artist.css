@@ -70,7 +70,6 @@ ytmusic-subscribe-button-renderer[is-subscribed] {
 
 /* Unsub Confirm */
 yt-confirm-dialog-renderer[dialog][dialog][dialog] {
-  --ytd-user-comment-color: white !important;
   background: transparent !important;
 }
 ytmusic-popup-container

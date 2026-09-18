@@ -18,6 +18,7 @@ ytmusic-multi-select-menu-bar {
 #tooltip {
   background: var(--ui-contrast);
   border-radius: var(--radius-panel);
+  backdrop-filter: blur(var(--ui-blur));
 }
 
 /* Playlist Visibility Dialog */

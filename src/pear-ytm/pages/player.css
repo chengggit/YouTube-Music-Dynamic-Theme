@@ -153,9 +153,17 @@ yt-icon-button.ytmusic-player {
 .ytd-tri-state-button-view-model {
   font-weight: var(--font-weight) !important;
 }
+#simplebox-placeholder.ytd-comment-simplebox-renderer,
+.yt-simple-endpoint.ytd-comment-view-model {
+  color: var(--text-secondary) !important;
+}
 .ytSpecButtonShapeNextDisabled {
   opacity: 0.7 !important;
 }
 .ytSpecButtonShapeNextDisabled.ytSpecButtonShapeNextFilled {
   color: var(--text-secondary) !important;
+}
+tp-yt-paper-tab.ytmusic-player-page[disabled] {
+  opacity: 0.25;
+  pointer-events: unset !important;
 }

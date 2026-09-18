@@ -211,4 +211,5 @@ yt-icon-button.rewind-button {
   --ytmusic-text-primary: var(--cfg-text-primary);
   --ytmusic-text-secondary: var(--text-secondary);
   --ytmusic-overlay-text-secondary: var(--cfg-text-secondary);
+  --yt-sys-color-baseline--text-secondary: var(--cfg-text-secondary) !important;
 }

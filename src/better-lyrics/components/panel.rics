@@ -10,7 +10,9 @@ ytmusic-playlist-form {
 .label.ytmusic-dropdown-item-renderer {
   color: var(--text-primary);
 }
-
+label.tp-yt-paper-input {
+  color: var(--text-secondary) !important;
+}
 tp-yt-iron-input.tp-yt-paper-input>input.tp-yt-paper-input {
   color: var(--text-primary);
 }
