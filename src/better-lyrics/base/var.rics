@@ -47,6 +47,11 @@ $btn-highlight: null;         // Button hover backgrounds
 $btn-border: transparent;     // e.g., "1px solid rgba(255,255,255,0.1)"
 
 /* --- Features & Toggles --- */
+$new-player-control: (
+  enable: true,
+  always-on: false
+);
+
 $small-video: false;                // Revert back to small video layout
 $unified-artists-lines: false;      // Force single alignment for all singers
 $increment-skip-buttons: false;     // Show -10s/+30s skip buttons
@@ -126,6 +131,8 @@ $theme-presets: (
 
 $theme-map: map-get($theme-presets, $preset);
 $final-bg-brightness: if($bg-brightness, $bg-brightness, map-get($theme-map, bg-brightness));
+$new-control-is-enable: map-get($new-player-control, enable);
+$new-control-always-on: map-get($new-player-control, always-on);
 
 :root {
   --bg-blur: calc($bg-blur * 100px);
@@ -185,6 +192,7 @@ $final-bg-brightness: if($bg-brightness, $bg-brightness, map-get($theme-map, bg-
   --ytmusic-text-primary: #{$text-primary};
   --ytmusic-text-secondary: #{$text-secondary};
   --ytmusic-overlay-text-secondary: #{$text-secondary};
+  --yt-sys-color-baseline--text-secondary: #{$text-secondary} !important;
 
   --blyrics-font-family: $font-family;
   --blyrics-font-weight: $lyrics-font-weight;

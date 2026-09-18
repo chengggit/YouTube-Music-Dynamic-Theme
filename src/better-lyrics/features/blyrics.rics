@@ -22,6 +22,63 @@
   }
 }
 
+@if $new-control-is-enable {
+  ytmusic-player-bar.ytmusic-app[player-page-open][player-fullscreened] {
+    display: none;
+  }
+  #layout[player-fullscreened]:not([blyrics-dfs])[show-fullscreen-controls] .blyrics-dock[data-position^="bottom-"] {
+    --dock-y-shift: 0;
+  }
+} @else {
+  #blyrics-fs-controls,
+  .blyrics-fs-info-actions {
+    display: none;
+  }
+  @if $fullscreen-layout == center {
+    #blyrics-fs-column #blyrics-song-info {
+      text-align: center !important;
+    }
+  }
+}
+
+@if $new-control-is-enable and not $new-control-always-on {
+  #blyrics-fs-controls {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+
+  ytmusic-app-layout[cursor-hidden] .blyrics-fs-info-actions,
+  ytmusic-app-layout[cursor-hidden] #blyrics-fs-controls {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+  @if $fullscreen-layout == corner {
+    ytmusic-app-layout[cursor-hidden] #blyrics-fs-info-row {
+      transform: translateY(10rem);
+    }
+  }
+}
+
+@if $new-control-always-on and $new-control-is-enable {
+  ytmusic-app-layout[player-fullscreened][show-fullscreen-controls]:not([blyrics-dfs])>[slot="player-bar"]:before {
+    opacity: 0 !important;
+  }
+}
+
+.blyrics-fs-play {
+  color: #ffffff;
+  background: transparent;
+  width: 4.5rem;
+  height: 4.5rem;
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.blyrics-fs-disc:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .blyrics-footer {
   opacity: 0;
   filter: blur(6px);
@@ -61,11 +118,7 @@
 
 /* ========================== LYRICS ========================== */
 .blyrics--line {
-  transform: scale(var(--blyrics-scale));
-  transition: 
-  transform var(--blyrics-scale-transition-duration) ease-in-out,
-  filter 0.8s ease-in-out,
-  opacity 0.6s ease;
+  transition: filter 0.8s ease-in-out, opacity 0.6s ease;
   filter: if(map-get($lyrics-blur-lines, previous), blur($lyrics-blur-amount), none);
   opacity: 0.4;
   &:hover {
@@ -76,9 +129,7 @@
 .blyrics-container[data-sync='none'] .blyrics--line {
   opacity: 1;
   filter: none;
-  transition: 
-  filter 0.35s ease-in-out,
-  opacity 0.2s ease;
+  transition: filter 0.35s ease-in-out, opacity 0.2s ease;
 }
 .blyrics-container .blyrics--active ~ .blyrics--line {
   opacity: 1;
@@ -91,16 +142,12 @@
 .blyrics--line.blyrics--active.blyrics--animating {
   filter: if(map-get($lyrics-blur-lines, current), blur($lyrics-blur-amount), none);
   opacity: 1;
-  transform: scale(var(--blyrics-active-scale));
   transition-delay: 0s;
 }
 .blyrics-container.blyrics-user-scrolling .blyrics--line {
   opacity: 1;
   filter: none;
-  transition: 
-  transform var(--blyrics-scale-transition-duration) ease-in-out,
-  filter 0.35s ease-in-out,
-  opacity 0.2s ease;
+  transition: filter 0.35s ease-in-out, opacity 0.2s ease;
 }
 
 @keyframes blyrics-glow {

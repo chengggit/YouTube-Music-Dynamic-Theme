@@ -441,6 +441,12 @@ ytmusic-player-page {
   .image-wrapper.ytmusic-two-row-item-renderer img.yt-img-shadow {
     transition: transform 0.3s ease;
   }
+
+  #blyrics-fs-controls,
+  .blyrics-fs-info-actions,
+  #blyrics-fs-info-row {
+    transition: transform 0.3s cubic-bezier(0.3, 0.6, 0.5, 1), opacity 0.3s ease;
+  }
 } @else {
   #play-button .content-wrapper.ytmusic-play-button-renderer {
     transform: scale(1);
