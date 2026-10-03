@@ -1,6 +1,9 @@
 {
+<<<<<<< HEAD
   "singleQuote": true,
   "endOfLine": "lf",
+=======
+>>>>>>> 682eb73 (chore: change printWidth to 104 and remove singleQuote)
   "plugins": ["prettier-plugin-rics"],
   "overrides": [
     {
@@ -15,5 +18,6 @@
         "parser": "css"
       }
     }
-  ]
+  ],
+  "printWidth": 104
 }
