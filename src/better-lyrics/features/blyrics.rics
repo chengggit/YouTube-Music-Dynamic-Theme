@@ -3,6 +3,10 @@
   background-color: transparent !important;
 }
 
+#better-lyrics-kawarp-backdrop-homepage {
+  background-color: transparent !important;
+}
+
 #blyrics-loader {
   transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding-top 0.5s ease-in-out;
 }
