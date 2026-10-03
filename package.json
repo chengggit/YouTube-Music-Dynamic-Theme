@@ -1,13 +1,8 @@
 {
   "type": "module",
-  "dependencies": {
-    "postcss": "^8.5.10",
-    "rics": "^0.3.21",
-    "rics-cli": "^0.3.21",
-    "ws": "^8.20.0"
-  },
   "devDependencies": {
-    "postcss-cli": "^11.0.1",
+    "postcss": "^8.5.28",
+    "postcss-cli": "^12.0.0",
     "postcss-import": "^16.1.1",
     "prettier": "^3.9.9",
     "prettier-plugin-rics": "^0.3.17"
