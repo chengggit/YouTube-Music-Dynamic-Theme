@@ -1,16 +1,16 @@
-const fs = require('fs');
-const path = require('path');
-const prettier = require('prettier');
-const { compile } = require('rics');
+import fs from 'node:fs';
+import path from 'node:path';
+import prettier from 'prettier';
+import { compile } from 'rics';
 
-const isWatch = process.argv.includes('--watch');
-const isDev = process.argv.includes('--dev');
+const ISWATCH = process.argv.includes('--watch');
+const ISDEV = process.argv.includes('--dev');
 
-const broadcast = isDev ? require('./server.js').broadcast : () => {};
+const RICSPATHOUT = './style.rics';
+const CSSPATHOUT = './src/rics-dev.css';
+const WATCHDIR = path.join(import.meta.dirname, 'src/better-lyrics');
 
-const outputRICSPath = './style.rics';
-
-const filesInOrder = [
+const RICSFILESINORDER = [
   'src/better-lyrics/base/header.rics',
   'src/better-lyrics/base/var.rics',
   'src/better-lyrics/base/typography.rics',
@@ -35,51 +35,73 @@ const filesInOrder = [
   'src/better-lyrics/pages/podcast.rics',
 ];
 
-async function build() {
-  let output = '';
-  for (const file of filesInOrder) {
-    output += fs.readFileSync(path.join(__dirname, file), 'utf8') + '\n\n';
-  }
+// the ws server only runs in dev, so only load it then
+const { broadcast } = ISDEV ? await import('./server.js') : { broadcast: () => {} };
 
-  if (!isDev) {
-    const formatted = await prettier.format(output, {
-      parser: 'rics',
-      plugins: ['prettier-plugin-rics'],
-    });
-
-    fs.writeFileSync(outputRICSPath, formatted);
-
-    console.log(
-      `[${new Date().toLocaleTimeString()}] ${outputRICSPath} built successfully.`,
-    );
-    return;
-  }
-
-  const compiledRICS = compile(output);
-  fs.writeFileSync('./src/rics-dev.css', compiledRICS);
-
-  console.log(
-    `[${new Date().toLocaleTimeString()}] ${outputRICSPath} built and compiled to src/rics-dev.css successfully.`,
-  );
+function concatRics() {
+  return RICSFILESINORDER.map((file) =>
+    fs.readFileSync(path.join(import.meta.dirname, file), 'utf8'),
+  ).join('\n\n');
 }
 
-if (isWatch) {
+// format and write to style.rics
+async function buildRics(rics) {
+  const formatted = await prettier.format(rics, {
+    parser: 'rics',
+    plugins: ['prettier-plugin-rics'],
+  });
+
+  fs.writeFileSync(RICSPATHOUT, formatted);
+
+  console.log(`[${new Date().toLocaleTimeString()}] ${RICSPATHOUT} built successfully.`);
+}
+
+// compile to src/rics-dev.css for the browser preview
+function compileRics(rics) {
+  fs.writeFileSync(CSSPATHOUT, compile(rics));
+
+  console.log(`[${new Date().toLocaleTimeString()}] ${CSSPATHOUT} built successfully.`);
+}
+
+function watchRics() {
   let timeout = null;
 
-  fs.watch('src/better-lyrics', { recursive: true }, (eventType, filename) => {
-    if (filename?.endsWith('.rics')) {
-      clearTimeout(timeout);
+  fs.watch(WATCHDIR, { recursive: true }, (eventType, filename) => {
+    if (!filename?.endsWith('.rics')) return;
 
-      timeout = setTimeout(() => {
-        console.log(
-          `[${new Date().toLocaleTimeString()}] Changed: ${filename}`,
-        );
-        build().then(broadcast);
-      }, 100);
-    }
+    clearTimeout(timeout);
+
+    timeout = setTimeout(() => {
+      console.log(`[${new Date().toLocaleTimeString()}] Changed: ${filename}`);
+      build().catch((error) => {
+        console.log(`[${new Date().toLocaleTimeString()}] ${error.message}`);
+      });
+    }, 100);
   });
 
   console.log('Watching for changes...');
-} else {
-  build();
 }
+
+async function build() {
+  const rics = concatRics();
+
+  await buildRics(rics);
+
+  if (ISDEV) {
+    compileRics(rics);
+    broadcast();
+  }
+}
+
+async function main() {
+  try {
+    await build();
+  } catch (error) {
+    console.log(`[${new Date().toLocaleTimeString()}] ${error.message}`);
+    process.exitCode = 1;
+  }
+
+  if (ISWATCH) watchRics();
+}
+
+main();
