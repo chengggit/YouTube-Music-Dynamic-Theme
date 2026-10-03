@@ -45,13 +45,7 @@
 }
 
 #synced-lyrics-container {
-  mask-image: linear-gradient(
-    180deg,
-    transparent,
-    #000 50px,
-    #000 calc(100% - 50px),
-    transparent
-  );
+  mask-image: linear-gradient(180deg, transparent, #000 50px, #000 calc(100% - 50px), transparent);
 }
 
 @keyframes lyrics-wobble-2 {

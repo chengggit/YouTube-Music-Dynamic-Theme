@@ -47,7 +47,7 @@ a.yt-simple-endpoint.yt-formatted-string {
 }
 
 /* Like buttons pressed */
-.yt-spec-button-shape-next[aria-pressed='true'] {
+.yt-spec-button-shape-next[aria-pressed="true"] {
   color: var(--accent-icon) !important;
 }
 

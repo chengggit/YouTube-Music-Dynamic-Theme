@@ -1,16 +1,12 @@
 /* ========================== PLAYER PAGE ========================== */
-ytmusic-app-layout:not([player-page-open]):not(
-    [is-mweb-player-bar-modernization-enabled]
-  )
-  > [slot='player-page'] {
+ytmusic-app-layout:not([player-page-open]):not([is-mweb-player-bar-modernization-enabled])
+  > [slot="player-page"] {
   transform: translate3d(0, 120vh, 0);
 }
 
 /* Player Page Background Re-position */
-ytmusic-app-layout:not([is-mweb-modernization-enabled]):not(
-    [player-fullscreened]
-  )
-  > [slot='player-page'] {
+ytmusic-app-layout:not([is-mweb-modernization-enabled]):not([player-fullscreened])
+  > [slot="player-page"] {
   position: fixed;
   top: 0 !important;
   left: 0 !important;
@@ -22,21 +18,19 @@ ytmusic-app-layout:not([is-mweb-modernization-enabled]):not(
   padding-bottom: var(--ytmusic-player-bar-height) !important;
 }
 
-ytmusic-player[player-ui-state='MINIPLAYER'] {
+ytmusic-player[player-ui-state="MINIPLAYER"] {
   bottom: calc(
-    120vh + var(--ytmusic-player-bar-height) +
-      var(--ytmusic-mini-player-spacing)
+    120vh + var(--ytmusic-player-bar-height) + var(--ytmusic-mini-player-spacing)
   ) !important;
 }
 
-ytmusic-player-page[is-player-page-layout-fixes-enabled]
-  #main-panel.ytmusic-player-page {
+ytmusic-player-page[is-player-page-layout-fixes-enabled] #main-panel.ytmusic-player-page {
   height: 100% !important;
 }
 
 ytmusic-player-page:not([is-mweb-modernization-enabled]):not([video-mode]):not(
-    [player-ui-state='FULLSCREEN']
-  ):not([player-ui-state='MINIPLAYER'])
+    [player-ui-state="FULLSCREEN"]
+  ):not([player-ui-state="MINIPLAYER"])
   #player.ytmusic-player-page {
   width: 100%;
   margin-left: auto !important;
@@ -97,8 +91,7 @@ yt-formatted-string.byline.ytmusic-player-queue-item {
   }
 }
 
-ytmusic-chip-cloud-chip-renderer[is-selected]
-  a.ytmusic-chip-cloud-chip-renderer {
+ytmusic-chip-cloud-chip-renderer[is-selected] a.ytmusic-chip-cloud-chip-renderer {
   background: var(--btn-highlight) !important;
   color: var(--accent) !important;
   &:focus {

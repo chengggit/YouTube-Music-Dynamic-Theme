@@ -52,7 +52,7 @@ The remaining background variables fine-tune how the background looks.
 ### Typography
 
 ```scss
-$font-family: 'Inter', 'PingFangSC-Regular', 'Apple SD Gothic Neo';
+$font-family: "Inter", "PingFangSC-Regular", "Apple SD Gothic Neo";
 $font-weight: 400;
 ```
 
@@ -144,8 +144,8 @@ $btn-border: transparent;
 Shadow values separated with commas or line breaks must be wrapped in quotes.
 
 ```scss
-$ui-shadow: 'rgba(0, 0, 0, 0.3) 0 10px 24px -6px, 
-inset rgba(255, 255, 255, 0.1) 0 1px 0 0';
+$ui-shadow: "rgba(0, 0, 0, 0.3) 0 10px 24px -6px, 
+inset rgba(255, 255, 255, 0.1) 0 1px 0 0";
 ```
 
 ### Corner Radius
@@ -266,7 +266,7 @@ The remaining background variables fine-tune how the background looks.
 ### Typography
 
 ```css
---cfg-font: 'Inter', 'PingFangSC-Regular', 'Apple SD Gothic Neo';
+--cfg-font: "Inter", "PingFangSC-Regular", "Apple SD Gothic Neo";
 --cfg-font-weight: 400;
 ```
 
@@ -356,8 +356,7 @@ Controls which lyric lines are blurred to draw focus to the active line. Each va
 Multi-layer shadows work the same as standard CSS — separate each layer with a comma.
 
 ```css
---cfg-ui-shadow:
-  rgba(0, 0, 0, 0.3) 0 10px 24px -6px, inset rgba(255, 255, 255, 0.1) 0 1px 0 0;
+--cfg-ui-shadow: rgba(0, 0, 0, 0.3) 0 10px 24px -6px, inset rgba(255, 255, 255, 0.1) 0 1px 0 0;
 ```
 
 ### Corner Radius

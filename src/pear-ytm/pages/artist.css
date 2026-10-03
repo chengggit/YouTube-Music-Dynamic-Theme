@@ -1,8 +1,7 @@
 /* ========================== ARTIST PAGE ========================== */
 ytmusic-immersive-header-renderer {
   background: var(--background) !important;
-  filter: blur(var(--bg-blur)) saturate(var(--bg-saturate))
-    brightness(var(--bg-brightness));
+  filter: blur(var(--bg-blur)) saturate(var(--bg-saturate)) brightness(var(--bg-brightness));
 }
 
 ytmusic-immersive-header-renderer .image {
@@ -73,9 +72,7 @@ yt-confirm-dialog-renderer[dialog][dialog][dialog] {
   background: transparent !important;
 }
 ytmusic-popup-container
-  tp-yt-paper-dialog.ytmusic-popup-container:has(
-    yt-confirm-dialog-renderer
-  )[role='dialog'] {
+  tp-yt-paper-dialog.ytmusic-popup-container:has(yt-confirm-dialog-renderer)[role="dialog"] {
   outline: none !important;
 }
 

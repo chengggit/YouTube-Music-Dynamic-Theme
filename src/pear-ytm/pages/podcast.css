@@ -9,8 +9,7 @@ ytmusic-multi-row-list-item-renderer[is-detailed-view] {
 }
 
 /* Podcast Header */
-ytmusic-visual-header-renderer[has-banner-image]
-  .gradient-container.ytmusic-visual-header-renderer {
+ytmusic-visual-header-renderer[has-banner-image] .gradient-container.ytmusic-visual-header-renderer {
   background: transparent;
 }
 
@@ -37,8 +36,7 @@ ytmusic-multi-row-list-item-renderer.ytmusic-shelf-renderer .thumbnail-overlay {
   background: transparent !important;
 }
 
-ytmusic-responsive-header-renderer
-  ytmusic-toggle-button-renderer.ytmusic-responsive-header-renderer {
+ytmusic-responsive-header-renderer ytmusic-toggle-button-renderer.ytmusic-responsive-header-renderer {
   background: var(--btn-color) !important;
   border: var(--btn-border) !important;
 }

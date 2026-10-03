@@ -1,12 +1,11 @@
 /* ========================== MOBILE VIEW ========================== */
 ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
-  content: '';
+  content: "";
   position: fixed;
   inset: 0 !important;
   height: 120vh !important;
   background: var(--background) center / cover no-repeat !important;
-  filter: blur(var(--bg-blur)) saturate(var(--bg-saturate))
-    brightness(var(--bg-brightness)) !important;
+  filter: blur(var(--bg-blur)) saturate(var(--bg-saturate)) brightness(var(--bg-brightness)) !important;
   z-index: -50;
 }
 
@@ -65,7 +64,7 @@ ytmusic-player-page[is-mweb-modernization-enabled] #main-panel {
   transform: none !important;
 }
 
-ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state='TABS_VIEW'] {
+ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state="TABS_VIEW"] {
   .av,
   #info-panel,
   #player-controls,
@@ -75,11 +74,11 @@ ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state='TABS_VI
   }
 }
 
-ytmusic-player-page[player-page-ui-state='TABS_VIEW'] #thumbnail > img {
+ytmusic-player-page[player-page-ui-state="TABS_VIEW"] #thumbnail > img {
   border-radius: calc(var(--radius-art) * 10);
 }
 
-ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state='TABS_VIEW']
+ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state="TABS_VIEW"]
   #music-player-wrapper {
   transform: translateY(6.5rem);
 }

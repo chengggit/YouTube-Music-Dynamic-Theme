@@ -289,8 +289,7 @@ yt-formatted-string.yt-start-at-renderer {
 }
 
 /* Explore Page */
-ytmusic-navigation-button-renderer.ytmusic-grid-renderer
-  button.ytmusic-navigation-button-renderer {
+ytmusic-navigation-button-renderer.ytmusic-grid-renderer button.ytmusic-navigation-button-renderer {
   background: var(--btn-color);
   border-radius: var(--radius-btn-alt);
   &:focus-within,
@@ -302,8 +301,7 @@ ytmusic-navigation-button-renderer.ytmusic-grid-renderer
   }
 }
 
-ytmusic-navigation-button-renderer.ytmusic-carousel
-  button.ytmusic-navigation-button-renderer {
+ytmusic-navigation-button-renderer.ytmusic-carousel button.ytmusic-navigation-button-renderer {
   background: var(--btn-color);
   border-radius: var(--radius-btn);
   &:focus-within,

@@ -61,7 +61,7 @@ ytmusic-search-box #suggestion-list {
 
 /* Search Backdrop workaround */
 ytmusic-app-layout::after {
-  content: '';
+  content: "";
   position: fixed;
   position-anchor: --search-dropdown;
   top: anchor(top);
