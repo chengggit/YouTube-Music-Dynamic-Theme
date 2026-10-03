@@ -74,6 +74,7 @@ ytmusic-player-page[player-fullscreened] #main-panel {
   align-items: var(--cfg-fullscreen-art-position) !important;
   transform: none !important;
   padding: 0 !important;
+  margin: 0 !important;
 }
 ytmusic-player-page[player-fullscreened] #player {
   margin: 0 !important;
@@ -86,4 +87,10 @@ ytmusic-player-page:not([is-mweb-modernization-enabled])[player-fullscreened]
 ytmusic-player-page[player-fullscreened][has-av-switcher]
   #player.ytmusic-player-page {
   flex: 1 !important;
+}
+ytmusic-player-page[player-fullscreened] .av {
+  position: fixed !important;
+  width: unset !important;
+  top: unset !important;
+  left: unset !important;
 }

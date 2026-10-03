@@ -20,6 +20,10 @@ ytmusic-app-layout[player-fullscreened] > [slot='player-page'] {
   padding: var(--ytmusic-nav-bar-height) 0 0;
 }
 
+ytmusic-player-page[player-fullscreened] #main-panel {
+  margin: 0 !important
+}
+
 ytmusic-player[player-ui-state='MINIPLAYER'] {
   bottom: calc(120vh + var(--ytmusic-player-bar-height) + var(--ytmusic-mini-player-spacing)) !important;
 }
