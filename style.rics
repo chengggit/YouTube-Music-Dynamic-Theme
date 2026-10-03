@@ -1448,6 +1448,10 @@ ytmusic-player-page {
   background-color: transparent !important;
 }
 
+#better-lyrics-kawarp-backdrop-homepage {
+  background-color: transparent !important;
+}
+
 #blyrics-loader {
   transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding-top 0.5s ease-in-out;
 }
@@ -1657,6 +1661,9 @@ ytmusic-player-page {
   #blyrics-song-info p#blyrics-artist {
     font-size: 2rem;
   }
+  ytmusic-player-page[player-fullscreened][video-mode]:not([blyrics-dfs]) #blyrics-fs-column {
+    width: 30% !important;
+  }
   ytmusic-player-page[player-fullscreened] .content.ytmusic-player-page {
     padding-bottom: var(--ytmusic-player-page-horizontal-padding);
     padding-top: var(--ytmusic-player-page-horizontal-padding);
@@ -1677,6 +1684,8 @@ ytmusic-player-page {
   }
   ytmusic-player-page[player-fullscreened] .av {
     position: fixed !important;
+    top: unset !important;
+    left: unset !important;
   }
   ytmusic-player-page:not([is-mweb-modernization-enabled])[player-fullscreened]:not([blyrics-dfs]):not([blyrics-video-mode]) #side-panel {
     width: 40%;
@@ -2141,6 +2150,10 @@ ytmusic-app-layout:not([is-mweb-modernization-enabled]) > [slot='player-page'] {
 
 ytmusic-app-layout[player-fullscreened] > [slot='player-page'] {
   padding: var(--ytmusic-nav-bar-height) 0 0;
+}
+
+ytmusic-player-page[player-fullscreened] #main-panel {
+  margin: 0 !important
 }
 
 ytmusic-player[player-ui-state='MINIPLAYER'] {
