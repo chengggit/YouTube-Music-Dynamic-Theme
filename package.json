@@ -14,6 +14,7 @@
   "scripts": {
     "build": "npm run build-rics && npm run build-pear",
     "dev": "node build-rics.js --watch --dev",
+    "format": "prettier --write .",
     "build-rics": "node build-rics.js",
     "watch-rics": "node build-rics.js --watch",
     "build-pear": "postcss src/index.css --use postcss-import -o pear-ytm.css --no-map",
