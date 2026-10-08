@@ -89,5 +89,5 @@ ytmusic-player[player-ui-state="PLAYER_BAR_ONLY"] {
 }
 
 .image-wrapper.ytmusic-two-row-item-renderer:hover img.yt-img-shadow {
-    transform: scale(1.01);
+  transform: scale(1.01);
 }
