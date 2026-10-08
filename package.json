@@ -12,6 +12,7 @@
     "prettier-plugin-rics": "^0.3.17"
   },
   "scripts": {
+    "build": "npm run build-rics && npm run build-pear",
     "dev": "node build-rics.js --watch --dev",
     "build-rics": "node build-rics.js",
     "watch-rics": "node build-rics.js --watch",
