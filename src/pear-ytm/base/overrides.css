@@ -1,8 +1,8 @@
 body {
   background-color: unset !important;
 }
-#player-page {
-  margin: var(--menu-bar-height) !important;
+#player-page:not([player-fullscreened]) {
+  margin-top: var(--menu-bar-height) !important;
 }
 ytmusic-app-layout {
   --ytmusic-nav-bar-height: 64px;
@@ -39,10 +39,17 @@ ytmusic-player[player-ui-state='FULLSCREEN'].ytmusic-player-page {
   margin-top: auto !important;
 }
 ytmusic-player-page[player-ui-state='FULLSCREEN'] .content.ytmusic-player-page {
-  margin-top: calc(var(--menu-bar-height, 32px) * -1);
+  margin-top: calc(var(--menu-bar-height, 32px) * -1) !important;
 }
 /* Fix wrong miniplayer position */
 #player.ytmusic-player-page[player-ui-state='MINIPLAYER'] {
   margin-left: unset !important;
   margin-right: unset !important;
+}
+
+ytmusic-app #mini-guide.ytmusic-app {
+  top: var(--menu-bar-height) !important;
+}
+ytmusic-app tp-yt-app-drawer.ytmusic-app {
+  top: var(--menu-bar-height) !important;
 }

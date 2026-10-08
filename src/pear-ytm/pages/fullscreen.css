@@ -8,6 +8,7 @@ ytmusic-app-layout[player-fullscreened]:not([is-mweb-modernization-enabled])
   position: fixed;
   top: 0 !important;
   width: 100% !important;
+  margin-top: 0 !important;
   height: 100% !important;
   box-sizing: border-box;
 }
