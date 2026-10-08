@@ -153,7 +153,8 @@ npm install
 Development commands:
 
 ```bash
-npm run build # one unified build command
+npm run build       # one unified build command
+npm run format      # formatting
 
 # Better Lyrics
 npm run dev # watch & hot-reload from code editor/IDE
