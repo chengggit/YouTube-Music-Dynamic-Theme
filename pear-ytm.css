@@ -70,67 +70,72 @@ For proper functionality, the variable below should be the default value:
       var(--ytmusic-album-color-ratio, 50%)
   );
 
-  --cfg-bg-brightness: 0.8;       
-  --cfg-bg-blur: 0;               /* Background blur */
-  --cfg-bg-saturate: 1.5;         /* Background saturation */
-  --cfg-bg-scale: 1.1;            /* Background zoom level */
+  --cfg-bg-brightness: 0.8;
+  --cfg-bg-blur: 0; /* Background blur */
+  --cfg-bg-saturate: 1.5; /* Background saturation */
+  --cfg-bg-scale: 1.1; /* Background zoom level */
   --cfg-player-page-opacity: 0.8; /* Player page transparency */
 
-/* --- Typography & Colors --- */
-  --cfg-font: 'Inter', 'PingFangSC-Regular', 'Apple SD Gothic Neo'; /* Main font for all text */
-  --cfg-font-weight: 400;                           /* Main text weight */
-  --cfg-text-primary: rgb(255, 255, 255);         /* Main text color */
+  /* --- Typography & Colors --- */
+  --cfg-font:
+    'Inter', 'PingFangSC-Regular', 'Apple SD Gothic Neo'; /* Main font for all text */
+  --cfg-font-weight: 400; /* Main text weight */
+  --cfg-text-primary: rgb(255, 255, 255); /* Main text color */
   --cfg-text-secondary: rgba(255, 255, 255, 0.7); /* Secondary text color */
 
-  --cfg-icon: rgb(255, 255, 255);                 /* Icon color */
-  --cfg-accent: rgb(255, 255, 255);               /* Accent color for highlights */
-  --cfg-accent-icon: rgb(255, 255, 255);          /* Accent color for icons */  
-  --cfg-accent-highlight: rgb(255, 255, 255);     /* Lighter accent for hover states and highlights */
+  --cfg-icon: rgb(255, 255, 255); /* Icon color */
+  --cfg-accent: rgb(255, 255, 255); /* Accent color for highlights */
+  --cfg-accent-icon: rgb(255, 255, 255); /* Accent color for icons */
+  --cfg-accent-highlight: rgb(
+    255,
+    255,
+    255
+  ); /* Lighter accent for hover states and highlights */
 
   /* --- Lyrics --- */
   --cfg-fullscreen-art-position: flex-end; /* Album art position in fullscreen (flex-start | center | flex-end) */
   --cfg-lyrics-font-size: 50px;
-  --cfg-lyrics-font-weight: 600; 
+  --cfg-lyrics-font-weight: 600;
   --cfg-lyrics-container-width: 40%;
 
   --cfg-previous-line-blur: 6px;
   --cfg-current-line-blur: 0px;
   --cfg-upcoming-line-blur: 6px;
 
-/* --- UI Components --- */
-/*  
+  /* --- UI Components --- */
+  /*  
  - Border: Use 'transparent' for no border, or '1px solid color' 
  - Shadow: Horizontal-Offset Vertical-Offset Blur Color 
-*/  
+*/
   --cfg-album-art-size: 400px;
-  
-  --cfg-ui-color: transparent;                    /* Panel backgrounds */
-  --cfg-ui-contrast: rgba(255, 255, 255, 0.1);  /* Secondary panel backgrounds */
+
+  --cfg-ui-color: transparent; /* Panel backgrounds */
+  --cfg-ui-contrast: rgba(255, 255, 255, 0.1); /* Secondary panel backgrounds */
   --cfg-ui-highlight: rgba(255, 255, 255, 0.1); /* Hover/Select backgrounds */
   --cfg-ui-blur: 10px;
   --cfg-ui-border: transparent;
   --cfg-ui-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 
-  --cfg-btn-color: rgba(255, 255, 255, 0.1);     /* Button backgrounds */
+  --cfg-btn-color: rgba(255, 255, 255, 0.1); /* Button backgrounds */
   --cfg-btn-highlight: rgba(255, 255, 255, 0.2); /* Button hover backgrounds */
   --cfg-btn-border: transparent;
 
   /* --- Roundness --- */
-  --cfg-radius-art: 8px;            /* Album art corners (Small) */
-  --cfg-radius-art-md: 16px;        /* Album art corners (Medium) */
-  --cfg-radius-art-lg: 20px;        /* Album art corners (Large) */
+  --cfg-radius-art: 8px; /* Album art corners (Small) */
+  --cfg-radius-art-md: 16px; /* Album art corners (Medium) */
+  --cfg-radius-art-lg: 20px; /* Album art corners (Large) */
 
-  --cfg-radius-btn: 12px;           /* Standard buttons */ 
-  --cfg-radius-btn-alt: 16px;       /* Alternative/Pill buttons */
+  --cfg-radius-btn: 12px; /* Standard buttons */
+  --cfg-radius-btn-alt: 16px; /* Alternative/Pill buttons */
 
-  --cfg-radius-highlight: 8px;      /* Hover overlays */
-  --cfg-radius-highlight-lg: 12px;  
+  --cfg-radius-highlight: 8px; /* Hover overlays */
+  --cfg-radius-highlight-lg: 12px;
 
-  --cfg-radius-panel: 12px;         /* Popups and dropdowns */
+  --cfg-radius-panel: 12px; /* Popups and dropdowns */
   --cfg-radius-panel-lg: 24px;
 
-/* --- Animation --- */
-/* - Set duration to 0s to disable animation */
+  /* --- Animation --- */
+  /* - Set duration to 0s to disable animation */
   --cfg-anim-bg-duration: 0.3s;
   --cfg-anim-bg-timing: ease-in-out;
 
@@ -226,7 +231,7 @@ yt-icon-button.rewind-button {
   --ui-blur: var(--cfg-ui-blur);
   --ui-border: var(--cfg-ui-border);
   --ui-shadow: var(--cfg-ui-shadow);
-  
+
   --btn-color: var(--cfg-btn-color);
   --btn-highlight: var(--cfg-btn-highlight);
   --btn-border: var(--cfg-btn-border);
