@@ -76,8 +76,7 @@ For proper functionality, the variable below should be the default value:
   --cfg-player-page-opacity: 0.8; /* Player page transparency */
 
   /* --- Typography & Colors --- */
-  --cfg-font:
-    'Inter', 'PingFangSC-Regular', 'Apple SD Gothic Neo'; /* Main font for all text */
+  --cfg-font: "Inter", "PingFangSC-Regular", "Apple SD Gothic Neo"; /* Main font for all text */
   --cfg-font-weight: 400; /* Main text weight */
   --cfg-text-primary: rgb(255, 255, 255); /* Main text color */
   --cfg-text-secondary: rgba(255, 255, 255, 0.7); /* Secondary text color */
@@ -85,11 +84,7 @@ For proper functionality, the variable below should be the default value:
   --cfg-icon: rgb(255, 255, 255); /* Icon color */
   --cfg-accent: rgb(255, 255, 255); /* Accent color for highlights */
   --cfg-accent-icon: rgb(255, 255, 255); /* Accent color for icons */
-  --cfg-accent-highlight: rgb(
-    255,
-    255,
-    255
-  ); /* Lighter accent for hover states and highlights */
+  --cfg-accent-highlight: rgb(255, 255, 255); /* Lighter accent for hover states and highlights */
 
   /* --- Lyrics --- */
   --cfg-fullscreen-art-position: flex-end; /* Album art position in fullscreen (flex-start | center | flex-end) */
@@ -2438,8 +2433,8 @@ ytmusic-app-layout[is-bauhaus-sidenav-enabled] #mini-guide-background.ytmusic-ap
 ytmusic-player[player-ui-state="FULLSCREEN"].ytmusic-player-page {
   margin-top: auto !important;
 }
-ytmusic-player-page[player-ui-state='FULLSCREEN'] .content.ytmusic-player-page {
-  margin-top: calc(var(--menu-bar-height, 32px) * -1) !important;
+ytmusic-player-page[player-ui-state="FULLSCREEN"] .content.ytmusic-player-page {
+  margin-top: calc(var(--menu-bar-height, 32px) * -1);
 }
 /* Fix wrong miniplayer position */
 #player.ytmusic-player-page[player-ui-state="MINIPLAYER"] {
