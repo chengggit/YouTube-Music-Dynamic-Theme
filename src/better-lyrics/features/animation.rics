@@ -452,3 +452,6 @@ ytmusic-player-page {
 .slider-knob-inner.tp-yt-paper-slider {
   transition: background 0.3s ease-in, border 0.18s ease-in;
 }
+tp-yt-paper-button[animated] {
+    transition: unset;
+}
