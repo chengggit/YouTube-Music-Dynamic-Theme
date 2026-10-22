@@ -27,13 +27,13 @@
     display: none;
   }
   ytmusic-app-layout {
-      --ytmusic-fullscreen-player-overlay-gradient: transparent;
+    --ytmusic-fullscreen-player-overlay-gradient: transparent;
   }
   /* Overrides blyrics rules*/
   #layout[player-fullscreened]:not([blyrics-dfs])[show-fullscreen-controls] #blyrics-fs-controls,
   #layout[player-fullscreened]:not([blyrics-dfs])[show-fullscreen-controls] .blyrics-fs-info-actions {
-      opacity: 1;
-      pointer-events: unset;
+    opacity: 1;
+    pointer-events: unset;
   }
 } @else {
   #blyrics-fs-controls,
@@ -77,7 +77,7 @@
 .blyrics-footer {
   opacity: 0;
   filter: blur(4px);
-  transition:
+  transition: 
   opacity var(--anim-fade-duration-alt) var(--anim-fade-timing),
   filter 0.8s var(--anim-fade-timing);
   &:hover {

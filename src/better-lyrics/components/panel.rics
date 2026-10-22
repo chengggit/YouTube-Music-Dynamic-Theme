@@ -49,11 +49,11 @@ tp-yt-iron-input.tp-yt-paper-input>input.tp-yt-paper-input {
 
 /* Playlist Visibility Dropdown */
 .dropdown-content.tp-yt-paper-menu-button {
-    --yt-spec-brand-background-primary: transparent;
-    background: var(--ui-color);
-    box-shadow: var(--ui-shadow);
-    border-radius: var(--radius-panel-lg);
-    border: var(--ui-border);
+  --yt-spec-brand-background-primary: transparent;
+  background: var(--ui-color);
+  box-shadow: var(--ui-shadow);
+  border-radius: var(--radius-panel-lg);
+  border: var(--ui-border);
 }
 
 .ytmusic-playlist-form .dropdown-content.tp-yt-paper-menu-button {

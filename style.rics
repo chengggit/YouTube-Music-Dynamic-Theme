@@ -16,7 +16,7 @@ $preset: default;
 /* --- Background & Backdrop --- */
 $background: dynamic;         // dynamic (uses current song art) | color | url('https://example.com/image.jpg')
 $bg-brightness: null;
-$bg-blur: 0.6;                // Background blur intensity
+$bg-blur: 0.5;                // Background blur intensity
 $bg-saturate: 1.5;            // Background color vibrancy
 $bg-scale: 1.2;               // Background zoom level
 $bg-player-opacity: 0.8;      // Player page transparency
@@ -470,8 +470,9 @@ tp-yt-iron-input.tp-yt-paper-input>input.tp-yt-paper-input {
 .dropdown-content.tp-yt-paper-menu-button {
   --yt-spec-brand-background-primary: transparent;
   background: var(--ui-color);
+  box-shadow: var(--ui-shadow);
+  border-radius: var(--radius-panel-lg);
   border: var(--ui-border);
-  box-shadow: unset;
 }
 
 .ytmusic-playlist-form .dropdown-content.tp-yt-paper-menu-button {
@@ -1442,6 +1443,9 @@ ytmusic-player-page {
 .slider-knob-inner.tp-yt-paper-slider {
   transition: background 0.3s ease-in, border 0.18s ease-in;
 }
+tp-yt-paper-button[animated] {
+  transition: unset;
+}
 
 /* ========================== BETTER LYRICS ========================== */
 #better-lyrics-kawarp-backdrop-player {
@@ -1587,15 +1591,6 @@ ytmusic-player-page {
   opacity: 1;
   filter: none;
   transition: filter 0.35s ease-in-out, opacity 0.2s ease;
-}
-
-@keyframes blyrics-glow {
-  0% {
-    filter: drop-shadow(0 0 1.2rem var(--blyrics-glow-color));
-  }
-  to {
-    filter: drop-shadow(0 0 0rem var(--blyrics-glow-color));
-  }
 }
 
 /* ========================== TOGGLES ========================== */
@@ -1943,10 +1938,12 @@ ytmusic-app #guide-wrapper.ytmusic-app {
   #guide-wrapper {
     background: var(--ui-color) !important;
     border-right: var(--ui-border) !important;
+    backdrop-filter: unset;
   }
   #nav-bar-background {
     background: var(--ui-color) !important;
     border-bottom: var(--ui-border) !important;
+    backdrop-filter: unset;
   }
 }
 
