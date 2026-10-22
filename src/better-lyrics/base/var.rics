@@ -147,6 +147,36 @@ $new-control-always-on: map-get($new-player-control, always-on);
   border-radius: #{$border-radius};
 }
 
+/* --- Fonts --- */
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Apple SD Gothic Neo Medium"), url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/fonts/400_AppleSDGothicNeo-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Apple SD Gothic Neo SemiBold"), url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/fonts/600_AppleSDGothicNeo-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Apple SD Gothic Neo Bold"), url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/fonts/700_AppleSDGothicNeo-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "PingFangSC-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/font-pingfang-sc@1.0.5/PingFangSC-Regular.woff2") format("woff2");
+}
+
 :root {
   --bg-blur: calc($bg-blur * 100px);
   --bg-brightness: if($final-bg-brightness != null, $final-bg-brightness, 0.7);
