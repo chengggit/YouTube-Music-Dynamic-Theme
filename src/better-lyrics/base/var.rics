@@ -49,7 +49,7 @@ $btn-border: transparent;     // e.g., "1px solid rgba(255,255,255,0.1)"
 /* --- Features & Toggles --- */
 $new-player-control: (
   enable: true,
-  always-on: false
+  always-on: true
 );
 
 $small-video: false;                // Revert back to small video layout
@@ -243,4 +243,5 @@ $new-control-always-on: map-get($new-player-control, always-on);
   --blyrics-footer-font-weight: $font-weight;
 
   --blyrics-glow-color: rgb(255,255,255);
+  --blyrics-fullscreen-bottom-dock-shift: 0;
 }
