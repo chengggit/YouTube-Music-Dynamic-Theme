@@ -71,12 +71,12 @@ ytmusic-search-box #suggestion-list {
     width: anchor-size(width);
     height: anchor-size(height);
     border-radius: var(--radius-panel);
-    backdrop-filter: blur(var(--ui-blur));
     opacity: 0;
     z-index: 2;
   }
 }
 ytmusic-app-layout:has(ytmusic-search-box[opened])::after {
+  backdrop-filter: blur(var(--ui-blur));
   opacity: 1;
 }
 

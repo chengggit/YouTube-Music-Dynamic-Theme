@@ -14,13 +14,15 @@
   filter: blur(var(--bg-blur)) saturate(var(--bg-saturate)) brightness(var(--bg-brightness));
 }
 
+/* Chromium Only */
 @if $anim-bg-transition {
-  #browse-page::before,
-  #search-page::before,
-  ytmusic-player-page::before,
-  ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
-    transition: background var(--anim-bg-duration) var(--anim-bg-timing);
-    will-change: background;
+  @supports (not (-moz-appearance: none)) {
+    #browse-page::before,
+    #search-page::before,
+    ytmusic-player-page::before,
+    ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
+      transition: background var(--anim-bg-duration) var(--anim-bg-timing);
+    }
   }
 }
 
@@ -33,9 +35,6 @@ ytmusic-fullbleed-thumbnail-renderer[is-background] .image {
 }
 
 @media (min-width: 615px) {
-  ytmusic-player-page {
-    background: none;
-  }
   ytmusic-player-page::before {
     background: if($background == dynamic, var(--blyrics-background-img), $background);
     background-size: cover;

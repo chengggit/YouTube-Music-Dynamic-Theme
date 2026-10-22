@@ -917,12 +917,12 @@ ytmusic-search-box #suggestion-list {
     width: anchor-size(width);
     height: anchor-size(height);
     border-radius: var(--radius-panel);
-    backdrop-filter: blur(var(--ui-blur));
     opacity: 0;
     z-index: 2;
   }
 }
 ytmusic-app-layout:has(ytmusic-search-box[opened])::after {
+  backdrop-filter: blur(var(--ui-blur));
   opacity: 1;
 }
 
@@ -1154,13 +1154,7 @@ tp-yt-paper-toggle-button[checked]:not([disabled]) {
   }
 
   #tabs.ytmusic-tabbed-search-results-renderer {
-    transition: background var(--anim-fade-duration) var(--anim-fade-timing),
-    backdrop-filter var(--anim-fade-duration) var(--anim-fade-timing);
-  }
-  /* When Scrolled */
-  ytmusic-tabs.stuck {
-    transition: background var(--anim-fade-duration) var(--anim-fade-timing),
-    backdrop-filter var(--anim-fade-duration) var(--anim-fade-timing);
+    transition: background var(--anim-fade-duration) var(--anim-fade-timing);
   }
 
   /* PLAYER BAR */
@@ -1399,7 +1393,7 @@ ytmusic-player-page {
     transition: box-shadow 0.3s ease;
   }
   ytmusic-search-box #suggestion-list {
-    transition: 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
   }
   ytmusic-search-suggestion {
     transition: background 0.3s ease;
@@ -1414,7 +1408,6 @@ ytmusic-player-page {
     }
   }
   .play-pause-button-wrapper.ytmusic-player-controls {
-    will-change: transform;
     transition: transform 0.3s ease;
     &:hover {
       transform: scale(1.4);
@@ -1424,7 +1417,6 @@ ytmusic-player-page {
   .previous-button.ytmusic-player-controls,
   .shuffle.ytmusic-player-controls,
   .repeat.ytmusic-player-controls {
-    will-change: transform;
     transition: transform 0.3s ease;
     &:hover {
       transform: scale(1.2);
@@ -1871,13 +1863,15 @@ ytmusic-subscribe-button-renderer.ytmusic-visual-header-renderer {
   filter: blur(var(--bg-blur)) saturate(var(--bg-saturate)) brightness(var(--bg-brightness));
 }
 
+/* Chromium Only */
 @if $anim-bg-transition {
-  #browse-page::before,
-  #search-page::before,
-  ytmusic-player-page::before,
-  ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
-    transition: background var(--anim-bg-duration) var(--anim-bg-timing);
-    will-change: background;
+  @supports (not (-moz-appearance: none)) {
+    #browse-page::before,
+    #search-page::before,
+    ytmusic-player-page::before,
+    ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
+      transition: background var(--anim-bg-duration) var(--anim-bg-timing);
+    }
   }
 }
 
@@ -1890,9 +1884,6 @@ ytmusic-fullbleed-thumbnail-renderer[is-background] .image {
 }
 
 @media (min-width: 615px) {
-  ytmusic-player-page {
-    background: none;
-  }
   ytmusic-player-page::before {
     background: if($background == dynamic, var(--blyrics-background-img), $background);
     background-size: cover;

@@ -163,13 +163,7 @@
   }
 
   #tabs.ytmusic-tabbed-search-results-renderer {
-    transition: background var(--anim-fade-duration) var(--anim-fade-timing),
-    backdrop-filter var(--anim-fade-duration) var(--anim-fade-timing);
-  }
-  /* When Scrolled */
-  ytmusic-tabs.stuck {
-    transition: background var(--anim-fade-duration) var(--anim-fade-timing),
-    backdrop-filter var(--anim-fade-duration) var(--anim-fade-timing);
+    transition: background var(--anim-fade-duration) var(--anim-fade-timing);
   }
 
   /* PLAYER BAR */
@@ -408,7 +402,7 @@ ytmusic-player-page {
     transition: box-shadow 0.3s ease;
   }
   ytmusic-search-box #suggestion-list {
-    transition: 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
   }
   ytmusic-search-suggestion {
     transition: background 0.3s ease;
@@ -423,7 +417,6 @@ ytmusic-player-page {
     }
   }
   .play-pause-button-wrapper.ytmusic-player-controls {
-    will-change: transform;
     transition: transform 0.3s ease;
     &:hover {
       transform: scale(1.4);
@@ -433,7 +426,6 @@ ytmusic-player-page {
   .previous-button.ytmusic-player-controls,
   .shuffle.ytmusic-player-controls,
   .repeat.ytmusic-player-controls {
-    will-change: transform;
     transition: transform 0.3s ease;
     &:hover {
       transform: scale(1.2);
