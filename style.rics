@@ -61,7 +61,7 @@ $btn-border: transparent;     // e.g., "1px solid rgba(255,255,255,0.1)"
 /* --- Features & Toggles --- */
 $new-player-control: (
   enable: true,
-  always-on: true
+  always-on: false
 );
 
 $small-video: false;                // Revert back to small video layout
