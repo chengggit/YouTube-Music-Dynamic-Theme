@@ -4,7 +4,7 @@ $preset: default;
 /* --- Background & Backdrop --- */
 $background: dynamic;         // dynamic (uses current song art) | color | url('https://example.com/image.jpg')
 $bg-brightness: null;
-$bg-blur: 0.6;                // Background blur intensity
+$bg-blur: 0.5;                // Background blur intensity
 $bg-saturate: 1.5;            // Background color vibrancy
 $bg-scale: 1.2;               // Background zoom level
 $bg-player-opacity: 0.8;      // Player page transparency
