@@ -61,7 +61,7 @@ $btn-border: transparent;     // e.g., "1px solid rgba(255,255,255,0.1)"
 /* --- Features & Toggles --- */
 $new-player-control: (
   enable: true,
-  always-on: false
+  always-on: true
 );
 
 $small-video: false;                // Revert back to small video layout
@@ -255,6 +255,7 @@ $new-control-always-on: map-get($new-player-control, always-on);
   --blyrics-footer-font-weight: $font-weight;
 
   --blyrics-glow-color: rgb(255,255,255);
+  --blyrics-fullscreen-bottom-dock-shift: 0;
 }
 
 /* ========================== TYPOGRAPHY & ICONS ========================== */
@@ -1470,18 +1471,19 @@ ytmusic-player-page {
   ytmusic-player-bar.ytmusic-app[player-page-open][player-fullscreened] {
     display: none;
   }
-  #layout[player-fullscreened]:not([blyrics-dfs])[show-fullscreen-controls] .blyrics-dock[data-position^="bottom-"] {
-    --dock-y-shift: 0;
+  ytmusic-app-layout {
+    --ytmusic-fullscreen-player-overlay-gradient: transparent;
+  }
+  /* Overrides blyrics rules*/
+  #layout[player-fullscreened]:not([blyrics-dfs])[show-fullscreen-controls] #blyrics-fs-controls,
+  #layout[player-fullscreened]:not([blyrics-dfs])[show-fullscreen-controls] .blyrics-fs-info-actions {
+    opacity: 1;
+    pointer-events: unset;
   }
 } @else {
   #blyrics-fs-controls,
   .blyrics-fs-info-actions {
     display: none;
-  }
-  @if $fullscreen-layout == center {
-    #blyrics-fs-column #blyrics-song-info {
-      text-align: center !important;
-    }
   }
 }
 
@@ -1494,18 +1496,12 @@ ytmusic-player-page {
   ytmusic-app-layout[cursor-hidden] .blyrics-fs-info-actions,
   ytmusic-app-layout[cursor-hidden] #blyrics-fs-controls {
     transform: translateY(10rem);
-    opacity: 0;
+    opacity: 0 !important;
   }
   @if $fullscreen-layout == corner {
     ytmusic-app-layout[cursor-hidden] #blyrics-fs-info-row {
       transform: translateY(10rem);
     }
-  }
-}
-
-@if $new-control-always-on and $new-control-is-enable {
-  ytmusic-app-layout[player-fullscreened][show-fullscreen-controls]:not([blyrics-dfs])>[slot="player-bar"]:before {
-    opacity: 0 !important;
   }
 }
 
