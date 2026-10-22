@@ -38,9 +38,9 @@ $album-art-size: 400px;
 $ui-color: null;              // Panel backgrounds
 $ui-contrast: null;           // Secondary backgrounds
 $ui-highlight: null;          // Hover/Select backgrounds
-$ui-blur: 10px;
+$ui-blur: 8px;
 $ui-border: transparent;      // e.g., "1px solid rgba(255,255,255,0.1)"
-$ui-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); // x-offset y-offset blur color
+$ui-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // x-offset y-offset blur color
 
 $btn-color: null;             // Default button backgrounds
 $btn-highlight: null;         // Button hover backgrounds
@@ -133,6 +133,19 @@ $theme-map: map-get($theme-presets, $preset);
 $final-bg-brightness: if($bg-brightness, $bg-brightness, map-get($theme-map, bg-brightness));
 $new-control-is-enable: map-get($new-player-control, enable);
 $new-control-always-on: map-get($new-player-control, always-on);
+
+@mixin surface($border-radius, $shadow) {
+  background: var(--ui-color);
+  border: var(--ui-border);
+  backdrop-filter: blur(var(--ui-blur));
+  border-radius: #{$border-radius};
+  box-shadow: #{$shadow};
+}
+@mixin btn($border-radius) {
+  background: var(--btn-color);
+  border: var(--btn-border);
+  border-radius: #{$border-radius};
+}
 
 :root {
   --bg-blur: calc($bg-blur * 100px);
