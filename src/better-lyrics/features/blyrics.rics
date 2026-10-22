@@ -143,12 +143,3 @@
   filter: none;
   transition: filter 0.35s ease-in-out, opacity 0.2s ease;
 }
-
-@keyframes blyrics-glow {
-  0% {
-    filter: drop-shadow(0 0 1.2rem var(--blyrics-glow-color));
-  }
-  to {
-    filter: drop-shadow(0 0 0rem var(--blyrics-glow-color));
-  }
-}
