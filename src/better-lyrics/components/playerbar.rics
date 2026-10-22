@@ -1,5 +1,5 @@
 /* ========================== PLAYER BAR ========================== */
-ytmusic-player-bar {
+ytmusic-player-bar:not([player-page-open]) {
   background: var(--ui-color);
   backdrop-filter: blur(var(--ui-blur));
 }
