@@ -99,12 +99,6 @@
     max-width: 400px !important;
     transition: none;
   }
-  ytmusic-player[player-ui-state='FULLSCREEN'] {
-    position: relative !important;
-  }
-  ytmusic-player-page:not([is-mweb-modernization-enabled])[video-mode] .side-panel.ytmusic-player-page {
-    margin: 0 0 0 var(--ytmusic-player-page-content-gap);
-  }
   ytmusic-app-layout:not([is-mweb-modernization-enabled])[player-fullscreened]:not([blyrics-dfs]) > [slot='player-page']
   #side-panel {
     transform: translateY(4rem);
