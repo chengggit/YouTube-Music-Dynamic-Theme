@@ -394,6 +394,7 @@ ytmusic-player-page {
   /* Expanding Description */
   ytmusic-immersive-header-renderer .description {
     transition: max-height 0.65s ease-in-out !important;
+    line-clamp: unset !important;
     -webkit-line-clamp: unset !important;
   }
   ytmusic-immersive-header-renderer .image {
