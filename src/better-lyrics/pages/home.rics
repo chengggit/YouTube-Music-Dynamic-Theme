@@ -40,10 +40,12 @@ ytmusic-app #guide-wrapper.ytmusic-app {
   #guide-wrapper {
     background: var(--ui-color) !important;
     border-right: var(--ui-border) !important;
+    backdrop-filter: unset;
   }
   #nav-bar-background {
     background: var(--ui-color) !important;
     border-bottom: var(--ui-border) !important;
+    backdrop-filter: unset;
   }
 }
 
