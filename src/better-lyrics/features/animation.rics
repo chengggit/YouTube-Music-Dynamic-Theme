@@ -438,6 +438,9 @@ ytmusic-player-page {
       transform: scale(1.2);
     }
   }
+  .image-wrapper.ytmusic-two-row-item-renderer:hover img.yt-img-shadow {
+    transform: scale(1.01);
+  }
   .image-wrapper.ytmusic-two-row-item-renderer img.yt-img-shadow {
     transition: transform 0.3s ease;
   }
