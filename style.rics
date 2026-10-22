@@ -108,8 +108,7 @@ $anim-no-lyrics-duration: 0.3s;
 $anim-no-lyrics-timing: ease-in-out;
 $anim-no-lyrics-slide-delay: 1.8s;
 
-$lyric-scroll-duration: 0.5s; // Speed of lyric line movement
-$lyric-scroll-timing: ease-in-out;
+$lyric-scroll-timing: ease-in-out; // Timing of lyric line movement (upstream default: cubic-bezier(0.86, 0, 0.2, 1))
 
 // Presets
 $theme-presets: (
@@ -241,7 +240,6 @@ $new-control-always-on: map-get($new-player-control, always-on);
   --anim-no-lyrics-duration: #{$anim-no-lyrics-duration};
   --anim-no-lyrics-timing: #{$anim-no-lyrics-timing};
 
-  --blyrics-lyric-scroll-duration: #{$lyric-scroll-duration};
   --blyrics-lyric-scroll-timing-function: #{$lyric-scroll-timing};
 
   --ytmusic-text-primary: #{$text-primary};
