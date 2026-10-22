@@ -41,7 +41,6 @@ ytmusic-player-bar:hover #progress-bar {
   border-radius: var(--radius-panel);
   background: var(--ui-contrast);
   color: var(--text-primary);
-  backdrop-filter: blur(var(--ui-blur));
   border: var(--ui-border);
 }
 
