@@ -7,10 +7,6 @@
   background-color: transparent !important;
 }
 
-#blyrics-loader {
-  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding-top 0.5s ease-in-out;
-}
-
 #blyrics-song-info {
   max-width: 50rem;
 }
@@ -85,10 +81,10 @@
 
 .blyrics-footer {
   opacity: 0;
-  filter: blur(6px);
+  filter: blur(4px);
   transition: 
   opacity var(--anim-fade-duration-alt) var(--anim-fade-timing),
-  filter 1s var(--anim-fade-timing);
+  filter 0.8s var(--anim-fade-timing);
   &:hover {
     opacity: 1;
     filter: none;
@@ -98,10 +94,12 @@
 
 .blyrics-footer__discord,
 .autoscroll-resume-button,
-.blyrics-footer__container {
+.blyrics-footer__container,
+.blyrics-footer__container.blyrics-footer__shaders  {
   background: var(--btn-color);
   border: var(--ui-border);
-  backdrop-filter: blur(var(--ui-blur));
+  color: var(--text-primary);
+  box-shadow: none;
 }
 .autoscroll-resume-button {
   border-radius: var(--radius-btn);
@@ -112,12 +110,9 @@
 .blyrics-footer__discord > img {
   filter: brightness(1.5);
 }
-#betterLyricsFooterLink span {
+#betterLyricsFooterLink {
   color: var(--icon) !important;
   opacity: 1 !important;
-}
-.blyrics-dock__offset-value {
-  font-family: var(--font-family);
 }
 
 /* ========================== LYRICS ========================== */
