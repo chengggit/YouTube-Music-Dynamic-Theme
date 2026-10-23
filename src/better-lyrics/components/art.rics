@@ -32,7 +32,7 @@ ytmusic-responsive-list-item-renderer[play-button-state] {
 }
 
 ytmusic-play-button-renderer:not([state="default"]) .content-wrapper .yt-icon-shape {
-  color: var(--accent-icon);
+  color: var(--accent);
 }
 
 /* Playlist Page Art */
@@ -59,7 +59,7 @@ ytmusic-two-row-item-renderer .image-wrapper {
   border-radius: var(--radius-art-lg);
 }
 
-#player:not([player-ui-state="PLAYER_BAR_ONLY"]) {
+#player[player-page-open] {
   border-radius: var(--radius-art-lg);
   box-shadow: var(--ui-shadow) !important;
   overflow: hidden;
@@ -70,12 +70,8 @@ ytmusic-player[player-ui-state] #song-media-window {
   border-radius: var(--radius-art-lg);
 }
 
-ytmusic-player[player-ui-state="PLAYER_BAR_ONLY"] {
-  .html5-video-player,
-  .video-stream {
-    background: transparent;
-    border-radius: var(--radius-art-md);
-  }
+ytmusic-player[player-ui-state="PLAYER_BAR_ONLY"] .html5-video-player {
+  border-radius: var(--radius-art-md);
 }
 
 @media (min-width: 615px) {
@@ -86,8 +82,4 @@ ytmusic-player[player-ui-state="PLAYER_BAR_ONLY"] {
 
 #top-shelf .image-wrapper {
   border-radius: var(--radius-art-md);
-}
-
-.image-wrapper.ytmusic-two-row-item-renderer:hover img.yt-img-shadow {
-  transform: scale(1.01);
 }

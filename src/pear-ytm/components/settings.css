@@ -45,8 +45,7 @@ tp-yt-paper-item:focus {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-tp-yt-paper-toggle-button[checked]:not([disabled])
-  #toggleBar.toggle-bar.tp-yt-paper-toggle-button,
+tp-yt-paper-toggle-button[checked]:not([disabled]) #toggleBar.toggle-bar.tp-yt-paper-toggle-button,
 tp-yt-paper-toggle-button[checked]:not([disabled])
   #toggleButton.toggle-button.tp-yt-paper-toggle-button {
   background: var(--accent);

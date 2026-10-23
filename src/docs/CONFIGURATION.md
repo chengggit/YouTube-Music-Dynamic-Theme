@@ -52,7 +52,7 @@ The remaining background variables fine-tune how the background looks.
 ### Typography
 
 ```scss
-$font-family: 'Inter', 'PingFangSC-Regular', 'Apple SD Gothic Neo';
+$font-family: "Inter", "PingFangSC-Regular", "Apple SD Gothic Neo";
 $font-weight: 400;
 ```
 
@@ -69,7 +69,6 @@ $text-primary: white;
 $text-secondary: rgba(white, 0.7);
 $icon: white;
 $accent: white;
-$accent-icon: white;
 $accent-highlight: mix($accent, white, 70%);
 ```
 
@@ -81,7 +80,6 @@ All variables accept any valid CSS color. Using `rgba()` lets you control opacit
 | `$text-secondary`   | Supporting text — subtitles, artist names, timestamps.                                                                                                                                                         |
 | `$icon`             | Default color for buttons and icons in their resting state.                                                                                                                                                    |
 | `$accent`           | Highlight color used on active states, selected items, and titles.                                                                                                                                             |
-| `$accent-icon`      | Accent color specifically for interactive icons like the like button, active shuffle, and repeat.                                                                                                              |
 | `$accent-highlight` | Hover state color derived from `$accent`. Defaults to a 70% mix of `$accent` and white. Override this if you want hover states to be a different color entirely rather than a lightened version of the accent. |
 
 ### Lyrics
@@ -144,8 +142,8 @@ $btn-border: transparent;
 Shadow values separated with commas or line breaks must be wrapped in quotes.
 
 ```scss
-$ui-shadow: 'rgba(0, 0, 0, 0.3) 0 10px 24px -6px, 
-inset rgba(255, 255, 255, 0.1) 0 1px 0 0';
+$ui-shadow: "rgba(0, 0, 0, 0.3) 0 10px 24px -6px, 
+inset rgba(255, 255, 255, 0.1) 0 1px 0 0";
 ```
 
 ### Corner Radius
@@ -266,7 +264,7 @@ The remaining background variables fine-tune how the background looks.
 ### Typography
 
 ```css
---cfg-font: 'Inter', 'PingFangSC-Regular', 'Apple SD Gothic Neo';
+--cfg-font: "Inter", "PingFangSC-Regular", "Apple SD Gothic Neo";
 --cfg-font-weight: 400;
 ```
 
@@ -283,7 +281,6 @@ The font must be installed on your system. Fonts that are not installed will fal
 --cfg-text-secondary: rgba(255, 255, 255, 0.7);
 --cfg-icon: rgb(255, 255, 255);
 --cfg-accent: rgb(255, 255, 255);
---cfg-accent-icon: rgb(255, 255, 255);
 --cfg-accent-highlight: rgb(255, 255, 255);
 ```
 
@@ -295,7 +292,6 @@ All variables accept any valid CSS color. Using `rgba()` lets you control opacit
 | `--cfg-text-secondary`   | Supporting text — subtitles, artist names, timestamps.                                                |
 | `--cfg-icon`             | Default color for buttons and icons in their resting state.                                           |
 | `--cfg-accent`           | Highlight color used on active states, selected items, and titles.                                    |
-| `--cfg-accent-icon`      | Accent color specifically for interactive icons like the like button, active shuffle, and repeat.     |
 | `--cfg-accent-highlight` | Hover state color. Defaults to white. Override this if you want hover states to be a different color. |
 
 ### Lyrics
@@ -356,8 +352,7 @@ Controls which lyric lines are blurred to draw focus to the active line. Each va
 Multi-layer shadows work the same as standard CSS — separate each layer with a comma.
 
 ```css
---cfg-ui-shadow:
-  rgba(0, 0, 0, 0.3) 0 10px 24px -6px, inset rgba(255, 255, 255, 0.1) 0 1px 0 0;
+--cfg-ui-shadow: rgba(0, 0, 0, 0.3) 0 10px 24px -6px, inset rgba(255, 255, 255, 0.1) 0 1px 0 0;
 ```
 
 ### Corner Radius

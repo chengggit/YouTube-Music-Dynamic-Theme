@@ -4,7 +4,7 @@ $preset: default;
 /* --- Background & Backdrop --- */
 $background: dynamic;         // dynamic (uses current song art) | color | url('https://example.com/image.jpg')
 $bg-brightness: null;
-$bg-blur: 0.6;                // Background blur intensity
+$bg-blur: 0.5;                // Background blur intensity
 $bg-saturate: 1.5;            // Background color vibrancy
 $bg-scale: 1.2;               // Background zoom level
 $bg-player-opacity: 0.8;      // Player page transparency
@@ -17,7 +17,6 @@ $text-secondary: rgba(white, 0.7); // Secondary text color (subtitles, secondary
 
 $icon: white;                 // Standard button/icon color
 $accent: white;               // Accent for highlights (e.g., titles, active states)
-$accent-icon: white;          // Accent for icons (e.g., like button, active shuffle/repeat)
 $accent-highlight: mix($accent, white, 70%); // Lighter accent for hover states and highlights
 
 /* --- Lyrics --- */
@@ -38,9 +37,9 @@ $album-art-size: 400px;
 $ui-color: null;              // Panel backgrounds
 $ui-contrast: null;           // Secondary backgrounds
 $ui-highlight: null;          // Hover/Select backgrounds
-$ui-blur: 10px;
+$ui-blur: 8px;
 $ui-border: transparent;      // e.g., "1px solid rgba(255,255,255,0.1)"
-$ui-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); // x-offset y-offset blur color
+$ui-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // x-offset y-offset blur color
 
 $btn-color: null;             // Default button backgrounds
 $btn-highlight: null;         // Button hover backgrounds
@@ -96,8 +95,7 @@ $anim-no-lyrics-duration: 0.3s;
 $anim-no-lyrics-timing: ease-in-out;
 $anim-no-lyrics-slide-delay: 1.8s;
 
-$lyric-scroll-duration: 0.5s; // Speed of lyric line movement
-$lyric-scroll-timing: ease-in-out;
+$lyric-scroll-timing: ease-in-out; // Timing of lyric line movement (upstream default: cubic-bezier(0.86, 0, 0.2, 1))
 
 // Presets
 $theme-presets: (
@@ -134,6 +132,49 @@ $final-bg-brightness: if($bg-brightness, $bg-brightness, map-get($theme-map, bg-
 $new-control-is-enable: map-get($new-player-control, enable);
 $new-control-always-on: map-get($new-player-control, always-on);
 
+@mixin surface($border-radius, $shadow) {
+  background: var(--ui-color);
+  border: var(--ui-border);
+  backdrop-filter: blur(var(--ui-blur));
+  border-radius: #{$border-radius};
+  box-shadow: #{$shadow};
+}
+@mixin btn($border-radius) {
+  background: var(--btn-color);
+  border: var(--btn-border);
+  border-radius: #{$border-radius};
+}
+
+/* --- Fonts --- */
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Apple SD Gothic Neo Medium"), url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/fonts/400_AppleSDGothicNeo-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Apple SD Gothic Neo SemiBold"), url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/fonts/600_AppleSDGothicNeo-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Apple SD Gothic Neo Bold"), url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/fonts/700_AppleSDGothicNeo-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "PingFangSC-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/font-pingfang-sc@1.0.5/PingFangSC-Regular.woff2") format("woff2");
+}
+
 :root {
   --bg-blur: calc($bg-blur * 100px);
   --bg-brightness: if($final-bg-brightness != null, $final-bg-brightness, 0.7);
@@ -155,7 +196,6 @@ $new-control-always-on: map-get($new-player-control, always-on);
   --text-secondary: #{$text-secondary};
   --icon: #{$icon};
   --accent: #{$accent};
-  --accent-icon: #{$accent-icon};
   --accent-highlight: #{$accent-highlight};
 
   --ui-blur: #{$ui-blur};
@@ -186,7 +226,6 @@ $new-control-always-on: map-get($new-player-control, always-on);
   --anim-no-lyrics-duration: #{$anim-no-lyrics-duration};
   --anim-no-lyrics-timing: #{$anim-no-lyrics-timing};
 
-  --blyrics-lyric-scroll-duration: #{$lyric-scroll-duration};
   --blyrics-lyric-scroll-timing-function: #{$lyric-scroll-timing};
 
   --ytmusic-text-primary: #{$text-primary};
@@ -202,4 +241,5 @@ $new-control-always-on: map-get($new-player-control, always-on);
   --blyrics-footer-font-weight: $font-weight;
 
   --blyrics-glow-color: rgb(255,255,255);
+  --blyrics-fullscreen-bottom-dock-shift: 0;
 }

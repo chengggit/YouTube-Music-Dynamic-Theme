@@ -1,6 +1,6 @@
 /* ========================== THEME CONFIG ========================== */
 
-/* Edit these variables to configure your theme. 
+/* Edit these variables to configure your theme.
    Ensure every line ends with a semicolon (;) to prevent errors. */
 
 :root {
@@ -15,7 +15,7 @@
       var(--ytmusic-album-color-ratio, 50%)
   );
 
-  --cfg-bg-brightness: 0.8;       
+  --cfg-bg-brightness: 0.8;
   --cfg-bg-blur: 0;               /* Background blur */
   --cfg-bg-saturate: 1.5;         /* Background saturation */
   --cfg-bg-scale: 1.1;            /* Background zoom level */
@@ -29,13 +29,12 @@
 
   --cfg-icon: rgb(255, 255, 255);                 /* Icon color */
   --cfg-accent: rgb(255, 255, 255);               /* Accent color for highlights */
-  --cfg-accent-icon: rgb(255, 255, 255);          /* Accent color for icons */  
   --cfg-accent-highlight: rgb(255, 255, 255);     /* Lighter accent for hover states and highlights */
 
   /* --- Lyrics --- */
   --cfg-fullscreen-art-position: flex-end; /* Album art position in fullscreen (flex-start | center | flex-end) */
   --cfg-lyrics-font-size: 50px;
-  --cfg-lyrics-font-weight: 600; 
+  --cfg-lyrics-font-weight: 600;
   --cfg-lyrics-container-width: 40%;
 
   --cfg-previous-line-blur: 6px;
@@ -43,12 +42,12 @@
   --cfg-upcoming-line-blur: 6px;
 
 /* --- UI Components --- */
-/*  
- - Border: Use 'transparent' for no border, or '1px solid color' 
- - Shadow: Horizontal-Offset Vertical-Offset Blur Color 
-*/  
+/*
+ - Border: Use 'transparent' for no border, or '1px solid color'
+ - Shadow: Horizontal-Offset Vertical-Offset Blur Color
+*/
   --cfg-album-art-size: 400px;
-  
+
   --cfg-ui-color: transparent;                    /* Panel backgrounds */
   --cfg-ui-contrast: rgba(255, 255, 255, 0.1);  /* Secondary panel backgrounds */
   --cfg-ui-highlight: rgba(255, 255, 255, 0.1); /* Hover/Select backgrounds */
@@ -65,11 +64,11 @@
   --cfg-radius-art-md: 16px;        /* Album art corners (Medium) */
   --cfg-radius-art-lg: 20px;        /* Album art corners (Large) */
 
-  --cfg-radius-btn: 12px;           /* Standard buttons */ 
+  --cfg-radius-btn: 12px;           /* Standard buttons */
   --cfg-radius-btn-alt: 16px;       /* Alternative/Pill buttons */
 
   --cfg-radius-highlight: 8px;      /* Hover overlays */
-  --cfg-radius-highlight-lg: 12px;  
+  --cfg-radius-highlight-lg: 12px;
 
   --cfg-radius-panel: 12px;         /* Popups and dropdowns */
   --cfg-radius-panel-lg: 24px;
@@ -140,9 +139,38 @@ yt-icon-button.rewind-button {
   }
 } */
 
-/* ============================================================ 
+/* ============================================================
 * DO NOT EDIT BELOW THIS LINE
- ============================================================== */
+  ============================================================== */
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Apple SD Gothic Neo Medium"), url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/fonts/400_AppleSDGothicNeo-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Apple SD Gothic Neo SemiBold"), url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/fonts/600_AppleSDGothicNeo-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Apple SD Gothic Neo Bold"), url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/fonts/700_AppleSDGothicNeo-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "PingFangSC-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/font-pingfang-sc@1.0.5/PingFangSC-Regular.woff2") format("woff2");
+}
+
 * {
   font-family: var(--cfg-font) !important;
   font-weight: var(--cfg-font-weight);
@@ -162,7 +190,6 @@ yt-icon-button.rewind-button {
   --text-secondary: var(--cfg-text-secondary);
   --icon: var(--cfg-icon);
   --accent: var(--cfg-accent);
-  --accent-icon: var(--cfg-accent-icon);
   --accent-highlight: var(--cfg-accent-highlight);
 
   --ui-color: var(--cfg-ui-color);
@@ -171,7 +198,7 @@ yt-icon-button.rewind-button {
   --ui-blur: var(--cfg-ui-blur);
   --ui-border: var(--cfg-ui-border);
   --ui-shadow: var(--cfg-ui-shadow);
-  
+
   --btn-color: var(--cfg-btn-color);
   --btn-highlight: var(--cfg-btn-highlight);
   --btn-border: var(--cfg-btn-border);

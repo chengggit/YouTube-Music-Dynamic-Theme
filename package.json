@@ -1,20 +1,18 @@
 {
-  "dependencies": {
-    "postcss": "^8.5.10",
-    "rics": "^0.3.21",
-    "rics-cli": "^0.3.21",
-    "ws": "^8.20.0"
-  },
+  "type": "module",
   "devDependencies": {
-    "postcss-cli": "^11.0.1",
+    "postcss": "^8.5.28",
+    "postcss-cli": "^12.0.0",
     "postcss-import": "^16.1.1",
     "prettier": "^3.9.9",
-    "prettier-plugin-rics": "^0.3.17"
+    "prettier-plugin-rics": "^0.3.17",
+    "rics": "^0.3.22",
+    "ws": "^8.22.0"
   },
   "scripts": {
     "build": "npm run build-rics && npm run build-pear",
     "dev": "node build-rics.js --watch --dev",
-    "format": "prettier --write .",
+    "format": "prettier --write src/ style.rics pear-ytm.css",
     "build-rics": "node build-rics.js",
     "watch-rics": "node build-rics.js --watch",
     "build-pear": "postcss src/index.css --use postcss-import -o pear-ytm.css --no-map",

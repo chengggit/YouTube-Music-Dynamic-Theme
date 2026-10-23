@@ -1,8 +1,7 @@
 /* ========================== ARTIST PAGE ========================== */
 ytmusic-immersive-header-renderer {
   background: var(--background) !important;
-  filter: blur(var(--bg-blur)) saturate(var(--bg-saturate))
-    brightness(var(--bg-brightness));
+  filter: blur(var(--bg-blur)) saturate(var(--bg-saturate)) brightness(var(--bg-brightness));
 }
 
 ytmusic-immersive-header-renderer .image {
@@ -73,9 +72,7 @@ yt-confirm-dialog-renderer[dialog][dialog][dialog] {
   background: transparent !important;
 }
 ytmusic-popup-container
-  tp-yt-paper-dialog.ytmusic-popup-container:has(
-    yt-confirm-dialog-renderer
-  )[role='dialog'] {
+  tp-yt-paper-dialog.ytmusic-popup-container:has(yt-confirm-dialog-renderer)[role="dialog"] {
   outline: none !important;
 }
 
@@ -91,7 +88,7 @@ button.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextFilled {
     border: var(--btn-border);
   }
   .yt-icon-shape {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
 }
 
@@ -113,5 +110,5 @@ ytmusic-subscribe-button-renderer.ytmusic-visual-header-renderer {
   font-weight: 700 !important;
 }
 .subscriber-count-text.ytmusic-subscribe-button-renderer {
-  color: var(--text-primary) !important;
+  color: var(--text-secondary) !important;
 }

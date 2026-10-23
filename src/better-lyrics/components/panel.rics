@@ -1,6 +1,10 @@
 /* ========================== PANELS & MISC ========================== */
 /* New Playlist Panel */
-ytmusic-playlist-form {
+ytmusic-dialog {
+  @include surface(var(--radius-panel-lg), var(--ui-shadow))
+}
+
+ytmusic-playlist-form.ytmusic-dialog {
   background: transparent;
   .yt-icon-shape {
     color: var(--icon);
@@ -19,14 +23,6 @@ tp-yt-iron-input.tp-yt-paper-input>input.tp-yt-paper-input {
 
 .yt-list-item-view-model__title {
   color: var(--text-primary);
-}
-
-ytmusic-dialog {
-  box-shadow: var(--ui-shadow);
-  background: var(--ui-color);
-  backdrop-filter: blur(var(--ui-blur));
-  border: var(--ui-border);
-  border-radius: var(--radius-panel-lg);
 }
 
 /* Underline */
@@ -56,8 +52,8 @@ ytmusic-dialog {
   --yt-spec-brand-background-primary: transparent;
   background: var(--ui-color);
   box-shadow: var(--ui-shadow);
-  backdrop-filter: blur(var(--ui-blur));
   border-radius: var(--radius-panel-lg);
+  border: var(--ui-border);
 }
 
 .ytmusic-playlist-form .dropdown-content.tp-yt-paper-menu-button {
@@ -66,7 +62,6 @@ ytmusic-dialog {
 
 .dropdown-content.ytmusic-dropdown-renderer {
   background: transparent;
-  backdrop-filter: blur(var(--ui-blur));
 }
 
 ytmusic-dropdown-item-renderer {
@@ -88,14 +83,13 @@ tp-yt-iron-icon.tp-yt-paper-dropdown-menu {
 }
 
 /* Add to Playlist */
-tp-yt-paper-dialog[modern],
-ytmusic-add-to-playlist-renderer {
-  --yt-spec-brand-background-primary: transparent;
-  background: var(--ui-color);
-  backdrop-filter: blur(var(--ui-blur));
-  box-shadow: var(--ui-shadow);
-  border-radius: var(--radius-panel-lg);
-  border: var(--ui-border);
+tp-yt-paper-dialog.ytmusic-popup-container {
+  @include surface(var(--radius-panel-lg), var(--ui-shadow))
+}
+
+ytmusic-add-to-playlist-renderer.ytmusic-popup-container {
+  background: transparent;
+  border: 0;
 }
 
 yt-formatted-string.subtitle.ytmusic-two-row-item-renderer {
@@ -112,7 +106,7 @@ ytmusic-carousel-shelf-renderer.ytmusic-add-to-playlist-renderer:not(:empty) {
 ytmusic-playlist-add-to-option-renderer {
   border-radius: var(--radius-highlight-lg);
   .yt-icon-shape {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
 }
 
@@ -124,19 +118,9 @@ ytmusic-playlist-add-to-option-renderer {
   border-radius: var(--radius-art);
 }
 
-/* Divider */
-.top-bar.ytmusic-add-to-playlist-renderer,
-ytmusic-carousel-shelf-renderer.ytmusic-add-to-playlist-renderer:not(:empty) {
-  border-bottom: 0;
-}
-
-/* 3 Dot Menu */
+/* 3 Dot Menu & User dropdown*/
 tp-yt-iron-dropdown.ytmusic-popup-container {
-  background: var(--ui-color);
-  backdrop-filter: blur(var(--ui-blur));
-  border-radius: var(--radius-panel-lg);
-  box-shadow: var(--ui-shadow);
-  border: var(--ui-border);
+  @include surface(var(--radius-panel-lg), var(--ui-shadow));
   overflow: hidden;
 }
 
@@ -151,7 +135,6 @@ tp-yt-paper-listbox#items yt-formatted-string {
 
 .ytmusic-menu-popup-renderer {
   border-radius: var(--radius-highlight);
-  overflow: hidden;
   --ytmusic-menu-item-hover-background-color: var(--ui-highlight);
 }
 
@@ -195,9 +178,7 @@ yt-formatted-string.ytd-account-item-renderer[secondary] {
 /* "Recently Played" Button */
 button.ytmusic-sort-filter-button-renderer {
   color: var(--text-primary);
-  border: var(--btn-border);
-  border-radius: var(--radius-btn-alt);
-  background: var(--btn-color);
+  @include btn(var(--radius-btn-alt))
 }
 
 ytmusic-multi-select-menu-item-renderer {
@@ -228,15 +209,9 @@ ytmusic-background-promo-renderer {
 }
 
 /* Popup Message */
-tp-yt-paper-toast,
-tp-yt-paper-toast.yt-notification-action-renderer,
-#toast.ytmusic-notification-text-renderer {
+tp-yt-paper-toast.yt-notification-action-renderer {
   color: var(--text-primary);
-  background: var(--ui-color);
-  border-radius: var(--radius-panel);
-  border: var(--ui-border);
-  box-shadow: var(--ui-shadow);
-  backdrop-filter: blur(var(--ui-blur));
+  @include surface(var(--radius-panel), var(--ui-shadow))
 }
 
 #text.yt-notification-action-renderer,
@@ -271,7 +246,7 @@ tp-yt-paper-toast.yt-notification-action-renderer,
   border-color: var(--icon);
 }
 
-.ytSpecButtonShapeNextCallToAction.ytSpecButtonShapeNextFilled{
+.ytSpecButtonShapeNextCallToAction.ytSpecButtonShapeNextFilled {
   color: var(--accent);
   background: var(--btn-color);
   border-radius: var(--radius-btn-alt);
@@ -282,7 +257,6 @@ tp-yt-paper-toast.yt-notification-action-renderer,
 
 .scroll-button.yt-third-party-share-target-section-renderer {
   background: var(--btn-color);
-  backdrop-filter: blur(var(--ui-blur));
   box-shadow: none;
   .yt-icon-shape {
     color: var(--icon);

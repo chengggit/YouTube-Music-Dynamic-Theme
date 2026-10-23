@@ -1,6 +1,14 @@
 /* ========================== PANELS & MISC ========================== */
+ytmusic-dialog {
+  box-shadow: var(--ui-shadow) !important;
+  background: var(--ui-color) !important;
+  backdrop-filter: blur(var(--ui-blur));
+  border: var(--ui-border) !important;
+  border-radius: var(--radius-panel-lg) !important;
+}
+
 /* New Playlist Panel */
-ytmusic-playlist-form {
+ytmusic-playlist-form.ytmusic-dialog {
   background: transparent !important;
   .yt-icon-shape {
     color: var(--icon);
@@ -17,14 +25,6 @@ tp-yt-iron-input.tp-yt-paper-input > input.tp-yt-paper-input {
 
 .ytListItemViewModelTitle {
   color: var(--text-primary) !important;
-}
-
-ytmusic-dialog {
-  box-shadow: var(--ui-shadow) !important;
-  background: var(--ui-color) !important;
-  backdrop-filter: blur(var(--ui-blur));
-  border: var(--ui-border) !important;
-  border-radius: var(--radius-panel-lg) !important;
 }
 
 /* Underline */
@@ -53,9 +53,9 @@ ytmusic-dialog {
 .dropdown-content.tp-yt-paper-menu-button {
   --yt-spec-brand-background-primary: transparent;
   background: var(--ui-color) !important;
-  box-shadow: var(--ui-shadow) I !important;
-  backdrop-filter: blur(var(--ui-blur));
+  box-shadow: var(--ui-shadow) !important;
   border-radius: var(--radius-panel-lg) !important;
+  border: var(--ui-border) !important;
 }
 
 .description.ytmusic-dropdown-item-renderer {
@@ -68,7 +68,6 @@ ytmusic-dialog {
 
 .dropdown-content.ytmusic-dropdown-renderer {
   background: transparent;
-  backdrop-filter: blur(var(--ui-blur));
 }
 
 ytmusic-dropdown-item-renderer {
@@ -90,14 +89,16 @@ tp-yt-iron-icon.tp-yt-paper-dropdown-menu {
 }
 
 /* Add to Playlist */
-tp-yt-paper-dialog[modern].ytmusic-popup-container,
+tp-yt-paper-dialog.ytmusic-popup-container {
+  background: var(--ui-color) !important;
+  border: var(--ui-border) !important;
+  backdrop-filter: blur(var(--ui-blur)) !important;
+  border-radius: var(--radius-panel-lg) !important;
+  box-shadow: var(--ui-shadow) !important;
+}
 ytmusic-add-to-playlist-renderer.ytmusic-popup-container {
   --yt-spec-brand-background-primary: transparent;
-  background: var(--ui-color);
-  backdrop-filter: blur(var(--ui-blur));
-  box-shadow: var(--ui-shadow);
-  border-radius: var(--radius-panel-lg);
-  border: var(--ui-border);
+  border: 0;
 }
 
 /* Divider */
@@ -110,7 +111,7 @@ ytmusic-carousel-shelf-renderer.ytmusic-add-to-playlist-renderer:not(:empty) {
 ytmusic-playlist-add-to-option-renderer {
   border-radius: var(--radius-highlight-lg);
   .yt-icon-shape {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
 }
 
@@ -224,9 +225,7 @@ ytmusic-background-promo-renderer {
 }
 
 /* Popup Message */
-tp-yt-paper-toast,
-tp-yt-paper-toast.yt-notification-action-renderer,
-#toast.ytmusic-notification-text-renderer {
+tp-yt-paper-toast.yt-notification-action-renderer {
   background: var(--ui-color) !important;
   border-radius: var(--radius-panel) !important;
   border: var(--ui-border) !important;
@@ -289,8 +288,7 @@ yt-formatted-string.yt-start-at-renderer {
 }
 
 /* Explore Page */
-ytmusic-navigation-button-renderer.ytmusic-grid-renderer
-  button.ytmusic-navigation-button-renderer {
+ytmusic-navigation-button-renderer.ytmusic-grid-renderer button.ytmusic-navigation-button-renderer {
   background: var(--btn-color);
   border-radius: var(--radius-btn-alt);
   &:focus-within,
@@ -302,8 +300,7 @@ ytmusic-navigation-button-renderer.ytmusic-grid-renderer
   }
 }
 
-ytmusic-navigation-button-renderer.ytmusic-carousel
-  button.ytmusic-navigation-button-renderer {
+ytmusic-navigation-button-renderer.ytmusic-carousel button.ytmusic-navigation-button-renderer {
   background: var(--btn-color);
   border-radius: var(--radius-btn);
   &:focus-within,

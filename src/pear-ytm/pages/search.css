@@ -53,7 +53,7 @@ yt-formatted-string.text.style-scope.ytmusic-message-renderer {
   color: var(--accent) !important;
   border-radius: var(--radius-btn-alt) !important;
   .yt-icon-shape {
-    color: var(--accent-icon) !important;
+    color: var(--accent) !important;
   }
 }
 

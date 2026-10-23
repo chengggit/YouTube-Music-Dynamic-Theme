@@ -1,5 +1,5 @@
 /* ========================== PLAYER BAR ========================== */
-ytmusic-player-bar {
+ytmusic-player-bar:not([player-page-open]) {
   background: var(--ui-color);
   backdrop-filter: blur(var(--ui-blur));
 }
@@ -8,7 +8,8 @@ ytmusic-player-bar {
   backdrop-filter: none;
 }
 
-#layout[player-ui-state="PLAYER_PAGE_OPEN"] ytmusic-player-bar, #layout[player-ui-state="PLAYER_PAGE_OPEN"] #player-bar-background {
+#layout[player-ui-state="PLAYER_PAGE_OPEN"] ytmusic-player-bar,
+#layout[player-ui-state="PLAYER_PAGE_OPEN"] #player-bar-background {
   background: transparent !important;
 }
 
@@ -41,7 +42,6 @@ ytmusic-player-bar:hover #progress-bar {
   border-radius: var(--radius-panel);
   background: var(--ui-contrast);
   color: var(--text-primary);
-  backdrop-filter: blur(var(--ui-blur));
   border: var(--ui-border);
 }
 
@@ -95,7 +95,7 @@ tp-yt-paper-item.ytmusic-playback-rate-popup-renderer {
 ytmusic-player-bar:not([repeat-mode="NONE"]),
 ytmusic-player-controls:not([repeat-mode="NONE"]) {
   .repeat .yt-icon-shape {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
 }
 
@@ -103,14 +103,14 @@ ytmusic-player-bar[shuffle-on],
 ytmusic-player-controls[shuffle-on] {
   .shuffle yt-icon,
   .expand-shuffle yt-icon {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
 }
 
 ytmusic-player-bar:has(.volume-slider[value="0"]) {
   .volume yt-icon,
   .expand-volume yt-icon {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
 }
 

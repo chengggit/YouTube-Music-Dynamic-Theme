@@ -1,5 +1,4 @@
 {
-  "singleQuote": true,
   "endOfLine": "lf",
   "plugins": ["prettier-plugin-rics"],
   "overrides": [
@@ -15,5 +14,6 @@
         "parser": "css"
       }
     }
-  ]
+  ],
+  "printWidth": 104
 }
