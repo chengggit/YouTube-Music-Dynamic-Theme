@@ -17,7 +17,6 @@ $text-secondary: rgba(white, 0.7); // Secondary text color (subtitles, secondary
 
 $icon: white;                 // Standard button/icon color
 $accent: white;               // Accent for highlights (e.g., titles, active states)
-$accent-icon: white;          // Accent for icons (e.g., like button, active shuffle/repeat)
 $accent-highlight: mix($accent, white, 70%); // Lighter accent for hover states and highlights
 
 /* --- Lyrics --- */
@@ -197,7 +196,6 @@ $new-control-always-on: map-get($new-player-control, always-on);
   --text-secondary: #{$text-secondary};
   --icon: #{$icon};
   --accent: #{$accent};
-  --accent-icon: #{$accent-icon};
   --accent-highlight: #{$accent-highlight};
 
   --ui-blur: #{$ui-blur};

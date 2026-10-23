@@ -81,7 +81,6 @@
     .av, #info-panel, #player-controls, .collapse-button, .context-menu-button {
       transform: translateY(var(--ytmusic-player-page-player-bar-height));
       transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-      will-change: opacity, transform;
     }
   }
 
@@ -168,8 +167,7 @@
 
   /* PLAYER BAR */
   ytmusic-player-bar.ytmusic-app {
-    transition: background var(--anim-fade-duration) var(--anim-fade-timing),
-    bottom 0.5s;
+    transition: background var(--anim-fade-duration) var(--anim-fade-timing);
   }
 
   ytmusic-player-bar yt-icon-button.ytmusic-player-bar {
@@ -348,8 +346,7 @@
 ytmusic-player-page {
   @if $anim-drawer and $anim-player-page {
     transition: transform var(--anim-player-page-duration) var(--anim-player-page-timing),
-    padding var(--anim-drawer-duration) var(--anim-drawer-timing),
-    height var(--anim-drawer-duration) var(--anim-drawer-timing) !important;
+    padding var(--anim-drawer-duration) var(--anim-drawer-timing) !important;
   } @else if $anim-drawer {
     transition: padding var(--anim-drawer-duration) var(--anim-drawer-timing) !important;
   } @else if $anim-player-page {
@@ -419,7 +416,7 @@ ytmusic-player-page {
   .play-pause-button-wrapper.ytmusic-player-controls {
     transition: transform 0.3s ease;
     &:hover {
-      transform: scale(1.4);
+      transform: scale(1.2);
     }
   }
   .next-button.ytmusic-player-controls,

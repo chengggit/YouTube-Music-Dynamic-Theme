@@ -69,7 +69,6 @@ $text-primary: white;
 $text-secondary: rgba(white, 0.7);
 $icon: white;
 $accent: white;
-$accent-icon: white;
 $accent-highlight: mix($accent, white, 70%);
 ```
 
@@ -81,7 +80,6 @@ All variables accept any valid CSS color. Using `rgba()` lets you control opacit
 | `$text-secondary`   | Supporting text — subtitles, artist names, timestamps.                                                                                                                                                         |
 | `$icon`             | Default color for buttons and icons in their resting state.                                                                                                                                                    |
 | `$accent`           | Highlight color used on active states, selected items, and titles.                                                                                                                                             |
-| `$accent-icon`      | Accent color specifically for interactive icons like the like button, active shuffle, and repeat.                                                                                                              |
 | `$accent-highlight` | Hover state color derived from `$accent`. Defaults to a 70% mix of `$accent` and white. Override this if you want hover states to be a different color entirely rather than a lightened version of the accent. |
 
 ### Lyrics
@@ -283,7 +281,6 @@ The font must be installed on your system. Fonts that are not installed will fal
 --cfg-text-secondary: rgba(255, 255, 255, 0.7);
 --cfg-icon: rgb(255, 255, 255);
 --cfg-accent: rgb(255, 255, 255);
---cfg-accent-icon: rgb(255, 255, 255);
 --cfg-accent-highlight: rgb(255, 255, 255);
 ```
 
@@ -295,7 +292,6 @@ All variables accept any valid CSS color. Using `rgba()` lets you control opacit
 | `--cfg-text-secondary`   | Supporting text — subtitles, artist names, timestamps.                                                |
 | `--cfg-icon`             | Default color for buttons and icons in their resting state.                                           |
 | `--cfg-accent`           | Highlight color used on active states, selected items, and titles.                                    |
-| `--cfg-accent-icon`      | Accent color specifically for interactive icons like the like button, active shuffle, and repeat.     |
 | `--cfg-accent-highlight` | Hover state color. Defaults to white. Override this if you want hover states to be a different color. |
 
 ### Lyrics

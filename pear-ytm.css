@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Inter");
 @import url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.min.css");
 @import url("https://cdn.jsdelivr.net/npm/font-pingfang-sc@1.0.5/index.min.css");
-
 /* 
 
 Theme: Dynamic Background 
@@ -66,70 +65,70 @@ For proper functionality, the variable below should be the default value:
   --cfg-background: color-mix(
     in srgb,
     rgba(3, 3, 3) calc(100% - var(--ytmusic-album-color-ratio, 50%)),
-    rgba(var(--ytmusic-album-color-dark), 1) var(--ytmusic-album-color-ratio, 50%)
+    rgba(var(--ytmusic-album-color-dark), 1)
+      var(--ytmusic-album-color-ratio, 50%)
   );
 
-  --cfg-bg-brightness: 0.8;
-  --cfg-bg-blur: 0; /* Background blur */
-  --cfg-bg-saturate: 1.5; /* Background saturation */
-  --cfg-bg-scale: 1.1; /* Background zoom level */
+  --cfg-bg-brightness: 0.8;       
+  --cfg-bg-blur: 0;               /* Background blur */
+  --cfg-bg-saturate: 1.5;         /* Background saturation */
+  --cfg-bg-scale: 1.1;            /* Background zoom level */
   --cfg-player-page-opacity: 0.8; /* Player page transparency */
 
-  /* --- Typography & Colors --- */
-  --cfg-font: "Inter", "PingFangSC-Regular", "Apple SD Gothic Neo"; /* Main font for all text */
-  --cfg-font-weight: 400; /* Main text weight */
-  --cfg-text-primary: rgb(255, 255, 255); /* Main text color */
+/* --- Typography & Colors --- */
+  --cfg-font: 'Inter', 'PingFangSC-Regular', 'Apple SD Gothic Neo'; /* Main font for all text */
+  --cfg-font-weight: 400;                           /* Main text weight */
+  --cfg-text-primary: rgb(255, 255, 255);         /* Main text color */
   --cfg-text-secondary: rgba(255, 255, 255, 0.7); /* Secondary text color */
 
-  --cfg-icon: rgb(255, 255, 255); /* Icon color */
-  --cfg-accent: rgb(255, 255, 255); /* Accent color for highlights */
-  --cfg-accent-icon: rgb(255, 255, 255); /* Accent color for icons */
-  --cfg-accent-highlight: rgb(255, 255, 255); /* Lighter accent for hover states and highlights */
+  --cfg-icon: rgb(255, 255, 255);                 /* Icon color */
+  --cfg-accent: rgb(255, 255, 255);               /* Accent color for highlights */
+  --cfg-accent-highlight: rgb(255, 255, 255);     /* Lighter accent for hover states and highlights */
 
   /* --- Lyrics --- */
   --cfg-fullscreen-art-position: flex-end; /* Album art position in fullscreen (flex-start | center | flex-end) */
   --cfg-lyrics-font-size: 50px;
-  --cfg-lyrics-font-weight: 600;
+  --cfg-lyrics-font-weight: 600; 
   --cfg-lyrics-container-width: 40%;
 
   --cfg-previous-line-blur: 6px;
   --cfg-current-line-blur: 0px;
   --cfg-upcoming-line-blur: 6px;
 
-  /* --- UI Components --- */
-  /*  
+/* --- UI Components --- */
+/*  
  - Border: Use 'transparent' for no border, or '1px solid color' 
  - Shadow: Horizontal-Offset Vertical-Offset Blur Color 
-*/
+*/  
   --cfg-album-art-size: 400px;
-
-  --cfg-ui-color: transparent; /* Panel backgrounds */
-  --cfg-ui-contrast: rgba(255, 255, 255, 0.1); /* Secondary panel backgrounds */
+  
+  --cfg-ui-color: transparent;                    /* Panel backgrounds */
+  --cfg-ui-contrast: rgba(255, 255, 255, 0.1);  /* Secondary panel backgrounds */
   --cfg-ui-highlight: rgba(255, 255, 255, 0.1); /* Hover/Select backgrounds */
   --cfg-ui-blur: 10px;
   --cfg-ui-border: transparent;
   --cfg-ui-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 
-  --cfg-btn-color: rgba(255, 255, 255, 0.1); /* Button backgrounds */
+  --cfg-btn-color: rgba(255, 255, 255, 0.1);     /* Button backgrounds */
   --cfg-btn-highlight: rgba(255, 255, 255, 0.2); /* Button hover backgrounds */
   --cfg-btn-border: transparent;
 
   /* --- Roundness --- */
-  --cfg-radius-art: 8px; /* Album art corners (Small) */
-  --cfg-radius-art-md: 16px; /* Album art corners (Medium) */
-  --cfg-radius-art-lg: 20px; /* Album art corners (Large) */
+  --cfg-radius-art: 8px;            /* Album art corners (Small) */
+  --cfg-radius-art-md: 16px;        /* Album art corners (Medium) */
+  --cfg-radius-art-lg: 20px;        /* Album art corners (Large) */
 
-  --cfg-radius-btn: 12px; /* Standard buttons */
-  --cfg-radius-btn-alt: 16px; /* Alternative/Pill buttons */
+  --cfg-radius-btn: 12px;           /* Standard buttons */ 
+  --cfg-radius-btn-alt: 16px;       /* Alternative/Pill buttons */
 
-  --cfg-radius-highlight: 8px; /* Hover overlays */
-  --cfg-radius-highlight-lg: 12px;
+  --cfg-radius-highlight: 8px;      /* Hover overlays */
+  --cfg-radius-highlight-lg: 12px;  
 
-  --cfg-radius-panel: 12px; /* Popups and dropdowns */
+  --cfg-radius-panel: 12px;         /* Popups and dropdowns */
   --cfg-radius-panel-lg: 24px;
 
-  /* --- Animation --- */
-  /* - Set duration to 0s to disable animation */
+/* --- Animation --- */
+/* - Set duration to 0s to disable animation */
   --cfg-anim-bg-duration: 0.3s;
   --cfg-anim-bg-timing: ease-in-out;
 
@@ -216,7 +215,6 @@ yt-icon-button.rewind-button {
   --text-secondary: var(--cfg-text-secondary);
   --icon: var(--cfg-icon);
   --accent: var(--cfg-accent);
-  --accent-icon: var(--cfg-accent-icon);
   --accent-highlight: var(--cfg-accent-highlight);
 
   --ui-color: var(--cfg-ui-color);
@@ -225,7 +223,7 @@ yt-icon-button.rewind-button {
   --ui-blur: var(--cfg-ui-blur);
   --ui-border: var(--cfg-ui-border);
   --ui-shadow: var(--cfg-ui-shadow);
-
+  
   --btn-color: var(--cfg-btn-color);
   --btn-highlight: var(--cfg-btn-highlight);
   --btn-border: var(--cfg-btn-border);
@@ -267,6 +265,7 @@ yt-icon-button.rewind-button {
   --ytmusic-overlay-text-secondary: var(--cfg-text-secondary);
   --yt-sys-color-baseline--text-secondary: var(--cfg-text-secondary) !important;
 }
+
 /* ========================== TEXT & ICONS ========================== */
 yt-formatted-string.title {
   color: var(--text-primary) !important;
@@ -280,7 +279,7 @@ yt-icon .yt-icon-shape {
 }
 
 yt-icon.ytmusic-inline-badge-renderer {
-  color: var(--accent-icon);
+  color: var(--accent);
 }
 
 /* Icons in explore top songs  */
@@ -317,7 +316,7 @@ a.yt-simple-endpoint.yt-formatted-string {
 
 /* Like buttons pressed */
 .yt-spec-button-shape-next[aria-pressed="true"] {
-  color: var(--accent-icon) !important;
+  color: var(--accent) !important;
 }
 
 tp-yt-paper-ripple.tp-yt-paper-tab {
@@ -368,7 +367,7 @@ ytmusic-responsive-list-item-renderer[play-button-state] {
 }
 
 ytmusic-play-button-renderer:not([state="default"]) .content-wrapper .yt-icon-shape {
-  color: var(--accent-icon);
+  color: var(--accent);
 }
 
 /* Playlist Page Art */
@@ -428,6 +427,7 @@ ytmusic-player[player-ui-state="PLAYER_BAR_ONLY"] {
 .image-wrapper.ytmusic-two-row-item-renderer:hover img.yt-img-shadow {
   transform: scale(1.01);
 }
+
 /* ========================== PANELS & MISC ========================== */
 /* New Playlist Panel */
 ytmusic-playlist-form {
@@ -540,7 +540,7 @@ ytmusic-carousel-shelf-renderer.ytmusic-add-to-playlist-renderer:not(:empty) {
 ytmusic-playlist-add-to-option-renderer {
   border-radius: var(--radius-highlight-lg);
   .yt-icon-shape {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
 }
 
@@ -752,6 +752,7 @@ tp-yt-paper-listbox.yt-dropdown-menu tp-yt-paper-item.yt-dropdown-menu:hover {
 yt-card-item-container-renderer {
   border: 0 !important;
 }
+
 /* ========================== PLAYER BAR ========================== */
 ytmusic-player-bar {
   background: var(--ui-color);
@@ -854,18 +855,18 @@ tp-yt-paper-item.ytmusic-playback-rate-popup-renderer {
 ytmusic-player-bar:not([repeat-mode="NONE"]),
 ytmusic-player-controls:not([repeat-mode="NONE"]) {
   .repeat .yt-icon-shape {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
 }
 
 ytmusic-player-bar[shuffle-on] .shuffle yt-icon .yt-icon-shape,
 ytmusic-player-controls[shuffle-on] .expand-shuffle yt-icon .yt-icon-shape {
-  color: var(--accent-icon);
+  color: var(--accent);
 }
 
 ytmusic-player-bar:has(.volume-slider[value="0"]) .volume yt-icon .yt-icon-shape,
 ytmusic-player-bar:has(.volume-slider[value="0"]) .expand-volume yt-icon .yt-icon-shape {
-  color: var(--accent-icon);
+  color: var(--accent);
 }
 
 /* Hide Expand Button When Expanded */
@@ -881,7 +882,7 @@ ytmusic-search-box .search-box {
   background: var(--ui-contrast) !important;
   border: var(--ui-border) !important;
   .yt-icon-shape {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
 }
 input.ytmusic-search-box {
@@ -964,6 +965,7 @@ ytmusic-search-box[opened] #suggestion-list {
 #suggestions .ytmusic-search-suggestions-section {
   border-radius: var(--radius-highlight);
 }
+
 /* ========================== SETTINGS ========================== */
 ytmusic-setting-category-collection-renderer.ytmusic-settings-page {
   border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -1619,7 +1621,7 @@ button.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextFilled {
     border: var(--btn-border);
   }
   .yt-icon-shape {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
 }
 
@@ -1914,6 +1916,7 @@ ytmusic-play-button-renderer[size="MUSIC_PLAY_BUTTON_SIZE_HUGE"]:is([state="paus
     display: none;
   }
 }
+
 /* ========================== MOBILE VIEW ========================== */
 ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
   content: "";
@@ -2004,6 +2007,7 @@ ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state="TABS_VI
   border: 0 !important;
   background: transparent !important;
 }
+
 /* ========================== PLAYER PAGE ========================== */
 ytmusic-app-layout:not([player-page-open]):not([is-mweb-player-bar-modernization-enabled])
   > [slot="player-page"] {
@@ -2111,7 +2115,7 @@ ytmusic-chip-cloud-chip-renderer[is-selected] a.ytmusic-chip-cloud-chip-renderer
   border-radius: var(--radius-btn-alt);
   border: var(--btn-border) !important;
   .yt-icon-shape {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
   &:hover {
     background: var(--btn-highlight);
@@ -2229,6 +2233,7 @@ ytmusic-multi-row-list-item-renderer.ytmusic-shelf-renderer {
 yt-formatted-string.subtitle.ytmusic-multi-row-list-item-renderer {
   color: var(--text-secondary);
 }
+
 /* ========================== SEARCH PAGE ========================== */
 /* Tab Below Search */
 .tab-container.ytmusic-tabs {
@@ -2284,7 +2289,7 @@ yt-formatted-string.text.style-scope.ytmusic-message-renderer {
   color: var(--accent) !important;
   border-radius: var(--radius-btn-alt) !important;
   .yt-icon-shape {
-    color: var(--accent-icon) !important;
+    color: var(--accent) !important;
   }
 }
 
@@ -2302,6 +2307,7 @@ ytmusic-message-renderer {
     color: var(--icon);
   }
 }
+
 /* ========================== PLAYLIST ========================== */
 ytmusic-play-button-renderer.ytmusic-responsive-header-renderer {
   background: var(--btn-color) !important;

@@ -4,7 +4,7 @@ ytmusic-search-box .search-box {
   background: var(--ui-contrast) !important;
   border: var(--ui-border) !important;
   .yt-icon-shape {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
 }
 input.ytmusic-search-box {
@@ -26,7 +26,10 @@ ytmusic-search-box[opened] input.ytmusic-search-box {
 .search-container.ytmusic-search-box {
   border-radius: var(--radius-panel);
 }
-ytmusic-search-box[has-query] .search-container.ytmusic-search-box,
+ytmusic-search-box[has-query] .search-container.ytmusic-search-box {
+    background: transparent;
+    box-shadow: unset;
+}
 ytmusic-search-box[opened] .search-container.ytmusic-search-box {
   border-radius: var(--radius-panel);
   background: transparent !important;

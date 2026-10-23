@@ -100,18 +100,18 @@ tp-yt-paper-item.ytmusic-playback-rate-popup-renderer {
 ytmusic-player-bar:not([repeat-mode="NONE"]),
 ytmusic-player-controls:not([repeat-mode="NONE"]) {
   .repeat .yt-icon-shape {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
 }
 
 ytmusic-player-bar[shuffle-on] .shuffle yt-icon .yt-icon-shape,
 ytmusic-player-controls[shuffle-on] .expand-shuffle yt-icon .yt-icon-shape {
-  color: var(--accent-icon);
+  color: var(--accent);
 }
 
 ytmusic-player-bar:has(.volume-slider[value="0"]) .volume yt-icon .yt-icon-shape,
 ytmusic-player-bar:has(.volume-slider[value="0"]) .expand-volume yt-icon .yt-icon-shape {
-  color: var(--accent-icon);
+  color: var(--accent);
 }
 
 /* Hide Expand Button When Expanded */

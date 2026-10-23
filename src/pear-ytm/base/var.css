@@ -29,7 +29,6 @@
 
   --cfg-icon: rgb(255, 255, 255);                 /* Icon color */
   --cfg-accent: rgb(255, 255, 255);               /* Accent color for highlights */
-  --cfg-accent-icon: rgb(255, 255, 255);          /* Accent color for icons */  
   --cfg-accent-highlight: rgb(255, 255, 255);     /* Lighter accent for hover states and highlights */
 
   /* --- Lyrics --- */
@@ -162,7 +161,6 @@ yt-icon-button.rewind-button {
   --text-secondary: var(--cfg-text-secondary);
   --icon: var(--cfg-icon);
   --accent: var(--cfg-accent);
-  --accent-icon: var(--cfg-accent-icon);
   --accent-highlight: var(--cfg-accent-highlight);
 
   --ui-color: var(--cfg-ui-color);

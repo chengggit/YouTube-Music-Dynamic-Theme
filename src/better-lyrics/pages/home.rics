@@ -77,7 +77,7 @@ ytmusic-guide-entry-renderer .content-wrapper.ytmusic-play-button-renderer {
     border: var(--btn-border);
   }
   .yt-icon-shape {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
 }
 

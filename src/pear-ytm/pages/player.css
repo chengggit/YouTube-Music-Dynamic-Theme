@@ -105,7 +105,7 @@ ytmusic-chip-cloud-chip-renderer[is-selected] a.ytmusic-chip-cloud-chip-renderer
   border-radius: var(--radius-btn-alt);
   border: var(--btn-border) !important;
   .yt-icon-shape {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
   &:hover {
     background: var(--btn-highlight);

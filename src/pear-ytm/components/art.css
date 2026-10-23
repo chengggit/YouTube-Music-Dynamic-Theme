@@ -33,7 +33,7 @@ ytmusic-responsive-list-item-renderer[play-button-state] {
 }
 
 ytmusic-play-button-renderer:not([state="default"]) .content-wrapper .yt-icon-shape {
-  color: var(--accent-icon);
+  color: var(--accent);
 }
 
 /* Playlist Page Art */

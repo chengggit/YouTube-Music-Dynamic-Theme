@@ -19,7 +19,7 @@ yt-icon {
 }
 
 yt-icon.ytmusic-inline-badge-renderer {
-  color: var(--accent-icon);
+  color: var(--accent);
 }
 
 /* Icons in explore top songs  */
@@ -54,7 +54,7 @@ a.yt-simple-endpoint.yt-formatted-string {
 
 /* Like buttons pressed */
 .ytSpecButtonShapeNextHost[aria-pressed="true"] {
-  color: var(--accent-icon);
+  color: var(--accent);
 }
 
 tp-yt-paper-ripple.tp-yt-paper-tab {

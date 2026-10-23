@@ -88,7 +88,7 @@ button.ytSpecButtonShapeNextMono.ytSpecButtonShapeNextFilled {
     border: var(--btn-border);
   }
   .yt-icon-shape {
-    color: var(--accent-icon);
+    color: var(--accent);
   }
 }
 
