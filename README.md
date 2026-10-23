@@ -65,7 +65,7 @@ The Album Color Theme plugin is required for dynamic background functionality.
 
 **Installation**
 
-1. Download [`pear-ytm.css`](/pear-ytm.css)
+1. Download [`pear-ytm.css`](https://github.com/chengggit/YouTube-Music-Dynamic-Theme/releases/latest)
 2. Open the app menu → **Options** → **Visual Tweaks** → **Theme** → **Import custom CSS file**
 3. Select the downloaded `pear-ytm.css`
 4. Restart the app
