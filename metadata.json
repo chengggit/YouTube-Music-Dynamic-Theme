@@ -4,9 +4,9 @@
   "creators": [
     "chengggit"
   ],
-  "minVersion": "2.4.0",
+  "minVersion": "3.0.0",
   "hasShaders": true,
-  "version": "3.3.2",
+  "version": "4.0.0",
   "tags": [
     "dark",
     "light",
@@ -15,7 +15,7 @@
     "glassmorphism"
   ],
   "images": [
-    "main.webp",    
+    "main.webp",
     "preset.webp",
     "blrc-preview.jpeg",
     "corner-layout.jpeg",
