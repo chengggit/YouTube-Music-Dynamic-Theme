@@ -27,8 +27,8 @@ ytmusic-search-box[opened] input.ytmusic-search-box {
   border-radius: var(--radius-panel);
 }
 ytmusic-search-box[has-query] .search-container.ytmusic-search-box {
-    background: transparent;
-    box-shadow: unset;
+  background: transparent;
+  box-shadow: unset;
 }
 ytmusic-search-box[opened] .search-container.ytmusic-search-box {
   border-radius: var(--radius-panel);

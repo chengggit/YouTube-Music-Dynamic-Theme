@@ -8,7 +8,8 @@ ytmusic-player-bar:not([player-page-open]) {
   backdrop-filter: none;
 }
 
-#layout[player-ui-state="PLAYER_PAGE_OPEN"] ytmusic-player-bar, #layout[player-ui-state="PLAYER_PAGE_OPEN"] #player-bar-background {
+#layout[player-ui-state="PLAYER_PAGE_OPEN"] ytmusic-player-bar,
+#layout[player-ui-state="PLAYER_PAGE_OPEN"] #player-bar-background {
   background: transparent !important;
 }
 

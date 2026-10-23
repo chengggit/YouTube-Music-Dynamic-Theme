@@ -246,7 +246,7 @@ tp-yt-paper-toast.yt-notification-action-renderer {
   border-color: var(--icon);
 }
 
-.ytSpecButtonShapeNextCallToAction.ytSpecButtonShapeNextFilled{
+.ytSpecButtonShapeNextCallToAction.ytSpecButtonShapeNextFilled {
   color: var(--accent);
   background: var(--btn-color);
   border-radius: var(--radius-btn-alt);
