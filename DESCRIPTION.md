@@ -72,7 +72,7 @@ All variables are defined at the top of the theme file.
 
 ## Compatibility
 
-- Compatible with Better Lyrics v2.4.0 and later.
+- Compatible with Better Lyrics v3.0.0 and later.
 
 ## License
 
