@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Inter");
 @import url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.min.css");
 @import url("https://cdn.jsdelivr.net/npm/font-pingfang-sc@1.0.5/index.min.css");
-
 /* 
 
 Theme: Dynamic Background 
@@ -267,6 +266,7 @@ yt-icon-button.rewind-button {
   --ytmusic-overlay-text-secondary: var(--cfg-text-secondary);
   --yt-sys-color-baseline--text-secondary: var(--cfg-text-secondary) !important;
 }
+
 /* ========================== TEXT & ICONS ========================== */
 yt-formatted-string.title {
   color: var(--text-primary) !important;
@@ -428,6 +428,7 @@ ytmusic-player[player-ui-state="PLAYER_BAR_ONLY"] {
 .image-wrapper.ytmusic-two-row-item-renderer:hover img.yt-img-shadow {
   transform: scale(1.01);
 }
+
 /* ========================== PANELS & MISC ========================== */
 /* New Playlist Panel */
 ytmusic-playlist-form {
@@ -752,6 +753,7 @@ tp-yt-paper-listbox.yt-dropdown-menu tp-yt-paper-item.yt-dropdown-menu:hover {
 yt-card-item-container-renderer {
   border: 0 !important;
 }
+
 /* ========================== PLAYER BAR ========================== */
 ytmusic-player-bar {
   background: var(--ui-color);
@@ -964,6 +966,7 @@ ytmusic-search-box[opened] #suggestion-list {
 #suggestions .ytmusic-search-suggestions-section {
   border-radius: var(--radius-highlight);
 }
+
 /* ========================== SETTINGS ========================== */
 ytmusic-setting-category-collection-renderer.ytmusic-settings-page {
   border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -1914,6 +1917,7 @@ ytmusic-play-button-renderer[size="MUSIC_PLAY_BUTTON_SIZE_HUGE"]:is([state="paus
     display: none;
   }
 }
+
 /* ========================== MOBILE VIEW ========================== */
 ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
   content: "";
@@ -2004,6 +2008,7 @@ ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state="TABS_VI
   border: 0 !important;
   background: transparent !important;
 }
+
 /* ========================== PLAYER PAGE ========================== */
 ytmusic-app-layout:not([player-page-open]):not([is-mweb-player-bar-modernization-enabled])
   > [slot="player-page"] {
@@ -2229,6 +2234,7 @@ ytmusic-multi-row-list-item-renderer.ytmusic-shelf-renderer {
 yt-formatted-string.subtitle.ytmusic-multi-row-list-item-renderer {
   color: var(--text-secondary);
 }
+
 /* ========================== SEARCH PAGE ========================== */
 /* Tab Below Search */
 .tab-container.ytmusic-tabs {
@@ -2302,6 +2308,7 @@ ytmusic-message-renderer {
     color: var(--icon);
   }
 }
+
 /* ========================== PLAYLIST ========================== */
 ytmusic-play-button-renderer.ytmusic-responsive-header-renderer {
   background: var(--btn-color) !important;
