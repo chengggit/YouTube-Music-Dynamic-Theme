@@ -5,7 +5,9 @@
     "postcss-cli": "^12.0.0",
     "postcss-import": "^16.1.1",
     "prettier": "^3.9.9",
-    "prettier-plugin-rics": "^0.3.17"
+    "prettier-plugin-rics": "^0.3.17",
+    "rics": "^0.3.22",
+    "ws": "^8.22.0"
   },
   "scripts": {
     "build": "npm run build-rics && npm run build-pear",
