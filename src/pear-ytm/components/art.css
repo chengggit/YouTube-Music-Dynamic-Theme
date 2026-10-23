@@ -71,12 +71,8 @@ ytmusic-player[player-ui-state] #song-media-window {
   border-radius: var(--radius-art-lg);
 }
 
-ytmusic-player[player-ui-state="PLAYER_BAR_ONLY"] {
-  .html5-video-player,
-  .video-stream {
-    background: transparent;
-    border-radius: var(--radius-art-md);
-  }
+ytmusic-player[player-ui-state="PLAYER_BAR_ONLY"] .html5-video-player {
+  border-radius: var(--radius-art-md);
 }
 
 @media (min-width: 615px) {

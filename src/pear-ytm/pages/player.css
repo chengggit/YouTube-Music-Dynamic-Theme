@@ -15,7 +15,7 @@ ytmusic-app-layout:not([is-mweb-modernization-enabled]):not([player-fullscreened
   box-sizing: border-box;
   padding-top: var(--ytmusic-nav-bar-height) !important;
   padding-left: var(--ytmusic-guide-width) !important;
-  padding-bottom: var(--ytmusic-player-bar-height) !important;
+  padding-bottom: calc(var(--ytmusic-player-bar-height) + var(--menu-bar-height)) !important;
 }
 
 ytmusic-player[player-ui-state="MINIPLAYER"] {

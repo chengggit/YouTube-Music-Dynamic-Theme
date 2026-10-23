@@ -8,7 +8,7 @@ ytmusic-search-box .search-box {
   }
 }
 input.ytmusic-search-box {
-  color: var(--text-primary) !important;
+  color: var(--text-secondary) !important;
 }
 
 ytmusic-search-box[has-query],
@@ -26,7 +26,10 @@ ytmusic-search-box[opened] input.ytmusic-search-box {
 .search-container.ytmusic-search-box {
   border-radius: var(--radius-panel);
 }
-ytmusic-search-box[has-query] .search-container.ytmusic-search-box,
+ytmusic-search-box[has-query] .search-container.ytmusic-search-box {
+  background: transparent !important;
+  box-shadow: unset !important;
+}
 ytmusic-search-box[opened] .search-container.ytmusic-search-box {
   border-radius: var(--radius-panel);
   background: transparent !important;
@@ -69,12 +72,12 @@ ytmusic-app-layout::after {
   width: anchor-size(width);
   height: anchor-size(height);
   border-radius: var(--radius-panel);
-  backdrop-filter: blur(var(--ui-blur));
   opacity: 0;
   z-index: 2;
 }
 
 ytmusic-app-layout:has(ytmusic-search-box[opened])::after {
+  backdrop-filter: blur(var(--ui-blur));
   opacity: 1;
 }
 

@@ -110,5 +110,5 @@ ytmusic-subscribe-button-renderer.ytmusic-visual-header-renderer {
   font-weight: 700 !important;
 }
 .subscriber-count-text.ytmusic-subscribe-button-renderer {
-  color: var(--text-primary) !important;
+  color: var(--text-secondary) !important;
 }

@@ -36,7 +36,6 @@ ytmusic-player-page #top-player-bar {
 .play-pause-button-wrapper.ytmusic-player-controls {
   color: transparent !important;
   background: transparent !important;
-  transform: scale(1.2);
 }
 
 .next-button.ytmusic-player-controls,

@@ -16,7 +16,6 @@
 ytmusic-player-page::before,
 ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
   transition: background var(--anim-bg-duration) var(--anim-bg-timing);
-  will-change: background;
 }
 .background-gradient {
   background: transparent !important;
@@ -26,9 +25,6 @@ ytmusic-fullbleed-thumbnail-renderer[is-background] .image {
 }
 
 @media (min-width: 615px) {
-  ytmusic-player-page {
-    background: none;
-  }
   ytmusic-player-page::before {
     content: "";
     position: fixed;
@@ -37,7 +33,6 @@ ytmusic-fullbleed-thumbnail-renderer[is-background] .image {
     filter: blur(var(--bg-blur)) saturate(var(--bg-saturate)) brightness(var(--bg-brightness));
     transform: scale(var(--bg-scale));
     opacity: var(--player-page-opacity);
-    z-index: -50;
   }
 }
 

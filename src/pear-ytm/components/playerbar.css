@@ -1,5 +1,5 @@
 /* ========================== PLAYER BAR ========================== */
-ytmusic-player-bar {
+ytmusic-player-bar:not([player-page-open]) {
   background: var(--ui-color);
   backdrop-filter: blur(var(--ui-blur));
 }
@@ -44,7 +44,6 @@ ytmusic-player-bar:hover #progress-bar {
   border-radius: var(--radius-panel) !important;
   background: var(--ui-contrast) !important;
   color: var(--text-primary) !important;
-  backdrop-filter: blur(var(--ui-blur));
   border: var(--ui-border) !important;
 }
 

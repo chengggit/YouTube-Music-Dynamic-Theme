@@ -1,32 +1,31 @@
-@import url("https://fonts.googleapis.com/css?family=Inter");
-@import url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/css/all.min.css");
-@import url("https://cdn.jsdelivr.net/npm/font-pingfang-sc@1.0.5/index.min.css");
-/* 
+@import url("https://fonts.googleapis.com/css?family=Inter&display=swap");
 
-Theme: Dynamic Background 
-Version: 3.3.2
-GitHub: https://github.com/chengggit/YouTube-Music-Dynamic-Theme 
+/*
+
+Theme: Dynamic Background
+Version: 4.0.0
+GitHub: https://github.com/chengggit/YouTube-Music-Dynamic-Theme
 
 */
 
-/* ==================== README ======================= 
+/* ==================== README =======================
 
 Detailed configuration instructions here:
 https://github.com/chengggit/YouTube-Music-Dynamic-Theme/blob/main/src/docs/CONFIGURATION.md#pear-desktop-css
 
-This configuration section allows users to customize the theme without 
+This configuration section allows users to customize the theme without
 needing deep CSS knowledge. Please follow these guidelines:
 
 * Remember to save your changes and refresh the page to see the effects.
 
-- SYNTAX: Ensure every variable value ends with a semicolon (;) to 
+- SYNTAX: Ensure every variable value ends with a semicolon (;) to
   prevent the theme from breaking.
 
 - TOGGLES: to turn a feature ON, remove the comment tags /* */
 /* Add them back to turn a feature OFF.
 
-- FONTS: Ensure the font is installed on your system. You can list 
-  multiple fonts in quotes ("") separated by commas (,) for multi-language 
+- FONTS: Ensure the font is installed on your system. You can list
+  multiple fonts in quotes ("") separated by commas (,) for multi-language
   support or fallbacks.
 
 - ANIMATIONS: To disable any animation, set its duration variable to 0s.
@@ -34,7 +33,7 @@ needing deep CSS knowledge. Please follow these guidelines:
 - FULLSCREEN ART POSITION: Adjust the position of the album art in fullscreen mode.
   Options: flex-start (top), center, flex-end (bottom).
 
-- STATIC BACKGROUND: To use a solid color, set --cfg-background to any 
+- STATIC BACKGROUND: To use a solid color, set --cfg-background to any
   color value (hex, rgb, hsl).
 
 - CUSTOM IMAGE: To use an image, set --cfg-background to a URL.
@@ -44,17 +43,17 @@ needing deep CSS knowledge. Please follow these guidelines:
 Turn on the "Album Color Theme" plugin for the dynamic background to work.
 For proper functionality, the variable below should be the default value:
 
---cfg-background: color-mix( 
-  in srgb, 
-  rgba(3, 3, 3) calc(100% - var(--ytmusic-album-color-ratio, 50%)), 
-  rgba(var(--ytmusic-album-color-dark), 1) 
-    var(--ytmusic-album-color-ratio, 50%) 
+--cfg-background: color-mix(
+  in srgb,
+  rgba(3, 3, 3) calc(100% - var(--ytmusic-album-color-ratio, 50%)),
+  rgba(var(--ytmusic-album-color-dark), 1)
+    var(--ytmusic-album-color-ratio, 50%)
 );
 
 =================================================== */
 /* ========================== THEME CONFIG ========================== */
 
-/* Edit these variables to configure your theme. 
+/* Edit these variables to configure your theme.
    Ensure every line ends with a semicolon (;) to prevent errors. */
 
 :root {
@@ -65,70 +64,69 @@ For proper functionality, the variable below should be the default value:
   --cfg-background: color-mix(
     in srgb,
     rgba(3, 3, 3) calc(100% - var(--ytmusic-album-color-ratio, 50%)),
-    rgba(var(--ytmusic-album-color-dark), 1)
-      var(--ytmusic-album-color-ratio, 50%)
+    rgba(var(--ytmusic-album-color-dark), 1) var(--ytmusic-album-color-ratio, 50%)
   );
 
-  --cfg-bg-brightness: 0.8;       
-  --cfg-bg-blur: 0;               /* Background blur */
-  --cfg-bg-saturate: 1.5;         /* Background saturation */
-  --cfg-bg-scale: 1.1;            /* Background zoom level */
+  --cfg-bg-brightness: 0.8;
+  --cfg-bg-blur: 0; /* Background blur */
+  --cfg-bg-saturate: 1.5; /* Background saturation */
+  --cfg-bg-scale: 1.1; /* Background zoom level */
   --cfg-player-page-opacity: 0.8; /* Player page transparency */
 
-/* --- Typography & Colors --- */
-  --cfg-font: 'Inter', 'PingFangSC-Regular', 'Apple SD Gothic Neo'; /* Main font for all text */
-  --cfg-font-weight: 400;                           /* Main text weight */
-  --cfg-text-primary: rgb(255, 255, 255);         /* Main text color */
+  /* --- Typography & Colors --- */
+  --cfg-font: "Inter", "PingFangSC-Regular", "Apple SD Gothic Neo"; /* Main font for all text */
+  --cfg-font-weight: 400; /* Main text weight */
+  --cfg-text-primary: rgb(255, 255, 255); /* Main text color */
   --cfg-text-secondary: rgba(255, 255, 255, 0.7); /* Secondary text color */
 
-  --cfg-icon: rgb(255, 255, 255);                 /* Icon color */
-  --cfg-accent: rgb(255, 255, 255);               /* Accent color for highlights */
-  --cfg-accent-highlight: rgb(255, 255, 255);     /* Lighter accent for hover states and highlights */
+  --cfg-icon: rgb(255, 255, 255); /* Icon color */
+  --cfg-accent: rgb(255, 255, 255); /* Accent color for highlights */
+  --cfg-accent-highlight: rgb(255, 255, 255); /* Lighter accent for hover states and highlights */
 
   /* --- Lyrics --- */
   --cfg-fullscreen-art-position: flex-end; /* Album art position in fullscreen (flex-start | center | flex-end) */
   --cfg-lyrics-font-size: 50px;
-  --cfg-lyrics-font-weight: 600; 
+  --cfg-lyrics-font-weight: 600;
   --cfg-lyrics-container-width: 40%;
 
   --cfg-previous-line-blur: 6px;
   --cfg-current-line-blur: 0px;
   --cfg-upcoming-line-blur: 6px;
 
-/* --- UI Components --- */
-/*  
- - Border: Use 'transparent' for no border, or '1px solid color' 
- - Shadow: Horizontal-Offset Vertical-Offset Blur Color 
-*/  
+  /* --- UI Components --- */
+  /*
+ - Border: Use 'transparent' for no border, or '1px solid color'
+ - Shadow: Horizontal-Offset Vertical-Offset Blur Color
+*/
   --cfg-album-art-size: 400px;
-  
-  --cfg-ui-color: transparent;                    /* Panel backgrounds */
-  --cfg-ui-contrast: rgba(255, 255, 255, 0.1);  /* Secondary panel backgrounds */
+
+  --cfg-ui-color: transparent; /* Panel backgrounds */
+  --cfg-ui-contrast: rgba(255, 255, 255, 0.1); /* Secondary panel backgrounds */
   --cfg-ui-highlight: rgba(255, 255, 255, 0.1); /* Hover/Select backgrounds */
   --cfg-ui-blur: 10px;
   --cfg-ui-border: transparent;
   --cfg-ui-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 
-  --cfg-btn-color: rgba(255, 255, 255, 0.1);     /* Button backgrounds */
+  --cfg-btn-color: rgba(255, 255, 255, 0.1); /* Button backgrounds */
   --cfg-btn-highlight: rgba(255, 255, 255, 0.2); /* Button hover backgrounds */
   --cfg-btn-border: transparent;
 
   /* --- Roundness --- */
-  --cfg-radius-art: 8px;            /* Album art corners (Small) */
-  --cfg-radius-art-md: 16px;        /* Album art corners (Medium) */
-  --cfg-radius-art-lg: 20px;        /* Album art corners (Large) */
+  --cfg-radius-art: 8px; /* Album art corners (Small) */
+  --cfg-radius-art-md: 16px; /* Album art corners (Medium) */
+  --cfg-radius-art-lg: 20px; /* Album art corners (Large) */
 
-  --cfg-radius-btn: 12px;           /* Standard buttons */ 
-  --cfg-radius-btn-alt: 16px;       /* Alternative/Pill buttons */
+  --cfg-radius-btn: 12px; /* Standard buttons */
+  --cfg-radius-btn-alt: 16px; /* Alternative/Pill buttons */
 
-  --cfg-radius-highlight: 8px;      /* Hover overlays */
-  --cfg-radius-highlight-lg: 12px;  
+  --cfg-radius-highlight: 8px; /* Hover overlays */
+  --cfg-radius-highlight-lg: 12px;
 
-  --cfg-radius-panel: 12px;         /* Popups and dropdowns */
+  --cfg-radius-panel: 12px; /* Popups and dropdowns */
   --cfg-radius-panel-lg: 24px;
 
-/* --- Animation --- */
-/* - Set duration to 0s to disable animation */
+  /* --- Animation --- */
+  /* - Set duration to 0s to disable animation */
   --cfg-anim-bg-duration: 0.3s;
   --cfg-anim-bg-timing: ease-in-out;
 
@@ -193,9 +191,48 @@ yt-icon-button.rewind-button {
   }
 } */
 
-/* ============================================================ 
+/* ============================================================
 * DO NOT EDIT BELOW THIS LINE
- ============================================================== */
+  ============================================================== */
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Apple SD Gothic Neo Medium"),
+    url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/fonts/400_AppleSDGothicNeo-Medium.woff2")
+      format("woff2");
+}
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    local("Apple SD Gothic Neo SemiBold"),
+    url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/fonts/600_AppleSDGothicNeo-SemiBold.woff2")
+      format("woff2");
+}
+@font-face {
+  font-family: "Apple SD Gothic Neo";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local("Apple SD Gothic Neo Bold"),
+    url("https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0.3/fonts/700_AppleSDGothicNeo-Bold.woff2")
+      format("woff2");
+}
+@font-face {
+  font-family: "PingFangSC-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/font-pingfang-sc@1.0.5/PingFangSC-Regular.woff2")
+    format("woff2");
+}
+
 * {
   font-family: var(--cfg-font) !important;
   font-weight: var(--cfg-font-weight);
@@ -223,7 +260,7 @@ yt-icon-button.rewind-button {
   --ui-blur: var(--cfg-ui-blur);
   --ui-border: var(--cfg-ui-border);
   --ui-shadow: var(--cfg-ui-shadow);
-  
+
   --btn-color: var(--cfg-btn-color);
   --btn-highlight: var(--cfg-btn-highlight);
   --btn-border: var(--cfg-btn-border);
@@ -405,12 +442,8 @@ ytmusic-player[player-ui-state] #song-media-window {
   border-radius: var(--radius-art-lg);
 }
 
-ytmusic-player[player-ui-state="PLAYER_BAR_ONLY"] {
-  .html5-video-player,
-  .video-stream {
-    background: transparent;
-    border-radius: var(--radius-art-md);
-  }
+ytmusic-player[player-ui-state="PLAYER_BAR_ONLY"] .html5-video-player {
+  border-radius: var(--radius-art-md);
 }
 
 @media (min-width: 615px) {
@@ -429,8 +462,16 @@ ytmusic-player[player-ui-state="PLAYER_BAR_ONLY"] {
 }
 
 /* ========================== PANELS & MISC ========================== */
+ytmusic-dialog {
+  box-shadow: var(--ui-shadow) !important;
+  background: var(--ui-color) !important;
+  backdrop-filter: blur(var(--ui-blur));
+  border: var(--ui-border) !important;
+  border-radius: var(--radius-panel-lg) !important;
+}
+
 /* New Playlist Panel */
-ytmusic-playlist-form {
+ytmusic-playlist-form.ytmusic-dialog {
   background: transparent !important;
   .yt-icon-shape {
     color: var(--icon);
@@ -447,14 +488,6 @@ tp-yt-iron-input.tp-yt-paper-input > input.tp-yt-paper-input {
 
 .ytListItemViewModelTitle {
   color: var(--text-primary) !important;
-}
-
-ytmusic-dialog {
-  box-shadow: var(--ui-shadow) !important;
-  background: var(--ui-color) !important;
-  backdrop-filter: blur(var(--ui-blur));
-  border: var(--ui-border) !important;
-  border-radius: var(--radius-panel-lg) !important;
 }
 
 /* Underline */
@@ -483,9 +516,9 @@ ytmusic-dialog {
 .dropdown-content.tp-yt-paper-menu-button {
   --yt-spec-brand-background-primary: transparent;
   background: var(--ui-color) !important;
-  box-shadow: var(--ui-shadow) I !important;
-  backdrop-filter: blur(var(--ui-blur));
+  box-shadow: var(--ui-shadow) !important;
   border-radius: var(--radius-panel-lg) !important;
+  border: var(--ui-border) !important;
 }
 
 .description.ytmusic-dropdown-item-renderer {
@@ -498,7 +531,6 @@ ytmusic-dialog {
 
 .dropdown-content.ytmusic-dropdown-renderer {
   background: transparent;
-  backdrop-filter: blur(var(--ui-blur));
 }
 
 ytmusic-dropdown-item-renderer {
@@ -520,14 +552,16 @@ tp-yt-iron-icon.tp-yt-paper-dropdown-menu {
 }
 
 /* Add to Playlist */
-tp-yt-paper-dialog[modern].ytmusic-popup-container,
+tp-yt-paper-dialog.ytmusic-popup-container {
+  background: var(--ui-color) !important;
+  border: var(--ui-border) !important;
+  backdrop-filter: blur(var(--ui-blur)) !important;
+  border-radius: var(--radius-panel-lg) !important;
+  box-shadow: var(--ui-shadow) !important;
+}
 ytmusic-add-to-playlist-renderer.ytmusic-popup-container {
   --yt-spec-brand-background-primary: transparent;
-  background: var(--ui-color);
-  backdrop-filter: blur(var(--ui-blur));
-  box-shadow: var(--ui-shadow);
-  border-radius: var(--radius-panel-lg);
-  border: var(--ui-border);
+  border: 0;
 }
 
 /* Divider */
@@ -654,9 +688,7 @@ ytmusic-background-promo-renderer {
 }
 
 /* Popup Message */
-tp-yt-paper-toast,
-tp-yt-paper-toast.yt-notification-action-renderer,
-#toast.ytmusic-notification-text-renderer {
+tp-yt-paper-toast.yt-notification-action-renderer {
   background: var(--ui-color) !important;
   border-radius: var(--radius-panel) !important;
   border: var(--ui-border) !important;
@@ -754,7 +786,7 @@ yt-card-item-container-renderer {
 }
 
 /* ========================== PLAYER BAR ========================== */
-ytmusic-player-bar {
+ytmusic-player-bar:not([player-page-open]) {
   background: var(--ui-color);
   backdrop-filter: blur(var(--ui-blur));
 }
@@ -799,7 +831,6 @@ ytmusic-player-bar:hover #progress-bar {
   border-radius: var(--radius-panel) !important;
   background: var(--ui-contrast) !important;
   color: var(--text-primary) !important;
-  backdrop-filter: blur(var(--ui-blur));
   border: var(--ui-border) !important;
 }
 
@@ -886,7 +917,7 @@ ytmusic-search-box .search-box {
   }
 }
 input.ytmusic-search-box {
-  color: var(--text-primary) !important;
+  color: var(--text-secondary) !important;
 }
 
 ytmusic-search-box[has-query],
@@ -904,7 +935,10 @@ ytmusic-search-box[opened] input.ytmusic-search-box {
 .search-container.ytmusic-search-box {
   border-radius: var(--radius-panel);
 }
-ytmusic-search-box[has-query] .search-container.ytmusic-search-box,
+ytmusic-search-box[has-query] .search-container.ytmusic-search-box {
+  background: transparent !important;
+  box-shadow: unset !important;
+}
 ytmusic-search-box[opened] .search-container.ytmusic-search-box {
   border-radius: var(--radius-panel);
   background: transparent !important;
@@ -947,12 +981,12 @@ ytmusic-app-layout::after {
   width: anchor-size(width);
   height: anchor-size(height);
   border-radius: var(--radius-panel);
-  backdrop-filter: blur(var(--ui-blur));
   opacity: 0;
   z-index: 2;
 }
 
 ytmusic-app-layout:has(ytmusic-search-box[opened])::after {
+  backdrop-filter: blur(var(--ui-blur));
   opacity: 1;
 }
 
@@ -1112,7 +1146,6 @@ ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state="TABS_VI
   transition:
     opacity 0.3s ease-out,
     transform 0.3s ease-out;
-  will-change: opacity, transform;
 }
 
 ytmusic-player-page[is-mweb-modernization-enabled][player-page-ui-state="FULL_PLAYER_VIEW"] .av,
@@ -1186,23 +1219,17 @@ yt-icon-button.ytmusic-nav-bar {
 }
 
 #tabs.ytmusic-tabbed-search-results-renderer {
-  transition:
-    background var(--anim-fade-duration) var(--anim-fade-timing),
-    backdrop-filter var(--anim-fade-duration) var(--anim-fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-timing);
 }
 
 /* When Scrolled */
 ytmusic-tabs.stuck {
-  transition:
-    background var(--anim-fade-duration) var(--anim-fade-timing),
-    backdrop-filter var(--anim-fade-duration) var(--anim-fade-timing);
+  transition: background var(--anim-fade-duration) var(--anim-fade-timing);
 }
 
 /* PLAYER BAR */
 ytmusic-player-bar.ytmusic-app {
-  transition:
-    background var(--anim-fade-duration) var(--anim-fade-timing),
-    bottom 0.5s;
+  transition: background var(--anim-fade-duration) var(--anim-fade-timing);
 }
 
 ytmusic-player-bar yt-icon-button.ytmusic-player-bar {
@@ -1337,18 +1364,16 @@ yt-icon-button.ytmusic-carousel-shelf-renderer {
 }
 
 .play-pause-button-wrapper.ytmusic-player-controls {
-  will-change: transform;
   transition: transform var(--anim-play-btn-duration) var(--anim-play-btn-timing);
 }
 .play-pause-button-wrapper.ytmusic-player-controls:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 
 .next-button.ytmusic-player-controls,
 .previous-button.ytmusic-player-controls,
 .shuffle.ytmusic-player-controls,
 .repeat.ytmusic-player-controls {
-  will-change: transform;
   transition: transform var(--anim-play-btn-duration) var(--anim-play-btn-timing);
 }
 .next-button.ytmusic-player-controls:hover,
@@ -1367,7 +1392,10 @@ ytmusic-search-box .search-container.ytmusic-search-box {
 }
 
 ytmusic-search-box #suggestion-list {
-  transition: var(--anim-search-bar-duration) var(--anim-search-bar-timing);
+  transition:
+    opacity var(--anim-search-bar-duration) var(--anim-search-bar-timing),
+    visibility var(--anim-search-bar-duration) var(--anim-search-bar-timing),
+    top var(--anim-search-bar-duration) var(--anim-search-bar-timing);
 }
 
 ytmusic-search-suggestion {
@@ -1425,8 +1453,7 @@ ytmusic-visual-header-renderer .content-container {
 #player-page.ytmusic-app {
   transition:
     transform var(--anim-player-page-duration) var(--anim-player-page-timing),
-    padding var(--anim-drawer-duration) var(--anim-drawer-timing),
-    height var(--anim-drawer-duration) var(--anim-drawer-timing) !important;
+    padding var(--anim-drawer-duration) var(--anim-drawer-timing) !important;
 }
 
 .toggle-player-page-button {
@@ -1463,6 +1490,9 @@ ytmusic-immersive-header-renderer .image {
 }
 .image-wrapper.ytmusic-two-row-item-renderer img.yt-img-shadow {
   transition: transform 0.3s ease;
+}
+tp-yt-paper-button[animated] {
+  transition: unset !important;
 }
 #synced-lyrics-container .text-lyrics yt-formatted-string {
   font-family: var(--cfg-font) !important;
@@ -1643,7 +1673,7 @@ ytmusic-subscribe-button-renderer.ytmusic-visual-header-renderer {
   font-weight: 700 !important;
 }
 .subscriber-count-text.ytmusic-subscribe-button-renderer {
-  color: var(--text-primary) !important;
+  color: var(--text-secondary) !important;
 }
 /* ========================== BACKGROUND ========================== */
 #browse-page::before,
@@ -1663,7 +1693,6 @@ ytmusic-subscribe-button-renderer.ytmusic-visual-header-renderer {
 ytmusic-player-page::before,
 ytmusic-player-page[is-mweb-modernization-enabled] #main-panel::before {
   transition: background var(--anim-bg-duration) var(--anim-bg-timing);
-  will-change: background;
 }
 .background-gradient {
   background: transparent !important;
@@ -1673,9 +1702,6 @@ ytmusic-fullbleed-thumbnail-renderer[is-background] .image {
 }
 
 @media (min-width: 615px) {
-  ytmusic-player-page {
-    background: none;
-  }
   ytmusic-player-page::before {
     content: "";
     position: fixed;
@@ -1684,7 +1710,6 @@ ytmusic-fullbleed-thumbnail-renderer[is-background] .image {
     filter: blur(var(--bg-blur)) saturate(var(--bg-saturate)) brightness(var(--bg-brightness));
     transform: scale(var(--bg-scale));
     opacity: var(--player-page-opacity);
-    z-index: -50;
   }
 }
 
@@ -1831,10 +1856,12 @@ ytmusic-app #guide-wrapper.ytmusic-app {
   #guide-wrapper {
     background: var(--ui-color) !important;
     border-right: var(--ui-border) !important;
+    backdrop-filter: unset !important;
   }
   #nav-bar-background {
     background: var(--ui-color) !important;
     border-bottom: var(--ui-border) !important;
+    backdrop-filter: unset !important;
   }
 }
 
@@ -1955,7 +1982,6 @@ ytmusic-player-page #top-player-bar {
 .play-pause-button-wrapper.ytmusic-player-controls {
   color: transparent !important;
   background: transparent !important;
-  transform: scale(1.2);
 }
 
 .next-button.ytmusic-player-controls,
@@ -2025,7 +2051,7 @@ ytmusic-app-layout:not([is-mweb-modernization-enabled]):not([player-fullscreened
   box-sizing: border-box;
   padding-top: var(--ytmusic-nav-bar-height) !important;
   padding-left: var(--ytmusic-guide-width) !important;
-  padding-bottom: var(--ytmusic-player-bar-height) !important;
+  padding-bottom: calc(var(--ytmusic-player-bar-height) + var(--menu-bar-height)) !important;
 }
 
 ytmusic-player[player-ui-state="MINIPLAYER"] {
